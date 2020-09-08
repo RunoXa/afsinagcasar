@@ -4,6 +4,7 @@ import Home from './Home';
 import Counter from './Counter';
 import Header from "./Header";
 import Images from "./Images";
+import Footer from "./Footer";
 
 export default class App extends Component {
     render() {
@@ -17,7 +18,7 @@ export default class App extends Component {
                     <Route exact path="/counter" component={Counter}/>
                     <Route exact path="/images" component={Images}/>
                 </Switch>
-                <footer/>
+                <Footer/>
             </BrowserRouter>
         );
     }
