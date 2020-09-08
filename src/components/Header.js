@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/Header.css';
 import HouseIcon from '../icons/house.svg'
 import ImagesIcon from '../icons/images.svg'
+import MusicPlayerIcon from '../icons/music_player.svg'
 
 export default class Header extends Component {
 
@@ -22,6 +23,8 @@ export default class Header extends Component {
                                          activeClassName="main-nav-active"><img src={HouseIcon} alt="houseIcon"/>Anasayfa</NavLink>
                                 <NavLink exact to="/images" className="navLink"
                                          activeClassName="main-nav-active"><img src={ImagesIcon} alt="imagesIcon"/>Resimler</NavLink>
+                                <NavLink exact to="/radio" className="navLink"
+                                         activeClassName="main-nav-active"><img src={MusicPlayerIcon} alt="imagesIcon"/>Radyo</NavLink>
                                 <NavLink exact to="/counter" className="navLink"
                                          activeClassName="main-nav-active">Counter</NavLink>
 
