@@ -31,9 +31,22 @@ h3 {
     border-radius: 5px 5px 5px 5px;
 }
 
+img {
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+}
+
+/*Select Language*/
 .navDropdown {
-    padding: 10px;
     font-size: 20px;
+    /*position: absolute;*/
+    /*right: 10px;*/
+    top: 5px;
+    padding: 5px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
     color: #f0f0f0;
 }
 
@@ -42,10 +55,4 @@ h3 {
     color: #5bc0eb;
     background-color: grey;
     border-radius: 5px 5px 5px 5px;
-}
-
-img {
-    width: 30px;
-    height: 30px;
-    margin: 8px;
 }
