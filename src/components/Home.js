@@ -1,20 +1,25 @@
 import React, {Component} from "react";
+import '../styles/Home.css';
 
 export default class Home extends Component {
 
     render() {
+        let heading = "Afşin Ağcaşar Sitemize Hoşgeldiniz";
+        let subheading = "Sitemiz daha henüz yapım aşamasındadır. Önümüzdeki Süreçte yeni eklemeler olacaktır. Şimdilik iyi eğlenceler. ";
+
         return (
             <div>
-                <main>
-                    <h1>Ağcaşar Sitesine Hoşgeldiniz</h1>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                        ipsum dolor sit amet.</p>
-                </main>
+                <section className="section">
+                    <div className="section-body">
+                        <div className="container">
+                            <h1 className="title">{heading}</h1>
+                            <div className="is-two-thirds column is-paddingless">
+                                <h2 className="subtitle is-4">{subheading}</h2>
+                            </div>
+                            <a type="button" className="btn is-large text-dark bg-secondary" id="learn">Learn More</a>
+                        </div>
+                    </div>
+                </section>
             </div>
         )
     }
