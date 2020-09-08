@@ -1,0 +1,36 @@
+a {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    text-underline: none;
+}
+
+h3 {
+    padding: 5px;
+    margin-right: 20px;
+    color: #f0f0f0;
+}
+
+.navLink {
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 25px;
+    margin: 5px;
+    width: 150px;
+    height: 60px;
+}
+
+.navLink:hover {
+    text-decoration: none;
+    color: lightgrey;
+    background-color: grey;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.main-nav-active {
+    border-bottom: 8px solid #5bc0eb;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.navDropdown {
+    padding: 15px;
+}
