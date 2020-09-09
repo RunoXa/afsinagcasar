@@ -27,7 +27,7 @@ function Footer() {
                         </ul>
                     </div>
                     {/*Column 2*/}
-                    <div className="social-bar col-md-3 col-sm-6 social-bar">
+                    <div className="social-bar">
                         <h4>Sosyal Medya</h4>
                         <ul className="social-icons list-unstyled">
                             <li><a href="http://www.facebook.com"><img src={FacebookIcon} alt="facebookIcon"/></a></li>
