@@ -5,7 +5,7 @@ export default class Home extends Component {
 
     render() {
         let heading = "Afşin Ağcaşar Sitemize Hoş geldiniz";
-        let subheading = "Sitemiz daha henüz yapım aşamasındadır. Önümüzdeki Süreçte yeni eklemeler olacaktır. Şimdilik iyi eğlenceler. ";
+        let subheading = "Sitemiz daha henüz yapım aşamasındadır. Önümüzdeki Süreçte yeni eklemeler olacaktır. Şimdilik iyi eğlenceler.";
 
         return (
             <div>
