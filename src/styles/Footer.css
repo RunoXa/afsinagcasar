@@ -1,16 +1,21 @@
-.copyright-text{
+.copyright-text {
     text-align: center;
 }
 
 .main-footer {
     margin-top: auto;
-    position:absolute;
-    bottom:0;
-    width:100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
-.social-bar{
+.social-bar {
     right: 0;
-    position:absolute;
+    position: absolute;
 
+}
+
+.social-icons li {
+    display: inline;
+    padding: 1px;
 }

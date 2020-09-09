@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/Footer.css'
 import FacebookIcon from "../icons/facebook.svg";
+import YoutubeIcon from "../icons/youtube.svg";
 
 function Footer() {
     return (
@@ -28,8 +29,9 @@ function Footer() {
                     {/*Column 2*/}
                     <div className="social-bar col-md-3 col-sm-6 social-bar">
                         <h4>Sosyal Medya</h4>
-                        <ul className="list-unstyled">
+                        <ul className="social-icons list-unstyled">
                             <li><a href="http://www.facebook.com"><img src={FacebookIcon} alt="facebookIcon"/></a></li>
+                            <li><a href="http://www.youtube.com"><img src={YoutubeIcon} alt="facebookIcon"/></a></li>
                         </ul>
                     </div>
                 </div>
