@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/Footer.css'
+import FacebookIcon from "../icons/facebook.svg";
 
 function Footer() {
     return (
@@ -23,6 +24,13 @@ function Footer() {
                             <li>zweite</li>
                             <li>dritte</li>
                             <li>vierte</li>
+                        </ul>
+                    </div>
+                    {/*Column 2*/}
+                    <div className="col-md-3 col-sm-6 social-bar">
+                        <h4>Sosyal Medya</h4>
+                        <ul className="list-unstyled">
+                            <li><a href="http://www.facebook.com"><img src={FacebookIcon} alt="facebookIcon"/></a></li>
                         </ul>
                     </div>
                 </div>

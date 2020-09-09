@@ -1,0 +1,33 @@
+.main-menu {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    width: 180px;
+    height: 250px;
+}
+
+.menu {
+}
+
+.menu-title {
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+.main-nav {
+    width: 150px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.nav-link {
+    color: white;
+    text-align: center;
+}
+
+.nav-link:hover {
+    color: #5bc0eb;
+    border: none;
+}

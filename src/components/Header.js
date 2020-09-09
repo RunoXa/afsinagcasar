@@ -25,8 +25,8 @@ export default class Header extends Component {
                                          activeClassName="main-nav-active"><img src={ImagesIcon} alt="imagesIcon"/>Resimler</NavLink>
                                 <NavLink exact to="/radio" className="navLink"
                                          activeClassName="main-nav-active"><img src={MusicPlayerIcon} alt="imagesIcon"/>Radyo</NavLink>
-                                <NavLink exact to="/counter" className="navLink"
-                                         activeClassName="main-nav-active">Counter</NavLink>
+                                {/*<NavLink exact to="/counter" className="navLink"*/}
+                                {/*         activeClassName="main-nav-active">Counter</NavLink>*/}
                                 <NavDropdown title="Dil Seçeneği" className="navDropdown">
                                     <NavDropdown.Item href="#action/3.1">TR</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">EN</NavDropdown.Item>
