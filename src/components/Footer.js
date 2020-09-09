@@ -26,7 +26,7 @@ function Footer() {
                             <li>Afşin 3</li>
                         </ul>
                     </div>
-                    {/*Column 2*/}
+                    {/*Column 3*/}
                     <div className="social-bar">
                         <h4>Sosyal Medya</h4>
                         <ul className="social-icons list-unstyled">
@@ -40,7 +40,6 @@ function Footer() {
                         &copy;{new Date().getFullYear()} Afsin Agcasar Site - All Rights Reserved
                     </p>
                 </div>
-                {/*Footer Bottom*/}
             </div>
         </div>
     );

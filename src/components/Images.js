@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Nav, Navbar} from "react-bootstrap";
+import {Nav} from "react-bootstrap";
 import '../styles/Images.css';
 
 export default class Images extends Component {
@@ -17,8 +17,6 @@ export default class Images extends Component {
                         <Nav.Link eventKey="link-3">Dügünler 2018</Nav.Link>
                         <Nav.Link eventKey="link-4">Dügünler 2018</Nav.Link>
                         <Nav.Link eventKey="link-5">Dügünler 2018</Nav.Link>
-                        <Nav.Link eventKey="link-6">Dügünler 2018</Nav.Link>
-                        <Nav.Link eventKey="link-7">Dügünler 2018</Nav.Link>
                         <Nav.Link eventKey="link-8" disabled>
                             Disabled
                         </Nav.Link>
