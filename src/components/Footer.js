@@ -9,7 +9,7 @@ function Footer() {
                 <div className="row">
                     {/*Column 1*/}
                     <div className="col-md-3 col-sm-6">
-                        <h4>kontakt</h4>
+                        <h4>İletişim</h4>
                         <ul className="list-unstyled">
                             <li>Kontakt</li>
                             <li>Standort</li>
@@ -18,28 +18,27 @@ function Footer() {
                     </div>
                     {/*Column 2*/}
                     <div className="col-md-3 col-sm-6">
-                        <h4>kontakt 2</h4>
+                        <h4>Yenilikler</h4>
                         <ul className="list-unstyled">
-                            <li>erste</li>
-                            <li>zweite</li>
-                            <li>dritte</li>
-                            <li>vierte</li>
+                            <li>Afşin 1</li>
+                            <li>Afşin 2</li>
+                            <li>Afşin 3</li>
                         </ul>
                     </div>
                     {/*Column 2*/}
-                    <div className="col-md-3 col-sm-6 social-bar">
+                    <div className="social-bar col-md-3 col-sm-6 social-bar">
                         <h4>Sosyal Medya</h4>
                         <ul className="list-unstyled">
                             <li><a href="http://www.facebook.com"><img src={FacebookIcon} alt="facebookIcon"/></a></li>
                         </ul>
                     </div>
                 </div>
-                {/*Footer Bottom*/}
                 <div className="footer-bottom">
-                    <p className="text-xs-center">
+                    <p className="copyright-text">
                         &copy;{new Date().getFullYear()} Afsin Agcasar Site - All Rights Reserved
                     </p>
                 </div>
+                {/*Footer Bottom*/}
             </div>
         </div>
     );
