@@ -11,6 +11,12 @@ h3 {
 }
 
 /*Nav.bar && Buttons*/
+
+/*.main-navbar {*/
+/*    border-radius: 10px 10px 10px 10px;*/
+/*    margin: 5px;*/
+/*}*/
+
 .navLink {
     color: #f0f0f0;
     text-align: center;
@@ -25,6 +31,10 @@ h3 {
     color: #d3d3d3;
     background-color: grey;
     border-radius: 5px 5px 5px 5px;
+}
+
+.bg-dark {
+    background-color: #550A21 !important;
 }
 
 .main-nav-active {
@@ -56,8 +66,4 @@ img {
     color: #d3d3d3;
     background-color: grey;
     border-radius: 5px 5px 5px 5px;
-}
-
-.bg-dark{
-    background-color: #550A21 !important;
 }

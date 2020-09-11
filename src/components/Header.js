@@ -13,7 +13,7 @@ export default class Header extends Component {
         return (
             <div>
                 <React.Fragment>
-                    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                    <Navbar className="main-navbar" collapseOnSelect expand="lg" bg="dark" variant="dark">
                         {/*<Navbar.Brand className="">Ağcaşar Köyü</Navbar.Brand>*/}
                         <h3>Ağcaşar Köyü</h3>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
