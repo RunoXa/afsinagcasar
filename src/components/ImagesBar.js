@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Nav} from "react-bootstrap";
-import '../styles/Images.css';
+import '../styles/ImagesBar.css';
 
 export default class ImagesBar extends Component {
 

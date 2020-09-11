@@ -21,7 +21,7 @@ export default class Header extends Component {
                             <Nav className="mr-auto">
                                 <NavLink exact to="/" className="navLink"
                                          activeClassName="main-nav-active"><img src={HouseIcon} alt="houseIcon"/>Anasayfa</NavLink>
-                                <NavLink exact to="/images" className="navLink"
+                                <NavLink exact to="/images" onClick={this.closeNavBar} className="navLink"
                                          activeClassName="main-nav-active"><img src={ImagesIcon} alt="imagesIcon"/>Resimler</NavLink>
                                 <NavLink exact to="/radio" className="navLink"
                                          activeClassName="main-nav-active"><img src={MusicPlayerIcon}
