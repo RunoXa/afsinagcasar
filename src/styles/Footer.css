@@ -1,6 +1,6 @@
 .main-footer {
-    margin-top: auto;
-    position: absolute;
+    padding-top: 3em;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -8,12 +8,10 @@
 .social-bar {
     right: 25px;
     position: absolute;
-
 }
 
 .social-icons li {
     display: inline;
-    padding: 1px;
 }
 
 .copyright-text {

@@ -7,8 +7,7 @@ export default class Images extends Component {
     render() {
         return (
             <div>
-                <body>
-                <div className="main-menu">
+                <div className="">
                     <Nav defaultActiveKey="/images" className="main-nav flex-column bg-dark" variant="tabs">
                         <h4 className="menu-title">Resimler</h4>
                         <Nav.Link href="/images">Resimler 2020</Nav.Link>
@@ -22,7 +21,6 @@ export default class Images extends Component {
                         </Nav.Link>
                     </Nav>
                 </div>
-                </body>
             </div>
         )
     }
