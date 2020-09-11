@@ -1,7 +1,16 @@
 .main-contact {
 }
 
+.contact-title {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.contact-details {
+    text-align: center;
+}
+
 .google-map {
-    width: 50%;
-    margin: 0 auto;
+    text-align: center;
+    margin: 20px;
 }
