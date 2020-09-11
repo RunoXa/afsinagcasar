@@ -30,8 +30,8 @@ const Footer = () => {
                     <div className="social-bar">
                         <h4>Sosyal Medya</h4>
                         <ul className="social-icons list-unstyled">
-                            <li><a href="http://www.facebook.com"><img src={FacebookIcon} alt="facebookIcon"/></a></li>
-                            <li><a href="http://www.youtube.com"><img src={YoutubeIcon} alt="youtubeIcon"/></a></li>
+                            <li><a href="https://www.facebook.com/afsin.agcasar"><img src={FacebookIcon} alt="facebookIcon"/></a></li>
+                            <li><a href="https://www.youtube.com/channel/UClWom_yPiHPGel4-MacSomQ/featured"><img src={YoutubeIcon} alt="youtubeIcon"/></a></li>
                         </ul>
                     </div>
                 </div>
