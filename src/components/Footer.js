@@ -9,16 +9,16 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     {/*Column 1*/}
-                    <div className="col-md-3 col-sm-6">
+                    <div className="col-md-2 col-sm-3">
                         <h4>İletişim</h4>
                         <ul className="list-unstyled">
-                            <li>Kontakt</li>
-                            <li>Standort</li>
-                            <li>Imressum</li>
+                            <li><a href="/contact">Kontakt</a></li>
+                            <li><a href="/">Events</a></li>
+                            <li><a href="/">Impressum</a></li>
                         </ul>
                     </div>
                     {/*Column 2*/}
-                    <div className="col-md-3 col-sm-6">
+                    <div className="col-md-2 col-sm-3">
                         <h4>Yenilikler</h4>
                         <ul className="list-unstyled">
                             <li>Afşin 1</li>
