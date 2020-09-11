@@ -15,13 +15,13 @@ export default class Header extends Component {
                 <React.Fragment>
                     <Navbar className="main-navbar" collapseOnSelect expand="lg" bg="dark" variant="dark">
                         {/*<Navbar.Brand className="">Ağcaşar Köyü</Navbar.Brand>*/}
-                        <h3>Ağcaşar Köyü</h3>
+                        <a href="/"><h3>Ağcaşar Köyü</h3></a>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mr-auto">
                                 <NavLink exact to="/" className="navLink"
                                          activeClassName="main-nav-active"><img src={HouseIcon} alt="houseIcon"/>Anasayfa</NavLink>
-                                <NavLink exact to="/images" onClick={this.closeNavBar} className="navLink"
+                                <NavLink exact to="/images" className="navLink"
                                          activeClassName="main-nav-active"><img src={ImagesIcon} alt="imagesIcon"/>Resimler</NavLink>
                                 <NavLink exact to="/radio" className="navLink"
                                          activeClassName="main-nav-active"><img src={MusicPlayerIcon}

@@ -18,9 +18,10 @@
 }
 
 .main-nav {
-    width: 150px;
-    border-radius: 5px 5px 5px 5px;
+    height: 100%;
+    border-radius: 15px 15px 15px 15px;
     float: left;
+    margin: 10px;
 }
 
 .nav-link {

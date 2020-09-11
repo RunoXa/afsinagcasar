@@ -4,10 +4,15 @@ a {
     text-underline: none;
 }
 
+/*Überschrift der Seite*/
 h3 {
     padding: 5px;
     margin-right: 20px;
     color: #f0f0f0;
+}
+
+a:link {
+    text-decoration: none;
 }
 
 /*Nav.bar && Buttons*/
@@ -28,8 +33,9 @@ h3 {
 
 .navLink:hover {
     text-decoration: none;
-    color: #d3d3d3;
-    background-color: grey;
+    color: #f0f0f0;
+    font-weight: bold;
+    background-color: dimgrey;
     border-radius: 5px 5px 5px 5px;
 }
 
