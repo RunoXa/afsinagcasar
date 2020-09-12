@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Nav, Row, Col, TabContent, TabContainer, TabPane, NavLink, NavItem} from "react-bootstrap";
-import '../styles/ImagesBar.css';
+import '../styles/ImagesTabs.css';
 import Image1 from "./Image1";
 import Image2 from "./Image2";
 
