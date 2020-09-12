@@ -2,6 +2,7 @@ import React from "react";
 import '../styles/Footer.css'
 import FacebookIcon from "../icons/facebook.svg";
 import YoutubeIcon from "../icons/youtube.svg";
+import InstagramIcon from '../icons/instagram.svg';
 
 const Footer = () => {
     return (
@@ -30,8 +31,14 @@ const Footer = () => {
                     <div className="social-bar">
                         <h4>Sosyal Medya</h4>
                         <ul className="social-icons list-unstyled">
-                            <li><a href="https://www.facebook.com/afsin.agcasar"><img src={FacebookIcon} alt="facebookIcon"/></a></li>
-                            <li><a href="https://www.youtube.com/channel/UClWom_yPiHPGel4-MacSomQ/featured"><img src={YoutubeIcon} alt="youtubeIcon"/></a></li>
+                            <li><a href="https://www.facebook.com/afsin.agcasar" target="_blank"><img src={FacebookIcon}
+                                                                                                      alt="facebookIcon"/></a>
+                            </li>
+                            <li><a href="https://www.youtube.com/channel/UClWom_yPiHPGel4-MacSomQ/featured"
+                                   target="_blank"><img
+                                src={YoutubeIcon} alt="youtubeIcon"/></a></li>
+                            <li><a href="https://www.instagram.com" target="_blank"><img
+                                src={InstagramIcon} alt="youtubeIcon"/></a></li>
                         </ul>
                     </div>
                 </div>
