@@ -1,3 +1,16 @@
-section{
+section {
     margin: 2rem;
+}
+
+.title {
+    text-align: center;
+    color: #550A21;
+    padding-bottom: 15px;
+}
+
+.home-text {
+    padding: 10px;
+    font-size: medium;
+    color: #550A21;
+
 }
