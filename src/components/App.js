@@ -7,7 +7,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Contact from "./Contact";
 import ImagesTabs from "./ImagesTabs";
-import Image1 from "./Image1";
 
 export default class App extends Component {
     render() {

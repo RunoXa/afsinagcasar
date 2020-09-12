@@ -21,19 +21,15 @@ export default class ImagesTabs extends Component {
                                 </NavItem>
                             </Nav>
                         </Col>
-                        <Col sm={8}>
+                        <Col sm={9}>
                             <TabContent>
-                                <TabPane eventKey="first">
-                                    <Image1/>
-                                </TabPane>
-                                <TabPane eventKey="second">
-                                    <Image2/>
-                                </TabPane>
+                                <TabPane eventKey="first"><Image1/></TabPane>
+                                <TabPane eventKey="second"><Image2/></TabPane>
                             </TabContent>
                         </Col>
                     </Row>
                 </TabContainer>
             </div>
-        )
+        );
     }
 }

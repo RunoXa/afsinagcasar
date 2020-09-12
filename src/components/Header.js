@@ -26,11 +26,11 @@ export default class Header extends Component {
                                 <NavLink exact to="/radio" className="navLink"
                                          activeClassName="main-nav-active"><img src={MusicPlayerIcon}
                                                                                 alt="musicPlayerIcon"/>Radyo</NavLink>
-                                <NavDropdown title="Dil Seçeneği" className="navDropdown">
-                                    <NavDropdown.Item href="#action/3.1">TR</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">EN</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">DE</NavDropdown.Item>
-                                </NavDropdown>
+                                {/*<NavDropdown title="Dil Seçeneği" className="navDropdown">*/}
+                                {/*    <NavDropdown.Item href="#action/3.1">TR</NavDropdown.Item>*/}
+                                {/*    <NavDropdown.Item href="#action/3.2">EN</NavDropdown.Item>*/}
+                                {/*    <NavDropdown.Item href="#action/3.3">DE</NavDropdown.Item>*/}
+                                {/*</NavDropdown>*/}
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
