@@ -14,7 +14,7 @@ export default class Home extends Component {
                         <div className="container">
                             <h1 className="title">{heading}</h1>
                             <div className="is-two-thirds column is-paddingless">
-                                <h2 className="subtitle is-4">{subheading}</h2>
+                                <p className="subtitle is-4">{subheading}</p>
                             </div>
                             <a type="button" className="btn is-large text-dark bg-secondary" id="learn">Learn More</a>
                         </div>
