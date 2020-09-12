@@ -6,7 +6,7 @@ import Counter from './Counter';
 import Header from "./Header";
 import Footer from "./Footer";
 import Contact from "./Contact";
-import ImagesBar from "./ImagesBar";
+import ImagesTabs from "./ImagesTabs";
 import Image1 from "./Image1";
 
 export default class App extends Component {
@@ -21,8 +21,7 @@ export default class App extends Component {
                         <Switch>
                             <Route exact path="/" component={Home}/>
                             <Route exact path="/counter" component={Counter}/>
-                            <Route exact path="/images" component={ImagesBar}/>
-                            <Route exact path="/images/image1" component={Image1}/>
+                            <Route exact path="/images" component={ImagesTabs}/>
                             <Route exact path="/radio" component={Home}/>
                             <Route exact path="/contact" component={Contact}/>
                         </Switch>
