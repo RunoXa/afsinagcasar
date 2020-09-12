@@ -89,7 +89,7 @@ export default function FullWidthTabs() {
                     indicatorColor="primary"
                     textColor="primary"
                     variant="scrollable"
-                    scrollButtons="auto"
+                    // scrollButtons="auto"
                     aria-label="scrollable tabs example"
                     classes={{indicator: classes.indicator}}>
                     <Tab label="Köyde Yaşam" {...a11yProps(0)}
@@ -101,6 +101,8 @@ export default function FullWidthTabs() {
                     <Tab label="Manzaralar" {...a11yProps(3)}
                          classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                     <Tab label="Köyde Yangın" {...a11yProps(4)}
+                         classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+                    <Tab label="Düğünler" {...a11yProps(5)}
                          classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                 </Tabs>
             </AppBar>
@@ -122,6 +124,9 @@ export default function FullWidthTabs() {
                 </TabPanel>
                 <TabPanel value={value} index={4} dir={theme.direction}>
                     <h1>Köyde Yangın</h1>
+                </TabPanel>
+                <TabPanel value={value} index={5} dir={theme.direction}>
+                    <h1>Düğünler</h1>
                 </TabPanel>
             </SwipeableViews>
         </div>
