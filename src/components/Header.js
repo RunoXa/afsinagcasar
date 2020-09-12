@@ -7,6 +7,7 @@ import HouseIcon from '../icons/house.svg'
 import ImagesIcon from '../icons/images.svg'
 import MusicPlayerIcon from '../icons/music_player.svg'
 import TreeIcon from '../icons/tree.svg'
+import TextIcon from '../icons/text.svg'
 
 export default class Header extends Component {
 
@@ -29,7 +30,10 @@ export default class Header extends Component {
                                                                                 alt="musicPlayerIcon"/>Radyo</NavLink>
                                 <NavLink exact to="/tree" className="navLink"
                                          activeClassName="main-nav-active"><img src={TreeIcon}
-                                                                                alt="musicPlayerIcon"/>Soyağacı</NavLink>
+                                                                                alt="treeIcon"/>Soyağacı</NavLink>
+                                <NavLink exact to="/text" className="navLink"
+                                         activeClassName="main-nav-active"><img src={TextIcon}
+                                                                                alt="textIcon"/>Yazılar</NavLink>
                                 {/*<NavDropdown title="Dil Seçeneği" className="navDropdown">*/}
                                 {/*    <NavDropdown.Item href="#action/3.1">TR</NavDropdown.Item>*/}
                                 {/*    <NavDropdown.Item href="#action/3.2">EN</NavDropdown.Item>*/}

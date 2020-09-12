@@ -19,14 +19,15 @@ export default class Home extends Component {
                         <div className="container">
                             <h1 className="title">{heading}</h1>
                             <div className="home-text">
-                               <p> <img className="home-image" src={HomeImage} alt="HomeImage"/></p>
+                                <p><img className="home-image" src={HomeImage} alt="HomeImage"/></p>
                                 <p className="subtitle is-4">{subheading1}</p>
                                 <p className="subtitle is-4">{subheading2}</p>
                                 <p className="subtitle is-4">{subheading3}</p>
                                 <p className="subtitle is-4">{subheading4}</p>
                                 <p className="subtitle is-4">{subheading5}</p>
                             </div>
-                            <a type="button" className="btn is-large text-dark bg-secondary" id="learn">Coming Soon..</a>
+                            <a type="button" className="btn is-large text-dark bg-secondary" id="learn">Coming
+                                Soon..</a>
                         </div>
                     </div>
                 </section>
