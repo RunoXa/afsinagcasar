@@ -8,16 +8,22 @@ export default class ImagesTabs extends Component {
 
     render() {
         return (
-            <div>
-                <TabContainer id="left-tabs" defaultActiveKey="first">
+            <div className="main-tabs">
+                <TabContainer className="tab-content" defaultActiveKey="first">
                     <Row>
                         <Col sm={2}>
                             <Nav className="flex-column" variant="pills">
-                                <NavItem>
+                                <NavItem className="tab-item">
                                     <NavLink eventKey="first">Tab 1</NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink eventKey="second">Tab 2</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink eventKey="third">Tab 3</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink eventKey="fourth">Tab 4</NavLink>
                                 </NavItem>
                             </Nav>
                         </Col>

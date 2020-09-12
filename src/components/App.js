@@ -21,7 +21,7 @@ export default class App extends Component {
                             <Route exact path="/" component={Home}/>
                             <Route exact path="/counter" component={Counter}/>
                             <Route exact path="/images" component={ImagesTabs}/>
-                            <Route exact path="/radio" component={Home}/>
+                            <Route exact path="/radio"/>
                             <Route exact path="/contact" component={Contact}/>
                         </Switch>
                     </BrowserRouter>
