@@ -108,19 +108,19 @@ export default function FullWidthTabs() {
                 index={value}
                 onChangeIndex={handleChangeIndex}>
                 <TabPanel value={value} index={0} dir={theme.direction}>
-                    Köyde Yaşam
+                    <h1>Köyde Yaşam</h1>
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
-                    Tatiller
+                    <h1>Tatiller</h1>
                 </TabPanel>
                 <TabPanel value={value} index={2} dir={theme.direction}>
-                    Aramızdan Ayrılanlar
+                    <h1>Aramızdan Ayrılanlar</h1>
                 </TabPanel>
                 <TabPanel value={value} index={3} dir={theme.direction}>
-                    Manzaralar
+                    <h1>Manzaralar</h1>
                 </TabPanel>
                 <TabPanel value={value} index={4} dir={theme.direction}>
-                    Köyde Yangın
+                    <h1>Köyde Yangın</h1>
                 </TabPanel>
             </SwipeableViews>
         </div>
