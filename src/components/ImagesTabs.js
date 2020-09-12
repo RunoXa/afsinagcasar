@@ -86,10 +86,11 @@ export default function FullWidthTabs() {
                 <Tabs
                     value={value}
                     onChange={handleChange}
-                    indicatorColor="secondary"
+                    indicatorColor="primary"
                     textColor="primary"
-                    variant="fullWidth"
-                    aria-label="full width tabs example"
+                    variant="scrollable"
+                    scrollButtons="auto"
+                    aria-label="scrollable tabs example"
                     classes={{indicator: classes.indicator}}>
                     <Tab label="Köyde Yaşam" {...a11yProps(0)}
                          classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>

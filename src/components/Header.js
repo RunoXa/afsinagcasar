@@ -8,6 +8,9 @@ import ImagesIcon from '../icons/images.svg'
 import MusicPlayerIcon from '../icons/music_player.svg'
 import TreeIcon from '../icons/tree.svg'
 import TextIcon from '../icons/text.svg'
+import FacebookIcon from "../icons/facebook.svg";
+import YoutubeIcon from "../icons/youtube.svg";
+import InstagramIcon from "../icons/instagram.svg";
 
 export default class Header extends Component {
 
@@ -39,6 +42,19 @@ export default class Header extends Component {
                                 {/*    <NavDropdown.Item href="#action/3.2">EN</NavDropdown.Item>*/}
                                 {/*    <NavDropdown.Item href="#action/3.3">DE</NavDropdown.Item>*/}
                                 {/*</NavDropdown>*/}
+                                <div className="social-bar">
+                                    <h4>Sosyal Medya</h4>
+                                    <ul className="social-icons list-unstyled">
+                                        <li><a href="https://www.facebook.com/afsin.agcasar" target="_blank"><img src={FacebookIcon}
+                                                                                                                  alt="facebookIcon"/></a>
+                                        </li>
+                                        <li><a href="https://www.youtube.com/channel/UClWom_yPiHPGel4-MacSomQ/featured"
+                                               target="_blank"><img
+                                            src={YoutubeIcon} alt="youtubeIcon"/></a></li>
+                                        <li><a href="https://www.instagram.com" target="_blank"><img
+                                            src={InstagramIcon} alt="youtubeIcon"/></a></li>
+                                    </ul>
+                                </div>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
