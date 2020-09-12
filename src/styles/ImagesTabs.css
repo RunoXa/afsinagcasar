@@ -20,7 +20,8 @@
     text-align: center;
     color: #f0f0f0;
     width: 100%;
- height: 100%;
+    height: 100%;
+    padding: 16px;
 }
 
 .nav-item {
@@ -33,4 +34,5 @@
 .nav-item:hover {
     background-color: darkgrey;
     font-weight: bold;
+    color: #f0f0f0;
 }

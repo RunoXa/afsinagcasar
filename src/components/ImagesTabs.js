@@ -12,17 +12,17 @@ export default class ImagesTabs extends Component {
                 <TabContainer className="tab-content" defaultActiveKey="first">
                     <Row>
                         <Col sm={2}>
-                            <Nav className="flex-column" variant="pills">
+                            <Nav variant="pills">
                                 <NavItem className="tab-item">
                                     <NavLink eventKey="first">Tab 1</NavLink>
                                 </NavItem>
-                                <NavItem>
+                                <NavItem className="tab-item">
                                     <NavLink eventKey="second">Tab 2</NavLink>
                                 </NavItem>
-                                <NavItem>
+                                <NavItem className="tab-item">
                                     <NavLink eventKey="third">Tab 3</NavLink>
                                 </NavItem>
-                                <NavItem>
+                                <NavItem className="tab-item">
                                     <NavLink eventKey="fourth">Tab 4</NavLink>
                                 </NavItem>
                             </Nav>
