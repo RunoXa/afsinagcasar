@@ -32,13 +32,14 @@ const Footer = () => {
                         <h4>Sosyal Medya</h4>
                         <ul className="social-icons list-unstyled">
                             <li><a href="https://www.facebook.com/afsin.agcasar" target="_blank"><img src={FacebookIcon}
+                                                                                                      className="footer-icon"
                                                                                                       alt="facebookIcon"/></a>
                             </li>
                             <li><a href="https://www.youtube.com/channel/UClWom_yPiHPGel4-MacSomQ/featured"
                                    target="_blank"><img
-                                src={YoutubeIcon} alt="youtubeIcon"/></a></li>
+                                src={YoutubeIcon} className="footer-icon" alt="youtubeIcon"/></a></li>
                             <li><a href="https://www.instagram.com" target="_blank"><img
-                                src={InstagramIcon} alt="youtubeIcon"/></a></li>
+                                src={InstagramIcon} className="footer-icon" alt="youtubeIcon"/></a></li>
                         </ul>
                     </div>
                 </div>

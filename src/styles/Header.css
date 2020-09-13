@@ -33,7 +33,6 @@ a:link {
 .navLink:hover {
     text-decoration: none;
     color: #f0f0f0;
-    font-weight: bold;
     background-color: dimgrey;
     border-radius: 5px 5px 5px 5px;
 }
@@ -43,11 +42,11 @@ a:link {
 }
 
 .main-nav-active {
-    border-bottom: 8px solid #d3d3d3;
+    border-bottom: 5px solid #d3d3d3;
     border-radius: 5px 5px 5px 5px;
 }
 
-img {
+.header-icon {
     width: 25px;
     height: 30px;
     margin: 10px;

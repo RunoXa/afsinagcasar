@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import '../styles/Image1.css';
 
-export default class Image1 extends Component {
+export default class Image2 extends Component {
 
     render() {
         return (
