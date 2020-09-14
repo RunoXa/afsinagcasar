@@ -14,13 +14,11 @@ function TabPanel(props) {
     const {children, value, index, ...other} = props;
 
     return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`full-width-tabpanel-${index}`}
-            aria-labelledby={`full-width-tab-${index}`}
-            {...other}
-        >
+        <div role="tabpanel"
+             hidden={value !== index}
+             id={`full-width-tabpanel-${index}`}
+             aria-labelledby={`full-width-tab-${index}`}
+             {...other}>
             {value === index && (
                 <Box p={3}>
                     <Typography>{children}</Typography>
@@ -57,8 +55,8 @@ const useStyles = makeStyles((theme) => ({
         "&:hover": {
             color: '#550A21',
             opacity: 1,
-            fontWeight: "bold",
-            backgroundColor: 'lightgrey',
+            // fontWeight: "bold",
+            backgroundColor: 'rgba(211, 211, 211, 0.5);\n',
         },
         '&.Mui-selected': {
             outline: 'none',

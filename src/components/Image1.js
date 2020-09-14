@@ -18,111 +18,69 @@ const IMAGES =
             thumbnailHeight: 212,
             caption: "37H (gratispgraphy.com)"
         },
-
         {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+            src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
+            thumbnail: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_n.jpg",
             thumbnailWidth: 320,
-            thumbnailHeight: 212
+            thumbnailHeight: 212,
+            caption: "37H (gratispgraphy.com)"
         },
-
         {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+            src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
+            thumbnail: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_n.jpg",
             thumbnailWidth: 320,
-            thumbnailHeight: 212
+            thumbnailHeight: 212,
+            caption: "37H (gratispgraphy.com)"
         },
-
         {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+            src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
+            thumbnail: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_n.jpg",
             thumbnailWidth: 320,
-            thumbnailHeight: 212
+            thumbnailHeight: 212,
+            caption: "37H (gratispgraphy.com)"
         },
-
         {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+            src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
+            thumbnail: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_n.jpg",
             thumbnailWidth: 320,
-            thumbnailHeight: 212
+            thumbnailHeight: 212,
+            caption: "37H (gratispgraphy.com)"
         },
-
         {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+            src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
+            thumbnail: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_n.jpg",
             thumbnailWidth: 320,
-            thumbnailHeight: 212
+            thumbnailHeight: 212,
+            caption: "37H (gratispgraphy.com)"
         },
-
         {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+            src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
+            thumbnail: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_n.jpg",
             thumbnailWidth: 320,
-            thumbnailHeight: 212
+            thumbnailHeight: 212,
+            caption: "37H (gratispgraphy.com)"
         },
-
         {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c3.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+            src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
+            thumbnail: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_n.jpg",
             thumbnailWidth: 320,
-            thumbnailHeight: 212
+            thumbnailHeight: 212,
+            caption: "37H (gratispgraphy.com)"
         },
-
         {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+            src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
+            thumbnail: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_n.jpg",
             thumbnailWidth: 320,
-            thumbnailHeight: 212
+            thumbnailHeight: 212,
+            caption: "37H (gratispgraphy.com)"
         },
-
         {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+            src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
+            thumbnail: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_n.jpg",
             thumbnailWidth: 320,
-            thumbnailHeight: 212
-        },
-
-        {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-            thumbnailWidth: 320,
-            thumbnailHeight: 212
-        },
-
-        {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-            thumbnailWidth: 320,
-            thumbnailHeight: 212
-        },
-
-        {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-            thumbnailWidth: 320,
-            thumbnailHeight: 212
-        },
-
-        {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-            thumbnailWidth: 320,
-            thumbnailHeight: 212
-        },
-
-        {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-            thumbnailWidth: 320,
-            thumbnailHeight: 212
-        },
-
-        {
-            src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-            thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-            thumbnailWidth: 320,
-            thumbnailHeight: 212
-        },
+            thumbnailHeight: 212,
+            caption: "37H (gratispgraphy.com)"
+        }
     ];
 
 export default class Image1 extends Component {

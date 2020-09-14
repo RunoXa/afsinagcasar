@@ -4,18 +4,25 @@ section {
 
 .title {
     text-align: center;
-    color: #550A21;
+    color: #50001B;
     padding-bottom: 15px;
 }
 
 .home-text {
     padding: 10px;
     font-size: medium;
-    color: #550A21;
+    color: #50001B;
 
 }
 
-.home-image{
+.home-image {
     width: 100%;
     height: 100%;
+}
+
+.carousel-indicators li {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 100%;
+    background-color: #50001B !important;
 }

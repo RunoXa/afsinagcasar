@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import '../styles/Home.css';
-import HomeImage from '../images/res_10.jpg'
+import Carousel from 'react-bootstrap/Carousel'
+import Home1Image from '../images/res_10.jpg'
 
 export default class Home extends Component {
 
@@ -19,7 +20,20 @@ export default class Home extends Component {
                         <div className="container">
                             <h1 className="title">{heading}</h1>
                             <div className="home-text">
-                                <p><img className="home-image" src={HomeImage} alt="HomeImage"/></p>
+                                <Carousel>
+                                    <Carousel.Item>
+                                        <img className="home-image" src={Home1Image}
+                                             alt="HomeImage"/>
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img className="home-image" src={Home1Image}
+                                             alt="HomeImage"/>
+                                    </Carousel.Item>
+                                    <Carousel.Item>
+                                        <img className="home-image" src={Home1Image}
+                                             alt="HomeImage"/>
+                                    </Carousel.Item>
+                                </Carousel>
                                 <p className="subtitle is-4">{subheading1}</p>
                                 <p className="subtitle is-4">{subheading2}</p>
                                 <p className="subtitle is-4">{subheading3}</p>

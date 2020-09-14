@@ -14,7 +14,7 @@ export default class App extends Component {
             <div className="page-container">
                 <div className="content-wrap">
                     <BrowserRouter>
-                        <header>
+                        <header className="page-header">
                             <Header/>
                         </header>
                         <Switch>
