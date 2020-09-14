@@ -136,7 +136,7 @@ export default class Image1 extends Component {
                 width: "100%",
                 overflow: "auto",
             }}>
-                <Gallery images={IMAGES} enableImageSelection={true}/>
+                <Gallery images={IMAGES} enableImageSelection={false}/>
             </div>
         )
     }

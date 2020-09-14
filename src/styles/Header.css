@@ -46,7 +46,7 @@ a:link {
     border-radius: 5px 5px 5px 5px;
 }
 
-.header-icon {
+.header-icon, .header-icon:hover {
     width: 25px;
     height: 30px;
     margin: 10px;
