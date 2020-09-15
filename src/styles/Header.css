@@ -38,7 +38,9 @@ a:link {
 }
 
 .bg-dark {
-    background-color: #50001B !important;
+    /*background-color: #50001B !important;*/
+    background: rgb(50,0,0);
+    background: linear-gradient(90deg, rgba(50,0,0,1) 0%, rgba(121,16,9,1) 20%, rgba(121,16,9,1) 80%, rgba(50,0,0,1) 100%);
 }
 
 .main-nav-active {
