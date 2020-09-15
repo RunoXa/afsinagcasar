@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import '../styles/Home.css';
 import Carousel from 'react-bootstrap/Carousel'
-import Home1Image from '../images/res_10.jpg'
+import HomeImage1 from '../images/home-image3.jpg'
 import HomeImage2 from '../images/home-image1.jpg'
 import HomeImage3 from '../images/home-image2.jpg'
 
@@ -19,21 +19,21 @@ export default class Home extends Component {
             <div>
                 <section className="section">
                     <h1 className="home-title">{heading}</h1>
-                    <Carousel>
-                        <Carousel.Item>
-                            <img className="home-image" src={Home1Image}
-                                 alt="HomeImage"/>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img className="home-image" src={HomeImage2}
-                                 alt="HomeImage2"/>
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img className="home-image" src={HomeImage3}
-                                 alt="HomeImage3"/>
-                        </Carousel.Item>
-                    </Carousel>
                     <div className="section-body">
+                        <Carousel>
+                            <Carousel.Item>
+                                <img className="home-image" src={HomeImage1}
+                                     alt="HomeImage2"/>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img className="home-image" src={HomeImage2}
+                                     alt="HomeImage"/>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img className="home-image" src={HomeImage3}
+                                     alt="HomeImage3"/>
+                            </Carousel.Item>
+                        </Carousel>
                         <div className="container">
                             <div className="home-text">
                                 <p className="subtitle is-4">{subheading1}</p>
