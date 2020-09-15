@@ -1,10 +1,6 @@
 import React, {Component} from "react";
 import '../styles/Home.css';
-import Carousel from 'react-bootstrap/Carousel'
-import HomeImage1 from '../images/home-image3.jpg'
-import HomeImage2 from '../images/home-image1.jpg'
-import HomeImage3 from '../images/home-image2.jpg'
-
+import Carousel from './Carousel'
 export default class Home extends Component {
 
     render() {
@@ -16,35 +12,34 @@ export default class Home extends Component {
         let subheading5 = "Bu sayfada yayınlanmasını istediğiniz yazı ve resimleri bize gönderebilirsiniz.";
 
         return (
-            <div>
-                <section className="section">
+            <div className="home-content">
+                <section className="container">
+                    <Carousel/>
+                    {/*<Carousel>*/}
+                    {/*    <Carousel.Item>*/}
+                    {/*        <img className="home-image" src={HomeImage1}*/}
+                    {/*             alt="HomeImage1"/>*/}
+                    {/*    </Carousel.Item>*/}
+                    {/*    <Carousel.Item>*/}
+                    {/*        <img className="home-image" src={HomeImage2}*/}
+                    {/*             alt="HomeImage2"/>*/}
+                    {/*    </Carousel.Item>*/}
+                    {/*    <Carousel.Item>*/}
+                    {/*        <img className="home-image" src={HomeImage3}*/}
+                    {/*             alt="HomeImage3"/>*/}
+                    {/*    </Carousel.Item>*/}
+                    {/*</Carousel>*/}
                     <h1 className="home-title">{heading}</h1>
-                    <div className="section-body">
-                        <Carousel>
-                            <Carousel.Item>
-                                <img className="home-image" src={HomeImage1}
-                                     alt="HomeImage2"/>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img className="home-image" src={HomeImage2}
-                                     alt="HomeImage"/>
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img className="home-image" src={HomeImage3}
-                                     alt="HomeImage3"/>
-                            </Carousel.Item>
-                        </Carousel>
-                        <div className="container">
-                            <div className="home-text">
-                                <p className="subtitle is-4">{subheading1}</p>
-                                <p className="subtitle is-4">{subheading2}</p>
-                                <p className="subtitle is-4">{subheading3}</p>
-                                <p className="subtitle is-4">{subheading4}</p>
-                                <p className="subtitle is-4">{subheading5}</p>
-                            </div>
-                            <a type="button" className="btn is-large text-dark bg-secondary" id="button">Coming
-                                Soon..</a>
+                    <div className="container">
+                        <div className="home-text">
+                            <p className="subtitle is-4">{subheading1}</p>
+                            <p className="subtitle is-4">{subheading2}</p>
+                            <p className="subtitle is-4">{subheading3}</p>
+                            <p className="subtitle is-4">{subheading4}</p>
+                            <p className="subtitle is-4">{subheading5}</p>
                         </div>
+                        <a type="button" className="btn is-large text-dark bg-secondary" id="button">Coming
+                            Soon..</a>
                     </div>
                 </section>
             </div>

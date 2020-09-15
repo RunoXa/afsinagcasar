@@ -1,26 +1,27 @@
 section {
-    margin: 3rem;
+    margin: 1em;
+}
+
+.home-content{
 }
 
 .home-title {
     text-align: center;
     color: #50001B;
-    padding: 15px;
+    padding: 14px;
 }
 
 .home-text {
-    padding: 30px;
+    padding: 15px;
     font-size: medium;
     color: #50001B;
 }
 
 .carousel-inner {
     height: 300px;
+    max-width: 100%;
 }
 
-.home-image {
-    width: 100%;
-}
 
 .carousel-indicators li {
     width: 10px !important;
