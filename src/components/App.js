@@ -17,15 +17,17 @@ export default class App extends Component {
                         <header className="page-header">
                             <Header/>
                         </header>
-                        <Switch>
-                            <Route exact path="/" component={Home}/>
-                            <Route exact path="/counter" component={Counter}/>
-                            <Route exact path="/images" component={ImagesTabs}/>
-                            <Route exact path="/radio"/>
-                            <Route exact path="/tree"/>
-                            <Route exact path="/text"/>
-                            <Route exact path="/contact" component={Contact}/>
-                        </Switch>
+                        <div className="page-content">
+                            <Switch>
+                                <Route exact path="/" component={Home}/>
+                                <Route exact path="/counter" component={Counter}/>
+                                <Route exact path="/images" component={ImagesTabs}/>
+                                <Route exact path="/radio"/>
+                                <Route exact path="/tree"/>
+                                <Route exact path="/text"/>
+                                <Route exact path="/contact" component={Contact}/>
+                            </Switch>
+                        </div>
                     </BrowserRouter>
                 </div>
                 <Footer/>

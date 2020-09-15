@@ -39,3 +39,12 @@
 /*    border-right: 8px solid blue;*/
 /*    color: #f0f0f0;*/
 /*}*/
+
+.MuiTabs-flexContainer{
+    /*position: fixed;*/
+    padding-top: 25px;
+}
+
+button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled){
+    outline: none;
+}

@@ -49,7 +49,6 @@ const useStyles = makeStyles((theme) => ({
     indicator: {
         backgroundColor: '#550A21',
         height: 4
-
     },
     tabRoot: {
         "&:hover": {
