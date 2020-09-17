@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/Header.css';
@@ -10,32 +10,45 @@ import TreeIcon from '../icons/tree.svg'
 import TextIcon from '../icons/text.svg'
 
 export default class Header extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            navExpanded: false
+        };
+    }
+
+    setExpanded = (expanded) => {
+        this.setState({navExpanded: expanded});
+    };
+
+    setNavClose = () => {
+        this.setState({navExpanded: false});
+    };
 
     render() {
+
         return (
             <div>
                 <React.Fragment>
-                    <Navbar className="main-navbar" collapseOnSelect expand="lg" bg="dark" variant="dark">
+                    <Navbar onToggle={this.setExpanded} expanded={this.state.navExpanded} className="main-navbar"
+                            expand="xl" bg="dark"
+                            variant="dark">
                         {/*<Navbar.Brand exact href="/">Ağcaşar Köyü</Navbar.Brand>*/}
                         <a href="/"><h3>Ağcaşar Köyü</h3></a>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                         <Navbar.Collapse id="responsive-navbar-nav">
-                            <Nav className="mr-auto">
-                                <Nav.Link exact to="/" eventKey="1" as={Link}><img src={HouseIcon}
-                                                                                   className="header-icon"
-                                                                                   alt="houseIcon"/>Anasayfa</Nav.Link>
-                                <Nav.Link exact to="/images" eventKey="2" as={Link}><img src={ImagesIcon}
-                                                                                         className="header-icon"
-                                                                                         alt="imagesIcon"/>Resimler</Nav.Link>
-                                <Nav.Link exact to="/tree" eventKey="4" as={Link}><img src={TreeIcon}
-                                                                                       className="header-icon"
-                                                                                       alt="treeIcon"/>Soyağacı</Nav.Link>
-                                <Nav.Link exact to="/radio" eventKey="3" as={Link}><img src={MusicPlayerIcon}
-                                                                                        className="header-icon"
-                                                                                        alt="musicPlayerIcon"/>Radyo</Nav.Link>
-                                <Nav.Link exact to="/text" eventKey="5" as={Link}><img src={TextIcon}
-                                                                                       className="header-icon"
-                                                                                       alt="textIcon"/>Yazılar</Nav.Link>
+                            <Nav className="mr-auto" onClick={this.setNavClose}>
+                                <NavLink exact to="/" className="navLink" activeClassName="navLinkActive"
+                                         eventKey="1"><img src={HouseIcon} className="header-icon" alt="houseIcon"/>Anasayfa</NavLink>
+                                <NavLink exact to="/images" className="navLink" activeClassName="navLinkActive"
+                                         eventKey="2"><img src={ImagesIcon} className="header-icon" alt="imagesIcon"/>Resimler</NavLink>
+                                <NavLink exact to="/tree" className="navLink" activeClassName="navLinkActive"
+                                         eventKey="4"><img src={TreeIcon} className="header-icon" alt="treeIcon"/>Soyağacı</NavLink>
+                                <NavLink exact to="/radio" className="navLink" activeClassName="navLinkActive"
+                                         eventKey="3"><img src={MusicPlayerIcon} className="header-icon" alt="musicPlayerIcon"/>Radyo</NavLink>
+                                <NavLink exact to="/text" className="navLink" activeClassName="navLinkActive"
+                                         eventKey="5"><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazılar</NavLink>
                                 {/*<NavDropdown title="Dil Seçeneği" className="navDropdown">*/}
                                 {/*    <NavDropdown.Item href="#action/3.1">TR</NavDropdown.Item>*/}
                                 {/*    <NavDropdown.Item href="#action/3.2">EN</NavDropdown.Item>*/}

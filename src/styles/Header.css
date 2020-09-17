@@ -15,29 +15,27 @@ a:link {
     text-decoration: none;
 }
 
-
 /*Nav.bar && Buttons*/
-.navbar-dark .navbar-nav .nav-link {
+.navLink {
     color: #f0f0f0;
     text-align: center;
-    /*margin: 0;*/
     font-size: 18px;
-    width: 150px;
+    /*margin: 1px;*/
+    width: 160px;
     height: 60px;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover {
+.navLink:hover {
     text-decoration: none;
-    color: grey;
+    color: #f0f0f0;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 6px 6px 6px 6px;
 }
 
-/*.navbar-dark .navbar-nav .nav-link.active {*/
-/*    border-bottom: 5px solid #d3d3d3;*/
-/*    border-radius: 5px 5px 5px 5px;*/
-/*}*/
-
+.navLinkActive {
+    border-bottom: 5px solid #d3d3d3;
+    border-radius: 5px 5px 5px 5px;
+}
 
 .bg-dark {
     /*background-color: #50001B !important;*/
