@@ -42,6 +42,6 @@ a:hover {
     cursor: pointer;
 }
 
-svg:hover, .footer-icon:hover {
-    filter: sepia(200%) hue-rotate(190deg) saturate(500%);
+.footer-icon:hover {
+    filter: grayscale(100%) sepia(200%) hue-rotate(190deg) saturate(500%);
 }
