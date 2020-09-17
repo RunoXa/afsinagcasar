@@ -3,12 +3,13 @@
     bottom: 0;
     width: 100%;
     padding: 10px;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 .social-bar {
-    right: 25px;
+    right: 15px;
     position: absolute;
+    text-align: center;
 }
 
 .social-icons li {
