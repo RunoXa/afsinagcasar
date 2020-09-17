@@ -1,15 +1,17 @@
 import React, {Component} from "react";
 import '../styles/Image1.css';
 import Gallery from 'react-grid-gallery';
+import SmY1 from '../images/sm_y_1.jpg';
+import Y1 from '../images/y_1.jpg';
 
 const IMAGES =
     [
         {
-            src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-            thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+            src: Y1,
+            thumbnail: Y1,
             thumbnailWidth: 320,
             thumbnailHeight: 212,
-            caption: "After Rain (Jeshu John - designerspics.com)"
+            caption: "Besiret Arslan - Köy"
         },
         {
             src: "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
