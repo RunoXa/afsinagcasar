@@ -1,8 +1,11 @@
 import React from "react";
 import '../styles/Footer.css'
-import FacebookIcon from "../icons/facebook.svg";
-import YoutubeIcon from "../icons/youtube.svg";
-import InstagramIcon from '../icons/instagram.svg';
+import YoutubeIcon from '../icons/youtube.svg'
+import {
+    EmailIcon,
+    TwitterIcon,
+    FacebookIcon
+} from "react-share";
 
 const Footer = () => {
     return (
@@ -31,15 +34,14 @@ const Footer = () => {
                     <div className="social-bar">
                         <h4>Sosyal Medya</h4>
                         <ul className="social-icons list-unstyled">
-                            <li><a href="https://www.facebook.com/afsin.agcasar" target="_blank"><img src={FacebookIcon}
-                                                                                                      className="footer-icon"
-                                                                                                      alt="facebookIcon"/></a>
-                            </li>
+                            <li><a href="https://www.facebook.com/afsin.agcasar" target="_blank"><FacebookIcon size={32} round={true}/></a></li>
+                            <li><a href="/" target="_blank"><TwitterIcon size={31} round={true} fill='red'/></a></li>
+                            <li><a href="/" target="_blank"><EmailIcon size={31} round={true}/></a></li>
                             <li><a href="https://www.youtube.com/channel/UClWom_yPiHPGel4-MacSomQ/featured"
-                                   target="_blank"><img
-                                src={YoutubeIcon} className="footer-icon" alt="youtubeIcon"/></a></li>
-                            <li><a href="https://www.instagram.com" target="_blank"><img
-                                src={InstagramIcon} className="footer-icon" alt="youtubeIcon"/></a></li>
+                                   target="_blank"><img src={YoutubeIcon}
+                                                        className="footer-icon"
+                                                        alt="YoutubeIcon"/></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
