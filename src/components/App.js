@@ -2,11 +2,11 @@ import React, {Component} from "react";
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import '../styles/App.css'
 import Home from './Home';
-import Counter from './Counter';
 import Header from "./Header";
 import Footer from "./Footer";
 import Contact from "./Contact";
 import ImagesTabs from "./ImagesTabs";
+import FamilyTree from "./FamilyTree";
 
 export default class App extends Component {
     render() {
@@ -20,10 +20,9 @@ export default class App extends Component {
                         <div className="page-content">
                             <Switch>
                                 <Route exact path="/" component={Home}/>
-                                <Route exact path="/counter" component={Counter}/>
                                 <Route exact path="/images" component={ImagesTabs}/>
                                 <Route exact path="/radio"/>
-                                <Route exact path="/tree"/>
+                                <Route exact path="/tree" component={FamilyTree}/>
                                 <Route exact path="/text"/>
                                 <Route exact path="/contact" component={Contact}/>
                             </Switch>

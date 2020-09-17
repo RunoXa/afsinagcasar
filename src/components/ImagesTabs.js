@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
             color: '#550A21',
             opacity: 1,
             // fontWeight: "bold",
-            backgroundColor: 'rgba(211, 211, 211, 0.5);\n',
+            backgroundColor: 'rgba(211, 211, 211, 0.5);',
         },
         '&.Mui-selected': {
             outline: 'none',
