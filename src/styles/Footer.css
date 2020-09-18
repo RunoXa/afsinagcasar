@@ -32,6 +32,7 @@ a:hover {
 .footer-icon, .footer-icon:hover {
     width: 31px;
     height: 40px;
+    border: none !important;
 }
 
 .buttonIcon {

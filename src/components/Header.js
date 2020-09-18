@@ -10,55 +10,61 @@ import TreeIcon from '../icons/tree.svg'
 import TextIcon from '../icons/text.svg'
 
 export default class Header extends Component {
-    constructor(props) {
-        super(props);
+   constructor(props) {
+      super(props);
 
-        this.state = {
-            navExpanded: false
-        };
-    }
+      this.state = {
+         navExpanded: false
+      };
+   }
 
-    setExpanded = (expanded) => {
-        this.setState({navExpanded: expanded});
-    };
+   setExpanded = (expanded) => {
+      this.setState({navExpanded: expanded});
+   };
 
-    setNavClose = () => {
-        this.setState({navExpanded: false});
-    };
+   setNavClose = () => {
+      this.setState({navExpanded: false});
+   };
 
-    render() {
+   render() {
 
-        return (
-            <div>
-                <React.Fragment>
-                    <Navbar onToggle={this.setExpanded} expanded={this.state.navExpanded} className="main-navbar"
-                            expand="xl" bg="dark"
-                            variant="dark">
-                        {/*<Navbar.Brand exact href="/">Ağcaşar Köyü</Navbar.Brand>*/}
-                        <a href="/"><h3>Ağcaşar Köyü</h3></a>
-                        <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-                        <Navbar.Collapse id="responsive-navbar-nav">
-                            <Nav className="mr-auto" onClick={this.setNavClose}>
-                                <NavLink exact to="/" className="navLink" activeClassName="navLinkActive"
-                                         eventKey="1"><img src={HouseIcon} className="header-icon" alt="houseIcon"/>Anasayfa</NavLink>
-                                <NavLink exact to="/images" className="navLink" activeClassName="navLinkActive"
-                                         eventKey="2"><img src={ImagesIcon} className="header-icon" alt="imagesIcon"/>Resimler</NavLink>
-                                <NavLink exact to="/tree" className="navLink" activeClassName="navLinkActive"
-                                         eventKey="4"><img src={TreeIcon} className="header-icon" alt="treeIcon"/>Soyağacı</NavLink>
-                                <NavLink exact to="/radio" className="navLink" activeClassName="navLinkActive"
-                                         eventKey="3"><img src={MusicPlayerIcon} className="header-icon" alt="musicPlayerIcon"/>Radyo</NavLink>
-                                <NavLink exact to="/text" className="navLink" activeClassName="navLinkActive"
-                                         eventKey="5"><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazılar</NavLink>
-                                {/*<NavDropdown title="Dil Seçeneği" className="navDropdown">*/}
-                                {/*    <NavDropdown.Item href="#action/3.1">TR</NavDropdown.Item>*/}
-                                {/*    <NavDropdown.Item href="#action/3.2">EN</NavDropdown.Item>*/}
-                                {/*    <NavDropdown.Item href="#action/3.3">DE</NavDropdown.Item>*/}
-                                {/*</NavDropdown>*/}
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Navbar>
-                </React.Fragment>
-            </div>
-        );
-    }
+      return (
+         <div>
+            <React.Fragment>
+               <Navbar onToggle={this.setExpanded} expanded={this.state.navExpanded}
+                       expand="lg" bg="dark"
+                       variant="dark">
+                  {/*<Navbar.Brand exact href="/">Ağcaşar Köyü</Navbar.Brand>*/}
+                  <a href="/"><h3>Ağcaşar Köyü</h3></a>
+                  <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                  <Navbar.Collapse id="responsive-navbar-nav">
+                     <Nav className="mr-auto">
+                        <NavLink exact to="/" className="navLink" activeClassName="navLinkActive"
+                                 eventKey="1" onClick={this.setNavClose}><img src={HouseIcon} className="header-icon"
+                                                                              alt="houseIcon"/>Anasayfa</NavLink>
+                        <NavLink exact to="/images" className="navLink" activeClassName="navLinkActive"
+                                 eventKey="2" onClick={this.setNavClose}><img src={ImagesIcon} className="header-icon"
+                                                                              alt="imagesIcon"/>Resimler</NavLink>
+                        <NavLink exact to="/tree" className="navLink" activeClassName="navLinkActive"
+                                 eventKey="3" onClick={this.setNavClose}><img src={TreeIcon} className="header-icon"
+                                                                              alt="treeIcon"/>Soyağacı</NavLink>
+                        <NavLink exact to="/radio" className="navLink" activeClassName="navLinkActive"
+                                 eventKey="4" onClick={this.setNavClose}><img src={MusicPlayerIcon}
+                                                                              className="header-icon"
+                                                                              alt="musicPlayerIcon"/>Radyo</NavLink>
+                        {/*<NavLink exact to="/text" className="navLink" activeClassName="navLinkActive"*/}
+                        {/*         eventKey="5" onClick={this.setNavClose}><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazılar</NavLink>*/}
+                        <NavDropdown title={<div><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazilar</div>}
+                                     className="" renderMenuOnMount={true}>
+                           <NavDropdown.Item href="/text">Siirler</NavDropdown.Item>
+                           <NavDropdown.Item href="/text">Mektuplar</NavDropdown.Item>
+                           <NavDropdown.Item href="/text">Tarih</NavDropdown.Item>
+                        </NavDropdown>
+                     </Nav>
+                  </Navbar.Collapse>
+               </Navbar>
+            </React.Fragment>
+         </div>
+      );
+   }
 }

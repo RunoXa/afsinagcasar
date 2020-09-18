@@ -18,16 +18,15 @@ a:link {
 /*Nav.bar && Buttons*/
 .navLink {
     color: #f0f0f0;
-    text-align: center;
     font-size: 18px;
-    /*margin: 1px;*/
+    margin: 1px;
     width: 160px;
     height: 60px;
 }
 
 .navLink:hover {
     text-decoration: none;
-    color: #f0f0f0;
+    color: rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 6px 6px 6px 6px;
 }
@@ -49,9 +48,49 @@ a:link {
     margin: 10px;
 }
 
-/*Select Language*/
+/*Dropdown menu*/
 .navDropdown {
     font-size: 20px;
     top: 5px;
     padding: 2px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.dropdown:hover, .dropdown-item:hover {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px 6px 6px 6px;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px 10px 10px 10px;
+}
+
+/*Hintergrundfarbe des geöffneten dropdowns*/
+.navbar-nav .dropdown-menu {
+    /*background: rgb(50, 0, 0);*/
+    background: rgba(121, 16, 9, 1) !important;
+}
+
+/*Dropdown Elemente*/
+.dropdown-item {
+    color: #f0f0f0;
+    padding: 15px;
+}
+
+/*Dropdown Elemente Wenn Aktiv*/
+.dropdown-item.active, .dropdown-item:active {
+    /*border-bottom: 5px solid #d3d3d3;*/
+    /*border-radius: 5px 5px 5px 5px;*/
+    background-color: unset;
+}
+
+.dropdown-toggle::after {
+    display: none;
 }
