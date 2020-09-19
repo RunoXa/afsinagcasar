@@ -11,6 +11,6 @@
     font-size: 50px;
 }
 
-/*svg{*/
-/*    border: 1px solid;*/
-/*}*/
+svg {
+    border: 1px solid grey;
+}
