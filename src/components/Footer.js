@@ -35,16 +35,16 @@ const Footer = () => {
                   <h4>Sosyal Medya</h4>
                   <ul className="social-icons list-unstyled">
                      <li><a href="https://www.facebook.com/afsin.agcasar"
-                            target="_blank"><FacebookIcon size={32}
+                            target="_blank" rel="noopener noreferrer"><FacebookIcon size={32}
                                                           round={true}
                                                           className='footer-icon'/></a>
                      </li>
-                     <li><a href="/" target="_blank"><TwitterIcon size={31} round={true} className='footer-icon'/></a>
+                     <li><a href="https://twitter.com/afsinagcasar" target="_blank" rel="noopener noreferrer"><TwitterIcon size={31} round={true} className='footer-icon'/></a>
                      </li>
-                     <li><a href="/" target="_blank"><EmailIcon size={31} round={true} className='footer-icon'/></a>
+                     <li><a href="/" target="_blank" rel="noopener noreferrer"><EmailIcon size={31} round={true} className='footer-icon'/></a>
                      </li>
                      <li><a href="https://www.youtube.com/channel/UClWom_yPiHPGel4-MacSomQ/featured"
-                            target="_blank"><img src={YoutubeIcon}
+                            target="_blank" rel="noopener noreferrer"><img src={YoutubeIcon}
                                                  className="footer-icon"
                                                  alt="YoutubeIcon"/></a>
                      </li>

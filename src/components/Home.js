@@ -38,7 +38,7 @@ export default class Home extends Component {
                             <p className="subtitle is-4">{subheading4}</p>
                             <p className="subtitle is-4">{subheading5}</p>
                         </div>
-                        <a type="button" className="btn is-large text-dark bg-secondary" id="button">Coming
+                        <a type="button" href="/" className="btn is-large text-dark bg-secondary" id="button">Coming
                             Soon..</a>
                     </div>
                 </section>

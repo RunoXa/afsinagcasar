@@ -25,7 +25,7 @@ a:link {
     height: 60px;
 }
 
-.navbar{
+.navbar {
     padding: 1px;
 }
 
@@ -81,7 +81,7 @@ a:link {
 /*Hintergrundfarbe des geöffneten dropdowns*/
 .navbar-nav .dropdown-menu {
     /*background: rgb(50, 0, 0);*/
-    background: rgba(121, 16, 9, 1) !important;
+    background: rgba(121, 16, 9, 0.7) !important;
 }
 
 /*Dropdown Elemente*/
