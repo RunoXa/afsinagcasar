@@ -97,7 +97,7 @@ export default class FamilyTree extends React.Component {
       const dimensions = this.treeContainer.getBoundingClientRect();
       this.setState({
          translate: {
-            x: dimensions.width / 30,
+            x: dimensions.width / 100,
             y: dimensions.height / 2
          }
       });
