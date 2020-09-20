@@ -9,18 +9,18 @@ import AliRizaText1 from "./AliRizaText1";
 
 const useStyles = makeStyles((theme) => ({
    root: {
-      margin: '15px'
+      margin: '25px'
    },
    heading: {
-      fontSize: theme.typography.pxToRem(15),
-      fontWeight: theme.typography.fontWeightRegular,
+      fontSize: theme.typography.pxToRem(18),
+      fontWeight: theme.typography.fontWeightBold,
       color: '#50001B',
-      fontWeigth: 'bold'
    },
    accordionContent: {
       backgroundColor: '#f5f5f5',
       boxShadow: '6px 6px 6px 6px silver',
-   }
+   },
+
 }));
 
 const AccordionSummary = withStyles({
