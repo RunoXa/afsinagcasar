@@ -9,7 +9,7 @@ import AliRizaText1 from "./AliRizaText1";
 
 const useStyles = makeStyles((theme) => ({
    root: {
-      margin: '20px'
+      margin: '15px'
    },
    heading: {
       fontSize: theme.typography.pxToRem(15),
@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
    },
    accordionContent: {
       backgroundColor: '#f5f5f5',
-      boxShadow: '8px 8px 8px 8px silver'
-}
+      boxShadow: '6px 6px 6px 6px silver',
+   }
 }));
 
 const AccordionSummary = withStyles({
@@ -53,7 +53,8 @@ export default function ControlledAccordions() {
                </Typography>
             </AccordionDetails>
          </Accordion>
-         <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')} className={classes.accordionContent}>
+         <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}
+                    className={classes.accordionContent}>
             <AccordionSummary
                expandIcon={<ExpandMoreIcon/>}
                aria-controls="panel2bh-content"
@@ -67,7 +68,8 @@ export default function ControlledAccordions() {
                </Typography>
             </AccordionDetails>
          </Accordion>
-         <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')} className={classes.accordionContent}>
+         <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}
+                    className={classes.accordionContent}>
             <AccordionSummary
                expandIcon={<ExpandMoreIcon/>}
                aria-controls="panel3bh-content"
@@ -81,12 +83,88 @@ export default function ControlledAccordions() {
                </Typography>
             </AccordionDetails>
          </Accordion>
-         <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')} className={classes.accordionContent}>
+         <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}
+                    className={classes.accordionContent}>
             <AccordionSummary
                expandIcon={<ExpandMoreIcon/>}
                aria-controls="panel4bh-content"
                id="panel4bh-header">
                <Typography className={classes.heading}>Yazi 4</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+               <Typography>
+                  Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
+                  vitae egestas augue. Duis vel est augue.
+               </Typography>
+            </AccordionDetails>
+         </Accordion>
+         <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}
+                    className={classes.accordionContent}>
+            <AccordionSummary
+               expandIcon={<ExpandMoreIcon/>}
+               aria-controls="panel4bh-content"
+               id="panel4bh-header">
+               <Typography className={classes.heading}>Yazi 5</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+               <Typography>
+                  Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
+                  vitae egestas augue. Duis vel est augue.
+               </Typography>
+            </AccordionDetails>
+         </Accordion>
+         <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}
+                    className={classes.accordionContent}>
+            <AccordionSummary
+               expandIcon={<ExpandMoreIcon/>}
+               aria-controls="panel4bh-content"
+               id="panel4bh-header">
+               <Typography className={classes.heading}>Yazi 6</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+               <Typography>
+                  Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
+                  vitae egestas augue. Duis vel est augue.
+               </Typography>
+            </AccordionDetails>
+         </Accordion>
+         <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}
+                    className={classes.accordionContent}>
+            <AccordionSummary
+               expandIcon={<ExpandMoreIcon/>}
+               aria-controls="panel4bh-content"
+               id="panel4bh-header">
+               <Typography className={classes.heading}>Yazi 7</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+               <Typography>
+                  Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
+                  vitae egestas augue. Duis vel est augue.
+               </Typography>
+            </AccordionDetails>
+         </Accordion>
+         <Accordion expanded={expanded === 'panel8'} onChange={handleChange('panel8')}
+                    className={classes.accordionContent}>
+            <AccordionSummary
+               expandIcon={<ExpandMoreIcon/>}
+               aria-controls="panel4bh-content"
+               id="panel4bh-header">
+               <Typography className={classes.heading}>Yazi 8</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+               <Typography>
+                  Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
+                  vitae egestas augue. Duis vel est augue.
+               </Typography>
+            </AccordionDetails>
+         </Accordion>
+         <Accordion expanded={expanded === 'panel9'} onChange={handleChange('panel9')}
+                    className={classes.accordionContent}>
+            <AccordionSummary
+               expandIcon={<ExpandMoreIcon/>}
+               aria-controls="panel4bh-content"
+               id="panel4bh-header">
+               <Typography className={classes.heading}>Yazi 9</Typography>
             </AccordionSummary>
             <AccordionDetails>
                <Typography>
