@@ -12,7 +12,7 @@ section {
 }
 
 .home-text {
-    padding: 15px;
+    /*padding: 15px;*/
     font-size: medium;
     color: #50001B;
 }
@@ -21,7 +21,6 @@ section {
     height: 300px;
     max-width: 100%;
 }
-
 
 .carousel-indicators li {
     width: 10px !important;

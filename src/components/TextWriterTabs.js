@@ -8,7 +8,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import '../styles/ImagesTabs.css';
-import TextWriter from '../components/TextWriter';
+import TextWriter from '../texts/AliRizaArslan/AliRiza';
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
@@ -54,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          color: '#550A21',
          opacity: 1,
-         // fontWeight: "bold",
          backgroundColor: 'rgba(211, 211, 211, 0.5);',
       },
       '&.Mui-selected': {

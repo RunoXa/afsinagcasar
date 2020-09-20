@@ -81,13 +81,13 @@ a:link {
 /*Hintergrundfarbe des geöffneten dropdowns*/
 .navbar-nav .dropdown-menu {
     /*background: rgb(50, 0, 0);*/
-    background: rgba(121, 16, 9, 0.7) !important;
+    background: rgba(121, 16, 9, 0.8) !important;
 }
 
 /*Dropdown Elemente*/
 .dropdown-item {
     color: #f0f0f0;
-    padding: 15px;
+    padding: 18px;
 }
 
 /*Dropdown Elemente Wenn Aktiv*/

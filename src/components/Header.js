@@ -54,8 +54,9 @@ export default class Header extends Component {
                                                                               alt="musicPlayerIcon"/>Radyo</NavLink>
                         {/*<NavLink exact to="/text" className="navLink" activeClassName="navLinkActive"*/}
                         {/*         eventKey="5" onClick={this.setNavClose}><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazılar</NavLink>*/}
-                        <NavDropdown title={<div><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazilar</div>}
-                                     className="" renderMenuOnMount={true}>
+                        <NavDropdown
+                           title={<div><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazilar</div>}
+                           renderMenuOnMount={true}>
                            <NavDropdown.Item href="/textWriterTabs">Site Yazarları</NavDropdown.Item>
                            <NavDropdown.Item href="/text">Mektuplar</NavDropdown.Item>
                            <NavDropdown.Item href="/text">Tarih</NavDropdown.Item>
