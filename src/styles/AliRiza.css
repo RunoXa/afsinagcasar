@@ -9,3 +9,7 @@
 .text-content {
     color: #50001B;
 }
+
+.MuiSvgIcon-root{
+    border: none;
+}

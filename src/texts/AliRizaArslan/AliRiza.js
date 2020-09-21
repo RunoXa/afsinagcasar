@@ -9,7 +9,7 @@ import AliRizaText1 from "./AliRizaText1";
 
 const useStyles = makeStyles((theme) => ({
    root: {
-      margin: '25px'
+      margin: '18px'
    },
    heading: {
       fontSize: theme.typography.pxToRem(18),
@@ -18,14 +18,15 @@ const useStyles = makeStyles((theme) => ({
    },
    accordionContent: {
       backgroundColor: '#f5f5f5',
-      boxShadow: '6px 6px 6px 6px silver',
+      boxShadow: '5px 5px 5px 5px silver',
    },
 
 }));
 
 const AccordionSummary = withStyles({
    content: {
-      flexGrow: 1
+      flexGrow: 1,
+      padding: '20px'
    }
 })(MuiAccordionSummary);
 

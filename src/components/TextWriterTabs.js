@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import '../styles/ImagesTabs.css';
 import AliRizaTabs from '../texts/AliRizaArslan/AliRiza';
-import AliRizaPortre from '../images/alirizaportre.jpg'
+import AliRizaIcon from '../images/alirizaportre.jpg'
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
@@ -90,8 +90,8 @@ export default function FullWidthTabs() {
                // scrollButtons="auto"
                aria-label="scrollable tabs example"
                classes={{indicator: classes.indicator}}>
-               <Tab label="Ali Riza Arslan" {...a11yProps(0)} icon={<img src={AliRizaPortre} style={{
-                  width: "80px", heigth: "80px", float: "left", borderRadius: '30%'
+               <Tab label="Ali Riza Arslan" {...a11yProps(0)} icon={<img src={AliRizaIcon} style={{
+                  width: "60px", heigth: "60px", float: "left", borderRadius: '30%'
                }} alt="AliRizaPortre"/>}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab label="Sengül Arslan" {...a11yProps(1)}
