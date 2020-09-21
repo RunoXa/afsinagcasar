@@ -6,6 +6,7 @@ import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AliRizaText1 from "./AliRizaText1";
+import AliRizaText2 from "./AliRizaText2";
 import '../../styles/AliRiza.css';
 
 const Accordion = withStyles({
@@ -60,8 +61,7 @@ export default function CustomizedAccordions() {
    return (
       <div className="accordion-content">
          <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-            <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" expandIcon={<ExpandMoreIcon/>}
-            >
+            <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" expandIcon={<ExpandMoreIcon/>}>
                <Typography>AĞCAŞAR’DA YAŞADIĞIM BİR OLAY</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -72,13 +72,11 @@ export default function CustomizedAccordions() {
          </Accordion>
          <Accordion square expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
             <AccordionSummary aria-controls="panel2d-content" id="panel2d-header" expandIcon={<ExpandMoreIcon/>}>
-               <Typography>Yazi 2</Typography>
+               <Typography>GARİP BİR ÖZELLEŞTİRME İHALESİ DAHA</Typography>
             </AccordionSummary>
             <AccordionDetails>
                <Typography>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                  sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                  <AliRizaText2/>
                </Typography>
             </AccordionDetails>
          </Accordion>

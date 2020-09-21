@@ -9,7 +9,15 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import '../styles/ImagesTabs.css';
 import AliRizaTabs from '../texts/AliRizaArslan/AliRiza';
-import AliRizaIcon from '../images/alirizaportre.jpg'
+import AliRizaIcon from '../images/textImages/aliriza.jpg'
+import SengulIcon from '../images/textImages/sengul.jpg'
+import GuzelIcon from '../images/textImages/guzel.jpg'
+import HuseyinYesil from '../images/textImages/huseyinyesil.jpg'
+import CemalYesil from '../images/textImages/cemalyesil.jpg'
+import SenemAkgoz from '../images/textImages/senemakgoz.jpg'
+import HuseyinSumbul from '../images/textImages/huseyinsumbul.jpg'
+import BHuseyinYesil from '../images/textImages/bhuseyinyesil.jpg'
+import EkremYesil from '../images/textImages/ekremyesil.jpg'
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
@@ -92,18 +100,31 @@ export default function FullWidthTabs() {
                classes={{indicator: classes.indicator}}>
                <Tab label="Ali Riza Arslan" {...a11yProps(0)} icon={<img src={AliRizaIcon} style={{
                   width: "60px", heigth: "60px", float: "left", borderRadius: '30%'
-               }} alt="AliRizaPortre"/>}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Sengül Arslan" {...a11yProps(1)}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Vedat Arslan" {...a11yProps(2)}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="örnek 1" {...a11yProps(3)}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="örnek 2" {...a11yProps(4)}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="örnek 3" {...a11yProps(5)}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+               }} alt="AliRizaPortre"/>} classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+               <Tab label="Sengül Arslan" {...a11yProps(1)} icon={<img src={SengulIcon} style={{
+                  width: "80px", heigth: "80px", float: "left", borderRadius: '30%'
+               }} alt="SengulIcon"/>} classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+               <Tab label="Güzel Arslan" {...a11yProps(2)} icon={<img src={GuzelIcon} style={{
+                  width: "105px", heigth: "130px", float: "left", borderRadius: '60%'
+               }} alt="GuzelArslan"/>} classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+               <Tab label="Hüseyin Yeşil" {...a11yProps(3)} icon={<img src={HuseyinYesil} style={{
+                  width: "80px", heigth: "80px", float: "left", borderRadius: '60%'
+               }} alt="HuseyinYesilIcon"/>} classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+               <Tab label="Cemal Yeşil" {...a11yProps(4)} icon={<img src={CemalYesil} style={{
+                  width: "45px", heigth: "50px", float: "left", borderRadius: '40%'
+               }} alt="CemalYesilIcon"/>} classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+               <Tab label="Senem Akgöz" {...a11yProps(5)} icon={<img src={SenemAkgoz} style={{
+                  width: "60px", heigth: "60px", float: "left", borderRadius: '30%'
+               }} alt="SenemAkgozIcon"/>} classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+               <Tab label="Hüseyin Sümbül" {...a11yProps(6)} icon={<img src={HuseyinSumbul} style={{
+                  width: "40px", heigth: "50px", float: "left", borderRadius: '30%'
+               }} alt="HuseyinSumbulIcon"/>} classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+               <Tab label="B. Hüseyin Yeşil" {...a11yProps(7)} icon={<img src={BHuseyinYesil} style={{
+                  width: "45px", heigth: "50px", float: "left", borderRadius: '30%'
+               }} alt="BHuseyinYesilIcon"/>} classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+               <Tab label="Ekrem Yeşil" {...a11yProps(8)} icon={<img src={EkremYesil} style={{
+                  width: "60px", heigth: "60px", float: "left", borderRadius: '30%'
+               }} alt="EkremYesilIcon"/>} classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
             </Tabs>
          </AppBar>
          <SwipeableViews
