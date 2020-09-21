@@ -13,3 +13,7 @@
 .MuiSvgIcon-root{
     border: none;
 }
+
+.accordion-content{
+    margin: 18px;
+}

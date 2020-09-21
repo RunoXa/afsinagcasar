@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import '../../styles/AliRiza.css';
 
 export default class AliRizaText1 extends Component {
 
