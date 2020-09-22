@@ -27,7 +27,6 @@ export default class Header extends Component {
    };
 
    render() {
-
       return (
          <div>
             <React.Fragment>
@@ -48,15 +47,13 @@ export default class Header extends Component {
                         <NavLink exact to="/tree" className="navLink" activeClassName="navLinkActive"
                                  eventKey="3" onClick={this.setNavClose}><img src={TreeIcon} className="header-icon"
                                                                               alt="treeIcon"/>Soyağacı</NavLink>
-                        <NavLink exact to="/radio" className="navLink" activeClassName="navLinkActive"
-                                 eventKey="4" onClick={this.setNavClose}><img src={MusicPlayerIcon}
-                                                                              className="header-icon"
-                                                                              alt="musicPlayerIcon"/>Radyo</NavLink>
-                        {/*<NavLink exact to="/text" className="navLink" activeClassName="navLinkActive"*/}
-                        {/*         eventKey="5" onClick={this.setNavClose}><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazılar</NavLink>*/}
+                        {/*<NavLink exact to="/radio" className="navLink" activeClassName="navLinkActive"*/}
+                        {/*         eventKey="4" onClick={this.setNavClose}><img src={MusicPlayerIcon}*/}
+                        {/*                                                      className="header-icon"*/}
+                        {/*                                                      alt="musicPlayerIcon"/>Radyo</NavLink>*/}
                         <NavDropdown
                            title={<div><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazilar</div>}
-                           renderMenuOnMount={true}>
+                           renderMenuOnMount={true} className="dropdown">
                            <NavDropdown.Item href="/textWriterTabs">Site Yazarları</NavDropdown.Item>
                            <NavDropdown.Item href="/text">Mektuplar</NavDropdown.Item>
                            <NavDropdown.Item href="/text">Tarih</NavDropdown.Item>

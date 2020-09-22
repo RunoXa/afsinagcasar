@@ -138,10 +138,10 @@ export default function FullWidthTabs() {
                <h1>Sengül Arslan</h1>
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-               <h1>Vedat Arslan</h1>
+               <h1>Güzel Arslan</h1>
             </TabPanel>
             <TabPanel value={value} index={3} dir={theme.direction}>
-               <h1>Örnek 1</h1>
+               <h1>Hüseyin Yesil</h1>
             </TabPanel>
             <TabPanel value={value} index={4} dir={theme.direction}>
                <h1>Örnek 2</h1>
