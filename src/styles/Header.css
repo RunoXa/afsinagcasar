@@ -19,8 +19,7 @@ a:link {
 .navLink {
     color: #f0f0f0;
     font-size: 18px;
-    /*margin: 1px;*/
-    margin: 4px;
+    /*margin: 5px;*/
     width: 160px;
     height: 60px;
 }
@@ -80,20 +79,17 @@ a:link {
 
 /*Hintergrundfarbe des geöffneten dropdowns*/
 .navbar-nav .dropdown-menu {
-    /*background: rgb(50, 0, 0);*/
     background: rgba(121, 16, 9, 0.8) !important;
 }
 
 /*Dropdown Elemente*/
 .dropdown-item {
     color: #f0f0f0;
-    padding: 18px;
+    padding: 12px;
 }
 
 /*Dropdown Elemente Wenn Aktiv*/
 .dropdown-item.active, .dropdown-item:active {
-    /*border-bottom: 5px solid #d3d3d3;*/
-    /*border-radius: 5px 5px 5px 5px;*/
     background-color: unset;
 }
 

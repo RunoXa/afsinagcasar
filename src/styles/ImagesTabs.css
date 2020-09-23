@@ -1,5 +1,5 @@
 .MuiTabs-flexContainer {
-    padding-top: 10px;
+    padding-top: 4px;
 }
 
 button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
