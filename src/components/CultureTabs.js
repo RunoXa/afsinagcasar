@@ -90,17 +90,15 @@ export default function FullWidthTabs() {
                // scrollButtons="auto"
                aria-label="scrollable tabs example"
                classes={{indicator: classes.indicator}}>
-               <Tab label="Köyde Yaşam" {...a11yProps(0)}
+               <Tab label="Ağcaşarda Kültür" {...a11yProps(0)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Tatiller" {...a11yProps(1)}
+               <Tab label="Yayla Kültürü" {...a11yProps(1)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Aramızdan Ayrılanlar" {...a11yProps(2)}
+               <Tab label="Koç Katımı" {...a11yProps(2)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Manzaralar" {...a11yProps(3)}
+               <Tab label="Ağcaşar" {...a11yProps(3)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Köyde Yangın" {...a11yProps(4)}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Düğünler" {...a11yProps(5)}
+               <Tab label="Yayla Göçü" {...a11yProps(4)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
             </Tabs>
          </AppBar>
@@ -109,22 +107,22 @@ export default function FullWidthTabs() {
             index={value}
             onChangeIndex={handleChangeIndex}>
             <TabPanel value={value} index={0} dir={theme.direction}>
-               <Image1/>
+               {/*<Image1/>*/}<h1>Ağcaşarda Kültür</h1>
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
-               <h1>Tatiller</h1>
+               <h1>Yayla Kültürü</h1>
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-               <h1>Aramızdan Ayrılanlar</h1>
+               <h1>Yayla Kültürü</h1>
             </TabPanel>
             <TabPanel value={value} index={3} dir={theme.direction}>
-               <h1>Manzaralar</h1>
+               <h1>Koç Katımı</h1>
             </TabPanel>
             <TabPanel value={value} index={4} dir={theme.direction}>
-               <h1>Köyde Yangın</h1>
+               <h1>Ağcaşar</h1>
             </TabPanel>
             <TabPanel value={value} index={5} dir={theme.direction}>
-               <h1>Düğünler</h1>
+               <h1>Yayla Göçü</h1>
             </TabPanel>
          </SwipeableViews>
       </div>

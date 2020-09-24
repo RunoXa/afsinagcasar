@@ -8,6 +8,7 @@ import Contact from "./Contact";
 import ImagesTabs from "./ImagesTabs";
 import FamilyTree from "./FamilyTree";
 import TextWriterTabs from "./TextWriterTabs";
+import CultureTabs from "./CultureTabs";
 
 export default class App extends Component {
    render() {
@@ -24,6 +25,7 @@ export default class App extends Component {
                         <Route exact path="/images" component={ImagesTabs}/>
                         <Route exact path="/radio"/>
                         <Route exact path="/tree" component={FamilyTree}/>
+                        <Route exact path="/culture" component={CultureTabs}/>
                         <Route exact path="/textWriterTabs" component={TextWriterTabs}/>
                         <Route exact path="/contact" component={Contact}/>
                      </Switch>
