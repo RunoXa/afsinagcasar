@@ -57,7 +57,7 @@ export default class Header extends Component {
                         {/*                                                      alt="musicPlayerIcon"/>Radyo</NavLink>*/}
                         <NavDropdown
                            title={<div><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazilar</div>}
-                           renderMenuOnMount={true} className="dropdown">
+                           renderMenuOnMount={true} className="navLink">
                            <NavDropdown.Item href="/textWriterTabs">Site Yazarları</NavDropdown.Item>
                            <NavDropdown.Item href="/text">Mektuplar</NavDropdown.Item>
                            <NavDropdown.Item href="/text">Tarih</NavDropdown.Item>

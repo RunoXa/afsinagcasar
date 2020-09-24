@@ -19,7 +19,6 @@ a:link {
 .navLink {
     color: #f0f0f0;
     font-size: 18px;
-    /*margin: 5px;*/
     width: 160px;
     height: 60px;
 }
@@ -98,5 +97,4 @@ a:link {
 }
 
 .dropdown {
-    padding-left: 5px;
 }
