@@ -17,7 +17,7 @@ a:link {
 
 /*Nav.bar && Buttons*/
 .navLink {
-    color: #f0f0f0;
+    color: #c0c0c0;
     font-size: 18px;
     width: 160px;
     height: 60px;
@@ -32,11 +32,13 @@ a:link {
     color: rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 6px 6px 6px 6px;
+    color: #f0f0f0;
 }
 
 .navLinkActive {
     border-bottom: 5px solid #d3d3d3;
     border-radius: 5px 5px 5px 5px;
+    color: #f0f0f0;
 }
 
 .bg-dark {
@@ -59,12 +61,12 @@ a:link {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: white;
+    color: #c0c0c0;
     font-size: 18px;
 }
 
 .dropdown:hover, .dropdown-item:hover {
-    color: rgba(255, 255, 255, 0.5);
+    color: #f0f0f0;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 6px 6px 6px 6px;
 }
@@ -79,17 +81,19 @@ a:link {
 /*Hintergrundfarbe des geöffneten dropdowns*/
 .navbar-nav .dropdown-menu {
     background: rgba(121, 16, 9, 0.8) !important;
+    color: #f0f0f0;
 }
 
 /*Dropdown Elemente*/
 .dropdown-item {
-    color: #f0f0f0;
+    color: #c0c0c0;
     padding: 10px;
 }
 
 /*Dropdown Elemente Wenn Aktiv*/
 .dropdown-item.active, .dropdown-item:active {
     background-color: unset;
+    color: #f0f0f0;
 }
 
 .dropdown-toggle::after {
