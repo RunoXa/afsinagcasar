@@ -45,5 +45,6 @@ a:hover {
 }
 
 .footer-icon:hover {
-    filter: grayscale(100%) sepia(200%) hue-rotate(190deg) saturate(500%);
+    padding-bottom: 8px;
+    opacity: 0.7;
 }
