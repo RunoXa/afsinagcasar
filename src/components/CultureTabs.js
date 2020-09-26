@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import '../styles/ImagesTabs.css';
 import Image1 from "./Image1";
+import Yayla from "./culture/Yayla";
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
@@ -110,7 +111,7 @@ export default function FullWidthTabs() {
                {/*<Image1/>*/}<h1>Ağcaşarda Kültür</h1>
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
-               <h1>Yayla Kültürü</h1>
+               <Yayla/>
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
                <h1>Yayla Kültürü</h1>
