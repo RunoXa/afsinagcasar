@@ -13,21 +13,30 @@ const Footer = () => {
          <div className="container">
             <div className="row">
                {/*Column 1*/}
-               <div className="col-md-2 col-sm-3">
+               <div className="col-md-2 col-sm-2">
                   <h4>İletişim</h4>
                   <ul className="list-unstyled">
-                     <li><a href="/contact">Kontakt</a></li>
-                     <li><a href="/">Events</a></li>
+                     <li><a href="/contact">Biz Kimiz</a></li>
+                     <li><a href="/">İletişim</a></li>
                      <li><a href="/">Impressum</a></li>
                   </ul>
                </div>
                {/*Column 2*/}
-               <div className="col-md-2 col-sm-3">
-                  <h4>Yenilikler</h4>
+               <div className="col-md-3 col-sm-3">
+                  <h4>Yardım / Destek</h4>
                   <ul className="list-unstyled">
-                     <li>Afşin 1</li>
-                     <li>Afşin 2</li>
-                     <li>Afşin 3</li>
+                     <li><a href="/">Destek Talebi oluştur</a></li>
+                     <li><a href="/">Yardım</a></li>
+                     <li><a href="/">Sıkça Sorulan Sorular</a></li>
+                  </ul>
+               </div>
+               {/*Column 3*/}
+               <div className="col-md-4 col-sm-4">
+                  <h4>Haberler ve Duyurular</h4>
+                  <ul className="list-unstyled">
+                     <li><a href="/">Güncelleme Notları</a></li>
+                     <li><a href="/">Yakında</a></li>
+                     <li><a href="/">En Güncel Haberler</a></li>
                   </ul>
                </div>
                {/*Column 3*/}

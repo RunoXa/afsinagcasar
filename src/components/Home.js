@@ -3,15 +3,15 @@ import '../styles/Home.css';
 import Carousel from './Carousel'
 
 export default class Home extends Component {
-   componentDidMount() {
-      const script = document.createElement("script");
-
-      script.id = "radio-de-embedded";
-      script.src = "https://www.radio.de/inc/microsite/js/full.js";
-      script.async = true;
-
-      document.body.appendChild(script);
-   }
+   // componentDidMount() {
+   //    const script = document.createElement("script");
+   //
+   //    script.id = "radio-de-embedded";
+   //    script.src = "https://www.radio.de/inc/microsite/js/full.js";
+   //    script.async = true;
+   //
+   //    document.body.appendChild(script);
+   // }
 
    render() {
       let heading = "AĞCAŞAR'A HOŞ GELDİNİZ";
