@@ -62,7 +62,7 @@ export default function CustomizedAccordions() {
       <div className="accordion-content">
          <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
             <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" expandIcon={<ExpandMoreIcon/>}>
-               <Typography>AĞCAŞAR’DA YAŞADIĞIM BİR OLAY</Typography>
+               <Typography style={{fontWeight: "bold"}}>AĞCAŞAR’DA YAŞADIĞIM BİR OLAY</Typography>
             </AccordionSummary>
             <AccordionDetails>
                <Typography>
