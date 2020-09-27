@@ -6,7 +6,6 @@ import '../styles/Header.css';
 import HouseIcon from '../icons/house.svg'
 import ImagesIcon from '../icons/images.svg'
 import MusicPlayerIcon from '../icons/music_player.svg'
-import TreeIcon from '../icons/tree.svg'
 import CultureIcon from '../icons/culture.svg'
 import DiagramIcon from '../icons/diagram.svg'
 import TextIcon from '../icons/text.svg'
