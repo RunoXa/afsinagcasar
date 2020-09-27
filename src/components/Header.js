@@ -7,6 +7,7 @@ import HouseIcon from '../icons/house.svg'
 import ImagesIcon from '../icons/images.svg'
 import MusicPlayerIcon from '../icons/music_player.svg'
 import TreeIcon from '../icons/tree.svg'
+import CultureIcon from '../icons/culture.svg'
 import DiagramIcon from '../icons/diagram.svg'
 import TextIcon from '../icons/text.svg'
 
@@ -46,7 +47,7 @@ export default class Header extends Component {
                                  eventKey="2" onClick={this.setNavClose}><img src={ImagesIcon} className="header-icon"
                                                                               alt="imagesIcon"/>Resimler</NavLink>
                         <NavLink exact to="/culture" className="navLink" activeClassName="navLinkActive"
-                                 eventKey="3" onClick={this.setNavClose}><img src={TreeIcon} className="header-icon"
+                                 eventKey="3" onClick={this.setNavClose}><img src={CultureIcon} className="header-icon"
                                                                               alt="cultureIcon"/>Kültür</NavLink>
                         <NavLink exact to="/tree" className="navLink" activeClassName="navLinkActive"
                                  eventKey="4" onClick={this.setNavClose}><img src={DiagramIcon} className="header-icon"

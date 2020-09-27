@@ -91,7 +91,7 @@ export default function FullWidthTabs() {
                // scrollButtons="auto"
                aria-label="scrollable tabs example"
                classes={{indicator: classes.indicator}}>
-               <Tab label="Ağcaşarda Kültür" {...a11yProps(0)}
+               <Tab label="Kültür" {...a11yProps(0)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab label="Yayla Kültürü" {...a11yProps(1)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>

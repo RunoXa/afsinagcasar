@@ -35,8 +35,8 @@ const Footer = () => {
                   <h4>Haberler ve Duyurular</h4>
                   <ul className="list-unstyled">
                      <li><a href="/">Güncelleme Notları</a></li>
+                     <li><a href="/">Güncel Haberler</a></li>
                      <li><a href="/">Yakında</a></li>
-                     <li><a href="/">En Güncel Haberler</a></li>
                   </ul>
                </div>
                {/*Column 3*/}
