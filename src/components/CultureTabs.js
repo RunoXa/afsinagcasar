@@ -8,7 +8,11 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import '../styles/ImagesTabs.css';
-import Yayla from "./culture/Yayla";
+import Kultur from "./culture/Kultur";
+import YaylaKulturu from "./culture/YaylaKulturu";
+import YaylaGocu from "./culture/YaylaGocu";
+import KocKatimi from "./culture/KocKatimi";
+import AgcasarGecmisimiz from "./culture/AgcasarGecmisimiz";
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
@@ -96,7 +100,7 @@ export default function FullWidthTabs() {
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab label="Koç Katımı" {...a11yProps(2)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Ağcaşar" {...a11yProps(3)}
+               <Tab label="Ağcaşar Geçmişimiz" {...a11yProps(3)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab label="Yayla Göçü" {...a11yProps(4)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
@@ -107,22 +111,19 @@ export default function FullWidthTabs() {
             index={value}
             onChangeIndex={handleChangeIndex}>
             <TabPanel value={value} index={0} dir={theme.direction}>
-               <h1>Kültür</h1>
+               <Kultur/>
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
-               <Yayla/>
+               <YaylaKulturu/>
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-               <h1>Yayla Kültürü</h1>
+               <KocKatimi/>
             </TabPanel>
             <TabPanel value={value} index={3} dir={theme.direction}>
-               <h1>Koç Katımı</h1>
+               <AgcasarGecmisimiz/>
             </TabPanel>
             <TabPanel value={value} index={4} dir={theme.direction}>
-               <h1>Ağcaşar</h1>
-            </TabPanel>
-            <TabPanel value={value} index={5} dir={theme.direction}>
-               <h1>Yayla Göçü</h1>
+               <YaylaGocu/>
             </TabPanel>
          </SwipeableViews>
       </div>

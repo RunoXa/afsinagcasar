@@ -14,6 +14,6 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
     overflow: unset !important;
 }
 
-.MuiBox-root-15{
-    padding: 5px !important;
-}
+/*.MuiBox-root-15{*/
+/*    padding: 5px !important;*/
+/*}*/

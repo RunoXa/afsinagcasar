@@ -3,7 +3,7 @@ import YaylaImage1 from '../../images/yayla1.jpg';
 import YaylaImage2 from '../../images/yayla2.jpg';
 import YaylaImage3 from '../../images/yayla3.jpg';
 
-export default class Yayla extends Component {
+export default class YaylaKulturu extends Component {
 
    render() {
       return (
@@ -17,7 +17,7 @@ export default class Yayla extends Component {
                <h2 style={{fontWeight: "bold", color: "#50001B"}}>Ağcaşar'da Yaylaya Göç</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p>Eskiden mayıs ayında diğer tüm komşu köylerde olduğu gibi Ağcaşar’da da bir telaş başlardı. Bu telaş
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>E</span>skiden mayıs ayında diğer tüm komşu köylerde olduğu gibi Ağcaşar’da da bir telaş başlardı. Bu telaş
                   ve heyecan kollektif bir yaşamın ve üretimin başlangıcı olan yaylaya göçün telaşıydı. Yaylaya yaklaşık
                   olarak mayıs ayı ortalarında gidilir ve yaz sonunda tekrar köye geri dönülürdü. Bu gidiş ve gelişlerin
                   her birinin ayrı ayrı zevkleri ve zorlukları vardı. Asıl önemlisi bu göçlerin kendine özgü bir kültürü

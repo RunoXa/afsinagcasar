@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import '../styles/Image1.css';
+import '../styles/Images.css';
 import Gallery from 'react-grid-gallery';
 import Image_Y_1 from '../images/koydeyasam/y_1.jpg';
 import Image_Y_2 from '../images/koydeyasam/y_2.jpg';
@@ -175,9 +175,11 @@ export default class KoydeYasam extends Component {
             display: "block",
             minHeight: "1px",
             width: "100%",
-            overflow: "",
+            overflow: "auto",
          }}>
-            <Gallery images={IMAGES} enableImageSelection={false}/>
+            <div className="main-images">
+               <Gallery images={IMAGES} enableImageSelection={false}/>
+            </div>
          </div>
       )
    }
