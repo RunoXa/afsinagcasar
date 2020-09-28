@@ -35,7 +35,7 @@ export default class Header extends Component {
                        expand="lg" bg="dark"
                        variant="dark">
                   {/*<Navbar.Brand exact href="/">Ağcaşar Köyü</Navbar.Brand>*/}
-                  <a href="/"><h3>Ağcaşar Köyü</h3></a>
+                  <a href="/"><h3>AĞCAŞARLILAR</h3></a>
                   <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                   <Navbar.Collapse id="responsive-navbar-nav">
                      <Nav className="mr-auto">

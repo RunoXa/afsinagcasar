@@ -62,7 +62,7 @@ const Footer = () => {
             </div>
             <div className="footer-bottom">
                <p className="copyright-text">
-                  &copy;{new Date().getFullYear()} Afşin Ağcaşar Köyü | All Rights Reserved | Terms of Service |
+                  &copy;{new Date().getFullYear()} Ağcaşarlılar | All Rights Reserved | Terms of Service |
                   Privacy
                </p>
             </div>
