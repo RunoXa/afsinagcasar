@@ -15,26 +15,29 @@ import '../styles/FamilyTree.css';
 const myTreeData1 = [
    {
       name: 'Dede 1',
+      textLayout: {textAnchor: "start", x: 1, y: 30, transform: undefined},
       // _collapsed: true,
-      nodeImageStyle: {imageHeight: 30, imageWidth: 30},
+      nodeImageStyle: {imageHeight: 20, imageWidth: 30},
       nodeSvgShape: {
          shape: 'image',
          shapeProps: {
             r: 15,
+            y: -50,
             fill: 'red',
-            href: "https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png", width: 50, height: 50,
+            href: "https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png", width: 80, height: 80,
          },
       },
       children: [
          {
             name: 'Dede 2',
-            strokeWidth: 3,
+            textLayout: {textAnchor: "start", x: 1, y: 30, transform: undefined},
             nodeSvgShape: {
                shape: 'image',
                shapeProps: {
                   r: 100,
+                  y: -50,
                   fill: 'red',
-                  href: "https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png", width: 50, height: 50,
+                  href: "https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png", width: 80, height: 80,
                },
             },
             children: [
@@ -107,7 +110,7 @@ export default class FamilyTree extends React.Component {
       return (
          <div className="tree-content">
             <h1 className="tree-title">Soyağacı</h1>
-
+            <button>Collapse All</button>
             <div style={containerStyles} ref={tc => (this.treeContainer = tc)}>
                <Tree data={myTreeData1} translate={this.state.translate} orientation='horizontal'/>
             </div>

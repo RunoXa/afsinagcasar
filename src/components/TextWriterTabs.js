@@ -101,7 +101,7 @@ export default function FullWidthTabs() {
                <Tab label="Ali Riza Arslan" {...a11yProps(0)} icon={<img src={AliRizaIcon} style={{
                   width: "60px", heigth: "60px", float: "left", borderRadius: '30%'
                }} alt="AliRizaPortre"/>} classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Sengül Arslan" {...a11yProps(1)} icon={<img src={SengulIcon} style={{
+               <Tab label="Şengül Arslan" {...a11yProps(1)} icon={<img src={SengulIcon} style={{
                   width: "80px", heigth: "80px", float: "left", borderRadius: '30%'
                }} alt="SengulIcon"/>} classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab label="Güzel Arslan" {...a11yProps(2)} icon={<img src={GuzelIcon} style={{
@@ -135,7 +135,7 @@ export default function FullWidthTabs() {
                <AliRizaTabs/>
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
-               <h1>Sengül Arslan</h1>
+               <h1>Şengül Arslan</h1>
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
                <h1>Güzel Arslan</h1>
