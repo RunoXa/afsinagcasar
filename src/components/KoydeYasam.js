@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Gallery from 'react-grid-gallery';
+import '../styles/Images.css';
 import Image_Y_1 from '../images/koydeyasam/y_1.jpg';
 import Image_Y_2 from '../images/koydeyasam/y_2.jpg';
 import Image_Y_3 from '../images/koydeyasam/y_3.jpg';
