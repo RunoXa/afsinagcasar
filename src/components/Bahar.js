@@ -96,7 +96,7 @@ Bahar.defaultProps = {
             thumbnail: Bahar1,
             thumbnailWidth: 320,
             thumbnailHeight: 212,
-            caption: "Büyük Yenge - Köy"
+            caption: ""
          },
          {
             src: Bahar2,

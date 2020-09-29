@@ -89,9 +89,10 @@ const myTreeData1 = [
 
 const containerStyles = {
    width: "85%",
-   height: "100vh",
+   height: "110vh",
    marginLeft: "20px",
-   marginBottom: "20px"
+   marginBottom: "20px",
+   border: "1px solid grey"
 };
 export default class FamilyTree extends React.Component {
    state = {};
