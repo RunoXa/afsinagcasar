@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/Header.css';
 import HouseIcon from '../icons/house.svg'
 import ImagesIcon from '../icons/images.svg'
-import MusicPlayerIcon from '../icons/music_player.svg'
 import CultureIcon from '../icons/culture.svg'
 import DiagramIcon from '../icons/diagram.svg'
 import TextIcon from '../icons/text.svg'
@@ -51,13 +50,9 @@ export default class Header extends Component {
                         <NavLink exact to="/tree" className="navLink" activeClassName="navLinkActive"
                                  eventKey="4" onClick={this.setNavClose}><img src={DiagramIcon} className="header-icon"
                                                                               alt="diagramIcon"/>Soyağacı</NavLink>
-                        {/*<NavLink exact to="/radio" className="navLink" activeClassName="navLinkActive"*/}
-                        {/*         eventKey="4" onClick={this.setNavClose}><img src={MusicPlayerIcon}*/}
-                        {/*                                                      className="header-icon"*/}
-                        {/*                                                      alt="musicPlayerIcon"/>Radyo</NavLink>*/}
                         <NavDropdown
                            title={<div><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazilar</div>}
-                           renderMenuOnMount={true} className="navLink">
+                           renderMenuOnMount={true} className="navLink" id="dropdownId">
                            <NavDropdown.Item href="/textWriterTabs">Site Yazarları</NavDropdown.Item>
                            <NavDropdown.Item href="/text">Mektuplar</NavDropdown.Item>
                            <NavDropdown.Item href="/text">Tarih</NavDropdown.Item>
