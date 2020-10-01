@@ -41,21 +41,21 @@ export default class Header extends Component {
                         <NavLink exact to="/afsinagcasar" className="navLink" activeClassName="navLinkActive"
                                  eventKey="1" onClick={this.setNavClose}><img src={HouseIcon} className="header-icon"
                                                                               alt="houseIcon"/>Anasayfa</NavLink>
-                        <NavLink exact to="/images" className="navLink" activeClassName="navLinkActive"
+                        <NavLink exact to="/afsinagcasar/images" className="navLink" activeClassName="navLinkActive"
                                  eventKey="2" onClick={this.setNavClose}><img src={ImagesIcon} className="header-icon"
                                                                               alt="imagesIcon"/>Resimler</NavLink>
-                        <NavLink exact to="/culture" className="navLink" activeClassName="navLinkActive"
+                        <NavLink exact to="/afsinagcasar/culture" className="navLink" activeClassName="navLinkActive"
                                  eventKey="3" onClick={this.setNavClose}><img src={CultureIcon} className="header-icon"
                                                                               alt="cultureIcon"/>Kültür</NavLink>
-                        <NavLink exact to="/tree" className="navLink" activeClassName="navLinkActive"
+                        <NavLink exact to="/afsinagcasar/tree" className="navLink" activeClassName="navLinkActive"
                                  eventKey="4" onClick={this.setNavClose}><img src={DiagramIcon} className="header-icon"
                                                                               alt="diagramIcon"/>Soyağacı</NavLink>
                         <NavDropdown
                            title={<div><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazilar</div>}
                            renderMenuOnMount={true} className="navLink" id="dropdownId">
-                           <NavDropdown.Item href="/textWriterTabs">Site Yazarları</NavDropdown.Item>
-                           <NavDropdown.Item href="/text">Mektuplar</NavDropdown.Item>
-                           <NavDropdown.Item href="/text">Tarih</NavDropdown.Item>
+                           <NavDropdown.Item href="/afsinagcasar/textWriterTabs">Site Yazarları</NavDropdown.Item>
+                           <NavDropdown.Item href="/afsinagcasar/text">Mektuplar</NavDropdown.Item>
+                           <NavDropdown.Item href="/afsinagcasar/text">Tarih</NavDropdown.Item>
                         </NavDropdown>
                      </Nav>
                   </Navbar.Collapse>

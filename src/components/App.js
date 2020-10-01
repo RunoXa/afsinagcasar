@@ -23,12 +23,12 @@ export default class App extends Component {
                      <Switch>
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/afsinagcasar" component={Home}/>
-                        <Route exact path="/images" component={ImagesTabs}/>
-                        <Route exact path="/radio"/>
-                        <Route exact path="/tree" component={FamilyTree}/>
-                        <Route exact path="/culture" component={CultureTabs}/>
-                        <Route exact path="/textWriterTabs" component={TextWriterTabs}/>
-                        <Route exact path="/contact" component={Contact}/>
+                        <Route exact path="/afsinagcasar/images" component={ImagesTabs}/>
+                        <Route exact path="/afsinagcasar/radio"/>
+                        <Route exact path="/afsinagcasar/tree" component={FamilyTree}/>
+                        <Route exact path="/afsinagcasar/culture" component={CultureTabs}/>
+                        <Route exact path="/afsinagcasar/textWriterTabs" component={TextWriterTabs}/>
+                        <Route exact path="/afsinagcasar/contact" component={Contact}/>
                      </Switch>
                   </div>
                </BrowserRouter>
