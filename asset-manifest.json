@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/afsinagcasar/static/css/main.f523c565.chunk.css",
-    "main.js": "/afsinagcasar/static/js/main.45057ab5.chunk.js",
-    "main.js.map": "/afsinagcasar/static/js/main.45057ab5.chunk.js.map",
-    "runtime-main.js": "/afsinagcasar/static/js/runtime-main.d0a993f4.js",
-    "runtime-main.js.map": "/afsinagcasar/static/js/runtime-main.d0a993f4.js.map",
+    "main.js": "/afsinagcasar/static/js/main.975aae58.chunk.js",
+    "main.js.map": "/afsinagcasar/static/js/main.975aae58.chunk.js.map",
+    "runtime-main.js": "/afsinagcasar/static/js/runtime-main.e9d6afed.js",
+    "runtime-main.js.map": "/afsinagcasar/static/js/runtime-main.e9d6afed.js.map",
     "static/css/2.8aa5a7f8.chunk.css": "/afsinagcasar/static/css/2.8aa5a7f8.chunk.css",
-    "static/js/2.1d22f8b2.chunk.js": "/afsinagcasar/static/js/2.1d22f8b2.chunk.js",
-    "static/js/2.1d22f8b2.chunk.js.map": "/afsinagcasar/static/js/2.1d22f8b2.chunk.js.map",
+    "static/js/2.2674d633.chunk.js": "/afsinagcasar/static/js/2.2674d633.chunk.js",
+    "static/js/2.2674d633.chunk.js.map": "/afsinagcasar/static/js/2.2674d633.chunk.js.map",
     "index.html": "/afsinagcasar/index.html",
-    "precache-manifest.941fa48f89d638af9da0af1c8ec3f5b2.js": "/afsinagcasar/precache-manifest.941fa48f89d638af9da0af1c8ec3f5b2.js",
+    "precache-manifest.0c91499462789f3c4b22cec04fb25560.js": "/afsinagcasar/precache-manifest.0c91499462789f3c4b22cec04fb25560.js",
     "service-worker.js": "/afsinagcasar/service-worker.js",
     "static/css/2.8aa5a7f8.chunk.css.map": "/afsinagcasar/static/css/2.8aa5a7f8.chunk.css.map",
     "static/css/main.f523c565.chunk.css.map": "/afsinagcasar/static/css/main.f523c565.chunk.css.map",
-    "static/js/2.1d22f8b2.chunk.js.LICENSE.txt": "/afsinagcasar/static/js/2.1d22f8b2.chunk.js.LICENSE.txt",
+    "static/js/2.2674d633.chunk.js.LICENSE.txt": "/afsinagcasar/static/js/2.2674d633.chunk.js.LICENSE.txt",
     "static/media/aliriza.jpg": "/afsinagcasar/static/media/aliriza.bca02658.jpg",
     "static/media/bahar1.JPG": "/afsinagcasar/static/media/bahar1.899ff6f0.JPG",
     "static/media/bahar10.JPG": "/afsinagcasar/static/media/bahar10.88131389.JPG",
@@ -83,10 +83,10 @@
     "static/media/youtube.svg": "/afsinagcasar/static/media/youtube.602f3729.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d0a993f4.js",
+    "static/js/runtime-main.e9d6afed.js",
     "static/css/2.8aa5a7f8.chunk.css",
-    "static/js/2.1d22f8b2.chunk.js",
+    "static/js/2.2674d633.chunk.js",
     "static/css/main.f523c565.chunk.css",
-    "static/js/main.45057ab5.chunk.js"
+    "static/js/main.975aae58.chunk.js"
   ]
 }
