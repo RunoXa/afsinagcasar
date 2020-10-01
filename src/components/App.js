@@ -22,6 +22,7 @@ export default class App extends Component {
                   <div className="page-content">
                      <Switch>
                         <Route exact path="/" component={Home}/>
+                        <Route exact path="/afsinagcasar" component={Home}/>
                         <Route exact path="/images" component={ImagesTabs}/>
                         <Route exact path="/radio"/>
                         <Route exact path="/tree" component={FamilyTree}/>

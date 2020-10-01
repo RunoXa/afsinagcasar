@@ -1,6 +1,6 @@
 {
-  "homepage": "http://RunoXa.github.io/afsinagcasar",
-  "name": "my-website",
+  "homepage": "http://runoxa.github.io/afsinagcasar",
+  "name": "afsinagcasar",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +16,7 @@
     "react-d3-tree": "^1.16.1",
     "react-dom": "^16.13.1",
     "react-grid-gallery": "^0.5.5",
-    "react-i18next": "^11.7.2",
+    "react-i18next": "^11.7.3",
     "react-router": "latest",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",

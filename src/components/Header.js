@@ -34,11 +34,11 @@ export default class Header extends Component {
                        expand="lg" bg="dark"
                        variant="dark">
                   {/*<Navbar.Brand exact href="/">Ağcaşar Köyü</Navbar.Brand>*/}
-                  <a href="/"><h3>AĞCAŞARLILAR</h3></a>
+                  <a href="/afsinagcasar"><h3>AĞCAŞARLILAR</h3></a>
                   <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                   <Navbar.Collapse id="responsive-navbar-nav">
                      <Nav className="mr-auto">
-                        <NavLink exact to="/" className="navLink" activeClassName="navLinkActive"
+                        <NavLink exact to="/afsinagcasar" className="navLink" activeClassName="navLinkActive"
                                  eventKey="1" onClick={this.setNavClose}><img src={HouseIcon} className="header-icon"
                                                                               alt="houseIcon"/>Anasayfa</NavLink>
                         <NavLink exact to="/images" className="navLink" activeClassName="navLinkActive"
