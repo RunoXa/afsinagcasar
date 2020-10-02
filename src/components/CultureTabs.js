@@ -82,6 +82,8 @@ export default function FullWidthTabs() {
       setValue(index);
    };
 
+   window.scrollTo(0, 0);
+
    return (
       <div className={classes.root}>
          <AppBar position="static" color="default">
