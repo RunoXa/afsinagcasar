@@ -15,3 +15,11 @@
 .arrow_b9bbag-o_O-arrow__direction__left_shhpn5-o_O-arrow__size__medium_9f7hgo:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+/*Die Einzelnen Bilder*/
+.ReactGridGallery_tile-viewport:hover img {
+}
+
+.ReactGridGallery_tile-viewport:hover {
+    border: 4px solid #550A21;
+}

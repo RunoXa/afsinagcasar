@@ -11,7 +11,6 @@ import '../styles/FamilyTree.css';
 //         y: -10,
 //     }
 // };
-
 const myTreeData1 = [
    {
       name: 'Dede 1',
@@ -105,8 +104,8 @@ export default class FamilyTree extends React.Component {
             y: dimensions.height / 2
          }
       });
+      window.scrollTo(0, 0);
    }
-
    render() {
       return (
          <div className="tree-content">
