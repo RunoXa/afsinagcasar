@@ -12,6 +12,7 @@ export default class Home extends Component {
    //
    //    document.body.appendChild(script);
    // }
+
    componentDidMount() {
       window.scrollTo(0, 0);
    }
@@ -25,41 +26,43 @@ export default class Home extends Component {
       let subheading4 = "Bu sayfada yayınlanmasını istediğiniz yazı ve resimleri bize gönderebilirsiniz.";
 
       return (
-         <div className="home-content">
-            <section className="container">
-               <Carousel/>
-               {/*<Carousel>*/}
-               {/*    <Carousel.Item>*/}
-               {/*        <img className="home-image" src={HomeImage1}*/}
-               {/*             alt="HomeImage1"/>*/}
-               {/*    </Carousel.Item>*/}
-               {/*    <Carousel.Item>*/}
-               {/*        <img className="home-image" src={HomeImage2}*/}
-               {/*             alt="HomeImage2"/>*/}
-               {/*    </Carousel.Item>*/}
-               {/*    <Carousel.Item>*/}
-               {/*        <img className="home-image" src={HomeImage3}*/}
-               {/*             alt="HomeImage3"/>*/}
-               {/*    </Carousel.Item>*/}
-               {/*</Carousel>*/}
-               <h1 className="home-title">{heading}</h1>
-               <h3 className="home-title" style={{fontWeight: "bold"}}>{heading2}</h3>
-               <div className="container">
-                  <div className="home-text">
-                     <p className="subtitle is-4">{subheading1}</p>
-                     <p className="subtitle is-4">{subheading2}</p>
-                     <p className="subtitle is-4">{subheading3}</p>
-                     <p className="subtitle is-4">{subheading4}</p>
+         <div>
+            <div className="home-content">
+               <section className="container">
+                  <Carousel/>
+                  {/*<Carousel>*/}
+                  {/*    <Carousel.Item>*/}
+                  {/*        <img className="home-image" src={HomeImage1}*/}
+                  {/*             alt="HomeImage1"/>*/}
+                  {/*    </Carousel.Item>*/}
+                  {/*    <Carousel.Item>*/}
+                  {/*        <img className="home-image" src={HomeImage2}*/}
+                  {/*             alt="HomeImage2"/>*/}
+                  {/*    </Carousel.Item>*/}
+                  {/*    <Carousel.Item>*/}
+                  {/*        <img className="home-image" src={HomeImage3}*/}
+                  {/*             alt="HomeImage3"/>*/}
+                  {/*    </Carousel.Item>*/}
+                  {/*</Carousel>*/}
+                  <h1 className="home-title">{heading}</h1>
+                  <h3 className="home-title" style={{fontWeight: "bold"}}>{heading2}</h3>
+                  <div className="container">
+                     <div className="home-text">
+                        <p className="subtitle is-4">{subheading1}</p>
+                        <p className="subtitle is-4">{subheading2}</p>
+                        <p className="subtitle is-4">{subheading3}</p>
+                        <p className="subtitle is-4">{subheading4}</p>
+                     </div>
+                     <a type="button" className="btn is-large text-dark bg-secondary" id="button">Coming
+                        Soon..</a>
                   </div>
-                  <a type="button" className="btn is-large text-dark bg-secondary" id="button">Coming
-                     Soon..</a>
-               </div>
-            </section>
-            {/*<div className="ng-app-embedded">*/}
-            {/*   <div ui-view="" className="microsite embedded-radio-player" data-playerwidth="340px"*/}
-            {/*        data-playertype="web_embedded" data-playstation="turku" data-autoplay="true"*/}
-            {/*        data-apikey="df04ff67dd3339a6fc19c9b8be164d5b5245ae93"></div>*/}
-            {/*</div>*/}
+               </section>
+               {/*<div className="ng-app-embedded">*/}
+               {/*   <div ui-view="" className="microsite embedded-radio-player" data-playerwidth="340px"*/}
+               {/*        data-playertype="web_embedded" data-playstation="turku" data-autoplay="true"*/}
+               {/*        data-apikey="df04ff67dd3339a6fc19c9b8be164d5b5245ae93"></div>*/}
+               {/*</div>*/}
+            </div>
          </div>
       )
    }

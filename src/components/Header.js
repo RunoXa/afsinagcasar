@@ -3,12 +3,13 @@ import {NavLink} from "react-router-dom";
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/Header.css';
-import HouseIcon from '../icons/house.svg'
-import ImagesIcon from '../icons/images.svg'
-import CultureIcon from '../icons/culture.svg'
-import DiagramIcon from '../icons/diagram.svg'
-import TextIcon from '../icons/text.svg'
-import ChatIcon from '../icons/chat.svg'
+import HouseIcon from '../icons/house.svg';
+import ImagesIcon from '../icons/images.svg';
+import CultureIcon from '../icons/culture.svg';
+import DiagramIcon from '../icons/diagram.svg';
+import TextIcon from '../icons/text.svg';
+import ChatIcon from '../icons/chat.svg';
+import Base from '../Base';
 
 export default class Header extends Component {
    constructor(props) {
@@ -61,6 +62,8 @@ export default class Header extends Component {
                            <NavDropdown.Item href="/afsinagcasar/text">Mektuplar</NavDropdown.Item>
                            <NavDropdown.Item href="/afsinagcasar/text">Tarih</NavDropdown.Item>
                         </NavDropdown>
+
+                        <button onClick={() => Base.auth().signOut()}>Sign out</button>
                      </Nav>
                   </Navbar.Collapse>
                </Navbar>
