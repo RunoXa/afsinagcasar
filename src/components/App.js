@@ -5,6 +5,7 @@ import Home from './Home';
 import Header from "./Header";
 import Footer from "./Footer";
 import Contact from "./Contact";
+import Chat from "./Chat";
 import ImagesTabs from "./ImagesTabs";
 import FamilyTree from "./FamilyTree";
 import TextWriterTabs from "./TextWriterTabs";
@@ -46,6 +47,7 @@ const DefaultContainer = () => (
          {/*<PrivateRoute exact path="/afsinagcasar/home" component={Home}/>*/}
          <PrivateRoute exact path="/afsinagcasar/images" component={ImagesTabs}/>
          <PrivateRoute exact path="/afsinagcasar/radio"/>
+         <PrivateRoute exact path="/afsinagcasar/chat" component={Chat}/>
          <PrivateRoute exact path="/afsinagcasar/tree" component={FamilyTree}/>
          <PrivateRoute exact path="/afsinagcasar/culture" component={CultureTabs}/>
          <PrivateRoute exact path="/afsinagcasar/textWriterTabs" component={TextWriterTabs}/>

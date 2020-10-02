@@ -56,7 +56,7 @@ export default class Header extends Component {
                                  eventKey="5" onClick={this.setNavClose}><img src={DiagramIcon} className="header-icon"
                                                                               alt="diagramIcon"/>Soyağacı</NavLink>
                         <NavDropdown
-                           title={<div><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazilar</div>}
+                           title={<div><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazılar</div>}
                            renderMenuOnMount={true} className="navLink" id="dropdownId">
                            <NavDropdown.Item href="/afsinagcasar/textWriterTabs">Site Yazarları</NavDropdown.Item>
                            <NavDropdown.Item href="/afsinagcasar/text">Mektuplar</NavDropdown.Item>
