@@ -174,10 +174,10 @@ export default class KoydeYasam extends Component {
          <div className="main-images-1" style={{
             display: "block",
             minHeight: "1px",
-            width: "100%",
-            overflow: "",
+            // width: "100%",
+            // overflow: "auto",
          }}>
-            <Gallery images={IMAGES} enableImageSelection={false}/>
+            <Gallery images={IMAGES} enableImageSelection={false} showLightboxThumbnails={true}/>
          </div>
       )
    }

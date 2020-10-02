@@ -8,6 +8,7 @@ import ImagesIcon from '../icons/images.svg'
 import CultureIcon from '../icons/culture.svg'
 import DiagramIcon from '../icons/diagram.svg'
 import TextIcon from '../icons/text.svg'
+import ChatIcon from '../icons/chat.svg'
 
 export default class Header extends Component {
    constructor(props) {
@@ -47,8 +48,11 @@ export default class Header extends Component {
                         <NavLink exact to="/afsinagcasar/culture" className="navLink" activeClassName="navLinkActive"
                                  eventKey="3" onClick={this.setNavClose}><img src={CultureIcon} className="header-icon"
                                                                               alt="cultureIcon"/>Kültür</NavLink>
+                        <NavLink exact to="/afsinagcasar/chat" className="navLink" activeClassName="navLinkActive"
+                                 eventKey="4" onClick={this.setNavClose}><img src={ChatIcon} className="header-icon"
+                                                                              alt="cultureIcon"/>Sohbet</NavLink>
                         <NavLink exact to="/afsinagcasar/tree" className="navLink" activeClassName="navLinkActive"
-                                 eventKey="4" onClick={this.setNavClose}><img src={DiagramIcon} className="header-icon"
+                                 eventKey="5" onClick={this.setNavClose}><img src={DiagramIcon} className="header-icon"
                                                                               alt="diagramIcon"/>Soyağacı</NavLink>
                         <NavDropdown
                            title={<div><img src={TextIcon} className="header-icon" alt="textIcon"/>Yazilar</div>}

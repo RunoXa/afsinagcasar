@@ -40,7 +40,7 @@ const IMAGES =
          thumbnail: Bahar1,
          thumbnailWidth: 320,
          thumbnailHeight: 212,
-         caption: "Büyük Yenge - Köy"
+         caption: ""
       },
       {
          src: Bahar2,
@@ -255,11 +255,11 @@ export default class Bahar extends Component {
          <div className="main-images-1" style={{
             display: "block",
             minHeight: "1px",
-            width: "100%",
-            overflow: "auto",
+            // width: "100%",
+            // overflow: "auto",
          }}>
             <div className="main-images">
-               <Gallery images={IMAGES} enableImageSelection={false}/>
+               <Gallery images={IMAGES} enableImageSelection={false} showLightboxThumbnails={true}/>
             </div>
          </div>
       )
