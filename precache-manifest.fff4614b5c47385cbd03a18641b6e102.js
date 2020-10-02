@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9a09de86d05cedccb85043a07a3a6dbb",
+    "revision": "d694c37babac3839ee043ed13625bf67",
     "url": "/afsinagcasar/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/afsinagcasar/static/css/2.8aa5a7f8.chunk.css"
   },
   {
-    "revision": "697dd724330302811b3f",
-    "url": "/afsinagcasar/static/css/main.7e7a3863.chunk.css"
+    "revision": "4d6d88f5a07f41014348",
+    "url": "/afsinagcasar/static/css/main.2fe371d8.chunk.css"
   },
   {
     "revision": "5d46eb49ec23aed18c65",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/afsinagcasar/static/js/2.936ec348.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "697dd724330302811b3f",
-    "url": "/afsinagcasar/static/js/main.c08f69bf.chunk.js"
+    "revision": "4d6d88f5a07f41014348",
+    "url": "/afsinagcasar/static/js/main.655e791c.chunk.js"
   },
   {
     "revision": "c0e649d59b2ba02cf436",
