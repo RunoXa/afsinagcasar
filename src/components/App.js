@@ -61,19 +61,21 @@ export default class App extends Component {
    render() {
       return (
          <div className="page-container">
-            <div className="content-wrap">
-               <AuthProvider>
-                  <BrowserRouter>
-                     <div className="page-content">
-                        <Switch>
-                           <Route exact path="/afsinagcasar/login" component={AuthContainer}/>
-                           <Route exact path="/afsinagcasar/signup" component={AuthContainer}/>
-                           <Route component={DefaultContainer}/>
-                        </Switch>
-                     </div>
-                  </BrowserRouter>
-               </AuthProvider>
-            </div>
+            <AuthProvider>
+               <BrowserRouter>
+                  <div>
+                     <Switch>
+                        <Route exact path="/afsinagcasar/login" component={AuthContainer}/>
+                        <Route exact path="/afsinagcasar/signup" component={AuthContainer}/>
+                        <div className="content-wrap">
+                           <div className="page-content">
+                              <Route component={DefaultContainer}/>
+                           </div>
+                        </div>
+                     </Switch>
+                  </div>
+               </BrowserRouter>
+            </AuthProvider>
          </div>
       );
    }
