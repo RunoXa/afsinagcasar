@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/afsinagcasar/static/css/main.c9a5a667.chunk.css",
-    "main.js": "/afsinagcasar/static/js/main.59a9d92a.chunk.js",
-    "main.js.map": "/afsinagcasar/static/js/main.59a9d92a.chunk.js.map",
+    "main.js": "/afsinagcasar/static/js/main.b8453f32.chunk.js",
+    "main.js.map": "/afsinagcasar/static/js/main.b8453f32.chunk.js.map",
     "runtime-main.js": "/afsinagcasar/static/js/runtime-main.d0a993f4.js",
     "runtime-main.js.map": "/afsinagcasar/static/js/runtime-main.d0a993f4.js.map",
     "static/css/2.8aa5a7f8.chunk.css": "/afsinagcasar/static/css/2.8aa5a7f8.chunk.css",
-    "static/js/2.93c2a968.chunk.js": "/afsinagcasar/static/js/2.93c2a968.chunk.js",
-    "static/js/2.93c2a968.chunk.js.map": "/afsinagcasar/static/js/2.93c2a968.chunk.js.map",
+    "static/js/2.f93a9327.chunk.js": "/afsinagcasar/static/js/2.f93a9327.chunk.js",
+    "static/js/2.f93a9327.chunk.js.map": "/afsinagcasar/static/js/2.f93a9327.chunk.js.map",
     "index.html": "/afsinagcasar/index.html",
-    "precache-manifest.f2e11725748455d7910bf492fcee2c10.js": "/afsinagcasar/precache-manifest.f2e11725748455d7910bf492fcee2c10.js",
+    "precache-manifest.04f4a6894db6c2596b70d628097f4bde.js": "/afsinagcasar/precache-manifest.04f4a6894db6c2596b70d628097f4bde.js",
     "service-worker.js": "/afsinagcasar/service-worker.js",
     "static/css/2.8aa5a7f8.chunk.css.map": "/afsinagcasar/static/css/2.8aa5a7f8.chunk.css.map",
     "static/css/main.c9a5a667.chunk.css.map": "/afsinagcasar/static/css/main.c9a5a667.chunk.css.map",
-    "static/js/2.93c2a968.chunk.js.LICENSE.txt": "/afsinagcasar/static/js/2.93c2a968.chunk.js.LICENSE.txt",
+    "static/js/2.f93a9327.chunk.js.LICENSE.txt": "/afsinagcasar/static/js/2.f93a9327.chunk.js.LICENSE.txt",
     "static/media/aliriza.jpg": "/afsinagcasar/static/media/aliriza.bca02658.jpg",
     "static/media/bahar1.JPG": "/afsinagcasar/static/media/bahar1.899ff6f0.JPG",
     "static/media/bahar10.JPG": "/afsinagcasar/static/media/bahar10.88131389.JPG",
@@ -55,6 +55,7 @@
     "static/media/house.svg": "/afsinagcasar/static/media/house.ae2d1d64.svg",
     "static/media/huseyinsumbul.jpg": "/afsinagcasar/static/media/huseyinsumbul.dd9674bc.jpg",
     "static/media/images.svg": "/afsinagcasar/static/media/images.f571911b.svg",
+    "static/media/logout.svg": "/afsinagcasar/static/media/logout.51f0902c.svg",
     "static/media/senemakgoz.jpg": "/afsinagcasar/static/media/senemakgoz.7f2e9f62.jpg",
     "static/media/sengul.jpg": "/afsinagcasar/static/media/sengul.3a30e59f.jpg",
     "static/media/text.svg": "/afsinagcasar/static/media/text.676df565.svg",
@@ -86,8 +87,8 @@
   "entrypoints": [
     "static/js/runtime-main.d0a993f4.js",
     "static/css/2.8aa5a7f8.chunk.css",
-    "static/js/2.93c2a968.chunk.js",
+    "static/js/2.f93a9327.chunk.js",
     "static/css/main.c9a5a667.chunk.css",
-    "static/js/main.59a9d92a.chunk.js"
+    "static/js/main.b8453f32.chunk.js"
   ]
 }
