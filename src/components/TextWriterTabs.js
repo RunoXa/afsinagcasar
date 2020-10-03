@@ -8,7 +8,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import '../styles/ImagesTabs.css';
-import AliRizaTabs from './texts/AliRizaArslan/AliRiza';
+import AliRizaTabs from './texts/AliRiza';
 import AliRizaIcon from '../images/textImages/aliriza.jpg'
 import SengulIcon from '../images/textImages/sengul.jpg'
 import GuzelIcon from '../images/textImages/guzel.jpg'

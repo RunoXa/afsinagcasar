@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AliRizaText1 from "./AliRizaText1";
 import AliRizaText2 from "./AliRizaText2";
-import '../../../styles/AliRiza.css';
+import '../../styles/AliRiza.css';
 
 const Accordion = withStyles({
    root: {
