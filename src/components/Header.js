@@ -9,6 +9,7 @@ import CultureIcon from '../icons/culture.svg';
 import DiagramIcon from '../icons/diagram.svg';
 import TextIcon from '../icons/text.svg';
 import ChatIcon from '../icons/chat.svg';
+import LogoutIcon from '../icons/logout.svg';
 import Base from '../Base';
 
 export default class Header extends Component {
@@ -63,7 +64,8 @@ export default class Header extends Component {
                            <NavDropdown.Item href="/afsinagcasar/text">Tarih</NavDropdown.Item>
                         </NavDropdown>
 
-                        <button onClick={() => Base.auth().signOut()}>Sign out</button>
+                        <NavLink exact to="/afsinagcasar/login" onClick={() => Base.auth().signOut()} className="navLink"><img src={LogoutIcon} className="header-icon"
+                                                                                                             alt="diagramIcon"/></NavLink>
                      </Nav>
                   </Navbar.Collapse>
                </Navbar>
