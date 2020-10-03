@@ -10,7 +10,7 @@ const SignUp = ({history}) => {
          await app
             .auth()
             .createUserWithEmailAndPassword(email.value, password.value);
-         history.push("/afsinagcasar");
+         history.push("/");
       } catch (error) {
          alert(error);
       }

@@ -44,7 +44,7 @@ const DefaultContainer = () => (
       </header>
       <div>
          <PrivateRoute exact path="/" component={Home}/>
-         {/*<PrivateRoute exact path="/afsinagcasar/home" component={Home}/>*/}
+         {/*<PrivateRoute exact path="/home" component={Home}/>*/}
          <PrivateRoute exact path="/images" component={ImagesTabs}/>
          <PrivateRoute exact path="/radio"/>
          <PrivateRoute exact path="/chat" component={Chat}/>

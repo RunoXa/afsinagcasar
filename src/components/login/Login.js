@@ -97,7 +97,7 @@ const Login = ({history}) => {
             await app
                .auth()
                .signInWithEmailAndPassword(email.value, password.value);
-            history.push("/afsinagcasar");
+            history.push("/");
          } catch (error) {
             alert(error);
          }
@@ -109,7 +109,7 @@ const Login = ({history}) => {
    const classes = useStyles();
 
    if (currentUser) {
-      return <Redirect to="/afsinagcasar"/>;
+      return <Redirect to="/"/>;
    }
 
    return (
