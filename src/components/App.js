@@ -67,6 +67,7 @@ export default class App extends Component {
                      <Switch>
                         <Route exact path="/afsinagcasar/login" component={AuthContainer}/>
                         <Route exact path="/afsinagcasar/signup" component={AuthContainer}/>
+                        <Route exact path="/" component={AuthContainer}/>
                         <div className="content-wrap">
                            <div className="page-content">
                               <Route component={DefaultContainer}/>
