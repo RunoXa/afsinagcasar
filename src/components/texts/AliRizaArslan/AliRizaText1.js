@@ -6,7 +6,8 @@ export default class AliRizaText1 extends Component {
       return (
          <div className="text-content">
             <div>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>Y</span>ıllar önce Ağcaşar’da yaşadığım bir olay
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>Y</span>ıllar önce Ağcaşar’da
+                  yaşadığım bir olay
                   vardı. Belki çok önemli
                   değildi ama o yaşta yaşadığım ve bana anlatılanlar çok önemli gelmişti. Öyle ki günümüzde o
                   konuya ilişkin bir şeyler olduğunda ben o yaşta yaşadıklarımı hatırlarım.
