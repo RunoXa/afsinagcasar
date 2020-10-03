@@ -23,7 +23,7 @@ const PrivateRoute = ({component: RouteComponent, ...rest}) => {
             !!currentUser ? (
                <RouteComponent {...routeProps} />
             ) : (
-               <Redirect to={"/afsinagcasar/login"}/>
+               <Redirect to={"/login"}/>
             )
          }
       />
@@ -32,8 +32,8 @@ const PrivateRoute = ({component: RouteComponent, ...rest}) => {
 
 const AuthContainer = () => (
    <div>
-      <Route exact path="/afsinagcasar/login" component={LoginComponent}/>
-      <Route exact path="/afsinagcasar/signup" component={SignUpComponent}/>
+      <Route exact path="/login" component={LoginComponent}/>
+      <Route exact path="/signup" component={SignUpComponent}/>
    </div>
 )
 
@@ -43,15 +43,15 @@ const DefaultContainer = () => (
          <Header/>
       </header>
       <div>
-         <PrivateRoute exact path="/afsinagcasar" component={Home}/>
+         <PrivateRoute exact path="/" component={Home}/>
          {/*<PrivateRoute exact path="/afsinagcasar/home" component={Home}/>*/}
-         <PrivateRoute exact path="/afsinagcasar/images" component={ImagesTabs}/>
-         <PrivateRoute exact path="/afsinagcasar/radio"/>
-         <PrivateRoute exact path="/afsinagcasar/chat" component={Chat}/>
-         <PrivateRoute exact path="/afsinagcasar/tree" component={FamilyTree}/>
-         <PrivateRoute exact path="/afsinagcasar/culture" component={CultureTabs}/>
-         <PrivateRoute exact path="/afsinagcasar/textWriterTabs" component={TextWriterTabs}/>
-         <PrivateRoute exact path="/afsinagcasar/contact" component={Contact}/>
+         <PrivateRoute exact path="/images" component={ImagesTabs}/>
+         <PrivateRoute exact path="/radio"/>
+         <PrivateRoute exact path="/chat" component={Chat}/>
+         <PrivateRoute exact path="/tree" component={FamilyTree}/>
+         <PrivateRoute exact path="/culture" component={CultureTabs}/>
+         <PrivateRoute exact path="/textWriterTabs" component={TextWriterTabs}/>
+         <PrivateRoute exact path="/contact" component={Contact}/>
       </div>
       <Footer/>
    </div>
@@ -65,9 +65,8 @@ export default class App extends Component {
                <BrowserRouter>
                   <div>
                      <Switch>
-                        <Route exact path="/afsinagcasar/login" component={AuthContainer}/>
-                        <Route exact path="/afsinagcasar/signup" component={AuthContainer}/>
-                        <Route exact path="/" component={AuthContainer}/>
+                        <Route exact path="/login" component={AuthContainer}/>
+                        <Route exact path="/signup" component={AuthContainer}/>
                         <div className="content-wrap">
                            <div className="page-content">
                               <Route component={DefaultContainer}/>

@@ -16,7 +16,7 @@ const Footer = () => {
                <div className="col-md-2 col-sm-2">
                   <h4>İletişim</h4>
                   <ul className="list-unstyled">
-                     <li><a href="/afsinagcasar/contact">Biz Kimiz</a></li>
+                     <li><a href="/contact">Biz Kimiz</a></li>
                      <li><a href="/">İletişim</a></li>
                      <li><a href="/">Impressum</a></li>
                   </ul>
