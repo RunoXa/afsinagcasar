@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/afsinagcasar/static/css/main.e01aa113.chunk.css",
-    "main.js": "/afsinagcasar/static/js/main.2362660e.chunk.js",
-    "main.js.map": "/afsinagcasar/static/js/main.2362660e.chunk.js.map",
+    "main.css": "/afsinagcasar/static/css/main.c9a5a667.chunk.css",
+    "main.js": "/afsinagcasar/static/js/main.0f97453e.chunk.js",
+    "main.js.map": "/afsinagcasar/static/js/main.0f97453e.chunk.js.map",
     "runtime-main.js": "/afsinagcasar/static/js/runtime-main.d0a993f4.js",
     "runtime-main.js.map": "/afsinagcasar/static/js/runtime-main.d0a993f4.js.map",
     "static/css/2.8aa5a7f8.chunk.css": "/afsinagcasar/static/css/2.8aa5a7f8.chunk.css",
-    "static/js/2.936ec348.chunk.js": "/afsinagcasar/static/js/2.936ec348.chunk.js",
-    "static/js/2.936ec348.chunk.js.map": "/afsinagcasar/static/js/2.936ec348.chunk.js.map",
+    "static/js/2.93c2a968.chunk.js": "/afsinagcasar/static/js/2.93c2a968.chunk.js",
+    "static/js/2.93c2a968.chunk.js.map": "/afsinagcasar/static/js/2.93c2a968.chunk.js.map",
     "index.html": "/afsinagcasar/index.html",
-    "precache-manifest.98c48a2aaf1a23ce88323880bb808bf2.js": "/afsinagcasar/precache-manifest.98c48a2aaf1a23ce88323880bb808bf2.js",
+    "precache-manifest.b554a29b729fc8495096f9942cef9c50.js": "/afsinagcasar/precache-manifest.b554a29b729fc8495096f9942cef9c50.js",
     "service-worker.js": "/afsinagcasar/service-worker.js",
     "static/css/2.8aa5a7f8.chunk.css.map": "/afsinagcasar/static/css/2.8aa5a7f8.chunk.css.map",
-    "static/css/main.e01aa113.chunk.css.map": "/afsinagcasar/static/css/main.e01aa113.chunk.css.map",
-    "static/js/2.936ec348.chunk.js.LICENSE.txt": "/afsinagcasar/static/js/2.936ec348.chunk.js.LICENSE.txt",
+    "static/css/main.c9a5a667.chunk.css.map": "/afsinagcasar/static/css/main.c9a5a667.chunk.css.map",
+    "static/js/2.93c2a968.chunk.js.LICENSE.txt": "/afsinagcasar/static/js/2.93c2a968.chunk.js.LICENSE.txt",
     "static/media/aliriza.jpg": "/afsinagcasar/static/media/aliriza.bca02658.jpg",
     "static/media/bahar1.JPG": "/afsinagcasar/static/media/bahar1.899ff6f0.JPG",
     "static/media/bahar10.JPG": "/afsinagcasar/static/media/bahar10.88131389.JPG",
@@ -45,6 +45,7 @@
     "static/media/bahar7.JPG": "/afsinagcasar/static/media/bahar7.1f53f32a.JPG",
     "static/media/bahar8.JPG": "/afsinagcasar/static/media/bahar8.97dd2de2.JPG",
     "static/media/bahar9.JPG": "/afsinagcasar/static/media/bahar9.c9deb581.JPG",
+    "static/media/chat.svg": "/afsinagcasar/static/media/chat.325daf3f.svg",
     "static/media/culture.svg": "/afsinagcasar/static/media/culture.668075fb.svg",
     "static/media/diagram.svg": "/afsinagcasar/static/media/diagram.415812b1.svg",
     "static/media/guzel.jpg": "/afsinagcasar/static/media/guzel.b81b1124.jpg",
@@ -85,8 +86,8 @@
   "entrypoints": [
     "static/js/runtime-main.d0a993f4.js",
     "static/css/2.8aa5a7f8.chunk.css",
-    "static/js/2.936ec348.chunk.js",
-    "static/css/main.e01aa113.chunk.css",
-    "static/js/main.2362660e.chunk.js"
+    "static/js/2.93c2a968.chunk.js",
+    "static/css/main.c9a5a667.chunk.css",
+    "static/js/main.0f97453e.chunk.js"
   ]
 }
