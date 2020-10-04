@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
    },
    form: {
       width: '100%', // Fix IE 11 issue.
-      marginTop: theme.spacing(1),
+      marginTop: theme.spacing(3),
    },
    cssLabel: {
       '&$cssFocused': {
@@ -209,7 +209,7 @@ const Login = ({history}) => {
                         </Link>
                      </Grid>
                      <Grid item>
-                        <Link href="#" variant="body2" className={classes.link}>
+                        <Link href="/signup" variant="body2" className={classes.link}>
                            {"Yeni hesap oluştur"}
                         </Link>
                      </Grid>
