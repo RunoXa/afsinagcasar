@@ -12,6 +12,7 @@ import TextWriterTabs from "./TextWriterTabs";
 import CultureTabs from "./CultureTabs";
 import LoginComponent from "./auth/Login";
 import SignUpComponent from "./auth/SignUp";
+import NotFound from "./NotFound";
 import {AuthContext, AuthProvider} from "./Auth";
 
 const PrivateRoute = ({component: RouteComponent, ...rest}) => {
@@ -43,6 +44,7 @@ const DefaultContainer = () => (
          <Header/>
       </header>
       <div>
+         <Switch>
          <PrivateRoute exact path="/" component={Home}/>
          {/*<PrivateRoute exact path="/home" component={Home}/>*/}
          <PrivateRoute exact path="/images" component={ImagesTabs}/>
@@ -52,6 +54,8 @@ const DefaultContainer = () => (
          <PrivateRoute exact path="/culture" component={CultureTabs}/>
          <PrivateRoute exact path="/textWriterTabs" component={TextWriterTabs}/>
          <PrivateRoute exact path="/contact" component={Contact}/>
+         <PrivateRoute exact component={NotFound}/>
+         </Switch>
       </div>
       <Footer/>
    </div>
