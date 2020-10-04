@@ -226,7 +226,7 @@ const SignUp = ({history}) => {
                      </Grid>
                      <Grid item xs={12}>
                         <FormControlLabel
-                           control={<Checkbox value="allowExtraEmails" className={classes.checkbox}/>}
+                           control={<Checkbox value="allowExtraEmails" required className={classes.checkbox}/>}
                            label="Verdiğim bilgilerin doğruluğunu kabul ediyorum"
                         />
                      </Grid>
