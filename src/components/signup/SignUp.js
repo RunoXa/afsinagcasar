@@ -241,7 +241,7 @@ const SignUp = ({history}) => {
                   </Button>
                   <Grid container justify="flex-end">
                      <Grid item>
-                        <Link href="/login" variant="body2">
+                        <Link href="/login" variant="body2" className={classes.link}>
                            Hesabınız var mı? Giriş Yap
                         </Link>
                      </Grid>
