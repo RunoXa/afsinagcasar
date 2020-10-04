@@ -105,6 +105,17 @@ const SignUp = ({history}) => {
          {/*   </label>*/}
          {/*   <button type="submit">Sign Up</button>*/}
          {/*</form>*/}
+         <header className="page-header" style={{
+            height: "60px",
+            background: "linear-gradient(90deg, rgba(50, 0, 0, 1) 0%, rgba(121, 16, 9, 1) 20%, rgba(121, 16, 9, 1) 80%, rgba(50, 0, 0, 1) 100%)"
+         }}>
+            <h4 style={{
+               textAlign: "center",
+               fontWeight: "bold",
+               color: "white",
+               marginTop: "15px"
+            }}>AĞCAŞARA HOŞGELDİNİZ</h4>
+         </header>
          <Container component="main" maxWidth="xs">
             <CssBaseline/>
             <div className={classes.paper}>
@@ -217,7 +228,7 @@ const SignUp = ({history}) => {
                      <Grid item xs={12}>
                         <FormControlLabel
                            control={<Checkbox value="allowExtraEmails" className={classes.checkbox}/>}
-                           label="Verdiğim bilgilerin doğru olduğuna dair kabul ediyorum"
+                           label="Verdiğim bilgilerin doğruluğunu kabul ediyorum"
                         />
                      </Grid>
                   </Grid>
