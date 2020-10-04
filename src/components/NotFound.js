@@ -5,7 +5,6 @@ import '../styles/NotFound.css'
 export default class NotFound extends Component {
 
    render() {
-
       return (
          <div>
             <div>
