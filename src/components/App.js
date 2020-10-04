@@ -10,8 +10,8 @@ import ImagesTabs from "./ImagesTabs";
 import FamilyTree from "./FamilyTree";
 import TextWriterTabs from "./TextWriterTabs";
 import CultureTabs from "./CultureTabs";
-import LoginComponent from "./login/Login";
-import SignUpComponent from "./signup/SignUp";
+import LoginComponent from "./auth/Login";
+import SignUpComponent from "./auth/SignUp";
 import {AuthContext, AuthProvider} from "./Auth";
 
 const PrivateRoute = ({component: RouteComponent, ...rest}) => {

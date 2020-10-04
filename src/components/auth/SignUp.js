@@ -76,35 +76,34 @@ const useStyles = makeStyles((theme) => ({
       color: "#550A21 !important"
    }
 }));
+
 const SignUp = ({history}) => {
    const classes = useStyles();
+   let firebase = require('firebase/app');
+   const firestore = firebase.firestore();
+   require('firebase/auth');
+   require('firebase/database');
+   require('firebase/firestore');
+
    const handleSignUp = useCallback(async event => {
       event.preventDefault();
-      const {email, password} = event.target.elements;
+      const {firstName, lastName, email, password} = event.target.elements;
       try {
-         await app
-            .auth()
-            .createUserWithEmailAndPassword(email.value, password.value);
+         await app.auth().createUserWithEmailAndPassword(email.value, password.value)
+         await firestore.doc(`users/${firebase.auth().currentUser.uid}`).set({
+            firstName: firstName.value,
+            lastName: lastName.value,
+            email: email.value
+         });
          history.push("/");
       } catch (error) {
          alert(error);
+
       }
-   }, [history]);
+   }, [firebase, firestore, history]);
 
    return (
       <div>
-         {/*<h1>Sign up</h1>*/}
-         {/*<form onSubmit={handleSignUp}>*/}
-         {/*   <label>*/}
-         {/*      Email*/}
-         {/*      <input name="email" type="email" placeholder="Email"/>*/}
-         {/*   </label>*/}
-         {/*   <label>*/}
-         {/*      Password*/}
-         {/*      <input name="password" type="password" placeholder="Password"/>*/}
-         {/*   </label>*/}
-         {/*   <button type="submit">Sign Up</button>*/}
-         {/*</form>*/}
          <header className="page-header" style={{
             height: "60px",
             background: "linear-gradient(90deg, rgba(50, 0, 0, 1) 0%, rgba(121, 16, 9, 1) 20%, rgba(121, 16, 9, 1) 80%, rgba(50, 0, 0, 1) 100%)"
