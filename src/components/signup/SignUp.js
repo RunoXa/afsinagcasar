@@ -236,8 +236,7 @@ const SignUp = ({history}) => {
                      type="submit"
                      fullWidth
                      variant="contained"
-                     className={classes.submit}
-                  >
+                     className={classes.submit}>
                      Kayıt Ol
                   </Button>
                   <Grid container justify="flex-end">
