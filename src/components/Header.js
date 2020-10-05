@@ -39,10 +39,10 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
    },
    appBar: {
-      transition: theme.transitions.create(['margin', 'width'], {
-         easing: theme.transitions.easing.sharp,
-         duration: theme.transitions.duration.leavingScreen,
-      }),
+      // transition: theme.transitions.create(['margin', 'width'], {
+      //    easing: theme.transitions.easing.sharp,
+      //    duration: theme.transitions.duration.leavingScreen,
+      // }),
       background: "linear-gradient(90deg, rgba(50, 0, 0, 1) 0%, rgba(121, 16, 9, 1) 20%, rgba(121, 16, 9, 1) 80%, rgba(50, 0, 0, 1) 100%)"
    },
    appBarShift: {
@@ -76,6 +76,7 @@ const useStyles = makeStyles((theme) => ({
       width: drawerWidth,
       flexShrink: 0,
    },
+
    drawerPaper: {
       width: drawerWidth,
       color: "white",
@@ -142,9 +143,7 @@ export default function PersistentDrawerLeft() {
          <React.Fragment>
             <AppBar
                position="static"
-               className={clsx(classes.appBar, {
-                  [classes.appBarShift]: open,
-               })}>
+               className={classes.appBar}>
                <Toolbar>
                   <IconButton
                      color="inherit"
@@ -200,6 +199,9 @@ export default function PersistentDrawerLeft() {
                paper: classes.drawerPaper,
             }}>
             <div className={classes.drawerHeader}>
+               <Typography variant="h5" noWrap>
+                  Ağcaşarlılar
+               </Typography>
                <IconButton onClick={handleDrawerClose}>
                   {theme.direction === 'ltr' ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
                </IconButton>
