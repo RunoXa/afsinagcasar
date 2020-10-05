@@ -23,11 +23,11 @@
 }
 
 a:link {
-    color: #f0f0f0;
+    color: #f0f0f0 !important;
 }
 
 a:hover {
-    color: grey;
+    color: grey !important;
 }
 
 .footer-icon, .footer-icon:hover {
