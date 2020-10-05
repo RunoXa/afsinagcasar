@@ -31,6 +31,8 @@ import PermMediaIcon from '@material-ui/icons/PermMedia';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import ChromeReaderModeRoundedIcon from '@material-ui/icons/ChromeReaderModeRounded';
 import VerticalSplitRoundedIcon from '@material-ui/icons/VerticalSplitRounded';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import Base from '../Base';
 
 const drawerWidth = 240;
 
@@ -137,6 +139,11 @@ export default function PersistentDrawerLeft() {
       setDropDownOpen(!dropDownOpen);
    };
 
+   const handleLogoutAndClose = () => {
+      setAnchorEl(null);
+      Base.auth().signOut();
+   };
+
    return (
       <div className={classes.root}>
          <CssBaseline/>
@@ -181,7 +188,7 @@ export default function PersistentDrawerLeft() {
                         open={openMenu}
                         onClose={handleClose}>
                         <MenuItem onClick={handleClose}>Profile</MenuItem>
-                        <MenuItem onClick={handleClose}>My account</MenuItem>
+                        <MenuItem exact to="/login" onClick={handleLogoutAndClose}><ExitToAppIcon/>Çıkış Yap</MenuItem>
                      </Menu>
                   </div>
                </Toolbar>
