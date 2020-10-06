@@ -16,7 +16,8 @@
 }
 
 .linkToHomepage:hover {
-    color: red;
+    color: red !important;
+    text-decoration-line: none;
 }
 
 .notFoundImage {

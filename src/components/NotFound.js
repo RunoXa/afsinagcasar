@@ -14,7 +14,7 @@ export default class NotFound extends Component {
                      <div className="notFoundText">
                         <img src={NotFoundImage} alt="NotFoundImage" className="notFoundImage"/>
                         <p><h4 className="notFoundTitle">ANASAYFAYA
-                           <a href="/" className="linkToHomepage">GERİ DÖN</a>
+                           <a href="/" className="linkToHomepage"> GERİ DÖN</a>
                         </h4></p>
                      </div>
                   </div>
