@@ -7,6 +7,12 @@
     margin-top: 15px;
 }
 
+.bg-red {
+    /*background-color: #50001B !important;*/
+    background: rgb(50, 0, 0);
+    background: linear-gradient(90deg, rgba(73, 4, 4, 1) 0%, rgba(120, 2, 2, 1) 45%, rgba(120, 2, 2, 1) 55%, rgba(73, 4, 4, 1) 100%);
+}
+
 .social-bar {
     right: 15px;
     position: absolute;
@@ -22,9 +28,9 @@
     text-align: center;
 }
 
-a:link {
-    color: #f0f0f0 !important;
-}
+/*a:link {*/
+/*    color: #f0f0f0 !important;*/
+/*}*/
 
 a:hover {
     color: grey !important;

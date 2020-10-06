@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
       //    easing: theme.transitions.easing.sharp,
       //    duration: theme.transitions.duration.leavingScreen,
       // }),
-      background: "linear-gradient(90deg, rgba(50, 0, 0, 1) 0%, rgba(121, 16, 9, 1) 20%, rgba(121, 16, 9, 1) 80%, rgba(50, 0, 0, 1) 100%)"
+      background: "linear-gradient(90deg, rgba(73, 4, 4, 1) 0%, rgba(120, 2, 2, 1) 45%, rgba(120, 2, 2, 1) 55%, rgba(73, 4, 4, 1) 100%)"
    },
    appBarShift: {
       width: `calc(100% - ${drawerWidth}px)`,
@@ -59,6 +59,28 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(2),
       "&:hover": {
          opacity: 1,
+         color: "white !important",
+         backgroundColor: 'rgba(211, 211, 211, 0.3)',
+      },
+   },
+   menuButtonRight: {
+      "&:hover": {
+         opacity: 1,
+         color: "white !important",
+         backgroundColor: 'rgba(211, 211, 211, 0.3)',
+      },
+   },
+   headerCloseButton: {
+      marginLeft: theme.spacing(2),
+      "&:hover": {
+         opacity: 1,
+         backgroundColor: 'rgba(211, 211, 211, 0.3)',
+      },
+   },
+   listItem: {
+      "&:hover": {
+         opacity: 1,
+         color: "white !important",
          backgroundColor: 'rgba(211, 211, 211, 0.3)',
       },
    },
@@ -67,6 +89,11 @@ const useStyles = makeStyles((theme) => ({
    },
    nested: {
       paddingLeft: theme.spacing(4),
+      "&:hover": {
+         opacity: 1,
+         color: "white !important",
+         backgroundColor: 'rgba(211, 211, 211, 0.3)',
+      },
    },
    headerElements: {
       marginLeft: "auto"
@@ -82,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
    drawerPaper: {
       width: drawerWidth,
       color: "white",
-      background: "linear-gradient(90deg, rgba(50, 0, 0, 1) 0%, rgba(121, 16, 9, 1) 20%, rgba(121, 16, 9, 1) 80%, rgba(50, 0, 0, 1) 100%)"
+      background: "linear-gradient(90deg, rgba(73, 4, 4, 1) 0%, rgba(120, 2, 2, 1) 45%, rgba(120, 2, 2, 1) 55%, rgba(73, 4, 4, 1) 100%)"
    },
    drawerHeader: {
       display: 'flex',
@@ -164,13 +191,15 @@ export default function PersistentDrawerLeft() {
                      Ağcaşarlılar
                   </Typography>
                   <div className={classes.headerElements}>
-                     <IconButton button exact to="/" component={Link} color="inherit"><HomeRoundedIcon/></IconButton>
+                     <IconButton button exact to="/" component={Link} color="inherit"
+                                 className={classes.menuButtonRight}><HomeRoundedIcon/></IconButton>
                      <IconButton
                         aria-label="account of current user"
                         aria-controls="menu-appbar"
                         aria-haspopup="true"
                         onClick={handleMenu}
-                        color="inherit">
+                        color="inherit"
+                        className={classes.menuButtonRight}>
                         <AccountCircle/>
                      </IconButton>
                      <Menu
@@ -209,32 +238,36 @@ export default function PersistentDrawerLeft() {
                <Typography variant="h5" noWrap>
                   Ağcaşarlılar
                </Typography>
-               <IconButton onClick={handleDrawerClose}>
+               <IconButton onClick={handleDrawerClose} color="inherit" className={classes.headerCloseButton}>
                   {theme.direction === 'ltr' ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
                </IconButton>
             </div>
             <Divider/>
             <List>
-               <ListItem button exact to="/" component={Link} onClick={handleDrawerClose}>
+               <ListItem button exact to="/" component={Link} onClick={handleDrawerClose} className={classes.listItem}>
                   <ListItemIcon><HomeRoundedIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Anasayfa</ListItemText>
                </ListItem>
-               <ListItem button exact to="/images" component={Link} onClick={handleDrawerClose}>
+               <ListItem button exact to="/images" component={Link} onClick={handleDrawerClose}
+                         className={classes.listItem}>
                   <ListItemIcon><PermMediaIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Resimler</ListItemText>
                </ListItem>
-               <ListItem button exact to="/culture" component={Link} onClick={handleDrawerClose}>
+               <ListItem button exact to="/culture" component={Link} onClick={handleDrawerClose}
+                         className={classes.listItem}>
                   <ListItemText>Kültür</ListItemText>
                </ListItem>
-               <ListItem button exact to="/chat" component={Link} onClick={handleDrawerClose}>
+               <ListItem button exact to="/chat" component={Link} onClick={handleDrawerClose}
+                         className={classes.listItem}>
                   <ListItemIcon><ChatIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Sohbet</ListItemText>
                </ListItem>
-               <ListItem button exact to="/tree" component={Link} onClick={handleDrawerClose}>
+               <ListItem button exact to="/tree" component={Link} onClick={handleDrawerClose}
+                         className={classes.listItem}>
                   <ListItemIcon><AccountTreeIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Soyağacı</ListItemText>
                </ListItem>
-               <ListItem button onClick={handleClick}>
+               <ListItem button onClick={handleClick} className={classes.listItem}>
                   <ListItemIcon><ChromeReaderModeRoundedIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Yazılar</ListItemText>
                   {dropDownOpen ? <ExpandLess/> : <ExpandMore/>}

@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
       },
    },
    link: {
-      color: "#550A21 !important"
+      color: "#550A21"
    },
    checkbox: {
       color: "#550A21 !important"
