@@ -6,7 +6,6 @@ import clsx from 'clsx';
 import {Link} from 'react-router-dom';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import SvgIcon from '@material-ui/core/SvgIcon';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -34,6 +33,7 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import CultureIcon from '@material-ui/icons/AccountBalance';
 import VerticalSplitRoundedIcon from '@material-ui/icons/VerticalSplitRounded';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import PeopleIcon from '@material-ui/icons/People';
 import Base from '../Base';
 
 const drawerWidth = 240;
@@ -164,9 +164,14 @@ export default function PersistentDrawerLeft() {
       setAnchorEl(null);
    };
 
-   const handleClick = () => {
+   const handleDropDownClick = () => {
       setDropDownOpen(!dropDownOpen);
    };
+
+   const handleDropdownItemClick = () => {
+      setOpen(false);
+      setDropDownOpen(true);
+   }
 
    const handleLogoutAndClose = () => {
       setAnchorEl(null);
@@ -194,7 +199,7 @@ export default function PersistentDrawerLeft() {
                   </Typography>
                   <div className={classes.headerElements}>
                      <IconButton button exact to="/" component={Link} color="inherit"
-                                 className={classes.menuButtonRight}><HomeRoundedIcon/></IconButton>
+                                 className={classes.menuButtonRight}><HomeRoundedIcon fontSize="large"/></IconButton>
                      <IconButton
                         aria-label="account of current user"
                         aria-controls="menu-appbar"
@@ -202,7 +207,7 @@ export default function PersistentDrawerLeft() {
                         onClick={handleMenu}
                         color="inherit"
                         className={classes.menuButtonRight}>
-                        <AccountCircle/>
+                        <AccountCircle fontSize="large"/>
                      </IconButton>
                      <Menu
                         id="menu-appbar"
@@ -252,7 +257,7 @@ export default function PersistentDrawerLeft() {
                </ListItem>
                <ListItem button exact to="/images" component={Link} onClick={handleDrawerClose}
                          className={classes.listItem}>
-                  <ListItemIcon><PermMediaIcon style={{color: "white"}}/></ListItemIcon>
+                  <ListItemIcon><PermMediaIcon style={{color: "white"}} large/></ListItemIcon>
                   <ListItemText>Resimler</ListItemText>
                </ListItem>
                <ListItem button exact to="/culture" component={Link} onClick={handleDrawerClose}
@@ -272,7 +277,7 @@ export default function PersistentDrawerLeft() {
                   <ListItemIcon><AccountTreeIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Soyağacı</ListItemText>
                </ListItem>
-               <ListItem button onClick={handleClick} className={classes.listItem}>
+               <ListItem button onClick={handleDropDownClick} className={classes.listItem}>
                   <ListItemIcon><MenuBookIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Yazılar</ListItemText>
                   {dropDownOpen ? <ExpandLess/> : <ExpandMore/>}
@@ -280,15 +285,15 @@ export default function PersistentDrawerLeft() {
                <Collapse in={dropDownOpen} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
                      <ListItem button exact to="/textWriterTabs" className={classes.nested} component={Link}
-                               onClick={handleDrawerClose}>
-                        <ListItemIcon><VerticalSplitRoundedIcon style={{color: "white"}}/></ListItemIcon>
+                               onClick={handleDropdownItemClick}>
+                        <ListItemIcon><PeopleIcon style={{color: "white"}}/></ListItemIcon>
                         <ListItemText>Site Yazarları</ListItemText>
                      </ListItem>
-                     <ListItem button className={classes.nested} component={Link} onClick={handleDrawerClose}>
+                     <ListItem button className={classes.nested} component={Link} onClick={handleDropdownItemClick}>
                         <ListItemIcon><VerticalSplitRoundedIcon style={{color: "white"}}/></ListItemIcon>
                         <ListItemText>Tarih</ListItemText>
                      </ListItem>
-                     <ListItem button className={classes.nested} component={Link} onClick={handleDrawerClose}>
+                     <ListItem button className={classes.nested} component={Link} onClick={handleDropdownItemClick}>
                         <ListItemIcon><VerticalSplitRoundedIcon style={{color: "white"}}/></ListItemIcon>
                         <ListItemText>Mektuplar</ListItemText>
                      </ListItem>
