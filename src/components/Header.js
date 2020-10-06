@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import {Link} from 'react-router-dom';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
+import SvgIcon from '@material-ui/core/SvgIcon';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -29,7 +30,8 @@ import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import ChatIcon from '@material-ui/icons/Chat';
 import PermMediaIcon from '@material-ui/icons/PermMedia';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
-import ChromeReaderModeRoundedIcon from '@material-ui/icons/ChromeReaderModeRounded';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import CultureIcon from '@material-ui/icons/AccountBalance';
 import VerticalSplitRoundedIcon from '@material-ui/icons/VerticalSplitRounded';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Base from '../Base';
@@ -41,10 +43,10 @@ const useStyles = makeStyles((theme) => ({
       flexGrow: 1,
    },
    appBar: {
-      // transition: theme.transitions.create(['margin', 'width'], {
-      //    easing: theme.transitions.easing.sharp,
-      //    duration: theme.transitions.duration.leavingScreen,
-      // }),
+      transition: theme.transitions.create(['margin', 'width'], {
+         easing: theme.transitions.easing.sharp,
+         duration: theme.transitions.duration.leavingScreen,
+      }),
       background: "linear-gradient(90deg, rgba(73, 4, 4, 1) 0%, rgba(120, 2, 2, 1) 45%, rgba(120, 2, 2, 1) 55%, rgba(73, 4, 4, 1) 100%)"
    },
    appBarShift: {
@@ -255,6 +257,9 @@ export default function PersistentDrawerLeft() {
                </ListItem>
                <ListItem button exact to="/culture" component={Link} onClick={handleDrawerClose}
                          className={classes.listItem}>
+                  <ListItemIcon>
+                     <ListItemIcon><CultureIcon style={{color: "white"}}/></ListItemIcon>
+                  </ListItemIcon>
                   <ListItemText>Kültür</ListItemText>
                </ListItem>
                <ListItem button exact to="/chat" component={Link} onClick={handleDrawerClose}
@@ -268,7 +273,7 @@ export default function PersistentDrawerLeft() {
                   <ListItemText>Soyağacı</ListItemText>
                </ListItem>
                <ListItem button onClick={handleClick} className={classes.listItem}>
-                  <ListItemIcon><ChromeReaderModeRoundedIcon style={{color: "white"}}/></ListItemIcon>
+                  <ListItemIcon><MenuBookIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Yazılar</ListItemText>
                   {dropDownOpen ? <ExpandLess/> : <ExpandMore/>}
                </ListItem>

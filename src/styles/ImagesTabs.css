@@ -1,5 +1,4 @@
 .MuiTabs-flexContainer {
-    padding-top: 4px;
 }
 
 button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
@@ -10,10 +9,6 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
     padding-top: 18px !important;
 }
 
-.MuiTabs-root{
+.MuiTabs-root {
     overflow: unset !important;
 }
-
-/*.MuiBox-root-15{*/
-/*    padding: 5px !important;*/
-/*}*/

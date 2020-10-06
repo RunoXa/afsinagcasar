@@ -106,7 +106,7 @@ const SignUp = ({history}) => {
       <div>
          <header className="page-header" style={{
             height: "60px",
-            background: "linear-gradient(90deg, rgba(50, 0, 0, 1) 0%, rgba(121, 16, 9, 1) 20%, rgba(121, 16, 9, 1) 80%, rgba(50, 0, 0, 1) 100%)"
+            background: "linear-gradient(90deg, rgba(73, 4, 4, 1) 0%, rgba(120, 2, 2, 1) 45%, rgba(120, 2, 2, 1) 55%, rgba(73, 4, 4, 1) 100%)"
          }}>
             <h4 style={{
                textAlign: "center",
