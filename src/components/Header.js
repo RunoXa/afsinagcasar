@@ -60,28 +60,28 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          opacity: 1,
          color: "white !important",
-         backgroundColor: 'rgba(211, 211, 211, 0.3)',
+         backgroundColor: 'rgba(150, 150, 150, 0.4)',
       },
    },
    menuButtonRight: {
       "&:hover": {
          opacity: 1,
          color: "white !important",
-         backgroundColor: 'rgba(211, 211, 211, 0.3)',
+         backgroundColor: 'rgba(150, 150, 150, 0.4)',
       },
    },
    headerCloseButton: {
       marginLeft: theme.spacing(2),
       "&:hover": {
          opacity: 1,
-         backgroundColor: 'rgba(211, 211, 211, 0.3)',
+         backgroundColor: 'rgba(150, 150, 150, 0.4)',
       },
    },
    listItem: {
       "&:hover": {
          opacity: 1,
          color: "white !important",
-         backgroundColor: 'rgba(211, 211, 211, 0.3)',
+         backgroundColor: 'rgba(150, 150, 150, 0.4)',
       },
    },
    hide: {
@@ -92,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          opacity: 1,
          color: "white !important",
-         backgroundColor: 'rgba(211, 211, 211, 0.3)',
+         backgroundColor: 'rgba(150, 150, 150, 0.4)',
       },
    },
    headerElements: {
