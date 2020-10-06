@@ -1,6 +1,7 @@
 import React from 'react';
 import Tree from 'react-d3-tree';
 import '../styles/FamilyTree.css';
+import WorkImage from "../images/work-shift.png";
 
 // const svgSquare = {
 //     shape: 'rect',
@@ -110,7 +111,8 @@ export default class FamilyTree extends React.Component {
       return (
          <div className="tree-content">
             <h1 className="tree-title">Soyağacı</h1>
-            <button>Collapse All</button>
+            <div style={{textAlign: "center"}}><img src={WorkImage} alt="WorkImage"/></div>
+            {/*<button>Collapse All</button>*/}
             <div style={containerStyles} ref={tc => (this.treeContainer = tc)}>
                <Tree data={myTreeData1} translate={this.state.translate} orientation='horizontal'/>
             </div>
