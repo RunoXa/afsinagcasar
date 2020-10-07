@@ -3,7 +3,7 @@ import '../styles/Header.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
 import clsx from 'clsx';
-import {Link} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -84,7 +84,10 @@ const useStyles = makeStyles((theme) => ({
          opacity: 1,
          color: "white !important",
          backgroundColor: 'rgba(150, 150, 150, 0.4)',
-      },
+      }
+   },
+   active: {
+      backgroundColor: 'rgba(150, 150, 150, 0.4)',
    },
    hide: {
       display: 'none',
@@ -175,7 +178,9 @@ export default function PersistentDrawerLeft() {
 
    const handleLogoutAndClose = () => {
       setAnchorEl(null);
-      Base.auth().signOut();
+      Base.auth().signOut().then(() => {
+         // Do something after login is successful.
+      });
    };
 
    return (
@@ -251,29 +256,30 @@ export default function PersistentDrawerLeft() {
             </div>
             <Divider/>
             <List>
-               <ListItem button exact to="/" component={Link} onClick={handleDrawerClose} className={classes.listItem}>
+               <ListItem button exact to="/" component={NavLink}
+                         onClick={handleDrawerClose} className={classes.listItem} activeClassName={classes.active}>
                   <ListItemIcon><HomeRoundedIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Anasayfa</ListItemText>
                </ListItem>
-               <ListItem button exact to="/images" component={Link} onClick={handleDrawerClose}
-                         className={classes.listItem}>
+               <ListItem button exact to="/images" component={NavLink}
+                         onClick={handleDrawerClose} className={classes.listItem} activeClassName={classes.active}>
                   <ListItemIcon><PermMediaIcon style={{color: "white"}} large/></ListItemIcon>
                   <ListItemText>Resimler</ListItemText>
                </ListItem>
-               <ListItem button exact to="/culture" component={Link} onClick={handleDrawerClose}
-                         className={classes.listItem}>
+               <ListItem button exact to="/culture" component={NavLink} onClick={handleDrawerClose}
+                         className={classes.listItem} activeClassName={classes.active}>
                   <ListItemIcon>
                      <ListItemIcon><CultureIcon style={{color: "white"}}/></ListItemIcon>
                   </ListItemIcon>
                   <ListItemText>Kültür</ListItemText>
                </ListItem>
-               <ListItem button exact to="/chat" component={Link} onClick={handleDrawerClose}
-                         className={classes.listItem}>
+               <ListItem button exact to="/chat" component={NavLink} onClick={handleDrawerClose}
+                         className={classes.listItem} activeClassName={classes.active}>
                   <ListItemIcon><ChatIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Sohbet</ListItemText>
                </ListItem>
-               <ListItem button exact to="/tree" component={Link} onClick={handleDrawerClose}
-                         className={classes.listItem}>
+               <ListItem button exact to="/tree" component={NavLink} onClick={handleDrawerClose}
+                         className={classes.listItem} activeClassName={classes.active}>
                   <ListItemIcon><AccountTreeIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Soyağacı</ListItemText>
                </ListItem>
@@ -284,19 +290,21 @@ export default function PersistentDrawerLeft() {
                </ListItem>
                <Collapse in={dropDownOpen} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
-                     <ListItem button exact to="/textWriterTabs" className={classes.nested} component={Link}
-                               onClick={handleDropdownItemClick}>
+                     <ListItem button exact to="/textWriterTabs" className={classes.nested} component={NavLink}
+                               onClick={handleDropdownItemClick} activeClassName={classes.active}>
                         <ListItemIcon><PeopleIcon style={{color: "white"}}/></ListItemIcon>
                         <ListItemText>Site Yazarları</ListItemText>
                      </ListItem>
-                     <ListItem button className={classes.nested} component={Link} onClick={handleDropdownItemClick}>
-                        <ListItemIcon><VerticalSplitRoundedIcon style={{color: "white"}}/></ListItemIcon>
-                        <ListItemText>Tarih</ListItemText>
-                     </ListItem>
-                     <ListItem button className={classes.nested} component={Link} onClick={handleDropdownItemClick}>
-                        <ListItemIcon><VerticalSplitRoundedIcon style={{color: "white"}}/></ListItemIcon>
-                        <ListItemText>Mektuplar</ListItemText>
-                     </ListItem>
+                     {/*<ListItem button className={classes.nested} component={Link}*/}
+                     {/*          onClick={handleDropdownItemClick}>*/}
+                     {/*   <ListItemIcon><VerticalSplitRoundedIcon style={{color: "white"}}/></ListItemIcon>*/}
+                     {/*   <ListItemText>Tarih</ListItemText>*/}
+                     {/*</ListItem>*/}
+                     {/*<ListItem button className={classes.nested} component={Link}*/}
+                     {/*          onClick={handleDropdownItemClick}>*/}
+                     {/*   <ListItemIcon><VerticalSplitRoundedIcon style={{color: "white"}}/></ListItemIcon>*/}
+                     {/*   <ListItemText>Mektuplar</ListItemText>*/}
+                     {/*</ListItem>*/}
                   </List>
                </Collapse>
             </List>
