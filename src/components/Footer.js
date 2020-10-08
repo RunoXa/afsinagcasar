@@ -64,7 +64,7 @@ const Footer = () => {
             </div>
             <div className="footer-bottom">
                <p className="copyright-text">
-                  &copy;{new Date().getFullYear()} Ağcaşarlılar | All Rights Reserved | Terms of
+                  &copy;{new Date().getFullYear()} Agcasarlilar | All Rights Reserved | Terms of
                   Service |
                   Privacy
                </p>

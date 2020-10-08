@@ -3,8 +3,8 @@ import '../styles/Header.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
 import clsx from 'clsx';
-import {NavLink, Link} from 'react-router-dom';
-import {makeStyles, useTheme} from '@material-ui/core/styles';
+import {NavLink} from 'react-router-dom';
+import {makeStyles, withStyles, useTheme} from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -31,7 +31,6 @@ import PermMediaIcon from '@material-ui/icons/PermMedia';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import CultureIcon from '@material-ui/icons/AccountBalance';
-import VerticalSplitRoundedIcon from '@material-ui/icons/VerticalSplitRounded';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import PeopleIcon from '@material-ui/icons/People';
 import Base from '../Base';
@@ -66,6 +65,7 @@ const useStyles = makeStyles((theme) => ({
       },
    },
    menuButtonRight: {
+      padding: "6px",
       "&:hover": {
          opacity: 1,
          color: "white !important",
@@ -142,13 +142,43 @@ const useStyles = makeStyles((theme) => ({
    },
 }));
 
+const StyledMenu = withStyles({
+   paper: {
+      color: "white",
+      background: "linear-gradient(90deg, rgba(73, 4, 4, 1) 0%, rgba(120, 2, 2, 1) 45%, rgba(120, 2, 2, 1) 55%, rgba(73, 4, 4, 1) 100%)"
+   },
+})((props) => (
+   <Menu
+      elevation={0}
+      disableScrollLock
+      getContentAnchorEl={null}
+      anchorOrigin={{
+         vertical: 'bottom',
+         horizontal: 'center',
+      }}
+      transformOrigin={{
+         vertical: 'top',
+         horizontal: 'center',
+      }}
+      {...props}
+   />
+));
+
+const StyledMenuItem = withStyles((theme) => ({
+   root: {
+      '&:hover': {
+         opacity: 1,
+         backgroundColor: 'rgba(150, 150, 150, 0.4)',
+      },
+   },
+}))(MenuItem);
+
 export default function PersistentDrawerLeft() {
    const classes = useStyles();
    const theme = useTheme();
    const [open, setOpen] = React.useState(false);
    const [anchorEl, setAnchorEl] = React.useState(null);
    const [dropDownOpen, setDropDownOpen] = React.useState(false);
-   const openMenu = Boolean(anchorEl);
 
    const handleDrawerOpen = () => {
       setOpen(true);
@@ -203,8 +233,10 @@ export default function PersistentDrawerLeft() {
                      Ağcaşarlılar
                   </Typography>
                   <div className={classes.headerElements}>
-                     <IconButton button exact to="/" component={Link} color="inherit"
-                                 className={classes.menuButtonRight}><HomeRoundedIcon fontSize="large"/></IconButton>
+                     <IconButton button exact to="/" component={NavLink} color="inherit"
+                                 className={classes.menuButtonRight}><HomeRoundedIcon fontSize="medium"/></IconButton>
+                     <IconButton button exact to="/chat" component={NavLink} color="inherit"
+                                 className={classes.menuButtonRight}><ChatIcon fontSize="medium"/></IconButton>
                      <IconButton
                         aria-label="account of current user"
                         aria-controls="menu-appbar"
@@ -212,25 +244,34 @@ export default function PersistentDrawerLeft() {
                         onClick={handleMenu}
                         color="inherit"
                         className={classes.menuButtonRight}>
-                        <AccountCircle fontSize="large"/>
+                        <AccountCircle fontSize="medium"/>
                      </IconButton>
-                     <Menu
-                        id="menu-appbar"
+                     <StyledMenu
+                        id="customized-menu"
                         anchorEl={anchorEl}
-                        anchorOrigin={{
-                           vertical: 'top',
-                           horizontal: 'right',
-                        }}
                         keepMounted
-                        transformOrigin={{
-                           vertical: 'top',
-                           horizontal: 'right',
-                        }}
-                        open={openMenu}
+                        open={Boolean(anchorEl)}
                         onClose={handleClose}>
-                        <MenuItem onClick={handleClose}>Profile</MenuItem>
-                        <MenuItem exact to="/login" onClick={handleLogoutAndClose}><ExitToAppIcon/>Çıkış Yap</MenuItem>
-                     </Menu>
+                        <StyledMenuItem onClick={handleClose}>
+                           <ListItemIcon><AccountCircle style={{color: "white"}}/></ListItemIcon>
+                           <ListItemText primary="Onur Arslan"/>
+                        </StyledMenuItem>
+                        <Divider/>
+                        <StyledMenuItem onClick={handleClose}>
+                           <ListItemIcon>
+                           </ListItemIcon>
+                           <ListItemText primary="Profil"/>
+                        </StyledMenuItem>
+                        <StyledMenuItem onClick={handleClose}>
+                           <ListItemIcon>
+                           </ListItemIcon>
+                           <ListItemText primary="Yardim"/>
+                        </StyledMenuItem>
+                        <StyledMenuItem exact to="/login" onClick={handleLogoutAndClose}>
+                           <ListItemIcon><ExitToAppIcon style={{color: "white"}}/></ListItemIcon>
+                           <ListItemText primary='Çıkış Yap'/>
+                        </StyledMenuItem>
+                     </StyledMenu>
                   </div>
                </Toolbar>
             </AppBar>

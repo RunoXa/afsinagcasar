@@ -20,7 +20,7 @@ function Copyright() {
       <Typography variant="body2" color="textSecondary" align="center">
          {'Copyright © '}
          {/*<Link color="inherit" href="https://material-ui.com/">*/}
-         <span> Ağcaşarlılar | by Onur Arslan </span>
+         <span> Agcasarlilar | by Onur Arslan </span>
          {/*</Link>{' '}*/}
          {new Date().getFullYear()}
          {'.'}
