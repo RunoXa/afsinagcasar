@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {firestore, auth} from '../Base';
 import '../styles/Header.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -33,7 +34,6 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import CultureIcon from '@material-ui/icons/AccountBalance';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import PeopleIcon from '@material-ui/icons/People';
-import Base from '../Base';
 
 const drawerWidth = 240;
 
@@ -176,9 +176,10 @@ const StyledMenuItem = withStyles((theme) => ({
 export default function PersistentDrawerLeft() {
    const classes = useStyles();
    const theme = useTheme();
-   const [open, setOpen] = React.useState(false);
-   const [anchorEl, setAnchorEl] = React.useState(null);
-   const [dropDownOpen, setDropDownOpen] = React.useState(false);
+   const [open, setOpen] = useState(false);
+   const [anchorEl, setAnchorEl] = useState(null);
+   const [dropDownOpen, setDropDownOpen] = useState(false);
+   const [currentUserName, setCurrentUserName] = useState(null);
 
    const handleDrawerOpen = () => {
       setOpen(true);
@@ -208,10 +209,24 @@ export default function PersistentDrawerLeft() {
 
    const handleLogoutAndClose = () => {
       setAnchorEl(null);
-      Base.auth().signOut().then(() => {
-         // Do something after login is successful.
+      auth.signOut().then(() => {
+         // Do something after logout is successful.
       });
    };
+
+   firestore.collection("users")
+      .doc(auth.currentUser.uid)
+      .get()
+      .then(doc => {
+         if (doc.exists) {
+            const data = doc.data();
+            setCurrentUserName(data.firstName + ' ' + data.lastName);
+         } else {
+            alert("No such document!");
+         }
+      }).catch(function (error) {
+      console.log("Error getting document:", error);
+   });
 
    return (
       <div className={classes.root}>
@@ -254,7 +269,7 @@ export default function PersistentDrawerLeft() {
                         onClose={handleClose}>
                         <StyledMenuItem onClick={handleClose}>
                            <ListItemIcon><AccountCircle style={{color: "white"}}/></ListItemIcon>
-                           <ListItemText primary="Onur Arslan"/>
+                           <ListItemText primary={currentUserName}/>
                         </StyledMenuItem>
                         <Divider/>
                         <StyledMenuItem onClick={handleClose}>
