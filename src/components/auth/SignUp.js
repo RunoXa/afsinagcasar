@@ -14,6 +14,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import {firestore, auth} from '../../Base';
 
 function Copyright() {
    return (
@@ -79,18 +80,13 @@ const useStyles = makeStyles((theme) => ({
 
 const SignUp = ({history}) => {
    const classes = useStyles();
-   let firebase = require('firebase/app');
-   const firestore = firebase.firestore();
-   require('firebase/auth');
-   require('firebase/database');
-   require('firebase/firestore');
 
    const handleSignUp = useCallback(async event => {
       event.preventDefault();
       const {firstName, lastName, email, password} = event.target.elements;
       try {
          await app.auth().createUserWithEmailAndPassword(email.value, password.value)
-         await firestore.doc(`users/${firebase.auth().currentUser.uid}`).set({
+         await firestore.doc(`users/${auth.currentUser.uid}`).set({
             firstName: firstName.value,
             lastName: lastName.value,
             email: email.value
@@ -98,9 +94,8 @@ const SignUp = ({history}) => {
          history.push("/");
       } catch (error) {
          alert(error);
-
       }
-   }, [firebase, firestore, history]);
+   }, [history]);
 
    return (
       <div>
