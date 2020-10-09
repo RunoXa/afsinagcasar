@@ -213,7 +213,7 @@ export default function PersistentDrawerLeft() {
          // Do something after logout is successful.
       });
    };
-
+if(auth.currentUser != null){
    firestore.collection("users")
       .doc(auth.currentUser.uid)
       .get()
@@ -227,7 +227,7 @@ export default function PersistentDrawerLeft() {
       }).catch(function (error) {
       console.log("Error getting document:", error);
    });
-
+}
    return (
       <div className={classes.root}>
          <CssBaseline/>
