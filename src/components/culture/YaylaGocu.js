@@ -9,7 +9,8 @@ export default class AgcasarGecmisimiz extends Component {
             border: "3px solid #50001B",
             padding: "1rem",
             borderRadius: "10px 10px 10px 10px",
-            backgroundColor: "#f5f5f5"
+            backgroundColor: "#f5f5f5",
+            color: "#50001B"
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#50001B"}}>BİZİM MEMLEKETTE YAYLA ZAMANI</h2>
@@ -125,6 +126,7 @@ export default class AgcasarGecmisimiz extends Component {
                   ve Güle nenem olmak üzere Mete Elifi, Omojuna Gülü, Omojına Gülzari, Mete Zeycan’ı, Omojuna Nazifeyi,
                   Kepez'de Mete Perhan’ı, Omojuna ele Reşı, Omojuna Çakı, mamolarda Omojuna Aşuru, İğdemlikte Anke
                   Kibarı saygıyla anıyor sağ olan Aggül bibiyi ve Omojuna Hece de uzun ömür diliyorum.</p>
+               <p>Saygı ve sevgiyle kalın.</p>
                <p style={{color: 'red', fontSize: "40px"}}>***</p>
                <p>
                   Ali Rıza ARSLAN<br/>

@@ -11,7 +11,8 @@ export default class KocKatimi extends Component {
             border: "3px solid #50001B",
             padding: "1rem",
             borderRadius: "10px 10px 10px 10px",
-            backgroundColor: "#f5f5f5"
+            backgroundColor: "#f5f5f5",
+            color: "#50001B"
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#50001B"}}>Ağcaşar'da Koç Katımı</h2>
