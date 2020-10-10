@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import YaylaImage1 from '../../images/yayla1.jpg';
-import YaylaImage2 from '../../images/yayla2.jpg';
-import YaylaImage3 from '../../images/yayla3.jpg';
+import YaylaImage1 from '../../images/yaylakulturu1.jpg';
+import YaylaImage2 from '../../images/yaylakulturu2.jpg';
+import YaylaImage3 from '../../images/yaylakulturu3.jpg';
 
 export default class YaylaKulturu extends Component {
 
