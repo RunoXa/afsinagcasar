@@ -255,8 +255,7 @@ export default class Bahar extends Component {
          <div className="main-images-1" style={{
             display: "block",
             minHeight: "1px",
-            // width: "100%",
-            // overflow: "auto",
+            marginTop: "60px",
          }}>
             <div className="main-images">
                <Gallery images={IMAGES} enableImageSelection={false} showLightboxThumbnails={true}/>

@@ -10,6 +10,7 @@ export default class YaylaKulturu extends Component {
          <div style={{
             border: "3px solid #50001B",
             padding: "1rem",
+            marginTop: "75px",
             borderRadius: "10px 10px 10px 10px",
             backgroundColor: "#f5f5f5",
             color: "#50001B"

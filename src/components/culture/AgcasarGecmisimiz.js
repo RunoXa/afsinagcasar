@@ -6,6 +6,7 @@ export default class AgcasarGecmisimiz extends Component {
       return (
          <div style={{
             border: "3px solid #50001B",
+            marginTop: "75px",
             padding: "1rem",
             borderRadius: "10px 10px 10px 10px",
             backgroundColor: "#f5f5f5",

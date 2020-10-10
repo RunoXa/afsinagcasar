@@ -173,9 +173,8 @@ export default class KoydeYasam extends Component {
 
          <div className="main-images-1" style={{
             display: "block",
+            marginTop: "60px",
             minHeight: "1px",
-            // width: "100%",
-            // overflow: "auto",
          }}>
             <Gallery images={IMAGES} enableImageSelection={false} showLightboxThumbnails={true}/>
          </div>
