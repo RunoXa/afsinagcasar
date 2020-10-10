@@ -44,49 +44,65 @@ export default class KocKatimi extends Component {
                <div style={{fontWeight: "bold", fontSize: "18px", textDecoration: "underline"}}>Kültürle ilgili bazı
                   temel kavramlar şunlardır:
                </div>
-               <p>1) Kültürleme: Toplumun, aynı bağlamda ve yaklaşık aynı anlam içinde kendi kültürel özelliklerini yeni
-                  kuşaklara sosyalleşme yoluyla aktarmasıdır. Bu süreç “Kültür Aktarımı” olarak tanımlanır.</p>
-               <p>2) Kültürleşme: Farklı kültürlerin karşılıklı etkileşime girmesiyle gerçekleşen kültür alış-verişidir.
+               <p><span style={{fontWeight: "bold"}}>1) Kültürleme:</span> Toplumun, aynı bağlamda ve yaklaşık aynı
+                  anlam içinde kendi kültürel özelliklerini yeni kuşaklara sosyalleşme yoluyla aktarmasıdır. Bu süreç
+                  “Kültür Aktarımı” olarak tanımlanır.</p>
+               <p><span style={{fontWeight: "bold"}}>2) Kültürleşme:</span> Farklı kültürlerin karşılıklı etkileşime
+                  girmesiyle gerçekleşen kültür alış-verişidir.
                   Kültürleşme sürecinde iki ya da daha çok kültür karşılıklı etkileşin sonucu değişime uğrar.</p>
-               <p>3) Kültür Yitimi: Bir kültür grubu üyelerinin başka bir kültür grubu üyeleri ile iletişim içine
+               <p><span style={{fontWeight: "bold"}}>3) Kültür Yitimi:</span> Bir kültür grubu üyelerinin başka bir
+                  kültür grubu üyeleri ile iletişim içine
                   girmeleri sonucu kendi kültürel değerlerini tümden yada bir bölümü ile yitirmeleridir.</p>
-               <p>4) Kültürel Yayılma: Bir kültürde ortaya çıkan maddi veya manevi kültür öğesinin dünyadaki başka
+               <p><span style={{fontWeight: "bold"}}>4) Kültürel Yayılma:</span> Bir kültürde ortaya çıkan maddi veya
+                  manevi kültür öğesinin dünyadaki başka
                   kültürlere yayılmasıdır.</p>
-               <p>5) Kültürel Gecikme: Bir toplumdaki maddi kültür öğelerinde meydana gelen değişim hızına, manevi
+               <p><span style={{fontWeight: "bold"}}>5) Kültürel Gecikme:</span> Bir toplumdaki maddi kültür öğelerinde
+                  meydana gelen değişim hızına, manevi
                   kültür öğelerinin ayak uyduramaması sonucu oluşan uyumsuzluk ve görgüsüzlük durumudur.</p>
-               <p>6) Kültürel şok: Bir bireyin kendi kültür ortamından başka bir kültür ortamına girmesiyle yaşadığı
+               <p><span style={{fontWeight: "bold"}}>6) Kültürel şok:</span> Bir bireyin kendi kültür ortamından başka
+                  bir kültür ortamına girmesiyle yaşadığı
                   bunalım ve uyumsuzluk durumudur.</p>
-               <p>7) Kültür emperyalizmi: Gelişmiş ülkelerin az gelişmiş diğer kültürleri özellikle kitle iletişim
+               <p><span style={{fontWeight: "bold"}}>7) Kültür emperyalizmi:</span> Gelişmiş ülkelerin az gelişmiş diğer
+                  kültürleri özellikle kitle iletişim
                   araçlarıyla etkilemesi ve kendine benzetmesidir. Kültür emperyalizmi, sömürgeciliği
                   kolaylaştırmaktadır.</p>
-               <p>8) Kültürel asimilasyon: Bir kültürün, kendi içindeki azınlık kültürü eritmesi ve kendine
+               <p><span style={{fontWeight: "bold"}}>8) Kültürel asimilasyon:</span> Bir kültürün, kendi içindeki
+                  azınlık kültürü eritmesi ve kendine
                   benzetmesidir. Asimilasyon normal bir süreçle olabildiği gibi devlet eliyle zorla da olabilir.</p>
-               <p>9) Kültürel Yozlaşama: Yabancı kültürlerin olumsuz etkisi ve toplumun kendi öz değerlerine yeterince
+               <p><span style={{fontWeight: "bold"}}>9) Kültürel Yozlaşama:</span> Yabancı kültürlerin olumsuz etkisi ve
+                  toplumun kendi öz değerlerine yeterince
                   sahip çıkmaması sonucu meydana gelen kültürel bozulmadır.</p>
 
                <div style={{fontWeight: "bold", fontSize: "18px", textDecoration: "underline"}}>Kültürün Temel
                   Özellikleri
                </div>
-               <p>Toplumsallık: Bu nitelik kültürün, toplumların bulunduğu yer ya da dönemde oluşmasını ifade
+               <p><span style={{fontWeight: "bold"}}>Toplumsallık:</span> Bu nitelik kültürün, toplumların bulunduğu yer
+                  ya da dönemde oluşmasını ifade
                   etmektedir. Toplumun dışında ve ondan bağımsız kültürden söz etmek mümkün değildir. Kültür göreli olup
                   her toplumun kendine öz/has kültürü vardır.</p>
-               <p>Tarihsellik: Hangi toplumda olursa olsun, kültürün öğeleri (dil, yazı, din, bilim, giyim/kuşam, sanat,
+               <p><span style={{fontWeight: "bold"}}>Tarihsellik:</span> Hangi toplumda olursa olsun, kültürün öğeleri
+                  (dil, yazı, din, bilim, giyim/kuşam, sanat,
                   yerleşme vb.) bir anda, kısa bir zaman dilimi içinde meydana çıkmamıştır.</p>
-               <p>Kalıtsallık: Kültür geçmişten günümüze süregelmektedir. Kültürün öğrenilen birer kalıt olduğunun en
+               <p><span style={{fontWeight: "bold"}}>Kalıtsallık:</span> Kültür geçmişten günümüze süregelmektedir.
+                  Kültürün öğrenilen birer kalıt olduğunun en
                   belirgin kanıtı, doğumundan hemen sonra ailesi ve toplumundan alınıp başka bir kültürün içinde
                   büyütülen bir çocuğun içinde büyüdüğü toplumun kültürünü öğrenip benimsemesidir.</p>
-               <p>İşlevsellik: Bu özellik, kültürün, toplum yaşamında bir yerinin, görevinin bulunmasını ifade
+               <p><span style={{fontWeight: "bold"}}>İşlevsellik:</span> Bu özellik, kültürün, toplum yaşamında bir
+                  yerinin, görevinin bulunmasını ifade
                   etmektedir. Kültür insan eseridir. İnsanlar hem kültürü oluşturur hem de kültürden etkilenirler.
                   Günümüzde toplumdaki kültürel birikimin insanın davranışlarını belirlediği kabul edilmektedir.</p>
-               <p>Devingenlik ve değişkenlik: Kültür durağan değildir. Zaman içinde değişir. Kültürün maddi öğeleri daha
+               <p><span style={{fontWeight: "bold"}}>Devingenlik ve değişkenlik:</span> Kültür durağan değildir. Zaman
+                  içinde değişir. Kültürün maddi öğeleri daha
                   hızlı değişir. Birey kendine aktarılan kültürü yaşar ve yaşatırken farkında olmadan kültürde küçükte
                   olsa bazı değişiklikler yapmakta ve kendisinden sonraki kuşaklara bu şekliyle aktarmaktadır. Bundan
                   dolayı kültürün devingenlik ve değişkenlik özelliği vardır.</p>
 
                <div style={{fontWeight: "bold", fontSize: "18px", textDecoration: "underline"}}>Kültürün Öğeleri</div>
                <p>Kültür, genel olarak iki öğeden oluşur.</p>
-               <p>a) Maddi kültür öğeleri: Binalar, her türlü araç-gereç, giysiler vb.</p>
-               <p>b) Manevi kültür öğeleri: İnançlar, gelenekler, normlar, düşünce biçimleri vb.</p>
+               <p><span style={{fontWeight: "bold"}}>a) Maddi kültür öğeleri:</span> Binalar, her türlü araç-gereç,
+                  giysiler vb.</p>
+               <p><span style={{fontWeight: "bold"}}>b) Manevi kültür öğeleri:</span> İnançlar, gelenekler, normlar,
+                  düşünce biçimleri vb.</p>
                <p>Kültürün maddi ve manevi öğeleri arasında sürekli bir etkileşim vardır. Birinde meydana gelen bir
                   değişim diğerini de etkiler. Aynı şekilde kültür, toplumun doğal çevresinden yani coğrafi koşullardan
                   etkilenir. Örneğin, dağlık bölgelerde yaşayan toplumların kültürüyle verimli ovalarda yaşayan
@@ -117,7 +133,8 @@ export default class KocKatimi extends Component {
                   uygarlığı ayırmıştır.</p>
                <p>İçerik ve kapsam yönünde kültür ile uygarlık kavramlarına ilişkin görüşler üç kümede
                   toplanmaktadır.</p>
-               <p> 1) İki kavram arasında ayırım yapmayanlar (Tylor): Kültürün ilk bilimsel açıklamasını yapan Tylar,
+               <p><span style={{fontWeight: "bold"}}>1) İki kavram arasında ayırım yapmayanlar (Tylor):</span> Kültürün
+                  ilk bilimsel açıklamasını yapan Tylar,
                   tanımına “kültür yada uygarlık….” Diye başlayarak iki terimi eş anlamlı kullanmıştır. 19. yüzyılın
                   sonlarına doğru İngiliz antropolog Tylor, dünya üzerindeki kültürleri üç ana bölüme ayırarak “Batı
                   Kültürü” ve uygarlığını basamağın en üstüne, “savage” denilen yabanileri en alta, geçiş döneminde olan
@@ -126,13 +143,15 @@ export default class KocKatimi extends Component {
                   teorisinin tutarsız olduğunu kavramış ve hiçbir kültür ürününün diğerine kıyasla üstün olmadığını saha
                   araştırmalarına dayanarak ortaya koymuşlardır. Bu bilim adamları teknolojik üstünlüğün kültür
                   üstünlüğü anlamına gelemeyeceğini vurgulamışlardır.</p>
-               <p>2) Uygarlığı kültürden daha geniş kapsamlı sayanlar (A. Toynbee): Anglosakson sosyal bilimcilerin
+               <p><span
+                  style={{fontWeight: "bold"}}>2) Uygarlığı kültürden daha geniş kapsamlı sayanlar (A. Toynbee):</span> Anglosakson
+                  sosyal bilimcilerin
                   çoğu, her toplumsal grubun bir kültürü olduğunu kabul etmektedirler. Ünlü İngiliz tarihçisi A. Toynbee
                   uygarlığı “Uygarlık, belki içinde bütün insanlığı kapsayan tek bir ailenin üyeleri olarak, tam bir
                   uyum içinde yaşayabilecekleri bir toplum durumunu yaratmak için girişilmiş bir çaba şeklinde
                   tanımlanabilir” diyerek kültür ile uygarlık kavramlarını birbirinden ayırmış ve uygarlığı daha genişli
                   bir boyut olarak değerlendirmiştir.</p>
-               <p>3) Kültürü uygarlıktan daha kapsamlı bir kavram olarak kabul edenler (Oswald Spengler): Oswald
+               <p><span style={{fontWeight: "bold"}}>3) Kültürü uygarlıktan daha kapsamlı bir kavram olarak kabul edenler (Oswald Spengler):</span> Oswald
                   Spengler 1922’de yayımladığı “Batının Çöküşü” adlı kitabında kültürü; tarihi belirleyen, ona şekil
                   veren ilkeler olarak tanımlamıştır. Ona göre uygarlık ise, yaşama gücünü yitiren ve sona ermekte olan
                   bir kültürün son evresi olup kendinden sonra gelen yeni kültüre kalıt olarak bıraktığı bir
@@ -153,7 +172,8 @@ export default class KocKatimi extends Component {
                   Ankara
                </p>
                <p>
-                  <span style={{fontWeight: "bold", fontSize: "18px", textDecoration: "underline"}}>Kaynakça:</span><br/>
+                  <span
+                     style={{fontWeight: "bold", fontSize: "18px", textDecoration: "underline"}}>Kaynakça:</span><br/>
                   1-Ana Britanica Ansiklopedisi.<br/>
                   2-KONGAR Emre, Türkiye’de Araştırma Kültürünü Engelleyen Öğeler<br/>
                   3-TANİLLİ Server, Uygarlık Tarihi<br/>
