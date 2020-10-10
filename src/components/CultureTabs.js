@@ -99,11 +99,11 @@ export default function FullWidthTabs() {
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab label="Yayla Kültürü" {...a11yProps(1)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Koç Katımı" {...a11yProps(2)}
+               <Tab label="Yayla Göçü" {...a11yProps(2)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Ağcaşar Geçmişimiz" {...a11yProps(3)}
+               <Tab label="Koç Katımı" {...a11yProps(3)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Yayla Göçü" {...a11yProps(4)}
+               <Tab label="Ağcaşar Geçmişimiz" {...a11yProps(4)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
             </Tabs>
          </AppBar>
@@ -118,13 +118,13 @@ export default function FullWidthTabs() {
                <YaylaKulturu/>
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-               <KocKatimi/>
+               <YaylaGocu/>
             </TabPanel>
             <TabPanel value={value} index={3} dir={theme.direction}>
-               <AgcasarGecmisimiz/>
+               <KocKatimi/>
             </TabPanel>
             <TabPanel value={value} index={4} dir={theme.direction}>
-               <YaylaGocu/>
+               <AgcasarGecmisimiz/>
             </TabPanel>
          </SwipeableViews>
       </div>
