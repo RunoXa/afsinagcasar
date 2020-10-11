@@ -95,6 +95,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Login = ({history}) => {
+   const classes = useStyles();
    const [errorMessage, setErrorMessage] = React.useState("");
    const [snackbarOpen, setSnackbarOpen] = React.useState(false);
 
@@ -124,7 +125,6 @@ const Login = ({history}) => {
    );
 
    const {currentUser} = useContext(AuthContext);
-   const classes = useStyles();
 
    if (currentUser) {
       return <Redirect to="/"/>;
@@ -153,8 +153,6 @@ const Login = ({history}) => {
          <Container component="main" maxWidth="xs" maxHeigth="100%">
             <CssBaseline/>
             <div className={classes.paper}>
-               <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleCloseErrorMessage}><Alert
-                  severity="error">{errorMessage.key}: {errorMessage.msg}</Alert></Snackbar>
                <Avatar className={classes.avatar}>
                   <LockOutlinedIcon/>
                </Avatar>
@@ -239,6 +237,8 @@ const Login = ({history}) => {
             <Box mt={8}>
                <Copyright/>
             </Box>
+            <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleCloseErrorMessage}><Alert
+               severity="error">{errorMessage.key}: {errorMessage.msg}</Alert></Snackbar>
          </Container>
       </div>
    );

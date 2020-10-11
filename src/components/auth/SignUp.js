@@ -2,6 +2,8 @@ import React, {useCallback} from "react";
 import {withRouter} from "react-router-dom";
 import app from "../../Base";
 import Avatar from '@material-ui/core/Avatar';
+import MuiAlert from '@material-ui/lab/Alert';
+import Snackbar from '@material-ui/core/Snackbar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -25,6 +27,10 @@ function Copyright() {
          {'.'}
       </Typography>
    );
+}
+
+function Alert(props) {
+   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -78,6 +84,17 @@ const useStyles = makeStyles((theme) => ({
 
 const SignUp = ({history}) => {
    const classes = useStyles();
+   const [errorMessage, setErrorMessage] = React.useState("");
+   const [snackbarOpen, setSnackbarOpen] = React.useState(false);
+
+   async function handleErrorMessage(error) {
+      setErrorMessage({msg: error.message, key: error.code});
+      setSnackbarOpen(true)
+   }
+
+   const handleCloseErrorMessage = (event, reason) => {
+      setSnackbarOpen(false);
+   };
 
    const handleSignUp = useCallback(async event => {
       event.preventDefault();
@@ -91,7 +108,7 @@ const SignUp = ({history}) => {
          });
          history.push("/");
       } catch (error) {
-         alert(error);
+         await handleErrorMessage(error);
       }
    }, [history]);
 
@@ -243,6 +260,8 @@ const SignUp = ({history}) => {
             <Box mt={5}>
                <Copyright/>
             </Box>
+            <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleCloseErrorMessage}><Alert
+               severity="error">{errorMessage.key}: {errorMessage.msg}</Alert></Snackbar>
          </Container>
       </div>
    );
