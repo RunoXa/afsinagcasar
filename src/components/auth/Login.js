@@ -4,6 +4,8 @@ import './Login.css';
 import app from "../../Base";
 import {AuthContext} from "../Auth.js";
 import Avatar from '@material-ui/core/Avatar';
+import MuiAlert from '@material-ui/lab/Alert';
+import Snackbar from '@material-ui/core/Snackbar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -29,6 +31,10 @@ function Copyright() {
          {'.'}
       </Typography>
    );
+}
+
+function Alert(props) {
+   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -89,6 +95,18 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Login = ({history}) => {
+   const [errorMessage, setErrorMessage] = React.useState("");
+   const [snackbarOpen, setSnackbarOpen] = React.useState(false);
+
+   async function handleErrorMessage(error) {
+      setErrorMessage({msg: error.message, key: error.code});
+      setSnackbarOpen(true)
+   }
+
+   const handleCloseErrorMessage = (event, reason) => {
+      setSnackbarOpen(false);
+   };
+
    const handleLogin = useCallback(
       async event => {
          event.preventDefault();
@@ -99,7 +117,7 @@ const Login = ({history}) => {
                .signInWithEmailAndPassword(email.value, password.value);
             history.push("/");
          } catch (error) {
-            alert(error);
+            await handleErrorMessage(error);
          }
       },
       [history]
@@ -135,6 +153,8 @@ const Login = ({history}) => {
          <Container component="main" maxWidth="xs" maxHeigth="100%">
             <CssBaseline/>
             <div className={classes.paper}>
+               <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleCloseErrorMessage}><Alert
+                  severity="error">{errorMessage.key}: {errorMessage.msg}</Alert></Snackbar>
                <Avatar className={classes.avatar}>
                   <LockOutlinedIcon/>
                </Avatar>
