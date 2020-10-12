@@ -4,6 +4,7 @@ import '../styles/Header.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
 import clsx from 'clsx';
+import { useLocation } from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
 import {makeStyles, withStyles, useTheme} from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -228,6 +229,8 @@ if(auth.currentUser != null){
       console.log("Error getting document:", error);
    });
 }
+   const { pathname } = useLocation();
+
    return (
       <div className={classes.root}>
          <CssBaseline/>
@@ -323,7 +326,7 @@ if(auth.currentUser != null){
                   <ListItemText>Resimler</ListItemText>
                </ListItem>
                <ListItem button exact to="/culture/kultur" component={NavLink} onClick={handleDrawerClose}
-                         className={classes.listItem} activeClassName={classes.active}>
+                         className={classes.listItem} isActive={() => ['/culture/kultur', '/culture/yaylaKulturu', '/culture/yaylaGocu', '/culture/kocKatimi', '/culture/agcasarGecmisimiz'].includes(pathname)} activeClassName={classes.active}>
                   <ListItemIcon>
                      <ListItemIcon><CultureIcon style={{color: "white"}}/></ListItemIcon>
                   </ListItemIcon>
