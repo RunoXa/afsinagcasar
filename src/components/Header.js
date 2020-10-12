@@ -322,7 +322,7 @@ if(auth.currentUser != null){
                   <ListItemIcon><PermMediaIcon style={{color: "white"}} large/></ListItemIcon>
                   <ListItemText>Resimler</ListItemText>
                </ListItem>
-               <ListItem button exact to="/culture" component={NavLink} onClick={handleDrawerClose}
+               <ListItem button exact to="/culture/kultur" component={NavLink} onClick={handleDrawerClose}
                          className={classes.listItem} activeClassName={classes.active}>
                   <ListItemIcon>
                      <ListItemIcon><CultureIcon style={{color: "white"}}/></ListItemIcon>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
@@ -13,6 +13,8 @@ import YaylaKulturu from "./culture/YaylaKulturu";
 import YaylaGocu from "./culture/YaylaGocu";
 import KocKatimi from "./culture/KocKatimi";
 import AgcasarGecmisimiz from "./culture/AgcasarGecmisimiz";
+import {NavLink} from "react-router-dom";
+import {useLocation} from 'react-router-dom'
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
@@ -57,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          color: '#550A21',
          opacity: 1,
+         textDecoration: "none",
          backgroundColor: 'rgba(211, 211, 211, 0.5);',
       },
       '&.Mui-selected': {
@@ -71,7 +74,8 @@ const useStyles = makeStyles((theme) => ({
 export default function FullWidthTabs() {
    const classes = useStyles();
    const theme = useTheme();
-   const [value, setValue] = React.useState(0);
+   const selectedIndex = useLocation().pathname;
+   const [value, setValue] = React.useState(null);
 
    const handleChange = (event, newValue) => {
       setValue(newValue);
@@ -82,6 +86,38 @@ export default function FullWidthTabs() {
    };
 
    window.scrollTo(0, 0);
+
+   useEffect(() => {
+      switch (selectedIndex) {
+         case '/culture/kultur':
+            if (value !== 0) {
+               setValue(0)
+            }
+            break;
+         case '/culture/yaylaKulturu':
+            if (value !== 0) {
+               setValue(1)
+            }
+            break;
+         case '/culture/yaylaGocu':
+            if (value !== 0) {
+               setValue(2)
+            }
+            break;
+         case '/culture/kocKatimi':
+            if (value !== 0) {
+               setValue(3)
+            }
+            break;
+         case '/culture/agcasarGecmisimiz':
+            if (value !== 0) {
+               setValue(4)
+            }
+            break;
+         default:
+            break
+      }
+   }, [selectedIndex, value])
 
    return (
       <div className={classes.root}>
@@ -95,15 +131,16 @@ export default function FullWidthTabs() {
                // scrollButtons="auto"
                aria-label="scrollable tabs example"
                classes={{indicator: classes.indicator}}>
-               <Tab label="Kültür" {...a11yProps(0)}
+               <Tab component={NavLink} exact to="/culture/kultur" label="Kültür" {...a11yProps(0)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Yayla Kültürü" {...a11yProps(1)}
+               <Tab component={NavLink} exact to="/culture/yaylaKulturu" label="Yayla Kültürü" {...a11yProps(1)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Yayla Göçü" {...a11yProps(2)}
+               <Tab component={NavLink} exact to="/culture/yaylaGocu" label="Yayla Göçü" {...a11yProps(2)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Koç Katımı" {...a11yProps(3)}
+               <Tab component={NavLink} exact to="/culture/kocKatimi" label="Koç Katımı" {...a11yProps(3)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Ağcaşar Geçmişimiz" {...a11yProps(4)}
+               <Tab component={NavLink} exact to="/culture/agcasarGecmisimiz"
+                    label="Ağcaşar Geçmişimiz" {...a11yProps(4)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
             </Tabs>
          </AppBar>
