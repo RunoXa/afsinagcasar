@@ -112,8 +112,7 @@ export default class AgcasarGecmisimiz extends Component {
                <p>Şakik Belhi cevap verdi;</p>
                <p>- Bulunca yiyoruz bulmayınca sabrediyoruz.</p>
                <p>İbrahim edhem ;</p>
-               <p>- Horasan’ın köpekleri de aynı şeyi yapıyorlar. Bulunca yiyorlar bulmayınca sabrediyorlar diye</p>
-               <p>karşılık verdi</p>
+               <p>- Horasan’ın köpekleri de aynı şeyi yapıyorlar. Bulunca yiyorlar bulmayınca sabrediyorlar diye karşılık verdi.</p>
                <p>Bu kez Belhi sordu:</p>
                <p>- Peki siz ne yapıyorsunuz?</p>
                <p>- Biz bulunca dağıtıyoruz, bulmayınca sabrediyoruz. Demiş.</p>
