@@ -51,6 +51,7 @@ const DefaultContainer = () => (
          <PrivateRoute exact path="/radio"/>
          <PrivateRoute exact path="/chat" component={Chat}/>
          <PrivateRoute exact path="/tree" component={FamilyTree}/>
+         <PrivateRoute exact path="/culture" component={CultureTabs}/>
          <PrivateRoute exact path="/culture/kultur" component={CultureTabs}/>
          <PrivateRoute exact path="/culture/yaylaKulturu" component={CultureTabs}/>
          <PrivateRoute exact path="/culture/yaylaGocu" component={CultureTabs}/>
