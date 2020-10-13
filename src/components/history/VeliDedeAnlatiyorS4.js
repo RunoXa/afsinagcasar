@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import VeliDedeImage7 from "../../images/velidede/velidede7.jpg";
 import VeliDedeImage8 from "../../images/velidede/velidede8.jpg";
-import {Button} from "@material-ui/core";
 
 export default class VeliDedeAnlatiyorS1 extends Component {
 
@@ -49,9 +48,8 @@ export default class VeliDedeAnlatiyorS1 extends Component {
                   <span style={{fontWeight: "bold"}}>Söyleşi ve ses kayıt:</span> Ali Beyazıt<br/>
                   <span style={{fontWeight: "bold"}}>Yer:</span> Ağcaşar<br/>
                   <span style={{fontWeight: "bold"}}>Tarih:</span> 11 Ağustos 1969<br/>
-                  Yazıya aktarılan süre yaklaşık 30 dakika<br/>
+                  <span style={{fontWeight: "bold"}}>Yazıya aktarılan süre:</span> yaklaşık 30 dakika<br/>
                   <span style={{fontWeight: "bold"}}>Arşiv ve prodüksiyon:</span> Aslıhan Altun, Londra<br/>
-                  <span style={{fontWeight: "bold"}}>Bantdan CD`ye aktarma(dijitalleştirme) organizasyonu:</span> İsmini Sildik Nedeni için buraya <Button>TIKLA</Button><br/>
                   <span style={{fontWeight: "bold"}}>Transkripsiyon (Yazıya Döken):</span> Ercan Arslan, Berlin<br/>
                   <span style={{fontWeight: "bold"}}>Fotoğraflar:</span> Vedat Arslan, Stephan Komitsch ve arşiv
                </p>

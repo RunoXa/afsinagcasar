@@ -19,7 +19,8 @@ export default class VeliDedeAnlatiyorS1 extends Component {
                   Seyyit Veli'nin Vasiyeti</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>H</span>ayır, hiç bir şey yokmuş. Sadece bizim dedemiz oranın vahşiyetinden, oranın durumundan nefret etmiş,
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>H</span>ayır, hiç bir şey yokmuş.
+                  Sadece bizim dedemiz oranın vahşiyetinden, oranın durumundan nefret etmiş,
                   daha doğrusu bizim aşiretle başka bir aşiret arasında bir düşmanlık olmuş. O aşiret de çok kuvvetli
                   bir aşiret. İlk harpte de aşiret reisi Veli Ağa vuruluyor. Vurulunca da bütün şark Dersim'i
                   ayaklanıyor. Bütün Pilvenkleri yeriyle yurduyla kaldırak, talıyak, kırak, kesek, biçek. Bunlarda da
