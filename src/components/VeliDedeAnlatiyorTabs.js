@@ -8,13 +8,11 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import '../styles/ImagesTabs.css';
-import Kultur from "./culture/Kultur";
-import YaylaKulturu from "./culture/YaylaKulturu";
-import YaylaGocu from "./culture/YaylaGocu";
-import KocKatimi from "./culture/KocKatimi";
-import AgcasarGecmisimiz from "./culture/AgcasarGecmisimiz";
-import {NavLink} from "react-router-dom";
-import {useLocation} from 'react-router-dom'
+import VeliDedeAnlatiyorS1 from "./history/VeliDedeAnlatiyorS1";
+import VeliDedeAnlatiyorS2 from "./history/VeliDedeAnlatiyorS2";
+import VeliDedeAnlatiyorS3 from "./history/VeliDedeAnlatiyorS3";
+import VeliDedeAnlatiyorS4 from "./history/VeliDedeAnlatiyorS4";
+import {NavLink, useLocation} from "react-router-dom";
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
@@ -74,8 +72,8 @@ const useStyles = makeStyles((theme) => ({
 export default function FullWidthTabs() {
    const classes = useStyles();
    const theme = useTheme();
-   const selectedIndex = useLocation().pathname;
    const [value, setValue] = React.useState(null);
+   const selectedIndex = useLocation().pathname;
 
    const handleChange = (event, newValue) => {
       setValue(newValue);
@@ -90,39 +88,34 @@ export default function FullWidthTabs() {
    useEffect(() => {
       //set the TAB index by loading
       switch (selectedIndex) {
-         case '/culture':
+         case '/history/veliDedeAnlatiyor/':
             if (value !== 0) {
                setValue(0)
             }
             break;
-         case '/culture/':
+         case '/history/veliDedeAnlatiyor':
             if (value !== 0) {
                setValue(0)
             }
             break;
-         case '/culture/kultur':
+         case '/history/veliDedeAnlatiyor/sayfa1':
             if (value !== 0) {
                setValue(0)
             }
             break;
-         case '/culture/yaylaKulturu':
+         case '/history/veliDedeAnlatiyor/sayfa2':
             if (value !== 0) {
                setValue(1)
             }
             break;
-         case '/culture/yaylaGocu':
+         case '/history/veliDedeAnlatiyor/sayfa3':
             if (value !== 0) {
                setValue(2)
             }
             break;
-         case '/culture/kocKatimi':
+         case '/history/veliDedeAnlatiyor/sayfa4':
             if (value !== 0) {
                setValue(3)
-            }
-            break;
-         case '/culture/agcasarGecmisimiz':
-            if (value !== 0) {
-               setValue(4)
             }
             break;
          default:
@@ -142,17 +135,14 @@ export default function FullWidthTabs() {
                // scrollButtons="auto"
                aria-label="scrollable tabs example"
                classes={{indicator: classes.indicator}}>
-               <Tab component={NavLink} exact to="/culture/kultur" label="Kültür" {...a11yProps(0)}
+               <Tab component={NavLink} exact to="/history/veliDedeAnlatiyor/sayfa1" label="Sayfa 1" {...a11yProps(0)}
+                    classes={{root: classes.tabRoot, selected: classes.tabSelected}} style={{marginLeft: "auto"}}/>
+               <Tab component={NavLink} exact to="/history/veliDedeAnlatiyor/sayfa2" label="Sayfa 2" {...a11yProps(1)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/culture/yaylaKulturu" label="Yayla Kültürü" {...a11yProps(1)}
+               <Tab component={NavLink} exact to="/history/veliDedeAnlatiyor/sayfa3" label="Sayfa 3" {...a11yProps(2)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/culture/yaylaGocu" label="Yayla Göçü" {...a11yProps(2)}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/culture/kocKatimi" label="Koç Katımı" {...a11yProps(3)}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/culture/agcasarGecmisimiz"
-                    label="Ağcaşar Geçmişimiz" {...a11yProps(4)}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+               <Tab component={NavLink} exact to="/history/veliDedeAnlatiyor/sayfa4" label="Sayfa 4" {...a11yProps(3)}
+                    classes={{root: classes.tabRoot, selected: classes.tabSelected}} style={{marginRight: "auto"}}/>
             </Tabs>
          </AppBar>
          <SwipeableViews
@@ -160,19 +150,16 @@ export default function FullWidthTabs() {
             index={value}
             onChangeIndex={handleChangeIndex}>
             <TabPanel value={value} index={0} dir={theme.direction}>
-               <Kultur/>
+               <VeliDedeAnlatiyorS1/>
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
-               <YaylaKulturu/>
+               <VeliDedeAnlatiyorS2/>
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-               <YaylaGocu/>
+               <VeliDedeAnlatiyorS3/>
             </TabPanel>
             <TabPanel value={value} index={3} dir={theme.direction}>
-               <KocKatimi/>
-            </TabPanel>
-            <TabPanel value={value} index={4} dir={theme.direction}>
-               <AgcasarGecmisimiz/>
+               <VeliDedeAnlatiyorS4/>
             </TabPanel>
          </SwipeableViews>
       </div>

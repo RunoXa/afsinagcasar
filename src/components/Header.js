@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {firestore, auth} from '../Base';
 import '../styles/Header.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
 import clsx from 'clsx';
-import { useLocation } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
 import {makeStyles, withStyles, useTheme} from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -35,6 +35,7 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import CultureIcon from '@material-ui/icons/AccountBalance';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import PeopleIcon from '@material-ui/icons/People';
+import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 
 const drawerWidth = 240;
 
@@ -81,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
       },
    },
    listItem: {
+      padding: "14px",
       "&:hover": {
          opacity: 1,
          color: "white !important",
@@ -94,7 +96,8 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
    },
    nested: {
-      paddingLeft: theme.spacing(4),
+      paddingLeft: theme.spacing(2),
+      padding: "10px",
       "&:hover": {
          opacity: 1,
          color: "white !important",
@@ -180,7 +183,9 @@ export default function PersistentDrawerLeft() {
    const [open, setOpen] = useState(false);
    const [anchorEl, setAnchorEl] = useState(null);
    const [dropDownOpen, setDropDownOpen] = useState(false);
+   const [dropDownOpen2, setDropDownOpen2] = useState(false);
    const [currentUserName, setCurrentUserName] = useState(null);
+   const {pathname} = useLocation();
 
    const handleDrawerOpen = () => {
       setOpen(true);
@@ -189,6 +194,7 @@ export default function PersistentDrawerLeft() {
    const handleDrawerClose = () => {
       setOpen(false);
       setDropDownOpen(false);
+      setDropDownOpen2(false);
    };
 
    const handleMenu = (event) => {
@@ -206,6 +212,17 @@ export default function PersistentDrawerLeft() {
    const handleDropdownItemClick = () => {
       setOpen(false);
       setDropDownOpen(true);
+      setDropDownOpen2(false);
+   }
+
+   const handleDropDownClick2 = () => {
+      setDropDownOpen2(!dropDownOpen2);
+   };
+
+   const handleDropdownItemClick2 = () => {
+      setOpen(false);
+      setDropDownOpen2(true);
+      setDropDownOpen(false);
    }
 
    const handleLogoutAndClose = () => {
@@ -214,23 +231,46 @@ export default function PersistentDrawerLeft() {
          // Do something after logout is successful.
       });
    };
-if(auth.currentUser != null){
-   firestore.collection("users")
-      .doc(auth.currentUser.uid)
-      .get()
-      .then(doc => {
-         if (doc.exists) {
-            const data = doc.data();
-            setCurrentUserName(data.firstName + ' ' + data.lastName);
-         } else {
-            alert("No such document!");
-         }
-      }).catch(function (error) {
-      console.log("Error getting document:", error);
-   });
-}
-   const { pathname } = useLocation();
+   if (auth.currentUser != null) {
+      firestore.collection("users")
+         .doc(auth.currentUser.uid)
+         .get()
+         .then(doc => {
+            if (doc.exists) {
+               const data = doc.data();
+               setCurrentUserName(data.firstName + ' ' + data.lastName);
+            } else {
+               alert("No such document!");
+            }
+         }).catch(function (error) {
+         console.log("Error getting document:", error);
+      });
+   }
 
+   useEffect(() => {
+      switch (pathname) {
+         case '/history/veliDedeAnlatiyor':
+            setDropDownOpen2(true);
+            break;
+         case '/history/veliDedeAnlatiyor/':
+            setDropDownOpen2(true);
+            break;
+         case '/history/veliDedeAnlatiyor/sayfa1':
+            setDropDownOpen2(true);
+            break;
+         case '/history/veliDedeAnlatiyor/sayfa2':
+            setDropDownOpen2(true);
+            break;
+         case '/history/veliDedeAnlatiyor/sayfa3':
+            setDropDownOpen2(true);
+            break;
+         case '/history/veliDedeAnlatiyor/sayfa4':
+            setDropDownOpen2(true);
+            break;
+         default:
+            break
+      }
+   }, [pathname])
    return (
       <div className={classes.root}>
          <CssBaseline/>
@@ -326,7 +366,9 @@ if(auth.currentUser != null){
                   <ListItemText>Resimler</ListItemText>
                </ListItem>
                <ListItem button exact to="/culture/kultur" component={NavLink} onClick={handleDrawerClose}
-                         className={classes.listItem} isActive={() => ['/culture/kultur', '/culture/yaylaKulturu', '/culture/yaylaGocu', '/culture/kocKatimi', '/culture/agcasarGecmisimiz'].includes(pathname)} activeClassName={classes.active}>
+                         className={classes.listItem}
+                         isActive={() => ['/culture', '/culture/', '/culture/kultur', '/culture/yaylaKulturu', '/culture/yaylaGocu', '/culture/kocKatimi', '/culture/agcasarGecmisimiz'].includes(pathname)}
+                         activeClassName={classes.active}>
                   <ListItemIcon>
                      <ListItemIcon><CultureIcon style={{color: "white"}}/></ListItemIcon>
                   </ListItemIcon>
@@ -342,8 +384,25 @@ if(auth.currentUser != null){
                   <ListItemIcon><AccountTreeIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Soyağacı</ListItemText>
                </ListItem>
-               <ListItem button onClick={handleDropDownClick} className={classes.listItem}>
+               <Divider/>
+               <ListItem button onClick={handleDropDownClick2} className={classes.listItem}>
                   <ListItemIcon><MenuBookIcon style={{color: "white"}}/></ListItemIcon>
+                  <ListItemText>Tarih</ListItemText>
+                  {dropDownOpen2 ? <ExpandLess/> : <ExpandMore/>}
+               </ListItem>
+               <Collapse in={dropDownOpen2} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                     <ListItem button exact to="/history/veliDedeAnlatiyor/sayfa1" className={classes.nested}
+                               component={NavLink}
+                               isActive={() => ['/history/veliDedeAnlatiyor', '/history/veliDedeAnlatiyor/', '/history/veliDedeAnlatiyor/sayfa1', '/history/veliDedeAnlatiyor/sayfa2', '/history/veliDedeAnlatiyor/sayfa3', '/history/veliDedeAnlatiyor/sayfa4'].includes(pathname)}
+                               onClick={handleDropdownItemClick2} activeClassName={classes.active}>
+                        <ListItemIcon/>
+                        <ListItemText>Veli Dede Anlatıyor</ListItemText>
+                     </ListItem>
+                  </List>
+               </Collapse>
+               <ListItem button onClick={handleDropDownClick} className={classes.listItem}>
+                  <ListItemIcon><LocalLibraryIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Yazılar</ListItemText>
                   {dropDownOpen ? <ExpandLess/> : <ExpandMore/>}
                </ListItem>
@@ -351,23 +410,12 @@ if(auth.currentUser != null){
                   <List component="div" disablePadding>
                      <ListItem button exact to="/textWriterTabs" className={classes.nested} component={NavLink}
                                onClick={handleDropdownItemClick} activeClassName={classes.active}>
-                        <ListItemIcon><PeopleIcon style={{color: "white"}}/></ListItemIcon>
+                        <ListItemIcon/>
                         <ListItemText>Site Yazarları</ListItemText>
                      </ListItem>
-                     {/*<ListItem button className={classes.nested} component={Link}*/}
-                     {/*          onClick={handleDropdownItemClick}>*/}
-                     {/*   <ListItemIcon><VerticalSplitRoundedIcon style={{color: "white"}}/></ListItemIcon>*/}
-                     {/*   <ListItemText>Tarih</ListItemText>*/}
-                     {/*</ListItem>*/}
-                     {/*<ListItem button className={classes.nested} component={Link}*/}
-                     {/*          onClick={handleDropdownItemClick}>*/}
-                     {/*   <ListItemIcon><VerticalSplitRoundedIcon style={{color: "white"}}/></ListItemIcon>*/}
-                     {/*   <ListItemText>Mektuplar</ListItemText>*/}
-                     {/*</ListItem>*/}
                   </List>
                </Collapse>
             </List>
-            <Divider/>
          </Drawer>
       </div>
    );

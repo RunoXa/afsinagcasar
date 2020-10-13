@@ -14,6 +14,7 @@ import LoginComponent from "./auth/Login";
 import SignUpComponent from "./auth/SignUp";
 import NotFound from "./NotFound";
 import {AuthContext, AuthProvider} from "./Auth";
+import VeliDedeAnlatiyorTabs from "./VeliDedeAnlatiyorTabs";
 
 const PrivateRoute = ({component: RouteComponent, ...rest}) => {
    const {currentUser} = useContext(AuthContext);
@@ -51,6 +52,14 @@ const DefaultContainer = () => (
          <PrivateRoute exact path="/radio"/>
          <PrivateRoute exact path="/chat" component={Chat}/>
          <PrivateRoute exact path="/tree" component={FamilyTree}/>
+         <PrivateRoute exact path="/history/veliDedeAnlatiyor" component={VeliDedeAnlatiyorTabs}/>
+         <PrivateRoute exact path="/history/veliDedeAnlatiyor/" component={VeliDedeAnlatiyorTabs}/>
+         <PrivateRoute exact path="/history/veliDedeAnlatiyor/sayfa1" component={VeliDedeAnlatiyorTabs}/>
+         <PrivateRoute exact path="/history/veliDedeAnlatiyor/sayfa2" component={VeliDedeAnlatiyorTabs}/>
+         <PrivateRoute exact path="/history/veliDedeAnlatiyor/sayfa3" component={VeliDedeAnlatiyorTabs}/>
+         <PrivateRoute exact path="/history/veliDedeAnlatiyor/sayfa4" component={VeliDedeAnlatiyorTabs}/>
+         <PrivateRoute exact path="/culture" component={CultureTabs}/>
+         <PrivateRoute exact path="/culture/" component={CultureTabs}/>
          <PrivateRoute exact path="/culture/kultur" component={CultureTabs}/>
          <PrivateRoute exact path="/culture/yaylaKulturu" component={CultureTabs}/>
          <PrivateRoute exact path="/culture/yaylaGocu" component={CultureTabs}/>
