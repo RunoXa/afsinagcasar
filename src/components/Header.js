@@ -409,7 +409,7 @@ export default function PersistentDrawerLeft() {
                </ListItem>
                <Collapse in={dropDownOpen} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
-                     <ListItem button exact to="/textWriterTabs" className={classes.nested} component={NavLink}
+                     <ListItem button exact to="/writer/aliRizaArslan/1" className={classes.nested} component={NavLink}
                                onClick={handleDropdownItemClick} activeClassName={classes.active}>
                         <ListItemIcon><img src={AliRizaImageCircle} alt="AliRizaImageCircle" width="40px"/></ListItemIcon>
                         <ListItemText>Ali Rıza Arslan</ListItemText>

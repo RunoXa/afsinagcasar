@@ -8,13 +8,13 @@ import Contact from "./Contact";
 import Chat from "./Chat";
 import ImagesTabs from "./ImagesTabs";
 import FamilyTree from "./FamilyTree";
-import TextWriterTabs from "./TextWriterTabs";
 import CultureTabs from "./CultureTabs";
 import LoginComponent from "./auth/Login";
 import SignUpComponent from "./auth/SignUp";
 import NotFound from "./NotFound";
 import {AuthContext, AuthProvider} from "./Auth";
 import VeliDedeAnlatiyorTabs from "./VeliDedeAnlatiyorTabs";
+import AliRizaArslanTabs from "./AliRizaArslanTabs";
 
 const PrivateRoute = ({component: RouteComponent, ...rest}) => {
    const {currentUser} = useContext(AuthContext);
@@ -46,28 +46,28 @@ const DefaultContainer = () => (
       </header>
       <div>
          <Switch>
-         <PrivateRoute exact path="/" component={Home}/>
-         {/*<PrivateRoute exact path="/home" component={Home}/>*/}
-         <PrivateRoute exact path="/images" component={ImagesTabs}/>
-         <PrivateRoute exact path="/radio"/>
-         <PrivateRoute exact path="/chat" component={Chat}/>
-         <PrivateRoute exact path="/tree" component={FamilyTree}/>
-         <PrivateRoute exact path="/history/veliDedeAnlatiyor" component={VeliDedeAnlatiyorTabs}/>
-         <PrivateRoute exact path="/history/veliDedeAnlatiyor/" component={VeliDedeAnlatiyorTabs}/>
-         <PrivateRoute exact path="/history/veliDedeAnlatiyor/sayfa1" component={VeliDedeAnlatiyorTabs}/>
-         <PrivateRoute exact path="/history/veliDedeAnlatiyor/sayfa2" component={VeliDedeAnlatiyorTabs}/>
-         <PrivateRoute exact path="/history/veliDedeAnlatiyor/sayfa3" component={VeliDedeAnlatiyorTabs}/>
-         <PrivateRoute exact path="/history/veliDedeAnlatiyor/sayfa4" component={VeliDedeAnlatiyorTabs}/>
-         <PrivateRoute exact path="/culture" component={CultureTabs}/>
-         <PrivateRoute exact path="/culture/" component={CultureTabs}/>
-         <PrivateRoute exact path="/culture/kultur" component={CultureTabs}/>
-         <PrivateRoute exact path="/culture/yaylaKulturu" component={CultureTabs}/>
-         <PrivateRoute exact path="/culture/yaylaGocu" component={CultureTabs}/>
-         <PrivateRoute exact path="/culture/kocKatimi" component={CultureTabs}/>
-         <PrivateRoute exact path="/culture/agcasarGecmisimiz" component={CultureTabs}/>
-         <PrivateRoute exact path="/textWriterTabs" component={TextWriterTabs}/>
-         <PrivateRoute exact path="/contact" component={Contact}/>
-         <PrivateRoute exact component={NotFound}/>
+            <PrivateRoute exact path="/" component={Home}/>
+            {/*<PrivateRoute exact path="/home" component={Home}/>*/}
+            <PrivateRoute exact path="/images" component={ImagesTabs}/>
+            <PrivateRoute exact path="/radio"/>
+            <PrivateRoute exact path="/chat" component={Chat}/>
+            <PrivateRoute exact path="/tree" component={FamilyTree}/>
+            <PrivateRoute exact path="/history/veliDedeAnlatiyor" component={VeliDedeAnlatiyorTabs}/>
+            <PrivateRoute exact path="/history/veliDedeAnlatiyor/" component={VeliDedeAnlatiyorTabs}/>
+            <PrivateRoute exact path="/history/veliDedeAnlatiyor/sayfa1" component={VeliDedeAnlatiyorTabs}/>
+            <PrivateRoute exact path="/history/veliDedeAnlatiyor/sayfa2" component={VeliDedeAnlatiyorTabs}/>
+            <PrivateRoute exact path="/history/veliDedeAnlatiyor/sayfa3" component={VeliDedeAnlatiyorTabs}/>
+            <PrivateRoute exact path="/history/veliDedeAnlatiyor/sayfa4" component={VeliDedeAnlatiyorTabs}/>
+            <PrivateRoute exact path="/culture" component={CultureTabs}/>
+            <PrivateRoute exact path="/culture/" component={CultureTabs}/>
+            <PrivateRoute exact path="/culture/kultur" component={CultureTabs}/>
+            <PrivateRoute exact path="/culture/yaylaKulturu" component={CultureTabs}/>
+            <PrivateRoute exact path="/culture/yaylaGocu" component={CultureTabs}/>
+            <PrivateRoute exact path="/culture/kocKatimi" component={CultureTabs}/>
+            <PrivateRoute exact path="/culture/agcasarGecmisimiz" component={CultureTabs}/>
+            <PrivateRoute exact path="/writer/aliRizaArslan/1" component={AliRizaArslanTabs}/>
+            <PrivateRoute exact path="/contact" component={Contact}/>
+            <PrivateRoute exact component={NotFound}/>
          </Switch>
       </div>
       <Footer/>
