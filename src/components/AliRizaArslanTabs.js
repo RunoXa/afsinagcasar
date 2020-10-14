@@ -7,9 +7,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import '../styles/ImagesTabs.css';
-import VeliDedeAnlatiyorS3 from "./history/VeliDedeAnlatiyorS3";
-import VeliDedeAnlatiyorS4 from "./history/VeliDedeAnlatiyorS4";
 import {NavLink, useLocation} from "react-router-dom";
 import AliRizaArslanText1 from "./texts/AliRizaArslanText1";
 import AliRizaArslanText2 from "./texts/AliRizaArslanText2";
@@ -146,11 +143,12 @@ export default function FullWidthTabs() {
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab component={NavLink} exact to="/writer/aliRizaArslan/2" label="GARİP BİR İHALE" {...a11yProps(1)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/writer/aliRizaArslan/3" label="Sayfa 3" {...a11yProps(2)}
+               <Tab component={NavLink} exact to="/writer/aliRizaArslan/3"
+                    label="HÜSEYİN DEDE (BİYOGRAFİ)" {...a11yProps(2)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/writer/aliRizaArslan/4" label="Sayfa 4" {...a11yProps(3)}
+               <Tab component={NavLink} exact to="/writer/aliRizaArslan/4" label="1 MAYIS" {...a11yProps(3)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/writer/aliRizaArslan/5" label="Sayfa 4" {...a11yProps(4)}
+               <Tab component={NavLink} exact to="/writer/aliRizaArslan/5" label="SORUMLULUK" {...a11yProps(4)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
             </Tabs>
          </AppBar>
@@ -165,13 +163,13 @@ export default function FullWidthTabs() {
                <AliRizaArslanText2/>
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-               <VeliDedeAnlatiyorS3/>
+
             </TabPanel>
             <TabPanel value={value} index={3} dir={theme.direction}>
-               <VeliDedeAnlatiyorS4/>
+
             </TabPanel>
             <TabPanel value={value} index={4} dir={theme.direction}>
-               <VeliDedeAnlatiyorS4/>
+
             </TabPanel>
          </SwipeableViews>
       </div>
