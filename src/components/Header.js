@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
    },
    nested: {
       paddingLeft: theme.spacing(4),
-      padding: "10px",
+      padding: "3px",
       "&:hover": {
          opacity: 1,
          color: "white !important",
@@ -150,7 +150,7 @@ const useStyles = makeStyles((theme) => ({
 const StyledMenu = withStyles({
    paper: {
       color: "white",
-      background: "linear-gradient(90deg, rgba(73, 4, 4, 1) 0%, rgba(120, 2, 2, 1) 45%, rgba(120, 2, 2, 1) 55%, rgba(73, 4, 4, 1) 100%)"
+      background: "rgba(85, 4, 4, 1)"
    },
 })((props) => (
    <Menu
