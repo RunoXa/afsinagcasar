@@ -1,11 +1,21 @@
 import React, {Component} from "react";
 
-export default class AliRizaText2 extends Component {
+export default class AliRizaArslanText1 extends Component {
 
    render() {
       return (
-         <div className="text-content">
+         <div style={{
+            border: "3px solid #50001B",
+            padding: "1rem",
+            marginTop: "75px",
+            borderRadius: "10px 10px 10px 10px",
+            backgroundColor: "#f5f5f5",
+            color: "#50001B"
+         }}>
             <div>
+               <h2 style={{fontWeight: "bold", color: "#50001B"}}>Garip Bir İhale</h2>
+            </div>
+            <div style={{marginTop: "50px"}}>
                <p>Afşin-Elbistan A santrali de garip bir özelleştirme uygulamasına maruz kalmıştır. 1994 yılında,
                   santralin tamamlanmayan iki ünitesinin yapılarak toplam 6 ünitesinin 20 yıl boyunca kömür sahasıyla
                   birlikte işletilmesi için uluslararası beş ayrı konsorsiyuma çağrı yapılmış.

@@ -8,13 +8,11 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import '../styles/ImagesTabs.css';
-import VeliDedeAnlatiyorS1 from "./history/VeliDedeAnlatiyorS1";
-import VeliDedeAnlatiyorS2 from "./history/VeliDedeAnlatiyorS2";
 import VeliDedeAnlatiyorS3 from "./history/VeliDedeAnlatiyorS3";
 import VeliDedeAnlatiyorS4 from "./history/VeliDedeAnlatiyorS4";
 import {NavLink, useLocation} from "react-router-dom";
 import AliRizaArslanText1 from "./texts/AliRizaArslanText1";
-import AliRizaImage from "../images/textImages/aliriza.jpg";
+import AliRizaArslanText2 from "./texts/AliRizaArslanText2";
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
@@ -91,34 +89,39 @@ export default function FullWidthTabs() {
    useEffect(() => {
       //set the TAB index by loading
       switch (selectedIndex) {
+         case '/writer/aliRizaArslan':
+            if (value !== 0) {
+               setValue(0)
+            }
+            break;
+         case '/writer/aliRizaArslan/':
+            if (value !== 0) {
+               setValue(0)
+            }
+            break;
          case '/writer/aliRizaArslan/1':
             if (value !== 0) {
                setValue(0)
             }
             break;
-         case '/history/veliDedeAnlatiyor':
-            if (value !== 0) {
-               setValue(0)
-            }
-            break;
-         case '/history/veliDedeAnlatiyor/sayfa1':
-            if (value !== 0) {
-               setValue(0)
-            }
-            break;
-         case '/history/veliDedeAnlatiyor/sayfa2':
+         case '/writer/aliRizaArslan/2':
             if (value !== 0) {
                setValue(1)
             }
             break;
-         case '/history/veliDedeAnlatiyor/sayfa3':
+         case '/writer/aliRizaArslan/3':
             if (value !== 0) {
                setValue(2)
             }
             break;
-         case '/history/veliDedeAnlatiyor/sayfa4':
+         case '/writer/aliRizaArslan/4':
             if (value !== 0) {
                setValue(3)
+            }
+            break;
+         case '/writer/aliRizaArslan/5':
+            if (value !== 0) {
+               setValue(4)
             }
             break;
          default:
@@ -138,13 +141,16 @@ export default function FullWidthTabs() {
                // scrollButtons="auto"
                aria-label="scrollable tabs example"
                classes={{indicator: classes.indicator}}>
-               <Tab component={NavLink} exact to="/writer/aliRizaArslan/1" label="AĞCAŞAR’DA YAŞADIĞIM BİR OLAY" {...a11yProps(0)}
+               <Tab component={NavLink} exact to="/writer/aliRizaArslan/1"
+                    label="AĞCAŞAR’DA YAŞADIĞIM BİR OLAY" {...a11yProps(0)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/history/veliDedeAnlatiyor/sayfa2" label="Sayfa 2" {...a11yProps(1)}
+               <Tab component={NavLink} exact to="/writer/aliRizaArslan/2" label="GARİP BİR İHALE" {...a11yProps(1)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/history/veliDedeAnlatiyor/sayfa3" label="Sayfa 3" {...a11yProps(2)}
+               <Tab component={NavLink} exact to="/writer/aliRizaArslan/3" label="Sayfa 3" {...a11yProps(2)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/history/veliDedeAnlatiyor/sayfa4" label="Sayfa 4" {...a11yProps(3)}
+               <Tab component={NavLink} exact to="/writer/aliRizaArslan/4" label="Sayfa 4" {...a11yProps(3)}
+                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+               <Tab component={NavLink} exact to="/writer/aliRizaArslan/5" label="Sayfa 4" {...a11yProps(4)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
             </Tabs>
          </AppBar>
@@ -156,12 +162,15 @@ export default function FullWidthTabs() {
                <AliRizaArslanText1/>
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
-               <VeliDedeAnlatiyorS2/>
+               <AliRizaArslanText2/>
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
                <VeliDedeAnlatiyorS3/>
             </TabPanel>
             <TabPanel value={value} index={3} dir={theme.direction}>
+               <VeliDedeAnlatiyorS4/>
+            </TabPanel>
+            <TabPanel value={value} index={4} dir={theme.direction}>
                <VeliDedeAnlatiyorS4/>
             </TabPanel>
          </SwipeableViews>

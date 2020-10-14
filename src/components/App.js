@@ -65,7 +65,13 @@ const DefaultContainer = () => (
             <PrivateRoute exact path="/culture/yaylaGocu" component={CultureTabs}/>
             <PrivateRoute exact path="/culture/kocKatimi" component={CultureTabs}/>
             <PrivateRoute exact path="/culture/agcasarGecmisimiz" component={CultureTabs}/>
+            <PrivateRoute exact path="/writer/aliRizaArslan" component={AliRizaArslanTabs}/>
+            <PrivateRoute exact path="/writer/aliRizaArslan/" component={AliRizaArslanTabs}/>
             <PrivateRoute exact path="/writer/aliRizaArslan/1" component={AliRizaArslanTabs}/>
+            <PrivateRoute exact path="/writer/aliRizaArslan/2" component={AliRizaArslanTabs}/>
+            <PrivateRoute exact path="/writer/aliRizaArslan/3" component={AliRizaArslanTabs}/>
+            <PrivateRoute exact path="/writer/aliRizaArslan/4" component={AliRizaArslanTabs}/>
+            <PrivateRoute exact path="/writer/aliRizaArslan/5" component={AliRizaArslanTabs}/>
             <PrivateRoute exact path="/contact" component={Contact}/>
             <PrivateRoute exact component={NotFound}/>
          </Switch>
