@@ -1,4 +1,7 @@
 import React, {Component} from "react";
+import Santral from "../../images/textImages/aliriza/santral.jpg";
+import Kapitalizm from "../../images/textImages/aliriza/kapitalizm.jpg";
+import Somuru from "../../images/textImages/aliriza/somuru.jpg";
 
 export default class AliRizaArslanText1 extends Component {
 
@@ -16,7 +19,8 @@ export default class AliRizaArslanText1 extends Component {
                <h2 style={{fontWeight: "bold", color: "#50001B"}}>Garip Bir İhale</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p>Afşin-Elbistan A santrali de garip bir özelleştirme uygulamasına maruz kalmıştır. 1994 yılında,
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>A</span>fşin-Elbistan A santrali
+                  de garip bir özelleştirme uygulamasına maruz kalmıştır. 1994 yılında,
                   santralin tamamlanmayan iki ünitesinin yapılarak toplam 6 ünitesinin 20 yıl boyunca kömür sahasıyla
                   birlikte işletilmesi için uluslararası beş ayrı konsorsiyuma çağrı yapılmış.
                   Çağrıya uyan üç konsarsiyumun içerisinde ERG-VERBUND’a ihale verilmiştir.
@@ -28,6 +32,8 @@ export default class AliRizaArslanText1 extends Component {
                   Sözleşme uyarınca santralin devredilmesi halinde devri gerçekleştirenlerin sorumluluğu doğacağı gibi
                   kamunun olağanüstü zararlara uğrayacağı anlaşılmıştır.
                </p>
+               <img src={Santral} alt="Santral"
+                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
                <p>
                   Bu sorunları gidermek
                   için yapılan girişimler de sonuç vermeyince TEAŞ sözleşmeleri imzalamamıştır. Şirket ise bakanlıkla
@@ -73,6 +79,8 @@ export default class AliRizaArslanText1 extends Component {
                   kafamızda. Afşin–Elbistan Termik Santrali’ni devlet işletirse devlet 11 milyar dolar daha fazla kar
                   edecek. Peki buradaki farkla ne yapılır? Ona bir kaç örnek verelim.
                </p>
+               <img src={Kapitalizm} alt="Kapitalizm"
+                    style={{float: "right", maxWidth: "100%", margin: "10px"}}/>
                <p>
                   Bu parayla 10 ünitelik bir termik santral daha kurulabilir. İlk yapılan A santrali 4 üniteden
                   oluştuğuna göre 2.5 tane daha böyle santral yapılabilir. Şuan Türkiye’de inşaatın metrekare birim
@@ -122,6 +130,8 @@ export default class AliRizaArslanText1 extends Component {
                   Kahramanmaraş + yanına da nüfusu 243.210 olan bir Kahraman yanı iki Kahraman ilimiz ya da 10 yeni il
                   daha inşa edilir. Bu devletin işletmesi ile yabancı firmanın işletmesi arasındaki kâr farkıdır.
                </p>
+               <img src={Somuru} alt="Somuru"
+                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
                <p>
                   Şimdi Dünya Kapitalizmi böyle bir sömürüyü kolay kolay bırakır mı? Tabiî ki bırakmaz ve bunu rahat bir
                   şekilde devam ettirmek için de bu topraklarda kardeşi kardeşe kırdırmaktan elbette ki geri kalmaz.
@@ -146,20 +156,18 @@ export default class AliRizaArslanText1 extends Component {
                <p>
                   Yazımı Afşin-Elbistan bölgesinde yaşayan Mahir BAŞPINAR’a ait olan şu dizelerle bitirmek isterim.
                </p>
-               <p>
+               <p style={{fontStyle: "italic"}}>
                   “Kim bu işe çözüm bulur bilmem.<br/>
                   Ben kimseyle polemiğe girmem.<br/>
                   Buna göz yumana, Hayır dilemem.<br/>
-                  Sahipsiz kalmışsın Afşin –Elbistan “
+                  Sahipsiz kalmışsın Afşin –Elbistan“
                </p>
-               <p style={{fontSize: '13px'}}>
-                  Sevgi ve Saygılarla
-               </p>
-               <p style={{color: 'red'}}>***</p>
+               <p>Sevgi ve Saygılarla</p>
+               <p style={{color: 'red', fontSize: "40px"}}>***</p>
                <p>
-                  Ali Rıza ARSLAN <br/>
-                  15.03.2008 <br/>
-                  Ankara <br/>
+                  Ali Rıza ARSLAN<br/>
+                  15.03.2008<br/>
+                  Ankara<br/>
                </p>
             </div>
          </div>
