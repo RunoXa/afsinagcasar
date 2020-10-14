@@ -397,7 +397,7 @@ export default function PersistentDrawerLeft() {
                                component={NavLink}
                                isActive={() => ['/history/veliDedeAnlatiyor', '/history/veliDedeAnlatiyor/', '/history/veliDedeAnlatiyor/sayfa1', '/history/veliDedeAnlatiyor/sayfa2', '/history/veliDedeAnlatiyor/sayfa3', '/history/veliDedeAnlatiyor/sayfa4'].includes(pathname)}
                                onClick={handleDropdownItemClick2} activeClassName={classes.active}>
-                        <ListItemIcon><img src={VeliDedeImageCircle} alt="VeliDedeImageCircle" width="40px"/></ListItemIcon>
+                        <ListItemIcon><img src={VeliDedeImageCircle} alt="VeliDedeImageCircle" width="40px" height="40px"/></ListItemIcon>
                         <ListItemText>Veli Dede Anlatıyor</ListItemText>
                      </ListItem>
                   </List>
@@ -412,7 +412,7 @@ export default function PersistentDrawerLeft() {
                      <ListItem button exact to="/writer/aliRizaArslan/1" className={classes.nested} component={NavLink}
                                isActive={() => ['/writer/aliRizaArslan', '/writer/aliRizaArslan/', '/writer/aliRizaArslan/1', '/writer/aliRizaArslan/2', '/writer/aliRizaArslan/3', '/writer/aliRizaArslan/4', '/writer/aliRizaArslan/5'].includes(pathname)}
                                onClick={handleDropdownItemClick} activeClassName={classes.active}>
-                        <ListItemIcon><img src={AliRizaImageCircle} alt="AliRizaImageCircle" width="40px"/></ListItemIcon>
+                        <ListItemIcon><img src={AliRizaImageCircle} alt="AliRizaImageCircle" width="40px" height="40px"/></ListItemIcon>
                         <ListItemText>Ali Rıza Arslan</ListItemText>
                      </ListItem>
                   </List>
