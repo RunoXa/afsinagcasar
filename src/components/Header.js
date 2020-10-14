@@ -34,7 +34,6 @@ import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import CultureIcon from '@material-ui/icons/AccountBalance';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import PeopleIcon from '@material-ui/icons/People';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 
 const drawerWidth = 240;
@@ -48,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
          easing: theme.transitions.easing.sharp,
          duration: theme.transitions.duration.leavingScreen,
       }),
-      background: "linear-gradient(90deg, rgba(73, 4, 4, 1) 0%, rgba(120, 2, 2, 1) 45%, rgba(120, 2, 2, 1) 55%, rgba(73, 4, 4, 1) 100%)"
+      background: "rgba(85, 4, 4, 1)"
    },
    appBarShift: {
       width: `calc(100% - ${drawerWidth}px)`,
@@ -118,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
    drawerPaper: {
       width: drawerWidth,
       color: "white",
-      background: "linear-gradient(90deg, rgba(73, 4, 4, 1) 0%, rgba(120, 2, 2, 1) 45%, rgba(120, 2, 2, 1) 55%, rgba(73, 4, 4, 1) 100%)"
+      background: "rgba(85, 4, 4, 1)"
    },
    drawerHeader: {
       display: 'flex',
