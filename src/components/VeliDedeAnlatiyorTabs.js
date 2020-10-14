@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
          outline: 'none',
          color: '#550A21',
          fontWeight: "bold",
-         padding: '20px'
+         padding: '10px'
       },
    },
 }));
