@@ -35,6 +35,8 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import CultureIcon from '@material-ui/icons/AccountBalance';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
+import AliRizaImageCircle from '../images/textImages/alirizacircle.png';
+import VeliDedeImageCircle from '../images/velidede/velidedecircle.jpg';
 
 const drawerWidth = 240;
 
@@ -95,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
    },
    nested: {
-      paddingLeft: theme.spacing(2),
+      paddingLeft: theme.spacing(4),
       padding: "10px",
       "&:hover": {
          opacity: 1,
@@ -395,7 +397,7 @@ export default function PersistentDrawerLeft() {
                                component={NavLink}
                                isActive={() => ['/history/veliDedeAnlatiyor', '/history/veliDedeAnlatiyor/', '/history/veliDedeAnlatiyor/sayfa1', '/history/veliDedeAnlatiyor/sayfa2', '/history/veliDedeAnlatiyor/sayfa3', '/history/veliDedeAnlatiyor/sayfa4'].includes(pathname)}
                                onClick={handleDropdownItemClick2} activeClassName={classes.active}>
-                        <ListItemIcon/>
+                        <ListItemIcon><img src={VeliDedeImageCircle} alt="VeliDedeImageCircle" width="40px"/></ListItemIcon>
                         <ListItemText>Veli Dede Anlatıyor</ListItemText>
                      </ListItem>
                   </List>
@@ -409,7 +411,7 @@ export default function PersistentDrawerLeft() {
                   <List component="div" disablePadding>
                      <ListItem button exact to="/textWriterTabs" className={classes.nested} component={NavLink}
                                onClick={handleDropdownItemClick} activeClassName={classes.active}>
-                        <ListItemIcon/>
+                        <ListItemIcon><img src={AliRizaImageCircle} alt="AliRizaImageCircle" width="40px"/></ListItemIcon>
                         <ListItemText>Ali Rıza Arslan</ListItemText>
                      </ListItem>
                   </List>
