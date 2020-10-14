@@ -403,7 +403,7 @@ export default function PersistentDrawerLeft() {
                </Collapse>
                <ListItem button onClick={handleDropDownClick} className={classes.listItem}>
                   <ListItemIcon><LocalLibraryIcon style={{color: "white"}}/></ListItemIcon>
-                  <ListItemText>Yazılar</ListItemText>
+                  <ListItemText>Site Yazarları</ListItemText>
                   {dropDownOpen ? <ExpandLess/> : <ExpandMore/>}
                </ListItem>
                <Collapse in={dropDownOpen} timeout="auto" unmountOnExit>
@@ -411,7 +411,7 @@ export default function PersistentDrawerLeft() {
                      <ListItem button exact to="/textWriterTabs" className={classes.nested} component={NavLink}
                                onClick={handleDropdownItemClick} activeClassName={classes.active}>
                         <ListItemIcon/>
-                        <ListItemText>Site Yazarları</ListItemText>
+                        <ListItemText>Ali Rıza Arslan</ListItemText>
                      </ListItem>
                   </List>
                </Collapse>

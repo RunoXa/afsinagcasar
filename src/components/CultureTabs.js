@@ -50,6 +50,7 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
    root: {
       width: '100%',
+      backgroundColor: "lightGrey"
    },
    indicator: {
       backgroundColor: '#550A21',
