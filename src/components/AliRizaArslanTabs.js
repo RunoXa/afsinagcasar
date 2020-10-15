@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
          outline: 'none',
          color: '#550A21',
          fontWeight: "bold",
-         padding: '10px'
+         padding: '24px'
       },
    },
 }));
@@ -139,7 +139,7 @@ export default function FullWidthTabs() {
                aria-label="scrollable tabs example"
                classes={{indicator: classes.indicator}}>
                <Tab component={NavLink} exact to="/writer/aliRizaArslan/1"
-                    label="AĞCAŞAR’DA YAŞADIĞIM BİR OLAY" {...a11yProps(0)}
+                    label="YAŞADIĞIM BİR OLAY" {...a11yProps(0)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab component={NavLink} exact to="/writer/aliRizaArslan/2" label="GARİP BİR İHALE" {...a11yProps(1)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>

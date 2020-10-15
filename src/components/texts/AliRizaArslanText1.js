@@ -75,9 +75,9 @@ export default class AliRizaArslanText1 extends Component {
                   Allah inancı.
                </p>
                <p><span
-                  style={{fontWeight: "bold"}}>“Allah insanın kalbindedir ve Allah’ın evi temiz insanın kalbidir”.</span> Ben
-                  hep öyle olduğunu düşündüm ve hep öyle inandım.
+                  style={{fontWeight: "bold"}}>“Allah insanın kalbindedir ve Allah’ın evi temiz insanın kalbidir”.</span>
                </p>
+               <p>Ben hep öyle olduğunu düşündüm ve hep öyle inandım.</p>
                <p style={{color: 'red', fontSize: "40px"}}>***</p>
                <p>
                   Ali Rıza ARSLAN<br/>
