@@ -95,8 +95,8 @@ export default class AliRizaArslanText1 extends Component {
                <p>
                   <table border="1">
                      <tr>
-                        <th>Bartin</th>
-                        <th>İğdir</th>
+                        <th>Bartın</th>
+                        <th>Iğdır</th>
                         <th>Yalova</th>
                         <th>Ardahan</th>
                      </tr>
