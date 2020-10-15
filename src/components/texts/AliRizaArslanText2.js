@@ -8,7 +8,7 @@ export default class AliRizaArslanText1 extends Component {
    render() {
       return (
          <div style={{
-            border: "3px solid #50001B",
+            border: "8px double #50001B",
             padding: "1rem",
             marginTop: "75px",
             borderRadius: "10px 10px 10px 10px",
