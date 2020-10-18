@@ -37,6 +37,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import AliRizaImageCircle from '../images/textImages/alirizacircle.png';
 import VeliDedeImageCircle from '../images/velidede/velidedecircle.jpg';
+import SengulImageCircle from '../images/textImages/sengulcircle.png';
 
 const drawerWidth = 240;
 
@@ -416,6 +417,13 @@ export default function PersistentDrawerLeft() {
                         <ListItemIcon><img src={AliRizaImageCircle} alt="AliRizaImageCircle" width="40px"
                                            height="40px"/></ListItemIcon>
                         <ListItemText>Ali Rıza Arslan</ListItemText>
+                     </ListItem>
+                     <ListItem button exact to="/" className={classes.nested} component={NavLink}
+                               // isActive={() => ['/writer/aliRizaArslan', '/writer/aliRizaArslan/', '/writer/aliRizaArslan/1', '/writer/aliRizaArslan/2', '/writer/aliRizaArslan/3', '/writer/aliRizaArslan/4', '/writer/aliRizaArslan/5'].includes(pathname)}
+                               onClick={handleDropdownItemClick} activeClassName={classes.active}>
+                        <ListItemIcon><img src={SengulImageCircle} alt="SengulImageCircle" width="40px"
+                                           height="40px"/></ListItemIcon>
+                        <ListItemText>Şengül Arslan</ListItemText>
                      </ListItem>
                   </List>
                </Collapse>
