@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import '../styles/Images.css';
-import Gallery from 'react-grid-gallery';
-import '../styles/Images.css';
+import Lightbox from 'react-lightbox-component';
+import 'react-lightbox-component/build/css/index.css';
 import Bahar1 from '../images/bahar/bahar1.JPG';
 import Bahar2 from '../images/bahar/bahar2.JPG';
 import Bahar3 from '../images/bahar/bahar3.JPG';
@@ -38,212 +38,182 @@ const IMAGES =
       {
          src: Bahar1,
          thumbnail: Bahar1,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar2,
          thumbnail: Bahar2,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar3,
          thumbnail: Bahar3,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar4,
          thumbnail: Bahar4,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar5,
          thumbnail: Bahar5,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar6,
          thumbnail: Bahar6,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar7,
          thumbnail: Bahar7,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar8,
          thumbnail: Bahar8,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar9,
          thumbnail: Bahar9,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar10,
          thumbnail: Bahar10,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar11,
          thumbnail: Bahar11,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar12,
          thumbnail: Bahar12,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar13,
          thumbnail: Bahar13,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar14,
          thumbnail: Bahar14,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar15,
          thumbnail: Bahar15,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar16,
          thumbnail: Bahar16,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar17,
          thumbnail: Bahar17,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar18,
          thumbnail: Bahar18,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar19,
          thumbnail: Bahar19,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar20,
          thumbnail: Bahar20,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar21,
          thumbnail: Bahar21,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar22,
          thumbnail: Bahar22,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar23,
          thumbnail: Bahar23,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar24,
          thumbnail: Bahar24,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar25,
          thumbnail: Bahar25,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar26,
          thumbnail: Bahar26,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar27,
          thumbnail: Bahar27,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar28,
          thumbnail: Bahar28,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar29,
          thumbnail: Bahar29,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
       {
          src: Bahar30,
          thumbnail: Bahar30,
-         thumbnailWidth: 320,
-         thumbnailHeight: 212,
-         caption: ""
+         title: ' ',
+         description: ' ',
       },
    ];
 
@@ -257,9 +227,11 @@ export default class Bahar extends Component {
             minHeight: "1px",
             marginTop: "60px",
          }}>
-            <div className="main-images">
-               <Gallery images={IMAGES} enableImageSelection={false} showLightboxThumbnails={true}/>
-            </div>
+            <Lightbox
+               images={IMAGES}
+               thumbnailWidth='320px'
+               thumbnailHeight='212px'
+               showImageModifiers={false}/>
          </div>
       )
    }
