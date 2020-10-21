@@ -101,7 +101,7 @@ const Login = ({history}) => {
 
    async function handleErrorMessage(error) {
       setErrorMessage({msg: error.message, key: error.code});
-      setSnackbarOpen(true)
+      setSnackbarOpen(true);
    }
 
    const handleCloseErrorMessage = (event, reason) => {
