@@ -199,6 +199,10 @@ export default function PersistentDrawerLeft() {
       setDropDownOpen2(false);
    };
 
+   const outsideHandleDrawerClose = () => {
+      setOpen(false);
+   }
+
    const handleMenu = (event) => {
       setAnchorEl(event.currentTarget);
    };
@@ -342,8 +346,8 @@ export default function PersistentDrawerLeft() {
          <Drawer
             className={classes.drawer}
             variant="temporary"
-            onEscapeKeyDown={handleDrawerClose}
-            onBackdropClick={handleDrawerClose}
+            onEscapeKeyDown={outsideHandleDrawerClose}
+            onBackdropClick={outsideHandleDrawerClose}
             anchor="left"
             open={open}
             classes={{
