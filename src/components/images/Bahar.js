@@ -1,37 +1,37 @@
 import React, {Component} from "react";
-import '../styles/Images.css';
+import '../../styles/Images.css';
 import Lightbox from 'react-lightbox-component';
 import 'react-lightbox-component/build/css/index.css';
-import Bahar1 from '../images/bahar/bahar1.JPG';
-import Bahar2 from '../images/bahar/bahar2.JPG';
-import Bahar3 from '../images/bahar/bahar3.JPG';
-import Bahar4 from '../images/bahar/bahar4.JPG';
-import Bahar5 from '../images/bahar/bahar5.JPG';
-import Bahar6 from '../images/bahar/bahar6.JPG';
-import Bahar7 from '../images/bahar/bahar7.JPG';
-import Bahar8 from '../images/bahar/bahar8.JPG';
-import Bahar9 from '../images/bahar/bahar9.JPG';
-import Bahar10 from '../images/bahar/bahar10.JPG';
-import Bahar11 from '../images/bahar/bahar11.JPG';
-import Bahar12 from '../images/bahar/bahar12.JPG';
-import Bahar13 from '../images/bahar/bahar13.JPG';
-import Bahar14 from '../images/bahar/bahar14.JPG';
-import Bahar15 from '../images/bahar/bahar15.JPG';
-import Bahar16 from '../images/bahar/bahar16.JPG';
-import Bahar17 from '../images/bahar/bahar17.JPG';
-import Bahar18 from '../images/bahar/bahar18.JPG';
-import Bahar19 from '../images/bahar/bahar19.JPG';
-import Bahar20 from '../images/bahar/bahar20.JPG';
-import Bahar21 from '../images/bahar/bahar21.JPG';
-import Bahar22 from '../images/bahar/bahar22.JPG';
-import Bahar23 from '../images/bahar/bahar23.JPG';
-import Bahar24 from '../images/bahar/bahar24.JPG';
-import Bahar25 from '../images/bahar/bahar25.JPG';
-import Bahar26 from '../images/bahar/bahar26.JPG';
-import Bahar27 from '../images/bahar/bahar27.JPG';
-import Bahar28 from '../images/bahar/bahar28.JPG';
-import Bahar29 from '../images/bahar/bahar29.JPG';
-import Bahar30 from '../images/bahar/bahar30.JPG';
+import Bahar1 from '../../images/bahar/bahar1.JPG';
+import Bahar2 from '../../images/bahar/bahar2.JPG';
+import Bahar3 from '../../images/bahar/bahar3.JPG';
+import Bahar4 from '../../images/bahar/bahar4.JPG';
+import Bahar5 from '../../images/bahar/bahar5.JPG';
+import Bahar6 from '../../images/bahar/bahar6.JPG';
+import Bahar7 from '../../images/bahar/bahar7.JPG';
+import Bahar8 from '../../images/bahar/bahar8.JPG';
+import Bahar9 from '../../images/bahar/bahar9.JPG';
+import Bahar10 from '../../images/bahar/bahar10.JPG';
+import Bahar11 from '../../images/bahar/bahar11.JPG';
+import Bahar12 from '../../images/bahar/bahar12.JPG';
+import Bahar13 from '../../images/bahar/bahar13.JPG';
+import Bahar14 from '../../images/bahar/bahar14.JPG';
+import Bahar15 from '../../images/bahar/bahar15.JPG';
+import Bahar16 from '../../images/bahar/bahar16.JPG';
+import Bahar17 from '../../images/bahar/bahar17.JPG';
+import Bahar18 from '../../images/bahar/bahar18.JPG';
+import Bahar19 from '../../images/bahar/bahar19.JPG';
+import Bahar20 from '../../images/bahar/bahar20.JPG';
+import Bahar21 from '../../images/bahar/bahar21.JPG';
+import Bahar22 from '../../images/bahar/bahar22.JPG';
+import Bahar23 from '../../images/bahar/bahar23.JPG';
+import Bahar24 from '../../images/bahar/bahar24.JPG';
+import Bahar25 from '../../images/bahar/bahar25.JPG';
+import Bahar26 from '../../images/bahar/bahar26.JPG';
+import Bahar27 from '../../images/bahar/bahar27.JPG';
+import Bahar28 from '../../images/bahar/bahar28.JPG';
+import Bahar29 from '../../images/bahar/bahar29.JPG';
+import Bahar30 from '../../images/bahar/bahar30.JPG';
 
 const IMAGES =
    [
@@ -229,8 +229,8 @@ export default class Bahar extends Component {
          }}>
             <Lightbox
                images={IMAGES}
-               thumbnailWidth='320px'
-               thumbnailHeight='212px'
+               thumbnailWidth={'300px'}
+               thumbnailHeight={'400px'}
                showImageModifiers={false}/>
          </div>
       )
