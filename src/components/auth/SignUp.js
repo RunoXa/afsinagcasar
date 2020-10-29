@@ -106,11 +106,11 @@ const SignUp = ({history}) => {
             lastName: lastName.value,
             email: email.value
          });
-         history.push("/");
+         // await app.auth().currentUser.sendEmailVerification();
       } catch (error) {
          await handleErrorMessage(error);
       }
-   }, [history]);
+   }, []);
 
    return (
       <div>

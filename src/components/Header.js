@@ -209,6 +209,7 @@ export default function PersistentDrawerLeft() {
 
    const handleDropDownClick = () => {
       setDropDownOpen(!dropDownOpen);
+      setDropDownOpen2(false);
    };
 
    const handleDropdownItemClick = () => {
@@ -218,6 +219,7 @@ export default function PersistentDrawerLeft() {
    }
 
    const handleDropDownClick2 = () => {
+      setDropDownOpen(false);
       setDropDownOpen2(!dropDownOpen2);
    };
 
