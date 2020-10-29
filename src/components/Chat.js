@@ -7,7 +7,7 @@ export default class Image2 extends Component {
    render() {
       return (
          <div>
-            <div style={{textAlign: "center"}}>
+            <div style={{textAlign: "center", marginTop: "30px"}}>
                <h1>CHAT</h1>
                <img src={WorkImage} alt="WorkImage"/>
             </div>

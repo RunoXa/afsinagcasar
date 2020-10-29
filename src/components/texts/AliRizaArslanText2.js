@@ -13,7 +13,8 @@ export default class AliRizaArslanText2 extends Component {
             marginTop: "75px",
             borderRadius: "10px 10px 10px 10px",
             backgroundColor: "#f5f5f5",
-            color: "#50001B"
+            color: "#50001B",
+            overflow: "auto"
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#50001B"}}>Garip Bir İhale</h2>

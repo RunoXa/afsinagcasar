@@ -10,7 +10,8 @@ export default class AliRizaArslanText1 extends Component {
             marginTop: "75px",
             borderRadius: "10px 10px 10px 10px",
             backgroundColor: "#f5f5f5",
-            color: "#50001B"
+            color: "#50001B",
+            overflow: "auto"
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#50001B"}}>AĞCAŞAR’DA YAŞADIĞIM BİR OLAY</h2>
