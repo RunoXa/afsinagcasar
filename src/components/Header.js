@@ -331,7 +331,7 @@ export default function PersistentDrawerLeft() {
                         <StyledMenuItem onClick={handleClose}>
                            <ListItemIcon>
                            </ListItemIcon>
-                           <ListItemText primary="Yardim"/>
+                           <ListItemText primary="Yardım"/>
                         </StyledMenuItem>
                         <StyledMenuItem exact to="/login" onClick={handleLogoutAndClose}>
                            <ListItemIcon><ExitToAppIcon style={{color: "white"}}/></ListItemIcon>
