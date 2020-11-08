@@ -106,11 +106,13 @@ const SignUp = ({history}) => {
             lastName: lastName.value,
             email: email.value
          });
-         // await app.auth().currentUser.sendEmailVerification();
+         await app.auth().currentUser.sendEmailVerification();
+         window.alert("ÜYELİĞİNİZ BAŞARIYLA TAMAMLANMIŞTIR, SON OLARAK E-POSTA HESABINIZI DOĞRULAMANIZ GEREKMEKTEDİR.")
+         history.push("/login")
       } catch (error) {
          await handleErrorMessage(error);
       }
-   }, []);
+   }, [history]);
 
    return (
       <div>

@@ -98,6 +98,7 @@ const Login = ({history}) => {
    const classes = useStyles();
    const [errorMessage, setErrorMessage] = React.useState("");
    const [snackbarOpen, setSnackbarOpen] = React.useState(false);
+   const [emailSnackbarOpen, setEmailSnackbarOpen] = React.useState(false);
 
    async function handleErrorMessage(error) {
       setErrorMessage({msg: error.message, key: error.code});
@@ -108,15 +109,37 @@ const Login = ({history}) => {
       setSnackbarOpen(false);
    };
 
+   async function handleEmailVerification() {
+      setErrorMessage({
+         msg: "Siteye giriş yapabilmeniz için e-posta adresinizi doğrulamanız gerekmektedir.",
+         key: "E-Posta Doğrulama"
+      });
+      setEmailSnackbarOpen(true);
+   }
+
+   const handleCloseEmailVerification = (event, reason) => {
+      setEmailSnackbarOpen(false);
+   };
+
    const handleLogin = useCallback(
       async event => {
          event.preventDefault();
          const {email, password} = event.target.elements;
          try {
+            if (await app.auth().currentUser !== null) {
+               await app.auth().currentUser.reload();
+               if (app.auth().currentUser.emailVerified) {
+                  window.location.reload();
+                  history.push("/");
+               }
+            }
             await app
                .auth()
                .signInWithEmailAndPassword(email.value, password.value);
-            history.push("/");
+
+            if (!app.auth().currentUser.emailVerified) {
+               await handleEmailVerification();
+            }
          } catch (error) {
             await handleErrorMessage(error);
          }
@@ -238,6 +261,8 @@ const Login = ({history}) => {
                <Copyright/>
             </Box>
             <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleCloseErrorMessage}><Alert
+               severity="error">{errorMessage.key}: {errorMessage.msg}</Alert></Snackbar>
+            <Snackbar open={emailSnackbarOpen} autoHideDuration={6000} onClose={handleCloseEmailVerification}><Alert
                severity="error">{errorMessage.key}: {errorMessage.msg}</Alert></Snackbar>
          </Container>
       </div>

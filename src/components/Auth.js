@@ -9,8 +9,17 @@ export const AuthProvider = ({children}) => {
 
    useEffect(() => {
       auth.onAuthStateChanged((user) => {
-         setCurrentUser(user)
-         setPending(false)
+         if (user !== null) {
+            if (user.emailVerified) {
+               setCurrentUser(user)
+               setPending(false)
+            } else {
+               setPending(false)
+            }
+         } else {
+            setCurrentUser(null)
+            setPending(false)
+         }
       });
    }, []);
 
