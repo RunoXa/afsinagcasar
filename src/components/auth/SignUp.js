@@ -14,8 +14,13 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import {makeStyles} from '@material-ui/core/styles';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import {firestore, auth} from '../../Base';
 
 function Copyright() {
@@ -38,31 +43,31 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(8),
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
+      alignItems: 'center'
    },
    avatar: {
       margin: theme.spacing(1),
-      backgroundColor: "#550A21",
+      backgroundColor: "#550A21"
    },
    form: {
       width: '100%', // Fix IE 11 issue.
-      marginTop: theme.spacing(3),
+      marginTop: theme.spacing(3)
    },
    cssLabel: {
       '&$cssFocused': {
-         color: '#550A21 !important',
+         color: '#550A21 !important'
       }
    },
    cssOutlinedInput: {
       '&$cssFocused $notchedOutline': {
-         borderColor: `#550A21 !important`,
+         borderColor: `#550A21 !important`
       }
    },
    cssFocused: {},
 
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: '#550A21 !important',
+      borderColor: '#550A21 !important'
    },
    submit: {
       margin: theme.spacing(3, 0, 2),
@@ -71,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          color: 'white',
          opacity: 1,
-         backgroundColor: 'rgba(121, 16, 9, 1)',
+         backgroundColor: 'rgba(121, 16, 9, 1)'
       },
    },
    link: {
@@ -79,6 +84,33 @@ const useStyles = makeStyles((theme) => ({
    },
    checkbox: {
       color: "#550A21 !important"
+   },
+   dialog: {
+      border: '1px solid red'
+   },
+   dialogTitle: {
+      background: 'rgb(245, 245, 245)',
+      color: '#550A21',
+      fontWeight: "bold !important"
+   },
+   dialogContent: {
+      background: 'rgb(245, 245, 245)'
+   },
+   dialogContentText: {
+      background: 'rgb(245, 245, 245)',
+      color: '#550A21'
+   },
+   dialogActions: {
+      background: 'rgb(245, 245, 245)'
+   },
+   dialogButton: {
+      backgroundColor: "#550A21",
+      color: "white",
+      "&:hover": {
+         color: 'white',
+         opacity: 1,
+         backgroundColor: 'rgba(121, 16, 9, 1)'
+      },
    }
 }));
 
@@ -86,6 +118,7 @@ const SignUp = ({history}) => {
    const classes = useStyles();
    const [errorMessage, setErrorMessage] = React.useState("");
    const [snackbarOpen, setSnackbarOpen] = React.useState(false);
+   const [dialogOpen, setDialogOpen] = React.useState(false);
 
    async function handleErrorMessage(error) {
       setErrorMessage({msg: error.message, key: error.code});
@@ -94,6 +127,15 @@ const SignUp = ({history}) => {
 
    const handleCloseErrorMessage = (event, reason) => {
       setSnackbarOpen(false);
+   };
+
+   const handleClickDialogOpen = () => {
+      setDialogOpen(true);
+   };
+
+   const handleDialogClose = () => {
+      setDialogOpen(false);
+      history.push("/login");
    };
 
    const handleSignUp = useCallback(async event => {
@@ -107,12 +149,11 @@ const SignUp = ({history}) => {
             email: email.value
          });
          await app.auth().currentUser.sendEmailVerification();
-         window.alert("ÜYELİĞİNİZ BAŞARIYLA TAMAMLANMIŞTIR, SON OLARAK E-POSTA HESABINIZI DOĞRULAMANIZ GEREKMEKTEDİR.")
-         history.push("/login")
+         handleClickDialogOpen(true);
       } catch (error) {
          await handleErrorMessage(error);
       }
-   }, [history]);
+   }, []);
 
    return (
       <div>
@@ -264,6 +305,25 @@ const SignUp = ({history}) => {
             </Box>
             <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleCloseErrorMessage}><Alert
                severity="error">{errorMessage.key}: {errorMessage.msg}</Alert></Snackbar>
+            <Dialog
+               open={dialogOpen}
+               onClose={handleDialogClose}
+               aria-labelledby="alert-dialog-title"
+               aria-describedby="alert-dialog-description">
+               <DialogTitle id="alert-dialog-title" className={classes.dialogTitle}><span style={{fontWeight: "bold"}}>E-POSTA DOĞRULAMA</span></DialogTitle>
+               <DialogContent className={classes.dialogContent}>
+                  <DialogContentText id="alert-dialog-description" className={classes.dialogContentText}>
+                     Üyeliğiniz başarıyla tamamlanmıştır. Son olarak e-posta hesabınızı doğrulamanız gerekmektedir.
+                     <br/><br/><span style={{fontWeight: "bold"}}>NOT:</span> Mail gelmezse, önemsiz E-Posta klasörünü
+                     de kontrol ediniz. "Junk-E-Mail/Spam"
+                  </DialogContentText>
+               </DialogContent>
+               <DialogActions className={classes.dialogActions}>
+                  <Button onClick={handleDialogClose} className={classes.dialogButton}>
+                     OK
+                  </Button>
+               </DialogActions>
+            </Dialog>
          </Container>
       </div>
    );
