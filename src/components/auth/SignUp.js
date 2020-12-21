@@ -187,7 +187,7 @@ const SignUp = ({history}) => {
                            required
                            fullWidth
                            id="firstName"
-                           label="İsim"
+                           label="Adınız"
                            autoFocus
                            InputLabelProps={{
                               classes: {
@@ -210,7 +210,7 @@ const SignUp = ({history}) => {
                            required
                            fullWidth
                            id="lastName"
-                           label="Soyisim"
+                           label="Soyadınız"
                            name="lastName"
                            autoComplete="lname"
                            InputLabelProps={{
@@ -258,7 +258,7 @@ const SignUp = ({history}) => {
                            required
                            fullWidth
                            name="password"
-                           label="Şifre"
+                           label="Şifreniz"
                            type="password"
                            id="password"
                            autoComplete="current-password"
@@ -294,7 +294,7 @@ const SignUp = ({history}) => {
                   <Grid container justify="flex-end">
                      <Grid item>
                         <Link href="/login" variant="body2" className={classes.link}>
-                           Hesabınız var mı? Giriş Yap
+                           Üyeliğiniz var mı? Giriş Yap
                         </Link>
                      </Grid>
                   </Grid>

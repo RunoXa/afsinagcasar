@@ -23,11 +23,9 @@ import LoginImage from '../../images/home-image3.jpg';
 function Copyright() {
    return (
       <Typography variant="body2" color="textSecondary" align="center">
-         {'Copyright © '}
+         {'© Agcasarlilar '}
          {/*<Link color="inherit" href="https://material-ui.com/">*/}
-         <span> Agcasarlilar | by Onur Arslan </span>
-         {/*</Link>{' '}*/}
-         {new Date().getFullYear()}
+         <span>{new Date().getFullYear()} | Tüm Hakları saklıdır</span>
          {'.'}
       </Typography>
    );
