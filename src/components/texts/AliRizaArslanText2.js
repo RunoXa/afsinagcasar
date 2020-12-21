@@ -34,7 +34,7 @@ export default class AliRizaArslanText2 extends Component {
                   kamunun olağanüstü zararlara uğrayacağı anlaşılmıştır.
                </p>
                <img src={Santral} alt="Santral"
-                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
+                    style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                <p>
                   Bu sorunları gidermek
                   için yapılan girişimler de sonuç vermeyince TEAŞ sözleşmeleri imzalamamıştır. Şirket ise bakanlıkla
@@ -81,7 +81,7 @@ export default class AliRizaArslanText2 extends Component {
                   edecek. Peki buradaki farkla ne yapılır? Ona bir kaç örnek verelim.
                </p>
                <img src={Kapitalizm} alt="Kapitalizm"
-                    style={{float: "right", maxWidth: "100%", margin: "10px"}}/>
+                    style={{float: "right", maxWidth: "100%", margin: "20px 0px 20px 60px"}}/>
                <p>
                   Bu parayla 10 ünitelik bir termik santral daha kurulabilir. İlk yapılan A santrali 4 üniteden
                   oluştuğuna göre 2.5 tane daha böyle santral yapılabilir. Şuan Türkiye’de inşaatın metrekare birim
@@ -132,7 +132,7 @@ export default class AliRizaArslanText2 extends Component {
                   daha inşa edilir. Bu devletin işletmesi ile yabancı firmanın işletmesi arasındaki kâr farkıdır.
                </p>
                <img src={Somuru} alt="Somuru"
-                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
+                    style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                <p>
                   Şimdi Dünya Kapitalizmi böyle bir sömürüyü kolay kolay bırakır mı? Tabiî ki bırakmaz ve bunu rahat bir
                   şekilde devam ettirmek için de bu topraklarda kardeşi kardeşe kırdırmaktan elbette ki geri kalmaz.

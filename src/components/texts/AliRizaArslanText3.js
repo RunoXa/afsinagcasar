@@ -36,7 +36,7 @@ export default class AliRizaArslanText3 extends Component {
                   Hüseyin Dede çocukluğunda, cesareti ve güçlü fiziki yapısıyla yaşıtları içerisinde ön plana çıkar. Bu
                   özelliği onun ve ailesinin gelecekte kaderinin değişmesine sebep olacaktır.</p>
                <img src={Pertek} alt="Pertek"
-                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
+                    style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                <p>Pertek Hüseyin Dedenin Dersimdeki gençlik günleri yazın tarlada bağda bahçede çalışarak kışları babası
                   Mola Veli genellikle taliplerini gezdiği için hayvanların ve evdeki diğer işlerin sorumluluğu alarak
                   geçmiştir. Hüseyin dede, kışın kar yağdığında işlerini bitirdikten sonra, evleri mezrada olduğu için
@@ -64,7 +64,7 @@ export default class AliRizaArslanText3 extends Component {
                   çelişkisini kullanmakta bir an olsun geri durmadıkları bir zamanda Dersim’in de gerek ekonomik yapısı
                   gerekse siyasi yapısı gereği çok karışık olduğu bir dönemdir. </p>
                <img src={VeliArslan} alt="VeliArslan"
-                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
+                    style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                <p>Molla Veli de bu gelişmelerden rahatsızdır. Dersimin bu yapısının kendisi ve ailesi için pekte olumlu
                   olaylara işaret etmediğini
                   bilmektedir. Bu duruma mantıklı bir çözüm bulamamakla birlikte çözüm içinde sürekli bir arayış
