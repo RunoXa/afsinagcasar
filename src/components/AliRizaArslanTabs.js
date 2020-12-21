@@ -12,6 +12,7 @@ import AliRizaArslanText1 from "./texts/AliRizaArslanText1";
 import AliRizaArslanText2 from "./texts/AliRizaArslanText2";
 import AliRizaArslanText3 from "./texts/AliRizaArslanText3";
 import AliRizaArslanText4 from "./texts/AliRizaArslanText4";
+import AliRizaArslanText5 from "./texts/AliRizaArslanText5";
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
@@ -145,9 +146,11 @@ export default function FullWidthTabs() {
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab component={NavLink} exact to="/writer/aliRizaArslan/2" label="GARİP BİR İHALE" {...a11yProps(1)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/writer/aliRizaArslan/3" label="HÜSEYİN DEDE (BİYOGRAFİ)" {...a11yProps(2)}
+               <Tab component={NavLink} exact to="/writer/aliRizaArslan/3"
+                    label="HÜSEYİN DEDE (BİYOGRAFİ)" {...a11yProps(2)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/writer/aliRizaArslan/4" label="1 MAYIS ve PERTEK ANISI" {...a11yProps(3)}
+               <Tab component={NavLink} exact to="/writer/aliRizaArslan/4"
+                    label="1 MAYIS ve PERTEK ANISI" {...a11yProps(3)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab component={NavLink} exact to="/writer/aliRizaArslan/5" label="SORUMLULUK" {...a11yProps(4)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
@@ -170,7 +173,7 @@ export default function FullWidthTabs() {
                <AliRizaArslanText4/>
             </TabPanel>
             <TabPanel value={value} index={4} dir={theme.direction}>
-
+               <AliRizaArslanText5/>
             </TabPanel>
          </SwipeableViews>
       </div>
