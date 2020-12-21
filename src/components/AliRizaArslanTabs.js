@@ -10,6 +10,7 @@ import Box from '@material-ui/core/Box';
 import {NavLink, useLocation} from "react-router-dom";
 import AliRizaArslanText1 from "./texts/AliRizaArslanText1";
 import AliRizaArslanText2 from "./texts/AliRizaArslanText2";
+import AliRizaArslanText3 from "./texts/AliRizaArslanText3";
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
@@ -143,8 +144,7 @@ export default function FullWidthTabs() {
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab component={NavLink} exact to="/writer/aliRizaArslan/2" label="GARİP BİR İHALE" {...a11yProps(1)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab component={NavLink} exact to="/writer/aliRizaArslan/3"
-                    label="HÜSEYİN DEDE (BİYOGRAFİ)" {...a11yProps(2)}
+               <Tab component={NavLink} exact to="/writer/aliRizaArslan/3" label="HÜSEYİN DEDE (BİYOGRAFİ)" {...a11yProps(2)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab component={NavLink} exact to="/writer/aliRizaArslan/4" label="1 MAYIS" {...a11yProps(3)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
@@ -163,7 +163,7 @@ export default function FullWidthTabs() {
                <AliRizaArslanText2/>
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-
+               <AliRizaArslanText3/>
             </TabPanel>
             <TabPanel value={value} index={3} dir={theme.direction}>
 

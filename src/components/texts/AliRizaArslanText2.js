@@ -167,7 +167,7 @@ export default class AliRizaArslanText2 extends Component {
                <p style={{color: 'red', fontSize: "40px"}}>***</p>
                <p>
                   Ali Rıza ARSLAN<br/>
-                  15.03.2008<br/>
+                  15 Mart 2008<br/>
                   Ankara<br/>
                </p>
             </div>
