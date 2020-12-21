@@ -64,7 +64,7 @@ export default class AliRizaArslanText3 extends Component {
                   çelişkisini kullanmakta bir an olsun geri durmadıkları bir zamanda Dersim’in de gerek ekonomik yapısı
                   gerekse siyasi yapısı gereği çok karışık olduğu bir dönemdir. </p>
                <img src={VeliArslan} alt="VeliArslan"
-                    style={{float: "left", maxWidth: "100%", margin: "20px"}}/>
+                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
                <p>Molla Veli de bu gelişmelerden rahatsızdır. Dersimin bu yapısının kendisi ve ailesi için pekte olumlu
                   olaylara işaret etmediğini
                   bilmektedir. Bu duruma mantıklı bir çözüm bulamamakla birlikte çözüm içinde sürekli bir arayış
@@ -105,6 +105,8 @@ export default class AliRizaArslanText3 extends Component {
                <div style={{fontWeight: "bold", fontSize: "18px", textDecoration: "underline"}}>
                   Dersim’den Ağcaşar’a Göç
                </div>
+               <img src={Koy} alt="Koy"
+                    style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                <p>
                   Bu olaydan sonra Hüseyin Dede, kardeşleri ve annesi Sivas üzerinden yaptıkları uzun ve yorucu bir
                   yolculuktan sonra bir ilkbahar günü yeni yurtları olacak olan Ağcaşar’a varırlar. Ağcaşar’da ne
@@ -112,10 +114,8 @@ export default class AliRizaArslanText3 extends Component {
                   dönemde Ağcaşar’da biri Ape Temir’in çocuklarının diğeri de Ape Kulo’nun olmak üzere iki ev vardır. O
                   dönemdeki evler hog damı denilen ve ağaçtan yapılmış tek göz damlardır. Hüseyin Dede ve ailesinin tek
                   avantajları ise mevsimin pek eve ihtiyaç duyulmayacak bir mevsim olmasıdır. Hüseyin dede ve Rıza dede
-                  birer hog damı yapar ve yerleşirler.</p>
-               <img src={Koy} alt="Koy"
-                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
-               <p>İlk fırsatta Hüseyin Dede aşağı mahallede (Torunu Hüseyin
+                  birer hog damı yapar ve yerleşirler.
+                  İlk fırsatta Hüseyin Dede aşağı mahallede (Torunu Hüseyin
                   Beyazıt’ın şimdiki ev yerine) ilk evini yaparak bu bölgede yeni bir hayat kurma çabasının içine girer.
                   Çünkü ailenin en büyüğü olmasından dolayı kendini tüm kardeşlerine karşı sorumlu hisseder. Bu durum
                   Hüseyin Dedeye ağır bir sorumluluk yükler. Hüseyin Dede bazen kardeşlerine karşı müşfik bir baba,
@@ -201,7 +201,7 @@ export default class AliRizaArslanText3 extends Component {
                   Elif Arslan:
                </div>
                <img src={ElifArslan} alt="ElifArslan"
-                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
+                    style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                <p>
                   “Hüseyin dede genellikle taliplerini gezmeye gidermiş. Bir seferinde Erzincan’da bir köyde taliplerine
                   misafir olur. Akşam olunca dede, köylü gelir oturur, sohbet ederler diye bekler. Ama epeyce zaman
@@ -251,7 +251,7 @@ export default class AliRizaArslanText3 extends Component {
                   Süleyman Büyükgül:
                </div>
                <img src={SuleymanBuyukgul} alt="SuleymanBuyukgul"
-                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
+                    style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                <p>Hüseyin dedeyle ilgili anlatılan ilginç olaylardan bir tanesini de Süleyman BÜYÜKGÜL’den aktaralım.
                   “Hüseyin Dede Oluklu’daki evini yaptıktan sonra bir gün evde otururken gençlerden biri geliyor. ‘Dede
                   Abaza’dan gelen 8-10 kişi mağaranın dibinde yatan Ermeni’nin yozunu önlerine katarak alıp götürdüler’
@@ -290,7 +290,7 @@ export default class AliRizaArslanText3 extends Component {
                   Rıza Bayazıt:
                </div>
                <img src={RizaBayazit} alt="RizaBayazit"
-                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
+                    style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                <p>Hüseyin dede Ağcaşar’da uzun süre muhtarlık yapmış. Özellikle Birinci Dünya ve Kurtuluş savaşında
                   verdiği doğru kararlar yüzünden komşu ve akrabalarının en az mağdur olmalarını sağlamıştır. Bu savaş
                   sırasında gecen bir olayı torunu değerli Rıza (BAYAZIT) amcadan aktarmak istiyorum.
@@ -324,7 +324,7 @@ export default class AliRizaArslanText3 extends Component {
                   Süleyman Arslan:
                </div>
                <img src={SuleymanArslan} alt="SuleymanArslan"
-                    style={{float: "left", maxWidth: "100%", margin: "20px"}}/>
+                    style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                <p>Yine Hüseyin dedenin cesareti ve gücüne güzel bir örnek olacak bir olayı da Süleyman ARSLAN’dan
                   aktaralım.
                   “Ağcaşar’da kışın erkekler keklik avına giderlermiş. Bunu da genellikle kalabalık gruplar halinde
@@ -350,7 +350,7 @@ export default class AliRizaArslanText3 extends Component {
                   Hüseyin Bayazıt:
                </div>
                <img src={HuseyinBayazit} alt="HuseyinBayazit"
-                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
+                    style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                <p>Hüseyin dedeyle ilgili bir anıda yine Hüseyin dedenin torunu Hüseyin BAYAZIT Amca’dan aktaralım.
                   “Hüseyin Dede, oğlu Haşim Dede ikinci evliliğini yapınca uzun bir süre bundan vazgeçmesi için
                   uğraşmış. Vazgeçiremeyince kendisinden başka kimsenin yapmayacağı bir karar veriyor. Haşim Dedeyi
@@ -383,7 +383,7 @@ export default class AliRizaArslanText3 extends Component {
                   Besime Erbil:
                </div>
                <img src={BesimeErbil} alt="BesimeErbil"
-                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
+                    style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                <p>Hüseyin Dede yine Ağcaşar’a geldiği bir gün bir olay oluyor. Bu olaydaki tavrı ve tepkisini olayı
                   yaşayanlardan Besime ERBİL’in anlatımında aktaralım.
                   “Fidan ablam küsmüş eve gelmişti. Babamlar da tekrar gitmesine pek taraf değiller. Birkaç kere de
@@ -406,7 +406,7 @@ export default class AliRizaArslanText3 extends Component {
                   Hıdır Özdemir
                </div>
                <img src={HidirOzdemir} alt="HidirOzdemir"
-                    style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
+                    style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                <p>Hüseyin dedeyle ilgili bu anlattıklarımız cesareti ve merhametiyle ilgili olaylardır. Hüseyin dede
                   bunun yanı sıra yol erkan konusunda da bilgili ve donanımlıdır. Kışın çevre köylerdekiler de dahil
                   olmak üzere akşamları Hüseyin dedenin odasında toplanır, Hüseyin dedenin sohbet ve yol hakkındaki
