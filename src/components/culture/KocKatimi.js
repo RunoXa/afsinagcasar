@@ -21,7 +21,7 @@ export default class KocKatimi extends Component {
             <div style={{marginTop: "50px"}}>
                <p>
                   <img src={KocKatimiImage1} alt="KocKatimiImage1"
-                       style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
+                       style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                   <span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>A</span>ğcaşar Toroslar’ın Kuzey
                   eteklerinde Binboğa Dağlarının güney yamaçlarına yaslanmış daha doğrusu serpiştirilmiş küçük bir dağ
                   köyüdür. Bu küçük dağ köyünün de kendine özgü gelenekleri ve görenekleri vardır. Bu gelenek ve
@@ -42,7 +42,7 @@ export default class KocKatimi extends Component {
                   bakım yaklaşık bir, bir buçuk ay sürerdi.</p>
                <p>
                   <img src={KocKatimiImage3} alt="KocKatimiImage3"
-                       style={{float: "left", maxWidth: "100%", margin: "10px"}}/>
+                       style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
                   Bu sürenin sonunda “Koç Katımı (neri beranan)” hazırlıkları başlardı. İlk önce koçların boyanması için
                   özel boyalar alınır ya da hazırlanırdı. Koçların sürüye katılacak günün sabahı koçlar yemlendikten
                   sonra boyanırdı. Boyama işlemi koçun kafasından başlar ve bel kemiğini takip eder ve kuyruk ucuna
