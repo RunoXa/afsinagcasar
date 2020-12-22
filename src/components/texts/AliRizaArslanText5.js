@@ -14,7 +14,7 @@ export default class AliRizaArslanText5 extends Component {
             overflow: "auto"
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#50001B"}}>1 MAYIS ve PERTEK ANISI</h2>
+               <h2 style={{fontWeight: "bold", color: "#50001B"}}>Sorumluluk</h2>
             </div>
             <div style={{marginTop: "50px"}}>
                <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>D</span>ünyada savaş tarihi ile
