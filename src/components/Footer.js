@@ -1,6 +1,6 @@
 import React from "react";
-import '../styles/Footer.css'
-import YoutubeIcon from '../icons/youtube.svg'
+import '../styles/Footer.css';
+import YoutubeIcon from '../icons/youtube.svg';
 import {
    EmailIcon,
    TwitterIcon,
