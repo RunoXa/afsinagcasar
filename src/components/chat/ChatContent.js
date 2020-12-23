@@ -18,11 +18,68 @@ const useStyles = makeStyles({
    messageArea: {
       height: '50vh',
       maxHeight: '100%',
-      overflow: 'auto'
+      overflow: 'auto',
+      paddingRight: '15px'
+
    },
    fab: {
       marginRight: '8px'
-   }
+   },
+   messagesRight: {
+      border: '15px solid transparent',
+      background: '#f5f5f5',
+      borderRadius: '1em',
+      color: '#ffffff',
+      '&:after': {
+         content: '',
+         // right: 0,
+         // width: 0,
+         // height: 0,
+         border: '15px solid transparent',
+         borderLeftColor: 'blue',
+         borderRight: 0,
+         borderBottom: 0,
+         marginTop: '-7.5px',
+         marginRight: '15px'
+      },
+   },
+
+   messagesLeft: {
+      border: '15px solid transparent',
+      background: '#f5f5f5',
+      borderRadius: '1em',
+      color: '#ffffff',
+      '&::before': {
+         content: '',
+         // right: 0,
+         // width: 0,
+         // height: 0,
+         border: '15px solid transparent',
+         borderLeftColor: 'blue',
+         borderRight: 0,
+         borderBottom: 0,
+         marginTop: '-7.5px',
+      },
+   },
+   currentUserName: {
+      fontWeight: '600',
+      fontSize: '14px',
+      margin: '0 0 4px',
+      color: '#3498db'
+   },
+   otherUserName: {
+      fontWeight: '600',
+      fontSize: '14px',
+      margin: '0 0 4px',
+      color: '#2ecc71'
+   },
+   message: {
+      color: '#2b2b2b'
+   },
+   timestamp: {
+      fontSize: '11px',
+      color: '#999 !important'
+   },
 });
 
 
@@ -37,50 +94,26 @@ const Chat = () => {
                   <ListItem key="1">
                      <Grid container>
                         <Grid item xs={12}>
-                           <ListItemText align="right" primary="Hey man, What's up ?"></ListItemText>
-                        </Grid>
-                        <Grid item xs={12}>
-                           <ListItemText align="right" secondary="09:30"></ListItemText>
+                           <ListItemText className={classes.messagesRight} align="right">
+                              <div className={classes.text}>
+                                 <p className={classes.currentUserName}>Onur Arslan <span
+                                    className={classes.timestamp}>(10:20)</span></p>
+                                 <p className={classes.message}>Merhabe Nasilsiniz?</p>
+                              </div>
+                           </ListItemText>
                         </Grid>
                      </Grid>
                   </ListItem>
                   <ListItem key="2">
                      <Grid container>
                         <Grid item xs={12}>
-                           <ListItemText align="left" primary="Hey, Iam Good! What about you ?"></ListItemText>
-                        </Grid>
-                        <Grid item xs={12}>
-                           <ListItemText align="left" secondary="09:31"></ListItemText>
-                        </Grid>
-                     </Grid>
-                  </ListItem>
-                  <ListItem key="3">
-                     <Grid container>
-                        <Grid item xs={12}>
-                           <ListItemText align="right" primary="Cool. i am good, let's catch up!"></ListItemText>
-                        </Grid>
-                        <Grid item xs={12}>
-                           <ListItemText align="right" secondary="10:30"></ListItemText>
-                        </Grid>
-                     </Grid>
-                  </ListItem>
-                  <ListItem key="4">
-                     <Grid container>
-                        <Grid item xs={12}>
-                           <ListItemText align="left" primary="Cool. i am good, let's catch up!"></ListItemText>
-                        </Grid>
-                        <Grid item xs={12}>
-                           <ListItemText align="left" secondary="10:30"></ListItemText>
-                        </Grid>
-                     </Grid>
-                  </ListItem>
-                  <ListItem key="5">
-                     <Grid container>
-                        <Grid item xs={12}>
-                           <ListItemText align="left" primary="Cool. i am good, let's catch up!"></ListItemText>
-                        </Grid>
-                        <Grid item xs={12}>
-                           <ListItemText align="left" secondary="10:30"></ListItemText>
+                           <ListItemText className={classes.messagesRight} align="left">
+                              <div className={classes.text}>
+                                 <p className={classes.otherUserName}>Vedat Arslan <span
+                                    className={classes.timestamp}>(10:20)</span></p>
+                                 <p className={classes.message}>İyiyiz teşekkürler, sizler nasılsınız?</p>
+                              </div>
+                           </ListItemText>
                         </Grid>
                      </Grid>
                   </ListItem>
