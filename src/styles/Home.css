@@ -7,14 +7,14 @@ section {
 
 .home-title {
     text-align: center;
-    color: #50001B;
+    color: #ffffff;
     padding: 14px;
 }
 
 .home-text {
     /*padding: 15px;*/
     font-size: medium;
-    color: #50001B;
+    color: #ffffff;
 }
 
 .carousel-inner {

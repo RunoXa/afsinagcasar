@@ -22,7 +22,7 @@ import LoginImage from '../../images/home-image3.jpg';
 
 function Copyright() {
    return (
-      <Typography variant="body2" color="textSecondary" align="center">
+      <Typography variant="body2" align="center" style={{color: '#ffffff'}}>
          {'© Agcasarlilar '}
          {/*<Link color="inherit" href="https://material-ui.com/">*/}
          <span>{new Date().getFullYear()} | Tüm Hakları saklıdır</span>
@@ -44,51 +44,57 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      color: "#550A21"
+      color: "#ffffff"
    },
    loginContent: {
-      // color: "white",
+      // color: "#ffffff"
       // background: "rgba(85, 4, 4, 1)",
    },
    avatar: {
       margin: theme.spacing(1),
-      backgroundColor: "#550A21",
+      backgroundColor: "rgb(85, 4, 4)",
    },
    form: {
       width: '100%', // Fix IE 11 issue.
       marginTop: theme.spacing(3),
    },
    cssLabel: {
+      color: '#ffffff',
       '&$cssFocused': {
-         color: '#550A21 !important',
+         color: '#ffffff !important',
       }
    },
    cssOutlinedInput: {
+      color: '#ffffff',
+      background: '#2e1919 !important',
       '&$cssFocused $notchedOutline': {
-         borderColor: `#550A21 !important`,
+         borderColor: `#ffffff !important`,
       }
    },
-   cssFocused: {},
+   cssFocused: {
+      color: '#ffffff'
+   },
 
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: '#550A21 !important',
+      borderColor: '#ffffff !important',
+      color: '#ffffff'
    },
    submit: {
       margin: theme.spacing(3, 0, 2),
-      backgroundColor: "#550A21",
-      color: "white",
+      backgroundColor: "rgb(85, 4, 4)",
+      color: "#ffffff",
       "&:hover": {
-         color: 'white',
+         color: '#ffffff',
          opacity: 1,
          backgroundColor: 'rgba(121, 16, 9, 1)',
       },
    },
    link: {
-      color: "#550A21 !important"
+      color: "#ffffff !important"
    },
    checkbox: {
-      color: "#550A21 !important"
+      color: "#ffffff !important"
    }
 }));
 
