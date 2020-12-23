@@ -44,26 +44,30 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
    root: {
-      backgroundColor: theme.palette.background.paper,
-      width: '100%',
+      backgroundColor: '#2e1919',
+      width: '100%'
    },
    indicator: {
       backgroundColor: '#550A21',
       height: 4
    },
    tabRoot: {
+      color: '#ffffff',
       "&:hover": {
-         color: '#550A21',
+         color: '#ffffff',
          opacity: 1,
          backgroundColor: 'rgba(211, 211, 211, 0.5);',
       },
       '&.Mui-selected': {
          outline: 'none',
-         color: '#550A21',
+         color: '#ffffff',
          fontWeight: "bold",
          padding: '20px'
       },
    },
+   tabs: {
+      backgroundColor: '#211212'
+   }
 }));
 
 export default function FullWidthTabs() {
@@ -93,7 +97,8 @@ export default function FullWidthTabs() {
                variant="scrollable"
                // scrollButtons="auto"
                aria-label="scrollable tabs example"
-               classes={{indicator: classes.indicator}}>
+               classes={{indicator: classes.indicator}}
+               className={classes.tabs}>
                <Tab label="Köyde Yaşam" {...a11yProps(0)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab label="Ağcaşar'da Bahar" {...a11yProps(1)}

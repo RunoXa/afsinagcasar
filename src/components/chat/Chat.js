@@ -83,6 +83,8 @@ export default function ScrollableTabsButtonPrevent() {
       setValue(newValue);
    };
 
+   window.scrollTo(0, 0);
+
    return (
       <div className={classes.chatHeader}>
          <h4 style={{fontWeight: 'bold', textAlign: 'center'}}>Sohbet</h4>
