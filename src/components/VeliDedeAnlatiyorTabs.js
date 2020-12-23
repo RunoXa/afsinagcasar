@@ -48,26 +48,30 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
    root: {
       width: '100%',
-      backgroundColor: "lightGrey"
+      backgroundColor: "#2e1919",
    },
    indicator: {
       backgroundColor: '#550A21',
       height: 4
    },
    tabRoot: {
+      color: '#ffffff',
       "&:hover": {
-         color: '#550A21',
+         color: '#ffffff',
          opacity: 1,
          textDecoration: "none",
          backgroundColor: 'rgba(211, 211, 211, 0.5);',
       },
       '&.Mui-selected': {
          outline: 'none',
-         color: '#550A21',
+         color: '#ffffff',
          fontWeight: "bold",
          padding: '10px'
       },
    },
+   tabs: {
+      backgroundColor: '#404040'
+   }
 }));
 
 export default function FullWidthTabs() {
@@ -132,6 +136,7 @@ export default function FullWidthTabs() {
                onChange={handleChange}
                indicatorColor="primary"
                textColor="primary"
+               className={classes.tabs}
                variant="scrollable"
                // scrollButtons="auto"
                aria-label="scrollable tabs example"
