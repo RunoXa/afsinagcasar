@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
       background: 'grey'
    },
    chatHeader: {
-      color: '#50001B',
+      color: '#ffffff',
       margin: '15px',
       fontWeigth: 'bold'
    },

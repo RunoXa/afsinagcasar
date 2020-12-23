@@ -14,7 +14,7 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import {makeStyles, useTheme} from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -25,7 +25,7 @@ import {firestore, auth} from '../../Base';
 
 function Copyright() {
    return (
-      <Typography variant="body2" color="textSecondary" align="center">
+      <Typography variant="body2" align="center" style={{color: '#ffffff'}}>
          {'Copyright © '}
          <span> Agcasarlilar | by Onur Arslan </span>
          {new Date().getFullYear()}
@@ -43,47 +43,51 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(8),
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center'
+      alignItems: 'center',
+      color: "#ffffff"
    },
    avatar: {
       margin: theme.spacing(1),
-      backgroundColor: "#550A21"
+      backgroundColor: "rgb(85, 4, 4)"
    },
    form: {
       width: '100%', // Fix IE 11 issue.
       marginTop: theme.spacing(3)
    },
    cssLabel: {
+      color: "#ffffff",
       '&$cssFocused': {
-         color: '#550A21 !important'
+         color: '#ffffff !important'
       }
    },
    cssOutlinedInput: {
       '&$cssFocused $notchedOutline': {
-         borderColor: `#550A21 !important`
+         borderColor: `#ffffff !important`
       }
    },
-   cssFocused: {},
-
+   cssFocused: {
+      color: '#ffffff'
+   },
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: '#550A21 !important'
+      borderColor: '#ffffff !important',
+      color: "#ffffff"
    },
    submit: {
       margin: theme.spacing(3, 0, 2),
-      backgroundColor: "#550A21",
-      color: "white",
+      backgroundColor: "rgb(85, 4, 4)",
+      color: "#ffffff",
       "&:hover": {
-         color: 'white',
+         color: '#ffffff',
          opacity: 1,
          backgroundColor: 'rgba(121, 16, 9, 1)'
       },
    },
    link: {
-      color: "#550A21 !important"
+      color: "#ffffff !important"
    },
    checkbox: {
-      color: "#550A21 !important"
+      color: "#ffffff !important"
    },
    dialog: {
       border: '1px solid red'
@@ -105,9 +109,9 @@ const useStyles = makeStyles((theme) => ({
    },
    dialogButton: {
       backgroundColor: "#550A21",
-      color: "white",
+      color: "#ffffff",
       "&:hover": {
-         color: 'white',
+         color: '#ffffff',
          opacity: 1,
          backgroundColor: 'rgba(121, 16, 9, 1)'
       },
