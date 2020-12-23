@@ -49,13 +49,17 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
    root: {
       backgroundColor: theme.palette.background.paper,
-      margin: '15px',
+      // margin: '10px',
       borderRadius: '10px 10px 10px 10px',
       color: '#50001B',
       overflow: 'auto',
    },
    appBar: {
-      background: 'grey'
+      background: '#2e3b84'
+   },
+   indicator: {
+      backgroundColor: '#ffffff',
+      height: 4
    },
    chatHeader: {
       color: '#ffffff',
@@ -87,7 +91,9 @@ export default function ScrollableTabsButtonPrevent() {
                <Tabs
                   value={value}
                   onChange={handleChange}
-                  className={classes.tabsContent}>
+                  indicatorColor="primary"
+                  className={classes.tabsContent}
+                  classes={{indicator: classes.indicator}}>
                   <Tab className={classes.tabs} icon={<ChatBubbleIcon/>} aria-label="chatContent" {...a11yProps(0)} />
                   <Tab className={classes.tabs} icon={<PeopleAlt/>} aria-label="onlineUsersIcon" {...a11yProps(1)} />
                   <Tab className={classes.tabs} icon={<PersonPinIcon/>} aria-label="UsersIcon" {...a11yProps(2)} />
