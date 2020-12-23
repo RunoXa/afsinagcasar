@@ -1,6 +1,5 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import TextField from '@material-ui/core/TextField';
@@ -9,6 +8,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Fab from '@material-ui/core/Fab';
 import SendIcon from '@material-ui/icons/Send';
+import './Chat.css';
 
 const useStyles = makeStyles({
    chatSection: {
@@ -20,7 +20,6 @@ const useStyles = makeStyles({
       maxHeight: '100%',
       overflow: 'auto',
       paddingRight: '15px'
-
    },
    fab: {
       marginRight: '8px'
@@ -88,7 +87,7 @@ const Chat = () => {
 
    return (
       <div>
-         <Grid container component={Paper} className={classes.chatSection}>
+         <Grid container className={classes.chatSection}>
             <Grid item xs={12}>
                <List className={classes.messageArea}>
                   <ListItem key="1">
@@ -110,7 +109,7 @@ const Chat = () => {
                            <ListItemText className={classes.messagesRight} align="left">
                               <div className={classes.text}>
                                  <p className={classes.otherUserName}>Vedat Arslan <span
-                                    className={classes.timestamp}>(10:20)</span></p>
+                                    className={classes.timestamp}>(10:30)</span></p>
                                  <p className={classes.message}>İyiyiz teşekkürler, sizler nasılsınız?</p>
                               </div>
                            </ListItemText>
