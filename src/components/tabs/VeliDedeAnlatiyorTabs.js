@@ -136,11 +136,11 @@ export default function FullWidthTabs() {
                onChange={handleChange}
                indicatorColor="primary"
                textColor="primary"
-               className={classes.tabs}
                variant="scrollable"
                // scrollButtons="auto"
                aria-label="scrollable tabs example"
-               classes={{indicator: classes.indicator}}>
+               classes={{indicator: classes.indicator}}
+               className={classes.tabs}>
                <Tab component={NavLink} exact to="/history/veliDedeAnlatiyor/sayfa1" label="Sayfa 1" {...a11yProps(0)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}} style={{marginLeft: "auto"}}/>
                <Tab component={NavLink} exact to="/history/veliDedeAnlatiyor/sayfa2" label="Sayfa 2" {...a11yProps(1)}
