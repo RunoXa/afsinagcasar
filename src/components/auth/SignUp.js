@@ -55,12 +55,13 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(3)
    },
    cssLabel: {
-      color: "#ffffff",
+      color: '#ffffff',
       '&$cssFocused': {
          color: '#ffffff !important'
       }
    },
    cssOutlinedInput: {
+      color: '#ffffff',
       '&$cssFocused $notchedOutline': {
          borderColor: `#ffffff !important`
       }
@@ -75,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
    },
    submit: {
       margin: theme.spacing(3, 0, 2),
-      backgroundColor: "rgb(85, 4, 4)",
+      backgroundColor: 'rgb(85, 4, 4)',
       color: "#ffffff",
       "&:hover": {
          color: '#ffffff',
