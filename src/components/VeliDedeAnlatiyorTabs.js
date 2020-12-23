@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
       },
    },
    tabs: {
-      backgroundColor: '#404040'
+      backgroundColor: '#211212'
    }
 }));
 
