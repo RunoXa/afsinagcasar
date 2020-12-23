@@ -9,11 +9,11 @@ export default class AgcasarGecmisimiz extends Component {
             marginTop: "75px",
             padding: "1rem",
             borderRadius: "10px 10px 10px 10px",
-            backgroundColor: "#f5f5f5",
-            color: "#50001B"
+            backgroundColor: "#2e1919",
+            color: "#ffffff"
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#50001B"}}>Ağcaşar Geçmişimiz</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>Ağcaşar Geçmişimiz</h2>
             </div>
             <div style={{marginTop: "50px"}}>
                <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>Y</span>ıllar önce Ağcaşar'da akşamları büyükler toplanır sohbet ederlerdi. Bu toplantılar genellikle Veli

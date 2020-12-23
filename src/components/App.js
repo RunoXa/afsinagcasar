@@ -6,15 +6,15 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Contact from "./Contact";
 import Chat from "./chat/Chat";
-import ImagesTabs from "./ImagesTabs";
+import ImagesTabs from "./tabs/ImagesTabs";
 import FamilyTree from "./FamilyTree";
-import CultureTabs from "./CultureTabs";
+import CultureTabs from "./tabs/CultureTabs";
 import LoginComponent from "./auth/Login";
 import SignUpComponent from "./auth/SignUp";
 import NotFound from "./NotFound";
 import {AuthContext, AuthProvider} from "./Auth";
-import VeliDedeAnlatiyorTabs from "./VeliDedeAnlatiyorTabs";
-import AliRizaArslanTabs from "./AliRizaArslanTabs";
+import VeliDedeAnlatiyorTabs from "./tabs/VeliDedeAnlatiyorTabs";
+import AliRizaArslanTabs from "./tabs/AliRizaArslanTabs";
 
 const PrivateRoute = ({component: RouteComponent, ...rest}) => {
    const {currentUser} = useContext(AuthContext);
