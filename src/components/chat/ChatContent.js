@@ -24,40 +24,47 @@ const useStyles = makeStyles({
    fab: {
       marginRight: '8px'
    },
-   messagesRight: {
-      border: '15px solid transparent',
+   messageBoxRight: {
+      position: 'relative',
       background: '#f5f5f5',
-      borderRadius: '1em',
       color: '#ffffff',
-      '&:after': {
-         content: '',
-         // right: 0,
-         // width: 0,
-         // height: 0,
-         border: '15px solid transparent',
-         borderLeftColor: 'blue',
-         borderRight: 0,
-         borderBottom: 0,
-         marginTop: '-7.5px',
-         marginRight: '15px'
+      width: '240px',
+      borderRadius: '1em',
+      float: 'right',
+      padding: '10px',
+      '&::after': {
+         content: "''",
+         position: 'absolute',
+         display: 'block',
+         width: 0,
+         borderStyle: 'solid',
+         borderColor: 'transparent #f5f5f5',
+         borderWidth: '10px 0 10px 20px',
+         top: '78%',
+         right: '-20px',
+         marginTop: '-10px'
       },
    },
 
-   messagesLeft: {
-      border: '15px solid transparent',
+   messageBoxLeft: {
+      position: 'relative',
       background: '#f5f5f5',
-      borderRadius: '1em',
       color: '#ffffff',
-      '&::before': {
-         content: '',
-         // right: 0,
-         // width: 0,
-         // height: 0,
-         border: '15px solid transparent',
-         borderLeftColor: 'blue',
-         borderRight: 0,
-         borderBottom: 0,
-         marginTop: '-7.5px',
+      width: '240px',
+      borderRadius: '1em',
+      float: 'left',
+      padding: '10px',
+      '&::after': {
+         content: "''",
+         position: 'absolute',
+         display: 'block',
+         width: 0,
+         borderStyle: 'solid',
+         borderColor: 'transparent #f5f5f5',
+         borderWidth: '10px 20px 10px 0',
+         top: '78%',
+         left: '-20px',
+         marginTop: '-10px'
       },
    },
    currentUserName: {
@@ -77,7 +84,7 @@ const useStyles = makeStyles({
    },
    timestamp: {
       fontSize: '11px',
-      color: '#999 !important'
+      color: '#999'
    },
 });
 
@@ -93,7 +100,7 @@ const Chat = () => {
                   <ListItem key="1">
                      <Grid container>
                         <Grid item xs={12}>
-                           <ListItemText className={classes.messagesRight} align="right">
+                           <ListItemText className={classes.messageBoxRight} align="right">
                               <div className={classes.text}>
                                  <p className={classes.currentUserName}>Onur Arslan <span
                                     className={classes.timestamp}>(10:20)</span></p>
@@ -106,7 +113,7 @@ const Chat = () => {
                   <ListItem key="2">
                      <Grid container>
                         <Grid item xs={12}>
-                           <ListItemText className={classes.messagesRight} align="left">
+                           <ListItemText className={classes.messageBoxLeft} align="left">
                               <div className={classes.text}>
                                  <p className={classes.otherUserName}>Vedat Arslan <span
                                     className={classes.timestamp}>(10:30)</span></p>
