@@ -39,7 +39,7 @@ const useStyles = makeStyles({
          width: 0,
          borderStyle: 'solid',
          borderColor: 'transparent #f5f5f5',
-         borderWidth: '10px 0 10px 20px',
+         borderWidth: '10px 0 10px 28px',
          top: '78%',
          right: '-20px',
          marginTop: '-10px'
@@ -61,7 +61,7 @@ const useStyles = makeStyles({
          width: 0,
          borderStyle: 'solid',
          borderColor: 'transparent #f5f5f5',
-         borderWidth: '10px 20px 10px 0',
+         borderWidth: '10px 28px 10px 0',
          top: '78%',
          left: '-20px',
          marginTop: '-10px'
