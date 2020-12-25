@@ -179,6 +179,12 @@ const StyledMenuItem = withStyles((theme) => ({
    },
 }))(MenuItem);
 
+async function setUserStatusToOffline() {
+   await firestore.doc(`users/${auth.currentUser.uid}`).update({
+      online: false
+   });
+}
+
 export default function PersistentDrawerLeft() {
    const classes = useStyles();
    const theme = useTheme();
@@ -201,7 +207,7 @@ export default function PersistentDrawerLeft() {
 
    const outsideHandleDrawerClose = () => {
       setOpen(false);
-   }
+   };
 
    const handleMenu = (event) => {
       setAnchorEl(event.currentTarget);
@@ -220,7 +226,7 @@ export default function PersistentDrawerLeft() {
       setOpen(false);
       setDropDownOpen(true);
       setDropDownOpen2(false);
-   }
+   };
 
    const handleDropDownClick2 = () => {
       setDropDownOpen(false);
@@ -231,9 +237,10 @@ export default function PersistentDrawerLeft() {
       setOpen(false);
       setDropDownOpen2(true);
       setDropDownOpen(false);
-   }
+   };
 
    const handleLogoutAndClose = () => {
+      setUserStatusToOffline();
       setAnchorEl(null);
       auth.signOut().then(() => {
          // Do something after logout is successful.
@@ -425,7 +432,7 @@ export default function PersistentDrawerLeft() {
                         <ListItemText>Ali Rıza Arslan</ListItemText>
                      </ListItem>
                      <ListItem button exact to="/" className={classes.nested} component={NavLink}
-                               // isActive={() => ['/writer/aliRizaArslan', '/writer/aliRizaArslan/', '/writer/aliRizaArslan/1', '/writer/aliRizaArslan/2', '/writer/aliRizaArslan/3', '/writer/aliRizaArslan/4', '/writer/aliRizaArslan/5'].includes(pathname)}
+                        // isActive={() => ['/writer/aliRizaArslan', '/writer/aliRizaArslan/', '/writer/aliRizaArslan/1', '/writer/aliRizaArslan/2', '/writer/aliRizaArslan/3', '/writer/aliRizaArslan/4', '/writer/aliRizaArslan/5'].includes(pathname)}
                                onClick={handleDropdownItemClick} activeClassName={classes.active}>
                         <ListItemIcon><img src={SengulImageCircle} alt="SengulImageCircle" width="40px"
                                            height="40px"/></ListItemIcon>

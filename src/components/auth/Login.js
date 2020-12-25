@@ -1,7 +1,7 @@
 import React, {useCallback, useContext} from "react";
 import {withRouter, Redirect} from "react-router-dom";
 import './Login.css';
-import app from "../../Base";
+import app, {auth, firestore} from "../../Base";
 import {AuthContext} from "../Auth.js";
 import Avatar from '@material-ui/core/Avatar';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -140,7 +140,9 @@ const Login = ({history}) => {
             await app
                .auth()
                .signInWithEmailAndPassword(email.value, password.value);
-
+            await firestore.doc(`users/${auth.currentUser.uid}`).update({
+               online: true
+            });
             if (!app.auth().currentUser.emailVerified) {
                await handleEmailVerification();
             }

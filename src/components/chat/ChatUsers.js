@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -9,6 +9,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
+import {firestore} from "../../Base";
 
 const useStyles = makeStyles({
    table: {
@@ -30,8 +31,18 @@ const useStyles = makeStyles({
    }
 });
 
-const Chat = () => {
+export default function Chat() {
    const classes = useStyles();
+   const [onlineUsers, setOnlineUser] = useState([]);
+
+   useEffect(() => {
+      firestore.collection("users")
+         .onSnapshot((snapshot) => {
+            const userData = [];
+            snapshot.forEach((doc) => userData.push({...doc.data()}));
+            setOnlineUser(userData);
+         });
+   }, []);
 
    return (
       <div>
@@ -40,14 +51,18 @@ const Chat = () => {
                <Grid item xs={12} style={{padding: '10px'}}>
                   <TextField label="Ara" variant="outlined" fullWidth/>
                </Grid>
-               <List>
-                  <ListItem button key="Onur Arslan">
-                     <ListItemIcon>
-                        <Avatar alt="Onur Arslan" src="https://material-ui.com/static/images/avatar/1.jpg"/>
-                     </ListItemIcon>
-                     <ListItemText primary="Onur Arslan"></ListItemText>
-                  </ListItem>
-               </List>
+               {onlineUsers.map(function (onlineUser, i) {
+                  return (
+                     <ListItem button key="onlineUser">
+                        <ListItemIcon>
+                           <Avatar alt="onlineUserAvatar" src="https://material-ui.com/static/images/avatar/1.jpg"/>
+                        </ListItemIcon>
+                        <ListItemText key={0} primary={onlineUser.firstName + ' ' + onlineUser.lastName}></ListItemText>
+                        <ListItemText secondary={onlineUser.online ? 'online' : 'offline'}
+                                      align="right"></ListItemText>
+                     </ListItem>
+                  );
+               })}
                <Divider/>
                <List>
                   <ListItem button key="Vedat Arslan">
@@ -75,5 +90,3 @@ const Chat = () => {
       </div>
    );
 }
-
-export default Chat;

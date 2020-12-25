@@ -151,7 +151,8 @@ const SignUp = ({history}) => {
          await firestore.doc(`users/${auth.currentUser.uid}`).set({
             firstName: firstName.value,
             lastName: lastName.value,
-            email: email.value
+            email: email.value,
+            online: false
          });
          await app.auth().currentUser.sendEmailVerification();
          handleClickDialogOpen(true);
