@@ -140,9 +140,6 @@ const Login = ({history}) => {
             await app
                .auth()
                .signInWithEmailAndPassword(email.value, password.value);
-            await firestore.doc(`users/${auth.currentUser.uid}`).update({
-               online: true
-            });
             if (!app.auth().currentUser.emailVerified) {
                await handleEmailVerification();
             }
