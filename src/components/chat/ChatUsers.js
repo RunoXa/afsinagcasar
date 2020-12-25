@@ -4,11 +4,11 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import TextField from '@material-ui/core/TextField';
-import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
+import UserIcon from '../../icons/user.png';
 import {firestore} from "../../Base";
 
 const useStyles = makeStyles({
@@ -55,7 +55,7 @@ export default function Chat() {
                   return (
                      <ListItem button key="onlineUser">
                         <ListItemIcon>
-                           <Avatar alt="onlineUserAvatar" src="https://material-ui.com/static/images/avatar/1.jpg"/>
+                           <Avatar alt="userIcon" src={UserIcon}/>
                         </ListItemIcon>
                         <ListItemText key={0} primary={onlineUser.firstName + ' ' + onlineUser.lastName}></ListItemText>
                         <ListItemText secondary={onlineUser.online ? 'online' : 'offline'}
@@ -64,27 +64,6 @@ export default function Chat() {
                   );
                })}
                <Divider/>
-               <List>
-                  <ListItem button key="Vedat Arslan">
-                     <ListItemIcon>
-                        <Avatar alt="Vedat Arslan" src="https://material-ui.com/static/images/avatar/1.jpg"/>
-                     </ListItemIcon>
-                     <ListItemText primary="Vedat Arslan">Vedat Arslan</ListItemText>
-                     <ListItemText secondary="online" align="right"></ListItemText>
-                  </ListItem>
-                  <ListItem button key="Zeynep Arslan">
-                     <ListItemIcon>
-                        <Avatar alt="Zeynep Arslan" src="https://material-ui.com/static/images/avatar/3.jpg"/>
-                     </ListItemIcon>
-                     <ListItemText primary="Zeynep Arslan">Zeynep Arslan</ListItemText>
-                  </ListItem>
-                  <ListItem button key="Test Person">
-                     <ListItemIcon>
-                        <Avatar alt="Test Person" src="https://material-ui.com/static/images/avatar/2.jpg"/>
-                     </ListItemIcon>
-                     <ListItemText primary="Test Person">Test Person</ListItemText>
-                  </ListItem>
-               </List>
             </Grid>
          </Grid>
       </div>
