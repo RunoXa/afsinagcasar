@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import TextField from '@material-ui/core/TextField';
-import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Fab from '@material-ui/core/Fab';
 import SendIcon from '@material-ui/icons/Send';
 import './Chat.css';
+import {auth, firestore} from "../../Base";
 
 const useStyles = makeStyles({
    chatSection: {
@@ -88,42 +88,59 @@ const useStyles = makeStyles({
    },
 });
 
-
-const Chat = () => {
+export default function ChatContent() {
    const classes = useStyles();
+   const [chatConversation, setChatConversation] = useState([]);
+
+   useEffect(() => {
+      firestore.collection("chat")
+         .onSnapshot((snapshot) => {
+            const conversation = [];
+            snapshot.forEach((doc) => conversation.push({...doc.data()}));
+            setChatConversation(conversation);
+         });
+   }, []);
+
+   console.log()
 
    return (
       <div>
          <Grid container className={classes.chatSection}>
             <Grid item xs={12}>
-               <List className={classes.messageArea}>
-                  <ListItem key="1">
-                     <Grid container>
-                        <Grid item xs={12}>
-                           <ListItemText className={classes.messageBoxRight} align="right">
-                              <div className={classes.text}>
-                                 <p className={classes.currentUserName}>Onur Arslan <span
-                                    className={classes.timestamp}>(10:20)</span></p>
-                                 <p className={classes.message}>Merhabe Nasilsiniz?</p>
-                              </div>
-                           </ListItemText>
-                        </Grid>
-                     </Grid>
-                  </ListItem>
-                  <ListItem key="2">
-                     <Grid container>
-                        <Grid item xs={12}>
-                           <ListItemText className={classes.messageBoxLeft} align="left">
-                              <div className={classes.text}>
-                                 <p className={classes.otherUserName}>Vedat Arslan <span
-                                    className={classes.timestamp}>(10:30)</span></p>
-                                 <p className={classes.message}>İyiyiz teşekkürler, sizler nasılsınız?</p>
-                              </div>
-                           </ListItemText>
-                        </Grid>
-                     </Grid>
-                  </ListItem>
-               </List>
+               <div className={classes.messageArea}>
+                  {chatConversation.sort((a, b) => a.createdAt > b.createdAt ? 1 : -1).map(function (bubbleData, i) {
+                     return (
+                        bubbleData.user_id === auth.currentUser.uid ?
+                           <ListItem>
+                              <Grid container>
+                                 <Grid item xs={12}>
+                                    <ListItemText className={classes.messageBoxRight} align="right">
+                                       <div className={classes.text}>
+                                          <p className={classes.currentUserName}>{bubbleData.firstName + ' ' + bubbleData.lastName}<span
+                                             className={classes.timestamp}> (10:40)</span></p>
+                                          <p className={classes.message}>{bubbleData.message}</p>
+                                       </div>
+                                    </ListItemText>
+                                 </Grid>
+                              </Grid>
+                           </ListItem>
+                           :
+                           <ListItem>
+                              <Grid container>
+                                 <Grid item xs={12}>
+                                    <ListItemText className={classes.messageBoxLeft} align="left">
+                                       <div className={classes.text}>
+                                          <p className={classes.otherUserName}>{bubbleData.firstName + ' ' + bubbleData.lastName}<span
+                                             className={classes.timestamp}> (00:15)</span></p>
+                                          <p className={classes.message}>{bubbleData.message}</p>
+                                       </div>
+                                    </ListItemText>
+                                 </Grid>
+                              </Grid>
+                           </ListItem>
+                     )
+                  })}
+               </div>
                <Divider/>
                <Grid container style={{padding: '20px'}}>
                   <Grid item xs={11}>
@@ -138,5 +155,3 @@ const Chat = () => {
       </div>
    );
 }
-
-export default Chat;

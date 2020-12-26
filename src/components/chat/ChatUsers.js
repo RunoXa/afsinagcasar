@@ -57,9 +57,8 @@ export default function Chat() {
                         <ListItemIcon>
                            <Avatar alt="userIcon" src={UserIcon}/>
                         </ListItemIcon>
-                        <ListItemText key={0} primary={onlineUser.firstName + ' ' + onlineUser.lastName}></ListItemText>
-                        <ListItemText secondary={onlineUser.online ? 'online' : 'offline'}
-                                      align="right"></ListItemText>
+                        <ListItemText key={0} primary={onlineUser.firstName + ' ' + onlineUser.lastName}/>
+                        <ListItemText secondary={onlineUser.online ? 'online' : 'offline'} align="right"/>
                      </ListItem>
                   );
                })}
