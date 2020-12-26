@@ -6,7 +6,7 @@ import TextField from '@material-ui/core/TextField';
 import ListItem from '@material-ui/core/ListItem';
 import List from '@material-ui/core/List';
 import ListItemText from '@material-ui/core/ListItemText';
-import Fab from '@material-ui/core/Fab';
+import IconButton from '@material-ui/core/IconButton';
 import SendIcon from '@material-ui/icons/Send';
 import './Chat.css';
 import {auth, firestore} from "../../Base";
@@ -22,7 +22,7 @@ const useStyles = makeStyles({
       overflow: 'auto',
       paddingRight: '15px'
    },
-   fab: {
+   submitButton: {
       marginRight: '8px'
    },
    messageBoxRight: {
@@ -99,13 +99,16 @@ export default function ChatContent() {
       event.preventDefault();
       const {message} = event.target.elements;
       try {
-         await firestore.collection('chat').add({
-            firstName: currentFirstname,
-            lastName: currentLastname,
-            message: message.value,
-            created: new Date(),
-            user_id: auth.currentUser.uid
-         });
+         if (message.value !== '') {
+            await firestore.collection('chat').add({
+               firstName: currentFirstname,
+               lastName: currentLastname,
+               message: message.value,
+               created: new Date(),
+               user_id: auth.currentUser.uid
+            });
+         }
+         document.getElementById("message-field-form").reset();
       } catch (error) {
          console.log("Error adding document to collection:", error);
       }
@@ -113,7 +116,7 @@ export default function ChatContent() {
 
    useEffect(() => {
       //get username
-      if (auth.currentUser != null) {
+      if (auth.currentUser !== null) {
          firestore.collection("users")
             .doc(auth.currentUser.uid)
             .get()
@@ -145,10 +148,10 @@ export default function ChatContent() {
          <Grid container className={classes.chatSection}>
             <Grid item xs={12}>
                <List className={classes.messageArea}>
-                  {chatConversation.sort((a, b) => a.created > b.created ? 1 : -1).map(function (bubbleData, i) {
+                  {chatConversation.sort((a, b) => a.created > b.created ? 1 : -1).map(function (bubbleData, index) {
                      return (
                         bubbleData.user_id === auth.currentUser.uid ?
-                           <ListItem>
+                           <ListItem key={index}>
                               <Grid container>
                                  <Grid item xs={12}>
                                     <ListItemText className={classes.messageBoxRight} align="right">
@@ -163,7 +166,7 @@ export default function ChatContent() {
                               </Grid>
                            </ListItem>
                            :
-                           <ListItem>
+                           <ListItem key={index}>
                               <Grid container>
                                  <Grid item xs={12}>
                                     <ListItemText className={classes.messageBoxLeft} align="left">
@@ -181,14 +184,14 @@ export default function ChatContent() {
                   })}
                </List>
                <Divider/>
-               <form className={classes.form} onSubmit={submitMessage}>
+               <form id="message-field-form" className={classes.form} onSubmit={submitMessage}>
                   <Grid container style={{padding: '20px'}}>
                      <Grid item xs={11}>
-                        <TextField id="message" label="Mesaj yaz.." fullWidth name="message" type="message"/>
+                        <TextField id="message" label="Mesaj yaz.." name="message" type="message" fullWidth/>
                      </Grid>
                      <Grid xs={1} align="right">
-                        <Fab type="submit" color="primary" size="small" aria-label="add"
-                             className={classes.fab}><SendIcon/></Fab>
+                        <IconButton type="submit" color="primary" size="small" aria-label="add"
+                                    className={classes.submitButton}><SendIcon/></IconButton>
                      </Grid>
                   </Grid>
                </form>
