@@ -109,6 +109,8 @@ export default function ChatContent() {
             });
          }
          document.getElementById("message-field-form").reset();
+         const messageAreaList = document.getElementById("messageAreaId");
+         messageAreaList.scrollTop = messageAreaList.scrollHeight;
       } catch (error) {
          console.log("Error adding document to collection:", error);
       }
@@ -139,6 +141,8 @@ export default function ChatContent() {
             const conversation = [];
             snapshot.forEach((doc) => conversation.push({...doc.data()}));
             setChatConversation(conversation);
+            const messageAreaList = document.getElementById("messageAreaId");
+            messageAreaList.scrollTop = messageAreaList.scrollHeight;
          });
 
    }, []);
@@ -147,7 +151,7 @@ export default function ChatContent() {
       <div>
          <Grid container className={classes.chatSection}>
             <Grid item xs={12}>
-               <List className={classes.messageArea}>
+               <List className={classes.messageArea} id='messageAreaId'>
                   {chatConversation.sort((a, b) => a.created > b.created ? 1 : -1).map(function (bubbleData, index) {
                      return (
                         bubbleData.user_id === auth.currentUser.uid ?
