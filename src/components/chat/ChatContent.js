@@ -29,7 +29,7 @@ const useStyles = makeStyles({
       position: 'relative',
       background: '#f5f5f5',
       color: '#ffffff',
-      width: '240px',
+      width: '100%',
       borderRadius: '1em',
       float: 'right',
       padding: '10px',
@@ -51,7 +51,7 @@ const useStyles = makeStyles({
       position: 'relative',
       background: '#f5f5f5',
       color: '#ffffff',
-      width: '240px',
+      width: '100%',
       borderRadius: '1em',
       float: 'left',
       padding: '10px',
@@ -161,7 +161,7 @@ export default function ChatContent() {
                                     <ListItemText className={classes.messageBoxRight} align="right">
                                        <div className={classes.text}>
                                           <p className={classes.currentUserName}>{bubbleData.firstName + ' ' + bubbleData.lastName}<span
-                                             className={classes.timestamp}> {new Date(bubbleData.created.toDate()).toDateString()}</span>
+                                             className={classes.timestamp}> ({new Date(bubbleData.created.seconds * 1000).toLocaleString()})</span>
                                           </p>
                                           <p className={classes.message}>{bubbleData.message}</p>
                                        </div>
@@ -176,7 +176,7 @@ export default function ChatContent() {
                                     <ListItemText className={classes.messageBoxLeft} align="left">
                                        <div className={classes.text}>
                                           <p className={classes.otherUserName}>{bubbleData.firstName + ' ' + bubbleData.lastName}<span
-                                             className={classes.timestamp}> {new Date(bubbleData.created.toDate()).toDateString()}</span>
+                                             className={classes.timestamp}> ({new Date(bubbleData.created.seconds * 1000).toLocaleString()})</span>
                                           </p>
                                           <p className={classes.message}>{bubbleData.message}</p>
                                        </div>
