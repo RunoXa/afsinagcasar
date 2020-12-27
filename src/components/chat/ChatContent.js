@@ -7,7 +7,7 @@ import ListItem from '@material-ui/core/ListItem';
 import List from '@material-ui/core/List';
 import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
-import SendIcon from '@material-ui/icons/Send';
+import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 import './Chat.css';
 import {auth, firestore} from "../../Base";
 
@@ -41,7 +41,7 @@ const useStyles = makeStyles({
    },
    messageBoxRight: {
       position: 'relative',
-      background: '#f5f5f5',
+      background: '#500000',
       color: '#ffffff',
       width: '85%',
       borderRadius: '25px 25px 25px 25px',
@@ -53,7 +53,7 @@ const useStyles = makeStyles({
          display: 'block',
          width: 0,
          borderStyle: 'solid',
-         borderColor: 'transparent #f5f5f5',
+         borderColor: 'transparent #500000',
          borderWidth: '10px 0 10px 28px',
          top: '78%',
          right: '-20px',
@@ -63,7 +63,7 @@ const useStyles = makeStyles({
    messageBoxLeft: {
       position: 'relative',
       marginLeft: '15px',
-      background: '#f5f5f5',
+      background: '#505050',
       color: '#ffffff',
       width: '85%',
       borderRadius: '25px 25px 25px 25px',
@@ -75,7 +75,7 @@ const useStyles = makeStyles({
          display: 'block',
          width: 0,
          borderStyle: 'solid',
-         borderColor: 'transparent #f5f5f5',
+         borderColor: 'transparent #505050',
          borderWidth: '10px 28px 10px 0',
          top: '78%',
          left: '-20px',
@@ -95,7 +95,7 @@ const useStyles = makeStyles({
       color: '#2ecc71'
    },
    message: {
-      color: '#2b2b2b'
+      color: '#ffffff'
    },
    timestamp: {
       fontSize: '11px',
@@ -104,7 +104,7 @@ const useStyles = makeStyles({
    submitButton: {
       padding: '6px',
       color: 'rgb(240,0,0)',
-      backgroundColor: '#333',
+      backgroundColor: '#505050',
       marginTop: '10px',
       marginLeft: '5px',
       "&:hover": {
@@ -115,12 +115,12 @@ const useStyles = makeStyles({
    cssLabel: {
       color: '#ffffff',
       '&$cssFocused': {
-         color: '#ffffff !important',
+         color: '#ffffff !important'
       }
    },
    cssOutlinedInput: {
       color: '#ffffff',
-      background: '#333 !important',
+      background: '#505050 !important',
       borderRadius: "25px 25px 25px 25px",
       '&$cssFocused $notchedOutline': {
          color: '#ffffff !important'
@@ -134,6 +134,9 @@ const useStyles = makeStyles({
       borderColor: '#333 !important',
       color: '#ffffff !important',
    },
+   messageInputArea: {
+      background: '#333'
+   }
 });
 
 export default function ChatContent() {
@@ -234,33 +237,35 @@ export default function ChatContent() {
                   })}
                </List>
                <Divider/>
-               <form id="message-field-form" onSubmit={submitMessage}>
-                  <Grid container style={{padding: '20px'}}>
-                     <Grid item xs={11}>
-                        <TextField id="message" name="message" variant="outlined"
-                                   fullWidth
-                                   multiline={true}
-                                   autoComplete="off"
-                                   InputLabelProps={{
-                                      classes: {
-                                         root: classes.cssLabel,
-                                         focused: classes.cssFocused
-                                      },
-                                   }}
-                                   InputProps={{
-                                      classes: {
-                                         root: classes.cssOutlinedInput,
-                                         focused: classes.cssFocused,
-                                         notchedOutline: classes.notchedOutline
-                                      }
-                                   }}/>
+               <div className={classes.messageInputArea}>
+                  <form id="message-field-form" onSubmit={submitMessage}>
+                     <Grid container style={{padding: '20px'}}>
+                        <Grid item xs={11}>
+                           <TextField id="message" name="message" variant="outlined"
+                                      fullWidth
+                                      multiline={true}
+                                      autoComplete="off"
+                                      InputLabelProps={{
+                                         classes: {
+                                            root: classes.cssLabel,
+                                            focused: classes.cssFocused
+                                         },
+                                      }}
+                                      InputProps={{
+                                         classes: {
+                                            root: classes.cssOutlinedInput,
+                                            focused: classes.cssFocused,
+                                            notchedOutline: classes.notchedOutline
+                                         }
+                                      }}/>
+                        </Grid>
+                        <Grid xs={1} align="right">
+                           <IconButton type="submit" color="primary" size="small" aria-label="add"
+                                       className={classes.submitButton}><SendOutlinedIcon/></IconButton>
+                        </Grid>
                      </Grid>
-                     <Grid xs={1} align="right">
-                        <IconButton type="submit" color="primary" size="small" aria-label="add"
-                                    className={classes.submitButton}><SendIcon/></IconButton>
-                     </Grid>
-                  </Grid>
-               </form>
+                  </form>
+               </div>
             </Grid>
          </Grid>
       </div>

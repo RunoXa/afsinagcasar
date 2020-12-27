@@ -1,7 +1,6 @@
 import React, {useCallback, useContext} from "react";
 import {withRouter, Redirect} from "react-router-dom";
-import './Login.css';
-import app, {auth, firestore} from "../../Base";
+import app from "../../Base";
 import {AuthContext} from "../Auth.js";
 import Avatar from '@material-ui/core/Avatar';
 import MuiAlert from '@material-ui/lab/Alert';

@@ -4,10 +4,10 @@ import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
-import PeopleAlt from '@material-ui/icons/PeopleAlt';
-import PersonPinIcon from '@material-ui/icons/PersonPin';
-import AssignmentLateIcon from '@material-ui/icons/AssignmentLate';
+import ChatBubbleOutlineOutlinedIcon from '@material-ui/icons/ChatBubbleOutlineOutlined';
+import PeopleAltOutlinedIcon from '@material-ui/icons/PeopleAltOutlined';
+import PersonPinOutlinedIcon from '@material-ui/icons/PersonPinOutlined';
+import AssignmentLateOutlinedIcon from '@material-ui/icons/AssignmentLateOutlined';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import ChatContent from './ChatContent';
@@ -71,12 +71,15 @@ const useStyles = makeStyles((theme) => ({
 
    tabs: {
       minWidth: "25%",
-      color: 'rgb(240,0,0)',
+      color: '#ffffff',
       borderRadius: '10px 10px 10px 10px',
       "&:hover": {
          opacity: 1,
          textDecoration: "none",
-         backgroundColor: 'rgba(211, 211, 211, 0.1)'
+         color: 'rgb(240,0,0)'
+      },
+      '&.Mui-selected': {
+         color: 'rgb(240,0,0)',
       },
    }
 }));
@@ -102,10 +105,10 @@ export default function ScrollableTabsButtonPrevent() {
                   indicatorColor="primary"
                   className={classes.tabsContent}
                   classes={{indicator: classes.indicator}}>
-                  <Tab className={classes.tabs} icon={<ChatBubbleIcon/>} aria-label="chatContent" {...a11yProps(0)} />
-                  <Tab className={classes.tabs} icon={<PeopleAlt/>} aria-label="onlineUsersIcon" {...a11yProps(1)} />
-                  <Tab className={classes.tabs} icon={<PersonPinIcon/>} aria-label="UsersIcon" {...a11yProps(2)} />
-                  <Tab className={classes.tabs} icon={<AssignmentLateIcon/>} aria-label="rulesIcon" {...a11yProps(3)} />
+                  <Tab className={classes.tabs} icon={<ChatBubbleOutlineOutlinedIcon/>} aria-label="chatContent" {...a11yProps(0)} />
+                  <Tab className={classes.tabs} icon={<PeopleAltOutlinedIcon/>} aria-label="onlineUsersIcon" {...a11yProps(1)} />
+                  <Tab className={classes.tabs} icon={<PersonPinOutlinedIcon/>} aria-label="UsersIcon" {...a11yProps(2)} />
+                  <Tab className={classes.tabs} icon={<AssignmentLateOutlinedIcon/>} aria-label="rulesIcon" {...a11yProps(3)} />
                </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
