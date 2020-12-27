@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
       background: '#333'
    },
    indicator: {
-      backgroundColor: 'rgb(240,0,0)',
+      backgroundColor: 'rgb(180,0,0)',
       height: 4
    },
    chatHeader: {
@@ -76,10 +76,10 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          opacity: 1,
          textDecoration: "none",
-         color: 'rgb(240,0,0)'
+         color: 'rgb(180,0,0)'
       },
       '&.Mui-selected': {
-         color: 'rgb(240,0,0)',
+         color: 'rgb(180,0,0)',
       },
    }
 }));

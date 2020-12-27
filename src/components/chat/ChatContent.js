@@ -41,7 +41,7 @@ const useStyles = makeStyles({
    },
    messageBoxRight: {
       position: 'relative',
-      background: '#500000',
+      background: 'rgb(100,0,0)',
       color: '#ffffff',
       width: '85%',
       borderRadius: '25px 25px 25px 25px',
@@ -53,7 +53,7 @@ const useStyles = makeStyles({
          display: 'block',
          width: 0,
          borderStyle: 'solid',
-         borderColor: 'transparent #500000',
+         borderColor: 'transparent rgb(100,0,0)',
          borderWidth: '10px 0 10px 28px',
          top: '78%',
          right: '-20px',
