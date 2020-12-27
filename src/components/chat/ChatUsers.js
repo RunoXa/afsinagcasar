@@ -102,13 +102,13 @@ export default function Chat() {
                              }}/>
                </Grid>
                <List>
-                  {onlineUsers.sort((a, b) => a.online < b.online ? 1 : -1).map(function (onlineUser, i) {
+                  {onlineUsers.sort((a, b) => a.online < b.online ? 1 : -1).map(function (onlineUser, index) {
                      return (
-                        <ListItem button key="onlineUser" className={classes.userListItem}>
+                        <ListItem button key={index} className={classes.userListItem}>
                            <ListItemIcon>
                               <Avatar alt="userIcon" src={UserIcon}/>
                            </ListItemIcon>
-                           <ListItemText key={0} primary={onlineUser.firstName + ' ' + onlineUser.lastName}/>
+                           <ListItemText primary={onlineUser.firstName + ' ' + onlineUser.lastName}/>
                            <ListItemText primary={onlineUser.online ? 'online' : 'offline'} align="right"/>
                         </ListItem>
                      );
