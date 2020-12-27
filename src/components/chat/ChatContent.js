@@ -239,6 +239,7 @@ export default function ChatContent() {
                      <Grid item xs={11}>
                         <TextField id="message" name="message" variant="outlined"
                                    fullWidth
+                                   autoComplete="off"
                                    InputLabelProps={{
                                       classes: {
                                          root: classes.cssLabel,
