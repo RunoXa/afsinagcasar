@@ -120,7 +120,8 @@ const useStyles = makeStyles({
    },
    cssOutlinedInput: {
       color: '#ffffff',
-      background: '#202020 !important',
+      background: '#333 !important',
+      borderRadius: "25px 25px 25px 25px",
       '&$cssFocused $notchedOutline': {
          color: '#ffffff !important'
       }
@@ -130,7 +131,7 @@ const useStyles = makeStyles({
    },
    notchedOutline: {
       borderRadius: "25px 25px 25px 25px",
-      borderColor: 'rgb(240,0,0) !important',
+      borderColor: '#333 !important',
       color: '#ffffff !important',
    },
 });
