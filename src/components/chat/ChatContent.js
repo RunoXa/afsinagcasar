@@ -106,7 +106,7 @@ const useStyles = makeStyles({
       color: 'rgb(240,0,0)',
       backgroundColor: '#333',
       marginTop: '10px',
-      marginLeft: '3px',
+      marginLeft: '5px',
       "&:hover": {
          opacity: 1,
          backgroundColor: 'rgba(211, 211, 211, 0.2)'
