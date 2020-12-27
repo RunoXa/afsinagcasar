@@ -8,12 +8,10 @@ import List from '@material-ui/core/List';
 import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
 import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
-import './Chat.css';
 import {auth, firestore} from "../../Base";
 
 const useStyles = makeStyles({
    sectionRoot: {
-      background: '#202020',
       '@global': {
          '*::-webkit-scrollbar': {
             width: '0.4em'
