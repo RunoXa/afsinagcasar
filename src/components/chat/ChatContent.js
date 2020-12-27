@@ -41,7 +41,7 @@ const useStyles = makeStyles({
    },
    messageBoxRight: {
       position: 'relative',
-      background: 'rgb(100,0,0)',
+      background: '#662200',
       color: '#ffffff',
       width: '85%',
       borderRadius: '25px 25px 25px 25px',
@@ -53,7 +53,7 @@ const useStyles = makeStyles({
          display: 'block',
          width: 0,
          borderStyle: 'solid',
-         borderColor: 'transparent rgb(100,0,0)',
+         borderColor: 'transparent #662200',
          borderWidth: '10px 0 10px 28px',
          top: '78%',
          right: '-20px',
@@ -86,7 +86,7 @@ const useStyles = makeStyles({
       fontWeight: '600',
       fontSize: '14px',
       margin: '0 0 4px',
-      color: '#3498db'
+      color: '#1aa3ff'
    },
    otherUserName: {
       fontWeight: '600',
