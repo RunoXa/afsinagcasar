@@ -22,8 +22,7 @@ const useStyles = makeStyles({
             '-webkit-box-shadow': 'inset 0 0 6px #202020'
          },
          '*::-webkit-scrollbar-thumb': {
-            backgroundColor: '#8B0000',
-            outline: '2px solid #808080'
+            backgroundColor: '#999'
          }
       }
    },

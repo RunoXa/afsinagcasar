@@ -13,7 +13,7 @@ import List from "@material-ui/core/List";
 
 const useStyles = makeStyles({
    sectionRoot: {
-      background: '#202020 !important',
+      background: '#202020',
       '@global': {
          '*::-webkit-scrollbar': {
             width: '0.4em'
@@ -22,8 +22,7 @@ const useStyles = makeStyles({
             '-webkit-box-shadow': 'inset 0 0 6px #202020'
          },
          '*::-webkit-scrollbar-thumb': {
-            backgroundColor: '#8B0000',
-            outline: '2px solid #808080'
+            backgroundColor: '#999'
          }
       }
    },
