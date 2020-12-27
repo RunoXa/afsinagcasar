@@ -12,25 +12,39 @@ import './Chat.css';
 import {auth, firestore} from "../../Base";
 
 const useStyles = makeStyles({
+   sectionRoot: {
+      background: '#202020',
+      '@global': {
+         '*::-webkit-scrollbar': {
+            width: '0.4em'
+         },
+         '*::-webkit-scrollbar-track': {
+            '-webkit-box-shadow': 'inset 0 0 6px #202020'
+         },
+         '*::-webkit-scrollbar-thumb': {
+            backgroundColor: '#8B0000',
+            outline: '2px solid #808080'
+         }
+      }
+   },
    chatSection: {
       width: '100%',
       height: '100%',
+      background: '#202020'
    },
    messageArea: {
       height: '50vh',
       maxHeight: '100%',
       overflow: 'auto',
-      paddingRight: '15px'
-   },
-   submitButton: {
-      marginRight: '8px'
+      paddingRight: '15px',
+      background: '#202020'
    },
    messageBoxRight: {
       position: 'relative',
       background: '#f5f5f5',
       color: '#ffffff',
-      width: '100%',
-      borderRadius: '1em',
+      width: '80%',
+      borderRadius: '25px 25px 25px 25px',
       float: 'right',
       padding: '10px',
       '&::after': {
@@ -46,13 +60,13 @@ const useStyles = makeStyles({
          marginTop: '-10px'
       },
    },
-
    messageBoxLeft: {
       position: 'relative',
+      marginLeft: '15px',
       background: '#f5f5f5',
       color: '#ffffff',
-      width: '100%',
-      borderRadius: '1em',
+      width: '80%',
+      borderRadius: '25px 25px 25px 25px',
       float: 'left',
       padding: '10px',
       '&::after': {
@@ -86,6 +100,38 @@ const useStyles = makeStyles({
    timestamp: {
       fontSize: '11px',
       color: '#999'
+   },
+   submitButton: {
+      padding: '6px',
+      color: 'rgb(240,0,0)',
+      backgroundColor: '#333',
+      marginTop: '10px',
+      marginLeft: '3px',
+      "&:hover": {
+         opacity: 1,
+         backgroundColor: 'rgba(211, 211, 211, 0.2)'
+      },
+   },
+   cssLabel: {
+      color: '#ffffff',
+      '&$cssFocused': {
+         color: '#ffffff !important',
+      }
+   },
+   cssOutlinedInput: {
+      color: '#ffffff',
+      background: '#202020 !important',
+      '&$cssFocused $notchedOutline': {
+         color: '#ffffff !important'
+      }
+   },
+   cssFocused: {
+      color: '#ffffff !important'
+   },
+   notchedOutline: {
+      borderRadius: "25px 25px 25px 25px",
+      borderColor: 'rgb(240,0,0) !important',
+      color: '#ffffff !important',
    },
 });
 
@@ -144,11 +190,10 @@ export default function ChatContent() {
             const messageAreaList = document.getElementById("messageAreaId");
             messageAreaList.scrollTop = messageAreaList.scrollHeight;
          });
-
    }, []);
 
    return (
-      <div>
+      <div className={classes.sectionRoot}>
          <Grid container className={classes.chatSection}>
             <Grid item xs={12}>
                <List className={classes.messageArea} id='messageAreaId'>
@@ -188,10 +233,24 @@ export default function ChatContent() {
                   })}
                </List>
                <Divider/>
-               <form id="message-field-form" className={classes.form} onSubmit={submitMessage}>
+               <form id="message-field-form" onSubmit={submitMessage}>
                   <Grid container style={{padding: '20px'}}>
                      <Grid item xs={11}>
-                        <TextField id="message" label="Mesaj yaz.." name="message" type="message" fullWidth/>
+                        <TextField id="message" name="message" variant="outlined"
+                                   fullWidth
+                                   InputLabelProps={{
+                                      classes: {
+                                         root: classes.cssLabel,
+                                         focused: classes.cssFocused
+                                      },
+                                   }}
+                                   InputProps={{
+                                      classes: {
+                                         root: classes.cssOutlinedInput,
+                                         focused: classes.cssFocused,
+                                         notchedOutline: classes.notchedOutline
+                                      }
+                                   }}/>
                      </Grid>
                      <Grid xs={1} align="right">
                         <IconButton type="submit" color="primary" size="small" aria-label="add"

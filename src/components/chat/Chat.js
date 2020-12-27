@@ -49,29 +49,35 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
    root: {
       backgroundColor: theme.palette.background.paper,
-      // margin: '10px',
       borderRadius: '10px 10px 10px 10px',
       color: '#50001B',
       overflow: 'auto',
    },
    appBar: {
-      background: '#2e3b84'
+      background: '#333'
    },
    indicator: {
-      backgroundColor: '#ffffff',
+      backgroundColor: 'rgb(240,0,0)',
       height: 4
    },
    chatHeader: {
       color: '#ffffff',
       margin: '15px',
-      fontWeigth: 'bold'
+      fontWeigth: 'bold',
    },
    tabsContent: {
       display: 'block !important',
    },
 
    tabs: {
-      minWidth: "25%"
+      minWidth: "25%",
+      color: 'rgb(240,0,0)',
+      borderRadius: '10px 10px 10px 10px',
+      "&:hover": {
+         opacity: 1,
+         textDecoration: "none",
+         backgroundColor: 'rgba(211, 211, 211, 0.1)'
+      },
    }
 }));
 
