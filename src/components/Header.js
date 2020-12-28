@@ -256,7 +256,6 @@ export default function PersistentDrawerLeft() {
                if (doc.exists) {
                   const data = doc.data();
                   setCurrentUserName(data.firstName + ' ' + data.lastName);
-                  console.log("set User Name in Header")
                } else {
                   alert("No such document!");
                }
