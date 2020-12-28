@@ -185,11 +185,13 @@ export default function ChatContent() {
       //get chat messages
       firestore.collection("chat")
          .onSnapshot((snapshot) => {
-            const conversation = [];
-            snapshot.forEach((doc) => conversation.push({...doc.data()}));
-            setChatConversation(conversation);
-            const messageAreaList = document.getElementById("messageAreaId");
-            messageAreaList.scrollTop = messageAreaList.scrollHeight;
+            if (snapshot !== null) {
+               const conversation = [];
+               snapshot.forEach((doc) => conversation.push({...doc.data()}));
+               setChatConversation(conversation);
+               const messageAreaList = document.getElementById("messageAreaId");
+               messageAreaList.scrollTop = messageAreaList.scrollHeight;
+            }
          });
    }, []);
 

@@ -124,8 +124,7 @@ const Login = ({history}) => {
       setEmailSnackbarOpen(false);
    };
 
-   const handleLogin = useCallback(
-      async event => {
+   const handleLogin = useCallback(async event => {
          event.preventDefault();
          const {email, password} = event.target.elements;
          try {
