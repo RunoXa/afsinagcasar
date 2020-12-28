@@ -1,4 +1,4 @@
-import React, {useCallback, useContext} from "react";
+import React, {useCallback, useContext, useState} from "react";
 import {withRouter, Redirect} from "react-router-dom";
 import app from "../../Base";
 import {AuthContext} from "../Auth.js";
@@ -99,9 +99,9 @@ const useStyles = makeStyles((theme) => ({
 
 const Login = ({history}) => {
    const classes = useStyles();
-   const [errorMessage, setErrorMessage] = React.useState("");
-   const [snackbarOpen, setSnackbarOpen] = React.useState(false);
-   const [emailSnackbarOpen, setEmailSnackbarOpen] = React.useState(false);
+   const [errorMessage, setErrorMessage] = useState("");
+   const [snackbarOpen, setSnackbarOpen] = useState(false);
+   const [emailSnackbarOpen, setEmailSnackbarOpen] = useState(false);
 
    async function handleErrorMessage(error) {
       setErrorMessage({msg: error.message, key: error.code});

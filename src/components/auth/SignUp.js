@@ -1,4 +1,4 @@
-import React, {useCallback} from "react";
+import React, {useCallback, useState} from "react";
 import {withRouter} from "react-router-dom";
 import app from "../../Base";
 import Avatar from '@material-ui/core/Avatar';
@@ -121,9 +121,9 @@ const useStyles = makeStyles((theme) => ({
 
 const SignUp = ({history}) => {
    const classes = useStyles();
-   const [errorMessage, setErrorMessage] = React.useState("");
-   const [snackbarOpen, setSnackbarOpen] = React.useState(false);
-   const [dialogOpen, setDialogOpen] = React.useState(false);
+   const [errorMessage, setErrorMessage] = useState("");
+   const [snackbarOpen, setSnackbarOpen] = useState(false);
+   const [dialogOpen, setDialogOpen] = useState(false);
 
    async function handleErrorMessage(error) {
       setErrorMessage({msg: error.message, key: error.code});

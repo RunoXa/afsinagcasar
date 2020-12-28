@@ -14,6 +14,8 @@ export const AuthProvider = ({children}) => {
                      //set user status online
                      firestore.doc(`users/${auth.currentUser.uid}`).update({
                         online: true
+                     }).then(() => {
+                        //Do something
                      });
                      setCurrentUser(user)
                      setPending(false)
