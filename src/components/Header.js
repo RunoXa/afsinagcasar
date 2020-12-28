@@ -246,23 +246,25 @@ export default function PersistentDrawerLeft() {
          // Do something after logout is successful.
       });
    };
-   if (auth.currentUser != null) {
-      firestore.collection("users")
-         .doc(auth.currentUser.uid)
-         .get()
-         .then(doc => {
-            if (doc.exists) {
-               const data = doc.data();
-               setCurrentUserName(data.firstName + ' ' + data.lastName);
-            } else {
-               alert("No such document!");
-            }
-         }).catch(function (error) {
-         console.log("Error getting document:", error);
-      });
-   }
 
    useEffect(() => {
+      if (auth.currentUser != null) {
+         firestore.collection("users")
+            .doc(auth.currentUser.uid)
+            .get()
+            .then(doc => {
+               if (doc.exists) {
+                  const data = doc.data();
+                  setCurrentUserName(data.firstName + ' ' + data.lastName);
+                  console.log("set User Name in Header")
+               } else {
+                  alert("No such document!");
+               }
+            }).catch(function (error) {
+            console.log("Error getting document:", error);
+         });
+      }
+
       switch (pathname) {
          case '/history/veliDedeAnlatiyor':
             setDropDownOpen2(true);
@@ -286,6 +288,7 @@ export default function PersistentDrawerLeft() {
             break
       }
    }, [pathname])
+
    return (
       <div className={classes.root}>
          <CssBaseline/>
