@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {firestore, auth} from '../Base';
+import app, {firestore, auth} from '../Base';
 import '../styles/Header.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -240,6 +240,7 @@ export default function PersistentDrawerLeft() {
    };
 
    const handleLogoutAndClose = () => {
+      app.auth().currentUser.reload();
       setUserStatusToOffline();
       setAnchorEl(null);
       auth.signOut().then(() => {
