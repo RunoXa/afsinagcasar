@@ -180,19 +180,17 @@ export default function ChatContent() {
             }).catch(function (error) {
             console.log("Error getting document:", error);
          });
-      }
 
-      //get chat messages
-      firestore.collection("chat")
-         .onSnapshot((snapshot) => {
-            if (snapshot !== null) {
+         //get chat messages
+         firestore.collection("chat")
+            .onSnapshot((snapshot) => {
                const conversation = [];
                snapshot.forEach((doc) => conversation.push({...doc.data()}));
                setChatConversation(conversation);
                const messageAreaList = document.getElementById("messageAreaId");
                messageAreaList.scrollTop = messageAreaList.scrollHeight;
-            }
-         });
+            });
+      }
    }, []);
 
    return (
