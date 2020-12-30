@@ -67,7 +67,7 @@ const useStyles = makeStyles({
    }
 });
 
-export default function Chat() {
+export default function ChatUsers() {
    const classes = useStyles();
    const [onlineUsers, setOnlineUser] = useState([]);
 
