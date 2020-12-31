@@ -136,9 +136,8 @@ const useStyles = makeStyles({
    }
 });
 
-export default function ChatContent() {
+export default function ChatContent(props) {
    const classes = useStyles();
-   const [chatConversation, setChatConversation] = useState([]);
    const [currentFirstname, setCurrentUserFirstName] = useState([]);
    const [currentLastname, setCurrentUserLastName] = useState([]);
 
@@ -180,27 +179,22 @@ export default function ChatContent() {
             }).catch(function (error) {
             console.log("Error getting document:", error);
          });
-
-         //get chat messages
-         firestore.collection("chat")
-            .onSnapshot((snapshot) => {
-               const conversation = [];
-               snapshot.forEach((doc) => conversation.push({...doc.data()}));
-               setChatConversation(conversation);
-               const messageAreaList = document.getElementById("messageAreaId");
-               messageAreaList.scrollTop = messageAreaList.scrollHeight;
-            });
       }
-   }, []);
+
+      if (props.chatConversation !== null) {
+         const messageAreaList = document.getElementById("messageAreaId");
+         messageAreaList.scrollTop = messageAreaList.scrollHeight;
+      }
+   }, [props.chatConversation]);
 
    return (
       <div className={classes.sectionRoot}>
          <Grid container className={classes.chatSection}>
             <Grid item xs={12}>
                <List className={classes.messageArea} id='messageAreaId'>
-                  {chatConversation.sort((a, b) => a.created > b.created ? 1 : -1).map(function (bubbleData, index) {
+                  {props.chatConversation.sort((a, b) => a.created > b.created ? 1 : -1).map(function (bubbleData, index) {
                      return (
-                        bubbleData.user_id === auth.currentUser.uid ?
+                        bubbleData.user_id === props.currentUserId ?
                            <ListItem key={index}>
                               <Grid container>
                                  <Grid item xs={12}>

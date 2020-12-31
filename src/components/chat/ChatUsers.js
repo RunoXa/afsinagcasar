@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
@@ -8,7 +8,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
 import UserIcon from '../../icons/user.png';
-import {firestore} from "../../Base";
 import List from "@material-ui/core/List";
 
 const useStyles = makeStyles({
@@ -67,18 +66,8 @@ const useStyles = makeStyles({
    }
 });
 
-export default function ChatUsers() {
+export default function ChatUsers(props) {
    const classes = useStyles();
-   const [onlineUsers, setOnlineUser] = useState([]);
-
-   useEffect(() => {
-      firestore.collection("users")
-         .onSnapshot((snapshot) => {
-            const userData = [];
-            snapshot.forEach((doc) => userData.push({...doc.data()}));
-            setOnlineUser(userData);
-         });
-   }, []);
 
    return (
       <div className={classes.sectionRoot}>
@@ -102,7 +91,7 @@ export default function ChatUsers() {
                              }}/>
                </Grid>
                <List>
-                  {onlineUsers.sort((a, b) => a.online < b.online ? 1 : -1).map(function (onlineUser, index) {
+                  {props.currentUserData.sort((a, b) => a.online < b.online ? 1 : -1).map(function (onlineUser, index) {
                      return (
                         <ListItem button key={index} className={classes.userListItem}>
                            <ListItemIcon>

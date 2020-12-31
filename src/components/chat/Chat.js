@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {firestore, auth} from "../../Base";
 import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -84,15 +85,45 @@ const useStyles = makeStyles((theme) => ({
    }
 }));
 
-export default function ScrollableTabsButtonPrevent() {
+export default function Chat() {
    const classes = useStyles();
-   const [value, setValue] = React.useState(0);
+   const [value, setValue] = useState(0);
+   const [currentUserData, setCurrentUserData] = useState([]);
+   const [chatConversation, setChatConversation] = useState([]);
+   const [currentUserId, setCurrentUserId] = useState(null);
 
    const handleChange = (event, newValue) => {
       setValue(newValue);
    };
 
    window.scrollTo(0, 0);
+
+   useEffect(() => {
+      if (auth.currentUser !== null) {
+         setCurrentUserId(auth.currentUser.uid);
+
+         //get chat messages
+         firestore.collection("chat")
+            .onSnapshot((snapshot) => {
+               const conversation = [];
+               snapshot.forEach((doc) => conversation.push({...doc.data()}));
+               console.log("chaatt")
+               setChatConversation(conversation);
+            });
+
+         //get User data
+         const unsubscribe = firestore.collection("users")
+            .onSnapshot((snapshot) => {
+               const userData = [];
+               snapshot.forEach((doc) => userData.push({...doc.data()}));
+               console.log("USERSS")
+               setCurrentUserData(userData);
+            });
+         return () => {
+            unsubscribe();
+         }
+      }
+   }, []);
 
    return (
       <div className={classes.chatHeader}>
@@ -105,17 +136,21 @@ export default function ScrollableTabsButtonPrevent() {
                   indicatorColor="primary"
                   className={classes.tabsContent}
                   classes={{indicator: classes.indicator}}>
-                  <Tab className={classes.tabs} icon={<ChatBubbleOutlineOutlinedIcon/>} aria-label="chatContent" {...a11yProps(0)} />
-                  <Tab className={classes.tabs} icon={<PeopleAltOutlinedIcon/>} aria-label="onlineUsersIcon" {...a11yProps(1)} />
-                  <Tab className={classes.tabs} icon={<PersonPinOutlinedIcon/>} aria-label="UsersIcon" {...a11yProps(2)} />
-                  <Tab className={classes.tabs} icon={<AssignmentLateOutlinedIcon/>} aria-label="rulesIcon" {...a11yProps(3)} />
+                  <Tab className={classes.tabs} icon={<ChatBubbleOutlineOutlinedIcon/>}
+                       aria-label="chatContent" {...a11yProps(0)} />
+                  <Tab className={classes.tabs} icon={<PeopleAltOutlinedIcon/>}
+                       aria-label="onlineUsersIcon" {...a11yProps(1)} />
+                  <Tab className={classes.tabs} icon={<PersonPinOutlinedIcon/>}
+                       aria-label="UsersIcon" {...a11yProps(2)} />
+                  <Tab className={classes.tabs} icon={<AssignmentLateOutlinedIcon/>}
+                       aria-label="rulesIcon" {...a11yProps(3)} />
                </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
-               <ChatContent/>
+               <ChatContent chatConversation={chatConversation} currentUserId={currentUserId}/>
             </TabPanel>
             <TabPanel value={value} index={1}>
-               <ChatUsers/>
+               <ChatUsers currentUserData={currentUserData}/>
             </TabPanel>
             <TabPanel value={value} index={2}>
                PROFIL
