@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useContext, useEffect} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
@@ -9,6 +9,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
 import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 import {auth, firestore} from "../../Base";
+import {AuthContext} from "../Auth";
 
 const useStyles = makeStyles({
    sectionRoot: {
@@ -138,8 +139,7 @@ const useStyles = makeStyles({
 
 export default function ChatContent(props) {
    const classes = useStyles();
-   const [currentFirstname, setCurrentUserFirstName] = useState([]);
-   const [currentLastname, setCurrentUserLastName] = useState([]);
+   const {currentUserFirstName, currentUserLastName} = useContext(AuthContext);
 
    const submitMessage = useCallback(async event => {
       event.preventDefault();
@@ -147,8 +147,8 @@ export default function ChatContent(props) {
       try {
          if (message.value !== '') {
             await firestore.collection('chat').add({
-               firstName: currentFirstname,
-               lastName: currentLastname,
+               firstName: currentUserFirstName,
+               lastName: currentUserLastName,
                message: message.value,
                created: new Date(),
                user_id: auth.currentUser.uid
@@ -160,27 +160,9 @@ export default function ChatContent(props) {
       } catch (error) {
          console.log("Error adding document to collection:", error);
       }
-   }, [currentFirstname, currentLastname]);
+   }, [currentUserFirstName, currentUserLastName]);
 
    useEffect(() => {
-      //get username
-      if (auth.currentUser !== null) {
-         firestore.collection("users")
-            .doc(auth.currentUser.uid)
-            .get()
-            .then(doc => {
-               if (doc.exists) {
-                  const data = doc.data();
-                  setCurrentUserFirstName(data.firstName);
-                  setCurrentUserLastName(data.lastName);
-               } else {
-                  alert("No such document!");
-               }
-            }).catch(function (error) {
-            console.log("Error getting document:", error);
-         });
-      }
-
       if (props.chatConversation !== null) {
          const messageAreaList = document.getElementById("messageAreaId");
          messageAreaList.scrollTop = messageAreaList.scrollHeight;
@@ -200,7 +182,7 @@ export default function ChatContent(props) {
                                  <Grid item xs={12}>
                                     <ListItemText className={classes.messageBoxRight} align="right">
                                        <div className={classes.text}>
-                                          <p className={classes.currentUserName}>{bubbleData.firstName + ' ' + bubbleData.lastName}<span
+                                          <p className={classes.currentUserName}>{currentUserFirstName + ' ' + currentUserLastName}<span
                                              className={classes.timestamp}> ({new Date(bubbleData.created.seconds * 1000).toLocaleString()})</span>
                                           </p>
                                           <p className={classes.message}>{bubbleData.message}</p>

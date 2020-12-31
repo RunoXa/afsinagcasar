@@ -189,7 +189,7 @@ async function setUserStatusToOffline() {
 export default function PersistentDrawerLeft() {
    const classes = useStyles();
    const theme = useTheme();
-   const {currentUserName} = useContext(AuthContext);
+   const {currentUserFirstName, currentUserLastName} = useContext(AuthContext);
    const [open, setOpen] = useState(false);
    const [anchorEl, setAnchorEl] = useState(null);
    const [dropDownOpen, setDropDownOpen] = useState(false);
@@ -315,7 +315,7 @@ export default function PersistentDrawerLeft() {
                         onClose={handleClose}>
                         <StyledMenuItem onClick={handleClose}>
                            <ListItemIcon><AccountCircle style={{color: "white"}}/></ListItemIcon>
-                           <ListItemText primary={currentUserName}/>
+                           <ListItemText primary={currentUserFirstName + ' ' + currentUserLastName}/>
                         </StyledMenuItem>
                         <Divider/>
                         <StyledMenuItem onClick={handleClose}>
