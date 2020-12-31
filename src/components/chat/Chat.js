@@ -107,7 +107,6 @@ export default function Chat() {
             .onSnapshot((snapshot) => {
                const conversation = [];
                snapshot.forEach((doc) => conversation.push({...doc.data()}));
-               console.log("chaatt")
                setChatConversation(conversation);
             });
 
@@ -116,7 +115,6 @@ export default function Chat() {
             .onSnapshot((snapshot) => {
                const userData = [];
                snapshot.forEach((doc) => userData.push({...doc.data()}));
-               console.log("USERSS")
                setCurrentUserData(userData);
             });
          return () => {

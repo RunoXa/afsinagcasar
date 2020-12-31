@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import app, {firestore, auth} from '../Base';
+import {AuthContext} from "./Auth";
 import '../styles/Header.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -188,11 +189,11 @@ async function setUserStatusToOffline() {
 export default function PersistentDrawerLeft() {
    const classes = useStyles();
    const theme = useTheme();
+   const {currentUserName} = useContext(AuthContext);
    const [open, setOpen] = useState(false);
    const [anchorEl, setAnchorEl] = useState(null);
    const [dropDownOpen, setDropDownOpen] = useState(false);
    const [dropDownOpen2, setDropDownOpen2] = useState(false);
-   const [currentUserName, setCurrentUserName] = useState(null);
    const {pathname} = useLocation();
 
    const handleDrawerOpen = () => {
@@ -249,22 +250,6 @@ export default function PersistentDrawerLeft() {
    };
 
    useEffect(() => {
-      if (auth.currentUser != null) {
-         firestore.collection("users")
-            .doc(auth.currentUser.uid)
-            .get()
-            .then(doc => {
-               if (doc.exists) {
-                  const data = doc.data();
-                  setCurrentUserName(data.firstName + ' ' + data.lastName);
-               } else {
-                  alert("No such document!");
-               }
-            }).catch(function (error) {
-            console.log("Error getting document:", error);
-         });
-      }
-
       switch (pathname) {
          case '/history/veliDedeAnlatiyor':
             setDropDownOpen2(true);
