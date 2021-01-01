@@ -15,6 +15,7 @@ import NotFound from "./NotFound";
 import {AuthContext, AuthProvider} from "./Auth";
 import VeliDedeAnlatiyorTabs from "./tabs/VeliDedeAnlatiyorTabs";
 import AliRizaArslanTabs from "./tabs/AliRizaArslanTabs";
+import BizeUlas from "./BizeUlas";
 
 const PrivateRoute = ({component: RouteComponent, ...rest}) => {
    const {currentUser} = useContext(AuthContext);
@@ -73,6 +74,7 @@ const DefaultContainer = () => (
             <PrivateRoute exact path="/writer/aliRizaArslan/4" component={AliRizaArslanTabs}/>
             <PrivateRoute exact path="/writer/aliRizaArslan/5" component={AliRizaArslanTabs}/>
             <PrivateRoute exact path="/contact" component={Contact}/>
+            <PrivateRoute exact path="/bize-ulas" component={BizeUlas}/>
             <PrivateRoute exact component={NotFound}/>
          </Switch>
       </div>
