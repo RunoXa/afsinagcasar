@@ -10,6 +10,7 @@ export const AuthProvider = ({children}) => {
    const [pending, setPending] = useState(true);
 
    useEffect(() => {
+      //Auth check and set User Status online
       auth.onAuthStateChanged((user) => {
          if (user !== null) {
             if (user.emailVerified) {
@@ -19,6 +20,7 @@ export const AuthProvider = ({children}) => {
                }).then(() => {
                   //Do something
                });
+               //get users firstName & lastName
                firestore.collection("users")
                   .doc(user.uid)
                   .get()

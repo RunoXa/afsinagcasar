@@ -1,7 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import app, {firestore, auth} from '../Base';
 import {AuthContext} from "./Auth";
-import '../styles/Header.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
 import clsx from 'clsx';
@@ -326,7 +325,7 @@ export default function PersistentDrawerLeft() {
                         <StyledMenuItem onClick={handleClose}>
                            <ListItemIcon>
                            </ListItemIcon>
-                           <ListItemText primary="Yardım"/>
+                           <ListItemText primary="Bize Ulaş"/>
                         </StyledMenuItem>
                         <StyledMenuItem exact to="/login" onClick={handleLogoutAndClose}>
                            <ListItemIcon><ExitToAppIcon style={{color: "white"}}/></ListItemIcon>

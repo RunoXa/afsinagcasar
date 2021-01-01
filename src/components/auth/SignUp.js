@@ -26,9 +26,9 @@ import {firestore, auth} from '../../Base';
 function Copyright() {
    return (
       <Typography variant="body2" align="center" style={{color: '#ffffff'}}>
-         {'Copyright © '}
-         <span> Agcasarlilar | by Onur Arslan </span>
-         {new Date().getFullYear()}
+         {'© Agcasarlilar '}
+         {/*<Link color="inherit" href="https://material-ui.com/">*/}
+         <span>{new Date().getFullYear()} | Tüm Hakları saklıdır</span>
          {'.'}
       </Typography>
    );

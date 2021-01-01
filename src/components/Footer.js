@@ -17,25 +17,25 @@ const Footer = () => {
                   <h4 className="footer-titles">İletişim</h4>
                   <ul className="list-unstyled">
                      <li><a href="/contact" className="footer-links">Biz Kimiz</a></li>
-                     <li><a className="footer-links">İletişim</a></li>
-                     <li><a className="footer-links">Impressum</a></li>
+                     <li><a className="footer-links">Bize Ulaş</a></li>
+                     <li><a className="footer-links">Sıkça Sorulan Sorular</a></li>
                   </ul>
                </div>
                {/*Column 2*/}
                <div className="col-md-3 col-sm-3">
-                  <h4 className="footer-titles">Yardım / Destek</h4>
+                  <h4 className="footer-titles">Organizasyon</h4>
                   <ul className="list-unstyled">
-                     <li><a className="footer-links">Bize Bağlan</a></li>
-                     <li><a className="footer-links">Yardım</a></li>
-                     <li><a className="footer-links">Sıkça Sorulan Sorular</a></li>
+                     <li><a className="footer-links">Sohbet & Müzik</a></li>
+                     <li><a className="footer-links">Videolar</a></li>
+                     <li><a className="footer-links">Kurallar</a></li>
                   </ul>
                </div>
                {/*Column 3*/}
                <div className="col-md-4 col-sm-4">
                   <h4 className="footer-titles">Haberler ve Duyurular</h4>
                   <ul className="list-unstyled">
-                     <li><a className="footer-links">Güncelleme Notları</a></li>
                      <li><a className="footer-links">Güncel Haberler</a></li>
+                     <li><a className="footer-links">Yeni Eklenenler</a></li>
                      <li><a className="footer-links">Yakında</a></li>
                   </ul>
                </div>
