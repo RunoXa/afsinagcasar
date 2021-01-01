@@ -7,6 +7,7 @@ export const AuthProvider = ({children}) => {
    const [currentUser, setCurrentUser] = useState(null);
    const [currentUserFirstName, setCurrentUserFirstName] = useState(null);
    const [currentUserLastName, setCurrentUserLastName] = useState(null);
+   const [currentUserEmail, setCurrentUserEmail] = useState(null);
    const [pending, setPending] = useState(true);
 
    useEffect(() => {
@@ -29,6 +30,7 @@ export const AuthProvider = ({children}) => {
                         const userData = doc.data();
                         setCurrentUserFirstName(userData.firstName);
                         setCurrentUserLastName(userData.lastName);
+                        setCurrentUserEmail(userData.email);
                      } else {
                         alert("No such document!");
                      }
@@ -53,7 +55,7 @@ export const AuthProvider = ({children}) => {
 
    return (
       <AuthContext.Provider
-         value={{currentUser, currentUserFirstName, currentUserLastName}}>
+         value={{currentUser, currentUserFirstName, currentUserLastName, currentUserEmail}}>
          {children}
       </AuthContext.Provider>
    );

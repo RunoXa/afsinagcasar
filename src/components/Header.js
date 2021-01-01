@@ -34,6 +34,7 @@ import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import CultureIcon from '@material-ui/icons/AccountBalance';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import AliRizaImageCircle from '../images/textImages/alirizacircle.png';
 import VeliDedeImageCircle from '../images/velidede/velidedecircle.jpg';
@@ -74,6 +75,12 @@ const useStyles = makeStyles((theme) => ({
          opacity: 1,
          color: "white !important",
          backgroundColor: 'rgba(150, 150, 150, 0.4)',
+      },
+   },
+   styledMenuItem: {
+      "&:hover": {
+         opacity: 1,
+         color: "white !important",
       },
    },
    headerCloseButton: {
@@ -312,22 +319,21 @@ export default function PersistentDrawerLeft() {
                         keepMounted
                         open={Boolean(anchorEl)}
                         onClose={handleClose}>
-                        <StyledMenuItem onClick={handleClose}>
+                        <StyledMenuItem onClick={handleClose} className={classes.styledMenuItem}>
                            <ListItemIcon><AccountCircle style={{color: "white"}}/></ListItemIcon>
                            <ListItemText primary={currentUserFirstName + ' ' + currentUserLastName}/>
                         </StyledMenuItem>
                         <Divider/>
-                        <StyledMenuItem onClick={handleClose}>
+                        <StyledMenuItem onClick={handleClose} className={classes.styledMenuItem}>
                            <ListItemIcon>
                            </ListItemIcon>
                            <ListItemText primary="Profil"/>
                         </StyledMenuItem>
-                        <StyledMenuItem onClick={handleClose}>
-                           <ListItemIcon>
-                           </ListItemIcon>
+                        <StyledMenuItem button exact to="/bize-ulas" component={NavLink} onClick={handleClose} className={classes.styledMenuItem}>
+                           <ListItemIcon><MailOutlineIcon style={{color: "white"}}/></ListItemIcon>
                            <ListItemText primary="Bize Ulaş"/>
                         </StyledMenuItem>
-                        <StyledMenuItem exact to="/login" onClick={handleLogoutAndClose}>
+                        <StyledMenuItem exact to="/login" onClick={handleLogoutAndClose} className={classes.styledMenuItem}>
                            <ListItemIcon><ExitToAppIcon style={{color: "white"}}/></ListItemIcon>
                            <ListItemText primary='Çıkış Yap'/>
                         </StyledMenuItem>

@@ -17,7 +17,7 @@ const Footer = () => {
                   <h4 className="footer-titles">İletişim</h4>
                   <ul className="list-unstyled">
                      <li><a href="/contact" className="footer-links">Biz Kimiz</a></li>
-                     <li><a className="footer-links">Bize Ulaş</a></li>
+                     <li><a href="/bize-ulas" className="footer-links">Bize Ulaş</a></li>
                      <li><a className="footer-links">Sıkça Sorulan Sorular</a></li>
                   </ul>
                </div>
@@ -51,8 +51,8 @@ const Footer = () => {
                      <li><a href="https://twitter.com/afsinagcasar" target="_blank"
                             rel="noopener noreferrer"><TwitterIcon size={31} round={true} className='footer-icon'/></a>
                      </li>
-                     <li><a href="/" target="_blank" rel="noopener noreferrer"><EmailIcon size={31} round={true}
-                                                                                          className='footer-icon'/></a>
+                     <li><a href="/bize-ulas" rel="noopener noreferrer"><EmailIcon size={31} round={true}
+                                                                                   className='footer-icon'/></a>
                      </li>
                      <li><a href="https://www.youtube.com/channel/UClWom_yPiHPGel4-MacSomQ/featured"
                             target="_blank" rel="noopener noreferrer"><img src={YoutubeIcon}
