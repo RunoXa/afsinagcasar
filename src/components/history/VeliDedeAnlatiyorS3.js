@@ -7,11 +7,11 @@ export default class VeliDedeAnlatiyorS1 extends Component {
    render() {
       return (
          <div style={{
-            border: "3px solid #50001B",
+            border: "3px solid #550A21",
             padding: "1rem",
             marginTop: "75px",
             borderRadius: "10px 10px 10px 10px",
-            backgroundColor: "#2e1919",
+            backgroundColor: "rgb(20,0,0)",
             color: "#ffffff",
             overflow: "auto"
          }}>
