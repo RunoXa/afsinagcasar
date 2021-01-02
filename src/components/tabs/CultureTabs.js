@@ -22,8 +22,8 @@ function TabPanel(props) {
    return (
       <div role="tabpanel"
            hidden={value !== index}
-           id={`full-width-tabpanel-${index}`}
-           aria-labelledby={`full-width-tab-${index}`}
+           id={`scrollable-auto-tabpanel-${index}`}
+           aria-labelledby={`scrollable-auto-tab-${index}`}
            {...other}>
          {value === index && (
             <Box p={3}>
@@ -42,8 +42,8 @@ TabPanel.propTypes = {
 
 function a11yProps(index) {
    return {
-      id: `full-width-tab-${index}`,
-      'aria-controls': `full-width-tabpanel-${index}`,
+      id: `scrollable-auto-tab-${index}`,
+      'aria-controls': `scrollable-auto-tabpanel-${index}`,
    };
 }
 
@@ -72,7 +72,8 @@ const useStyles = makeStyles((theme) => ({
       },
    },
    tabs: {
-      backgroundColor: '#211212'
+      backgroundColor: '#211212',
+      color: '#ffffff'
    }
 }));
 
@@ -144,8 +145,8 @@ export default function FullWidthTabs() {
                indicatorColor="primary"
                textColor="primary"
                variant="scrollable"
-               // scrollButtons="auto"
-               aria-label="scrollable tabs example"
+               scrollButtons="on"
+               aria-label="scrollable auto tabs example"
                classes={{indicator: classes.indicator}}
                className={classes.tabs}>
                <Tab component={NavLink} exact to="/culture/kultur" label="Kültür" {...a11yProps(0)}
