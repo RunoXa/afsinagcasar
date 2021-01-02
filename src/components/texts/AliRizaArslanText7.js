@@ -67,6 +67,7 @@ export default class AliRizaArslanText7 extends Component {
                <p>
                   Ali Rıza ARSLAN<br/>
                   12 Aralık 2008<br/>
+                  Ankara<br/>
                </p>
             </div>
          </div>

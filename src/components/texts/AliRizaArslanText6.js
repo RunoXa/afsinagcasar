@@ -132,6 +132,7 @@ export default class AliRizaArslanText6 extends Component {
                <p>
                   Ali Rıza ARSLAN<br/>
                   1 Ekim 2008<br/>
+                  Ankara<br/>
                </p>
                <p>
                   NOT: Türkiye’de trafik kazalarından dolayı “Yapılacak Müdahale ve Tedavi Ücretini ödeyeceğinize dair,
