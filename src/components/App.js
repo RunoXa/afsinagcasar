@@ -74,6 +74,7 @@ const DefaultContainer = () => (
             <PrivateRoute exact path="/writer/aliRizaArslan/4" component={AliRizaArslanTabs}/>
             <PrivateRoute exact path="/writer/aliRizaArslan/5" component={AliRizaArslanTabs}/>
             <PrivateRoute exact path="/writer/aliRizaArslan/6" component={AliRizaArslanTabs}/>
+            <PrivateRoute exact path="/writer/aliRizaArslan/7" component={AliRizaArslanTabs}/>
             <PrivateRoute exact path="/contact" component={Contact}/>
             <PrivateRoute exact path="/bize-ulas" component={BizeUlas}/>
             <PrivateRoute exact component={NotFound}/>

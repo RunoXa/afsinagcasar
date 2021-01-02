@@ -130,8 +130,8 @@ export default class AliRizaArslanText6 extends Component {
                   kalın.</p>
                <p style={{color: 'red', fontSize: "40px"}}>***</p>
                <p>
-                  1 Ekim 2008<br/>
                   Ali Rıza ARSLAN<br/>
+                  1 Ekim 2008<br/>
                </p>
                <p>
                   NOT: Türkiye’de trafik kazalarından dolayı “Yapılacak Müdahale ve Tedavi Ücretini ödeyeceğinize dair,
@@ -143,7 +143,7 @@ export default class AliRizaArslanText6 extends Component {
                </p>
             </div>
             <div style={{fontSize: '12px'}}>
-               <h5 style={{fontWeight: "bold", color: "#ffffff"}}>Han-ı Yağma</h5>
+               <h5 style={{fontWeight: "bold", color: "#ffffff", textDecoration: "underline"}}>Han-ı Yağma</h5>
                <p>
                   Bu sofracık, efendiler - ki iltikaama muntazır<br/>
                   Huzurunuzda titriyor - bu milletin hayatıdır;<br/>
