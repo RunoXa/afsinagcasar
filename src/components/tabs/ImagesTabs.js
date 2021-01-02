@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          color: '#ffffff',
          opacity: 1,
-         backgroundColor: 'rgba(211, 211, 211, 0.5);',
+         backgroundColor: 'rgba(211, 211, 211, 0.2);',
       },
       '&.Mui-selected': {
          outline: 'none',
