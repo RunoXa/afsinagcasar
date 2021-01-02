@@ -15,7 +15,7 @@ export default class AliRizaArslanText3 extends Component {
    render() {
       return (
          <div style={{
-            border: "3px solid #50001B",
+            border: "3px solid rgb(20,0,0)",
             padding: "1rem",
             marginTop: "75px",
             borderRadius: "10px 10px 10px 10px",
