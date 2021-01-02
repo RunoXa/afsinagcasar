@@ -25,7 +25,7 @@ const Footer = () => {
                <div className="col-md-3 col-sm-3">
                   <h4 className="footer-titles">Organizasyon</h4>
                   <ul className="list-unstyled">
-                     <li><a className="footer-links">Sohbet & Müzik</a></li>
+                     <li><a href="/chat" className="footer-links">Sohbet & Müzik</a></li>
                      <li><a className="footer-links">Videolar</a></li>
                      <li><a className="footer-links">Kurallar</a></li>
                   </ul>
