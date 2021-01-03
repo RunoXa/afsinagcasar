@@ -329,11 +329,13 @@ export default function PersistentDrawerLeft() {
                            </ListItemIcon>
                            <ListItemText primary="Profil"/>
                         </StyledMenuItem>
-                        <StyledMenuItem button exact to="/bize-ulas" component={NavLink} onClick={handleClose} className={classes.styledMenuItem}>
+                        <StyledMenuItem button exact to="/bize-ulas" component={NavLink} onClick={handleClose}
+                                        className={classes.styledMenuItem}>
                            <ListItemIcon><MailOutlineIcon style={{color: "white"}}/></ListItemIcon>
                            <ListItemText primary="Bize Ulaş"/>
                         </StyledMenuItem>
-                        <StyledMenuItem exact to="/login" onClick={handleLogoutAndClose} className={classes.styledMenuItem}>
+                        <StyledMenuItem exact to="/login" onClick={handleLogoutAndClose}
+                                        className={classes.styledMenuItem}>
                            <ListItemIcon><ExitToAppIcon style={{color: "white"}}/></ListItemIcon>
                            <ListItemText primary='Çıkış Yap'/>
                         </StyledMenuItem>
@@ -418,7 +420,11 @@ export default function PersistentDrawerLeft() {
                <Collapse in={dropDownOpen} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
                      <ListItem button exact to="/writer/aliRizaArslan/1" className={classes.nested} component={NavLink}
-                               isActive={() => ['/writer/aliRizaArslan', '/writer/aliRizaArslan/', '/writer/aliRizaArslan/1', '/writer/aliRizaArslan/2', '/writer/aliRizaArslan/3', '/writer/aliRizaArslan/4', '/writer/aliRizaArslan/5'].includes(pathname)}
+                               isActive={() => ['/writer/aliRizaArslan', '/writer/aliRizaArslan/', '/writer/aliRizaArslan/1',
+                                  '/writer/aliRizaArslan/2', '/writer/aliRizaArslan/3',
+                                  '/writer/aliRizaArslan/4', '/writer/aliRizaArslan/5',
+                                  '/writer/aliRizaArslan/6', '/writer/aliRizaArslan/7',
+                                  '/writer/aliRizaArslan/8'].includes(pathname)}
                                onClick={handleDropdownItemClick} activeClassName={classes.active}>
                         <ListItemIcon><img src={AliRizaImageCircle} alt="AliRizaImageCircle" width="40px"
                                            height="40px"/></ListItemIcon>
