@@ -1,5 +1,6 @@
-import React, {useContext} from "react";
+import React, {useCallback, useContext} from "react";
 import {AuthContext} from "./Auth";
+import axios from "axios";
 import {makeStyles} from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Avatar from "@material-ui/core/Avatar";
@@ -59,6 +60,31 @@ export default function BizeUlas() {
    const classes = useStyles();
    const {currentUserFirstName, currentUserLastName, currentUserEmail} = useContext(AuthContext);
 
+   const handleSubmit = useCallback(async event => {
+      event.preventDefault();
+      const {firstName, lastName, email, subject, message} = event.target.elements;
+      console.log(firstName.value)
+      axios({
+         method: "POST",
+         url: "/send",
+         data: {
+            firstName: firstName.value,
+            lastName: lastName.value,
+            email: email.value,
+            subject: subject.value,
+            message: message.value
+         }
+      }).then((response) => {
+         if (response.data.status === 'success') {
+            alert("Message Sent.");
+            //reset form
+            document.getElementById("formId").reset();
+         } else if (response.data.status === 'fail') {
+            alert("Message failed to send.")
+         }
+      })
+   }, []);
+
    return (
       <div>
          <Container component="main" maxWidth="sm">
@@ -74,7 +100,7 @@ export default function BizeUlas() {
                      iletebilirsiniz.
                   </p>
                </Grid>
-               <form className={classes.form}>
+               <form id="formId" className={classes.form} onSubmit={handleSubmit}>
                   <Grid container spacing={3}>
                      <Grid item xs={6} sm={6}>
                         <TextField
@@ -91,7 +117,6 @@ export default function BizeUlas() {
                               classes: {
                                  root: classes.cssLabel,
                                  focused: classes.cssFocused,
-                                 shrink: true,
                               },
                            }}
                            InputProps={{
@@ -118,7 +143,6 @@ export default function BizeUlas() {
                               classes: {
                                  root: classes.cssLabel,
                                  focused: classes.cssFocused,
-                                 shrink: true,
                               },
                            }}
                            InputProps={{
@@ -145,7 +169,31 @@ export default function BizeUlas() {
                               classes: {
                                  root: classes.cssLabel,
                                  focused: classes.cssFocused,
-                                 shrink: true,
+                              },
+                           }}
+                           InputProps={{
+                              classes: {
+                                 root: classes.cssOutlinedInput,
+                                 focused: classes.cssFocused,
+                                 notchedOutline: classes.notchedOutline,
+                              }
+                           }}
+                        />
+                     </Grid>
+                     <Grid item xs={12}>
+                        <TextField
+                           variant="outlined"
+                           required
+                           fullWidth
+                           name="subject"
+                           label="Konu"
+                           type="subject"
+                           id="subject"
+                           autoComplete="off"
+                           InputLabelProps={{
+                              classes: {
+                                 root: classes.cssLabel,
+                                 focused: classes.cssFocused,
                               },
                            }}
                            InputProps={{
@@ -168,11 +216,11 @@ export default function BizeUlas() {
                            id="message"
                            multiline
                            rows={15}
+                           autoComplete="off"
                            InputLabelProps={{
                               classes: {
                                  root: classes.cssLabel,
                                  focused: classes.cssFocused,
-                                 shrink: true,
                               },
                            }}
                            InputProps={{
