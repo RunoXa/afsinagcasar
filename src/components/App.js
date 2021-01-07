@@ -11,6 +11,7 @@ import FamilyTree from "./FamilyTree";
 import CultureTabs from "./tabs/CultureTabs";
 import LoginComponent from "./auth/Login";
 import SignUpComponent from "./auth/SignUp";
+import PasswordResetComponent from "./auth/PasswordReset";
 import NotFound from "./NotFound";
 import {AuthContext, AuthProvider} from "./Auth";
 import VeliDedeAnlatiyorTabs from "./tabs/VeliDedeAnlatiyorTabs";
@@ -37,6 +38,7 @@ const AuthContainer = () => (
    <div>
       <Route exact path="/login" component={LoginComponent}/>
       <Route exact path="/signup" component={SignUpComponent}/>
+      <Route exact path="/passwordReset" component={PasswordResetComponent}/>
    </div>
 )
 
@@ -95,6 +97,7 @@ export default class App extends Component {
                      <Switch>
                         <Route exact path="/login" component={AuthContainer}/>
                         <Route exact path="/signup" component={AuthContainer}/>
+                        <Route exact path="/passwordReset" component={AuthContainer}/>
                         <div className="content-wrap">
                            <div className="page-content">
                               <Route component={DefaultContainer}/>

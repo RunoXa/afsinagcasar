@@ -1,18 +1,14 @@
 import React, {useCallback, useState} from "react";
 import {withRouter} from "react-router-dom";
 import app from "../../Base";
-import Avatar from '@material-ui/core/Avatar';
 import MuiAlert from '@material-ui/lab/Alert';
 import Snackbar from '@material-ui/core/Snackbar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -21,7 +17,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import {firestore, auth} from '../../Base';
 
 function Copyright() {
    return (
@@ -40,7 +35,7 @@ function Alert(props) {
 
 const useStyles = makeStyles((theme) => ({
    paper: {
-      marginTop: theme.spacing(8),
+      marginTop: theme.spacing(9),
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -119,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
    }
 }));
 
-const SignUp = ({history}) => {
+const PasswordReset = ({history}) => {
    const classes = useStyles();
    const [errorMessage, setErrorMessage] = useState("");
    const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -143,18 +138,11 @@ const SignUp = ({history}) => {
       history.push("/login");
    };
 
-   const handleSignUp = useCallback(async event => {
+   const handlePasswordReset = useCallback(async event => {
       event.preventDefault();
-      const {firstName, lastName, email, password} = event.target.elements;
+      const {email} = event.target.elements;
       try {
-         await app.auth().createUserWithEmailAndPassword(email.value, password.value)
-         await firestore.doc(`users/${auth.currentUser.uid}`).set({
-            firstName: firstName.value,
-            lastName: lastName.value,
-            email: email.value,
-            online: false
-         });
-         await app.auth().currentUser.sendEmailVerification();
+         await app.auth().sendPasswordResetEmail(email.value)
          handleClickDialogOpen(true);
       } catch (error) {
          await handleErrorMessage(error);
@@ -177,63 +165,13 @@ const SignUp = ({history}) => {
          <Container component="main" maxWidth="xs">
             <CssBaseline/>
             <div className={classes.paper}>
-               <Avatar className={classes.avatar}>
-                  <LockOutlinedIcon/>
-               </Avatar>
                <Typography component="h1" variant="h4">
-                  Kayıt Ol
+                  Şifremi Unuttum
                </Typography>
-               <form className={classes.form} onSubmit={handleSignUp}>
+               <p style={{marginTop: '20px', maxWidth: '100%'}}>Sisteme giriş yaparken kullandığınız e-posta adresini
+                  aşağıdaki alana yazarak şifrenizi sıfırlayabilirsiniz.</p>
+               <form className={classes.form} onSubmit={handlePasswordReset}>
                   <Grid container spacing={2}>
-                     <Grid item xs={12} sm={6}>
-                        <TextField
-                           autoComplete="fname"
-                           name="firstName"
-                           variant="outlined"
-                           required
-                           fullWidth
-                           id="firstName"
-                           label="Adınız"
-                           autoFocus
-                           InputLabelProps={{
-                              classes: {
-                                 root: classes.cssLabel,
-                                 focused: classes.cssFocused,
-                              },
-                           }}
-                           InputProps={{
-                              classes: {
-                                 root: classes.cssOutlinedInput,
-                                 focused: classes.cssFocused,
-                                 notchedOutline: classes.notchedOutline,
-                              }
-                           }}
-                        />
-                     </Grid>
-                     <Grid item xs={12} sm={6}>
-                        <TextField
-                           variant="outlined"
-                           required
-                           fullWidth
-                           id="lastName"
-                           label="Soyadınız"
-                           name="lastName"
-                           autoComplete="lname"
-                           InputLabelProps={{
-                              classes: {
-                                 root: classes.cssLabel,
-                                 focused: classes.cssFocused,
-                              },
-                           }}
-                           InputProps={{
-                              classes: {
-                                 root: classes.cssOutlinedInput,
-                                 focused: classes.cssFocused,
-                                 notchedOutline: classes.notchedOutline,
-                              }
-                           }}
-                        />
-                     </Grid>
                      <Grid item xs={12}>
                         <TextField
                            variant="outlined"
@@ -258,49 +196,18 @@ const SignUp = ({history}) => {
                            }}
                         />
                      </Grid>
-                     <Grid item xs={12}>
-                        <TextField
-                           variant="outlined"
-                           required
-                           fullWidth
-                           name="password"
-                           label="Şifreniz"
-                           type="password"
-                           id="password"
-                           autoComplete="current-password"
-                           InputLabelProps={{
-                              classes: {
-                                 root: classes.cssLabel,
-                                 focused: classes.cssFocused,
-                              },
-                           }}
-                           InputProps={{
-                              classes: {
-                                 root: classes.cssOutlinedInput,
-                                 focused: classes.cssFocused,
-                                 notchedOutline: classes.notchedOutline,
-                              }
-                           }}
-                        />
-                     </Grid>
-                     <Grid item xs={12}>
-                        <FormControlLabel
-                           control={<Checkbox value="allowExtraEmails" required className={classes.checkbox}/>}
-                           label="Verdiğim bilgilerin doğruluğunu kabul ediyorum"
-                        />
-                     </Grid>
                   </Grid>
                   <Button
                      type="submit"
                      fullWidth
                      variant="contained"
                      className={classes.submit}>
-                     Kayıt Ol
+                     Gönder
                   </Button>
                   <Grid container justify="flex-end">
                      <Grid item>
                         <Link href="/login" variant="body2" className={classes.link}>
-                           Üyeliğiniz var mı? Giriş Yap
+                           Giriş Yap
                         </Link>
                      </Grid>
                   </Grid>
@@ -316,11 +223,11 @@ const SignUp = ({history}) => {
                onClose={handleDialogClose}
                aria-labelledby="alert-dialog-title"
                aria-describedby="alert-dialog-description">
-               <DialogTitle id="alert-dialog-title" className={classes.dialogTitle}><span style={{fontWeight: "bold"}}>E-POSTA DOĞRULAMA</span></DialogTitle>
+               <DialogTitle id="alert-dialog-title" className={classes.dialogTitle}><span style={{fontWeight: "bold"}}>Şifre Sıfırlama</span></DialogTitle>
                <DialogContent className={classes.dialogContent}>
                   <DialogContentText id="alert-dialog-description" className={classes.dialogContentText}>
-                     Üyeliğiniz başarıyla tamamlanmıştır. Son olarak e-posta hesabınızı doğrulamanız gerekmektedir.
-                     <br/><br/><span style={{fontWeight: "bold"}}>NOT:</span> Mail gelmezse, önemsiz E-Posta klasörünü
+                     E-Posta hesabınıza gelen mesajı kontrol ediniz.
+                     <br/><br/><span style={{fontWeight: "bold"}}>NOT:</span> Mesaj gelmezse, önemsiz E-Posta klasörünü
                      de kontrol ediniz. "Junk-E-Mail/Spam"
                   </DialogContentText>
                </DialogContent>
@@ -335,4 +242,4 @@ const SignUp = ({history}) => {
    );
 };
 
-export default withRouter(SignUp);
+export default withRouter(PasswordReset);

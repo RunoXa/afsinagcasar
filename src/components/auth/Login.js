@@ -180,7 +180,7 @@ const Login = ({history}) => {
                <Avatar className={classes.avatar}>
                   <LockOutlinedIcon/>
                </Avatar>
-               <Typography component="h1" variant="h5">
+               <Typography component="h1" variant="h4">
                   Giriş Yap
                </Typography>
                <form className={classes.form} onSubmit={handleLogin}>
@@ -246,7 +246,7 @@ const Login = ({history}) => {
                   </Button>
                   <Grid container>
                      <Grid item xs>
-                        <Link href="#" variant="body2" className={classes.link}>
+                        <Link href="/passwordReset" variant="body2" className={classes.link}>
                            Şifremi unuttum?
                         </Link>
                      </Grid>
