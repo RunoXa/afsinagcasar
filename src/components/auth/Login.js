@@ -39,11 +39,14 @@ const useStyles = makeStyles((theme) => ({
       height: '100vh',
    },
    paper: {
-      margin: theme.spacing(8, 4),
+      margin: theme.spacing(9, 4),
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      color: "#ffffff"
+      color: "#ffffff",
+      padding: '25px',
+      background: 'rgb(20,0,0)',
+      borderRadius: "25px 25px 25px 25px",
    },
    loginContent: {
       // color: "#ffffff"
@@ -76,13 +79,14 @@ const useStyles = makeStyles((theme) => ({
 
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: '#ffffff !important',
+      borderColor: 'rgb(20,0,0) !important',
       color: '#ffffff'
    },
    submit: {
       margin: theme.spacing(3, 0, 2),
       backgroundColor: 'rgb(85, 4, 4)',
       color: "#ffffff",
+      borderRadius: "25px 25px 25px 25px",
       "&:hover": {
          color: '#ffffff',
          opacity: 1,
@@ -174,7 +178,7 @@ const Login = ({history}) => {
          {/*   marginTop: "auto",*/}
          {/*   width: "50%"*/}
          {/*}}/>*/}
-         <Container component="main" maxWidth="xs" maxHeigth="100%">
+         <Container component="main" maxWidth="xs">
             <CssBaseline/>
             <div className={classes.paper}>
                <Avatar className={classes.avatar}>

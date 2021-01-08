@@ -35,7 +35,7 @@ function Alert(props) {
 
 const useStyles = makeStyles((theme) => ({
    paper: {
-      marginTop: theme.spacing(9),
+      marginTop: theme.spacing(15),
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
