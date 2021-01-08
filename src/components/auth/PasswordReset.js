@@ -39,7 +39,10 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      color: "#ffffff"
+      color: "#ffffff",
+      padding: '20px',
+      background: 'rgb(20,0,0)',
+      borderRadius: "25px 25px 25px 25px"
    },
    avatar: {
       margin: theme.spacing(1),
@@ -57,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
    },
    cssOutlinedInput: {
       color: '#ffffff',
+      background: '#2e1919 !important',
       '&$cssFocused $notchedOutline': {
          borderColor: `#ffffff !important`
       }
@@ -66,13 +70,14 @@ const useStyles = makeStyles((theme) => ({
    },
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: '#ffffff !important',
+      borderColor: 'rgb(20,0,0) !important',
       color: "#ffffff"
    },
    submit: {
       margin: theme.spacing(3, 0, 2),
       backgroundColor: 'rgb(85, 4, 4)',
       color: "#ffffff",
+      borderRadius: "25px 25px 25px 25px",
       "&:hover": {
          color: '#ffffff',
          opacity: 1,
@@ -204,7 +209,7 @@ const PasswordReset = ({history}) => {
                      className={classes.submit}>
                      Gönder
                   </Button>
-                  <Grid container justify="flex-end">
+                  <Grid container>
                      <Grid item>
                         <Link href="/login" variant="body2" className={classes.link}>
                            Giriş Yap

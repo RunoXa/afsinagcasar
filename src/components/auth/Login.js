@@ -36,7 +36,7 @@ function Alert(props) {
 
 const useStyles = makeStyles((theme) => ({
    root: {
-      height: '100vh',
+      height: '100vh'
    },
    paper: {
       marginTop: theme.spacing(9),
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
       color: "#ffffff",
       padding: '20px',
       background: 'rgb(20,0,0)',
-      borderRadius: "25px 25px 25px 25px",
+      borderRadius: "25px 25px 25px 25px"
    },
    loginContent: {
       // color: "#ffffff"
@@ -54,23 +54,23 @@ const useStyles = makeStyles((theme) => ({
    },
    avatar: {
       margin: theme.spacing(1),
-      backgroundColor: "rgb(85, 4, 4)",
+      backgroundColor: "rgb(85, 4, 4)"
    },
    form: {
       width: '100%', // Fix IE 11 issue.
-      marginTop: theme.spacing(3),
+      marginTop: theme.spacing(3)
    },
    cssLabel: {
       color: '#ffffff',
       '&$cssFocused': {
-         color: '#ffffff !important',
+         color: '#ffffff !important'
       }
    },
    cssOutlinedInput: {
       color: '#ffffff',
       background: '#2e1919 !important',
       '&$cssFocused $notchedOutline': {
-         borderColor: `#ffffff !important`,
+         borderColor: `#ffffff !important`
       }
    },
    cssFocused: {
@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          color: '#ffffff',
          opacity: 1,
-         backgroundColor: 'rgba(121, 16, 9, 1)',
+         backgroundColor: 'rgba(121, 16, 9, 1)'
       },
    },
    link: {
