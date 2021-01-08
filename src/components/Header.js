@@ -372,7 +372,7 @@ export default function PersistentDrawerLeft() {
                </ListItem>
                <ListItem button exact to="/images" component={NavLink}
                          onClick={handleDrawerClose} className={classes.listItem} activeClassName={classes.active}>
-                  <ListItemIcon><PermMediaIcon style={{color: "white"}} large/></ListItemIcon>
+                  <ListItemIcon><PermMediaIcon style={{color: "white"}}/></ListItemIcon>
                   <ListItemText>Resimler</ListItemText>
                </ListItem>
                <ListItem button exact to="/culture/kultur" component={NavLink} onClick={handleDrawerClose}
