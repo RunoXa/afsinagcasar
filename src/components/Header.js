@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          opacity: 1,
          color: "white !important",
-         backgroundColor: 'rgba(150, 150, 150, 0.4)',
+         backgroundColor: 'rgba(211, 211, 211, 0.2)',
       },
    },
    menuButtonRight: {
@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          opacity: 1,
          color: "white !important",
-         backgroundColor: 'rgba(150, 150, 150, 0.4)',
+         backgroundColor: 'rgba(211, 211, 211, 0.2)',
       },
    },
    styledMenuItem: {
@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: theme.spacing(2),
       "&:hover": {
          opacity: 1,
-         backgroundColor: 'rgba(150, 150, 150, 0.4)',
+         backgroundColor: 'rgba(211, 211, 211, 0.2)',
       },
    },
    listItem: {
@@ -95,11 +95,11 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          opacity: 1,
          color: "white !important",
-         backgroundColor: 'rgba(150, 150, 150, 0.4)',
+         backgroundColor: 'rgba(211, 211, 211, 0.2)',
       }
    },
    active: {
-      backgroundColor: 'rgba(150, 150, 150, 0.4)',
+      backgroundColor: 'rgba(211, 211, 211, 0.2)',
    },
    hide: {
       display: 'none',
@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          opacity: 1,
          color: "white !important",
-         backgroundColor: 'rgba(150, 150, 150, 0.4)',
+         backgroundColor: 'rgba(211, 211, 211, 0.2)',
       },
    },
    headerElements: {
