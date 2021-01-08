@@ -12,12 +12,16 @@ import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
    paper: {
-      marginTop: theme.spacing(2),
+      marginTop: theme.spacing(5),
       marginBottom: theme.spacing(4),
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      color: "#ffffff"
+      color: "#ffffff",
+      padding: '20px',
+      background: 'rgb(20,0,0)',
+      borderRadius: "25px 25px 25px 25px",
+      border: "3px solid #550A21"
    },
    avatar: {
       margin: theme.spacing(1),
@@ -35,19 +39,27 @@ const useStyles = makeStyles((theme) => ({
    },
    cssOutlinedInput: {
       color: '#ffffff !important',
+      background: '#2e1919 !important',
       '&$disabled': {
          color: '#ffffff !important'
       },
+      '&$cssFocused $notchedOutline': {
+         borderColor: `#ffffff !important`
+      }
+   },
+   cssFocused: {
+      color: '#ffffff'
    },
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: '#ffffff !important',
+      borderColor: 'rgb(20,0,0) !important',
       color: "#ffffff"
    },
    submit: {
       margin: theme.spacing(3, 0, 2),
       backgroundColor: 'rgb(85, 4, 4)',
       color: "#ffffff",
+      borderRadius: "25px 25px 25px 25px",
       "&:hover": {
          color: '#ffffff',
          opacity: 1,

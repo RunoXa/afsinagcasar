@@ -76,7 +76,6 @@ const useStyles = makeStyles((theme) => ({
    cssFocused: {
       color: '#ffffff'
    },
-
    notchedOutline: {
       borderWidth: '1px',
       borderColor: 'rgb(20,0,0) !important',
