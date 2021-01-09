@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/Footer.css';
 import YoutubeIcon from '../icons/youtube.svg';
+import {Link} from "react-router-dom";
 import {
    EmailIcon,
    TwitterIcon,
@@ -16,8 +17,8 @@ const Footer = () => {
                <div className="col-md-2 col-sm-2">
                   <h4 className="footer-titles">İletişim</h4>
                   <ul className="list-unstyled">
-                     <li><a href="/contact" className="footer-links">Biz Kimiz</a></li>
-                     <li><a href="/bize-ulas" className="footer-links">Bize Ulaş</a></li>
+                     <li><Link to="/contact" className="footer-links">Biz Kimiz</Link></li>
+                     <li><Link to="/bize-ulas" className="footer-links">Bize Ulaş</Link></li>
                      <li><a className="footer-links">Sıkça Sorulan Sorular</a></li>
                   </ul>
                </div>
@@ -25,7 +26,7 @@ const Footer = () => {
                <div className="col-md-3 col-sm-3">
                   <h4 className="footer-titles">Organizasyon</h4>
                   <ul className="list-unstyled">
-                     <li><a href="/chat" className="footer-links">Sohbet & Müzik</a></li>
+                     <li><Link to="/chat" className="footer-links">Sohbet & Müzik</Link></li>
                      <li><a className="footer-links">Videolar</a></li>
                      <li><a className="footer-links">Kurallar</a></li>
                   </ul>
@@ -51,8 +52,8 @@ const Footer = () => {
                      <li><a href="https://twitter.com/afsinagcasar" target="_blank"
                             rel="noopener noreferrer"><TwitterIcon size={31} round={true} className='footer-icon'/></a>
                      </li>
-                     <li><a href="/bize-ulas" rel="noopener noreferrer"><EmailIcon size={31} round={true}
-                                                                                   className='footer-icon'/></a>
+                     <li><Link to="/bize-ulas" rel="noopener noreferrer"><EmailIcon size={31} round={true}
+                                                                                   className='footer-icon'/></Link>
                      </li>
                      <li><a href="https://www.youtube.com/channel/UClWom_yPiHPGel4-MacSomQ/featured"
                             target="_blank" rel="noopener noreferrer"><img src={YoutubeIcon}

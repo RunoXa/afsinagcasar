@@ -97,6 +97,8 @@ export default function BizeUlas() {
       })
    }, []);
 
+   window.scrollTo(0, 0);
+
    return (
       <div>
          <Container component="main" maxWidth="sm">
