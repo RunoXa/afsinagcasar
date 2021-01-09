@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-let port = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.post('/send', function (req, res) {
 
@@ -40,6 +40,6 @@ app.post('/send', function (req, res) {
    })
 });
 
-app.listen(port, function () {
-   console.log('Server is running at port: ', port);
+app.listen(PORT, function () {
+   console.log('Server is running at port: ', PORT);
 });
