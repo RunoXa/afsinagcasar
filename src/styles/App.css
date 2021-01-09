@@ -35,6 +35,13 @@
     flex: 1;
 }
 
+div {
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None;
+}
+
 .App-header {
     background-color: #282c34;
     min-height: 100vh;
