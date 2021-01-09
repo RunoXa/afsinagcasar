@@ -104,12 +104,12 @@ export default function FullWidthTabs() {
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
                <Tab label="Ağcaşar'da Bahar" {...a11yProps(1)}
                     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Manzaralar" {...a11yProps(2)}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Köyde Yangın" {...a11yProps(3)}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
-               <Tab label="Düğünler" {...a11yProps(4)}
-                    classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>
+               {/*<Tab label="Manzaralar" {...a11yProps(2)}*/}
+               {/*     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>*/}
+               {/*<Tab label="Köyde Yangın" {...a11yProps(3)}*/}
+               {/*     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>*/}
+               {/*<Tab label="Düğünler" {...a11yProps(4)}*/}
+               {/*     classes={{root: classes.tabRoot, selected: classes.tabSelected}}/>*/}
             </Tabs>
          </AppBar>
          <SwipeableViews
@@ -122,15 +122,15 @@ export default function FullWidthTabs() {
             <TabPanel value={value} index={1} dir={theme.direction}>
                <Bahar/>
             </TabPanel>
-            <TabPanel value={value} index={2} dir={theme.direction}>
-               <h1>Manzaralar</h1>
-            </TabPanel>
-            <TabPanel value={value} index={3} dir={theme.direction}>
-               <h1>Köyde Yangın</h1>
-            </TabPanel>
-            <TabPanel value={value} index={4} dir={theme.direction}>
-               <h1>Düğünler</h1>
-            </TabPanel>
+            {/*<TabPanel value={value} index={2} dir={theme.direction}>*/}
+            {/*   <h1>Manzaralar</h1>*/}
+            {/*</TabPanel>*/}
+            {/*<TabPanel value={value} index={3} dir={theme.direction}>*/}
+            {/*   <h1>Köyde Yangın</h1>*/}
+            {/*</TabPanel>*/}
+            {/*<TabPanel value={value} index={4} dir={theme.direction}>*/}
+            {/*   <h1>Düğünler</h1>*/}
+            {/*</TabPanel>*/}
          </SwipeableViews>
       </div>
    );
