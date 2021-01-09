@@ -36,11 +36,10 @@
     "start": "react-scripts start",
     "client": "npm start",
     "server": "cd backend && node server.js",
-    "build": "react-scripts build",
+    "build": "concurrently \"npm run client\" \"npm run server\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "concurrently \"npm run client\" \"npm run server\"",
-    "heroku-postbuild": "cd backend && node server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
