@@ -249,6 +249,7 @@ export default function BizeUlas() {
                      // type="submit"
                      fullWidth
                      variant="contained"
+                     size="large"
                      className={classes.submit}>
                      GÖNDER
                   </Button>

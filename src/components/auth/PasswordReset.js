@@ -206,6 +206,7 @@ const PasswordReset = ({history}) => {
                      type="submit"
                      fullWidth
                      variant="contained"
+                     size="large"
                      className={classes.submit}>
                      Gönder
                   </Button>

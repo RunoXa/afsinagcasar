@@ -192,7 +192,6 @@ const SignUp = ({history}) => {
                   <Grid container spacing={2}>
                      <Grid item xs={12} sm={6}>
                         <TextField
-                           autoComplete="fname"
                            name="firstName"
                            variant="outlined"
                            required
@@ -223,7 +222,6 @@ const SignUp = ({history}) => {
                            id="lastName"
                            label="Soyadınız"
                            name="lastName"
-                           autoComplete="lname"
                            InputLabelProps={{
                               classes: {
                                  root: classes.cssLabel,
@@ -247,7 +245,6 @@ const SignUp = ({history}) => {
                            id="email"
                            label="Email"
                            name="email"
-                           autoComplete="email"
                            InputLabelProps={{
                               classes: {
                                  root: classes.cssLabel,
@@ -272,7 +269,6 @@ const SignUp = ({history}) => {
                            label="Şifreniz"
                            type="password"
                            id="password"
-                           autoComplete="current-password"
                            InputLabelProps={{
                               classes: {
                                  root: classes.cssLabel,
@@ -298,6 +294,7 @@ const SignUp = ({history}) => {
                   <Button
                      type="submit"
                      fullWidth
+                     size="large"
                      variant="contained"
                      className={classes.submit}>
                      Kayıt Ol
