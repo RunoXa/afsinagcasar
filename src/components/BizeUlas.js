@@ -72,10 +72,9 @@ export default function BizeUlas() {
    const classes = useStyles();
    const {currentUserFirstName, currentUserLastName, currentUserEmail} = useContext(AuthContext);
 
-   const handleSubmit = useCallback(async event => {
+   const handleSendMail = useCallback(async event => {
       event.preventDefault();
       const {firstName, lastName, email, subject, message} = event.target.elements;
-      console.log(firstName.value)
       axios({
          method: "POST",
          url: "/send",
@@ -87,12 +86,12 @@ export default function BizeUlas() {
             message: message.value
          }
       }).then((response) => {
-         if (response.data.status === 'success') {
+         if (response.data.status === 'OK') {
             alert("Message Sent.");
             //reset form
             document.getElementById("formId").reset();
-         } else if (response.data.status === 'fail') {
-            alert("Message failed to send.")
+         } else if (response.data.status === 'FAIL') {
+            alert("Message failed to send.");
          }
       })
    }, []);
@@ -114,7 +113,7 @@ export default function BizeUlas() {
                      iletebilirsiniz.
                   </p>
                </Grid>
-               <form id="formId" className={classes.form} onSubmit={handleSubmit}>
+               <form id="formId" className={classes.form} onSubmit={handleSendMail}>
                   <Grid container spacing={3}>
                      <Grid item xs={6} sm={6}>
                         <TextField
@@ -248,7 +247,7 @@ export default function BizeUlas() {
                      </Grid>
                   </Grid>
                   <Button
-                     // type="submit"
+                     type="submit"
                      fullWidth
                      variant="contained"
                      size="large"
