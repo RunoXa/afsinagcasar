@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodeMailer = require('nodemailer');
+const path = require('path');
 const cors = require('cors');
 const app = express();
 
@@ -8,7 +9,9 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
-app.use(express.static('dist'));
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
+// app.use(express.static('dist'));
 const PORT = process.env.PORT || 3333;
 
 console.log(PORT);

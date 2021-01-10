@@ -3,7 +3,6 @@
   "name": "afsinagcasar",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3333",
   "engines": {
     "npm": "6.14.8",
     "node": "14.9.0"
