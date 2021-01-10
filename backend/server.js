@@ -1,13 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodeMailer = require('nodemailer');
+const cors = require('cors');
 const app = express();
+
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 const PORT = process.env.PORT || 3001;
+
+app.get('/send', function (req, res, next) {
+   res.json({msg: 'This is CORS-enabled for all origins!'})
+});
 
 app.post('/send', function (req, res) {
 
