@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static('dist'));
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3333;
 
 console.log(PORT);
 
