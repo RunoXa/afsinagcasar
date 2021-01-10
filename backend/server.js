@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.use(express.static('dist'));
 const PORT = process.env.PORT || 3001;
 
 app.get('/send', function (req, res, next) {
