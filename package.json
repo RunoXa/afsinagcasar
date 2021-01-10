@@ -3,7 +3,7 @@
   "name": "afsinagcasar",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy": "https://afsinagcasar.herokuapp.com/",
   "engines": {
     "npm": "6.14.8",
     "node": "14.9.0"
@@ -39,7 +39,9 @@
     "build": "react-scripts build && (cd backend && npm install)",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"npm run client\" \"npm run server\""
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "dev:server": "cd backend && node server.js && cd .. && npm start",
+    "heroku-postbuild": "npm install && npm install --only=dev --noshrinkwrap && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"

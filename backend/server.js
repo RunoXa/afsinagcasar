@@ -4,18 +4,14 @@ const nodeMailer = require('nodemailer');
 const cors = require('cors');
 const app = express();
 
-app.use(
-   cors({
-      origin: process.env.ORIGIN,
-      optionsSuccessStatus: 200,
-      credentials: true,
-   })
-);
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static('dist'));
 const PORT = process.env.PORT || 3001;
+
+console.log(PORT);
 
 app.get('/send', function (req, res, next) {
    res.json({msg: 'This is CORS-enabled for all origins!'})
