@@ -50,7 +50,7 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
    root: {
       backgroundColor: theme.palette.background.paper,
-      borderRadius: '10px 10px 10px 10px',
+      borderRadius: '25px 25px 25px 25px',
       color: '#50001B',
       overflow: 'auto',
    },
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
    tabs: {
       minWidth: "25%",
       color: '#ffffff',
-      borderRadius: '10px 10px 10px 10px',
+      borderRadius: '25px 25px 25px 25px',
       "&:hover": {
          opacity: 1,
          textDecoration: "none",
