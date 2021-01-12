@@ -8,11 +8,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.set('view engine', 'ejs');
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.static(buildPath));
-// app.use(express.static('dist'));
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 3001;
 
 console.log(PORT);
 
