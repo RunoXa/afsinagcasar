@@ -1,8 +1,8 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const nodeMailer = require('nodemailer');
 const path = require('path');
-const cors = require('cors');
 const app = express();
 
 app.use(cors());
@@ -12,13 +12,22 @@ app.use(bodyParser.urlencoded({extended: true}));
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.static(buildPath));
 
+var corsOptions = {
+   origin: 'https://afsinagcasar.herokuapp.com',
+   optionsSuccessStatus: 200
+}
+app.use((req, res, next) => {
+   res.header('Access-Control-Allow-Origin', '*');
+   next();
+});
+
 const PORT = process.env.PORT || 3000;
 
 // app.get('/send', function (req, res) {
 //    res.json({msg: 'This is CORS-enabled for all origins!'})
 // });
 
-app.post('/send', function (req, res) {
+app.post('/send', cors(corsOptions), function (req, res) {
    let mail = {
       from: req.body.email,
       to: 'giles.hoppe@ethereal.email',
