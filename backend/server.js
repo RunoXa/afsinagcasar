@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000;
 //    res.json({msg: 'This is CORS-enabled for all origins!'})
 // });
 
-app.get('/send', function (req, res) {
+app.post('/send', function (req, res) {
    let mail = {
       from: req.body.email,
       to: 'giles.hoppe@ethereal.email',
