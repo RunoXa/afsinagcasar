@@ -8,18 +8,17 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.static(buildPath));
-const PORT = process.env.PORT || 3001;
 
-console.log(PORT);
+const PORT = process.env.PORT || 3000;
 
-app.get('/send', function (req, res, next) {
+app.get('/send', function (req, res) {
    res.json({msg: 'This is CORS-enabled for all origins!'})
 });
 
 app.post('/send', function (req, res) {
-
    let mail = {
       from: req.body.email,
       to: 'giles.hoppe@ethereal.email',
@@ -27,7 +26,6 @@ app.post('/send', function (req, res) {
       text: req.body.message,
       html: req.body.message
    }
-
    let transporter = nodeMailer.createTransport({
       host: 'smtp.ethereal.email',
       port: 587,

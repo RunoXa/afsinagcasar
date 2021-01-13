@@ -31,7 +31,7 @@
   },
   "scripts": {
     "start-client": "react-scripts start",
-    "client": "npm start",
+    "client": "npm run start-client",
     "server": "cd backend && node server.js",
     "build": "react-scripts build && (cd backend && npm install)",
     "test": "react-scripts test",
