@@ -76,8 +76,8 @@ export default function BizeUlas() {
       event.preventDefault();
       const {firstName, lastName, email, subject, message} = event.target.elements;
       axios({
-         method: "POST",
-         url: "https://afsinagcasar.herokuapp.com/send",
+         method: "GET",
+         url: "/send",
          data: {
             firstName: firstName.value,
             lastName: lastName.value,
