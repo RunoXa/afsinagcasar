@@ -1,4 +1,4 @@
-import React, {useCallback, useContext} from "react";
+import React, {useCallback, useContext, useState} from "react";
 import {AuthContext} from "./Auth";
 import axios from "axios";
 import {makeStyles} from "@material-ui/core/styles";
@@ -9,6 +9,10 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogActions from "@material-ui/core/DialogActions";
+import Dialog from "@material-ui/core/Dialog";
 
 const useStyles = makeStyles((theme) => ({
    paper: {
@@ -66,11 +70,43 @@ const useStyles = makeStyles((theme) => ({
          backgroundColor: 'rgba(121, 16, 9, 1)'
       },
    },
+   dialog: {
+      border: '1px solid red'
+   },
+   dialogContent: {
+      background: 'rgb(245, 245, 245)'
+   },
+   dialogContentText: {
+      background: 'rgb(245, 245, 245)',
+      color: '#550A21'
+   },
+   dialogActions: {
+      background: 'rgb(245, 245, 245)'
+   },
+   dialogButton: {
+      backgroundColor: "#550A21",
+      color: "#ffffff",
+      "&:hover": {
+         color: '#ffffff',
+         opacity: 1,
+         backgroundColor: 'rgba(121, 16, 9, 1)'
+      },
+   }
 }));
 
 export default function BizeUlas() {
    const classes = useStyles();
    const {currentUserFirstName, currentUserLastName, currentUserEmail} = useContext(AuthContext);
+   const [dialogOpen, setDialogOpen] = useState(false);
+
+   const handleClickDialogOpen = () => {
+      setDialogOpen(true);
+   };
+
+   const handleDialogClose = () => {
+      setDialogOpen(false);
+      window.scrollTo(0, 0);
+   };
 
    const handleSendMail = useCallback(async event => {
       event.preventDefault();
@@ -87,8 +123,7 @@ export default function BizeUlas() {
          }
       }).then((response) => {
          if (response.data.status === 'OK') {
-            alert("Message Sent.");
-            //reset form
+            handleClickDialogOpen();
             document.getElementById("formId").reset();
          } else if (response.data.status === 'FAIL') {
             alert("Message failed to send.");
@@ -256,8 +291,24 @@ export default function BizeUlas() {
                   </Button>
                </form>
             </div>
-            {/*<Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleCloseErrorMessage}><Alert*/}
-            {/*   severity="error">{errorMessage.key}: {errorMessage.msg}</Alert></Snackbar>*/}
+            <Dialog
+               open={dialogOpen}
+               onClose={handleDialogClose}
+               aria-labelledby="alert-dialog-title"
+               aria-describedby="alert-dialog-description">
+               {/*<DialogTitle id="alert-dialog-title" className={classes.dialogTitle}><span*/}
+               {/*   style={{fontWeight: "bold"}}></span></DialogTitle>*/}
+               <DialogContent className={classes.dialogContent}>
+                  <DialogContentText id="alert-dialog-description" className={classes.dialogContentText}>
+                     Mesajınız başarıyla gönderilmiştir. 2-3 gün içerisinde size geri dönüş yapılacaktır.
+                  </DialogContentText>
+               </DialogContent>
+               <DialogActions className={classes.dialogActions}>
+                  <Button onClick={handleDialogClose} className={classes.dialogButton}>
+                     OK
+                  </Button>
+               </DialogActions>
+            </Dialog>
          </Container>
       </div>
    );

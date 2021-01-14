@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.static(buildPath));
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 app.get('/*', (req, res) => {
    res.sendFile(path.join(__dirname, '../build', 'index.html'));
@@ -20,18 +20,23 @@ app.get('/*', (req, res) => {
 
 app.post('/send', function (req, res) {
    let mail = {
+      to: 'agcasarlilar@gmail.com',
       from: req.body.email,
-      to: 'giles.hoppe@ethereal.email',
       subject: req.body.subject,
       text: req.body.message,
-      html: req.body.message
+      html: `
+      <div>${req.body.message} + 
+      <p>Email: ${req.body.email}</p>
+      <p>İsim: ${req.body.firstName} ${req.body.lastName}</p></div>
+    `
    }
    let transporter = nodeMailer.createTransport({
-      host: 'smtp.ethereal.email',
+      host: 'smtp.gmail.com',
       port: 587,
+      secure: false,
       auth: {
-         user: 'giles.hoppe@ethereal.email',
-         pass: '7Tmywfz1XVwsCPSRcP'
+         user: 'agcasarlilar@gmail.com',
+         pass: 'MfyoW3xTV17Jxsla1Rfl'
       }
    });
 
@@ -43,7 +48,10 @@ app.post('/send', function (req, res) {
          // SUCCESS SERVER RESPONSE
          res.status(200).json({status: 'OK', msg: 'Email sent'})
       }
-      console.log('Message %s sent: %s', info.messageId, info.response);
+
+      if (error == null) {
+         console.log('Message %s sent: %s', info.messageId, info.response);
+      }
    })
 });
 
