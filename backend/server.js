@@ -14,9 +14,9 @@ app.use(express.static(buildPath));
 
 const PORT = process.env.PORT || 3001;
 
-// app.get('/send', function (req, res) {
-//    res.json({msg: 'This is CORS-enabled for all origins!'})
-// });
+app.get('/*', (req, res) => {
+   res.sendFile(path.join(__dirname, '../build', 'index.html'));
+});
 
 app.post('/send', function (req, res) {
    let mail = {
