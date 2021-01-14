@@ -1,18 +1,19 @@
 .notFoundTitle {
     text-align: center;
-    color: #50001B;
+    color: #ffffff;
     padding: 14px;
 }
 
 .notFoundText {
     font-size: medium;
-    color: #50001B;
+    color: #ffffff;
 }
 
 .linkToHomepage {
-    color: #50001B;
+    color: #ffffff;
     font-weight: bold;
     font-size: 25px;
+
 }
 
 .linkToHomepage:hover {
