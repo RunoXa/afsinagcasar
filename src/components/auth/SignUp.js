@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from "react";
+import React, {useCallback, useRef, useState} from "react";
 import {withRouter} from "react-router-dom";
 import app from "../../Base";
 import Avatar from '@material-ui/core/Avatar';
@@ -21,6 +21,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import {firestore, auth} from '../../Base';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import {Link} from "react-router-dom";
 
 function Copyright() {
@@ -84,10 +85,16 @@ const useStyles = makeStyles((theme) => ({
       color: "#ffffff",
       borderRadius: "25px 25px 25px 25px",
       "&:hover": {
-         color: '#ffffff',
          opacity: 1,
          backgroundColor: 'rgba(121, 16, 9, 1)'
       },
+   },
+   buttonProgress: {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      marginTop: -12,
+      marginLeft: -12,
    },
    link: {
       color: "#ffffff !important"
@@ -129,8 +136,14 @@ const SignUp = ({history}) => {
    const [errorMessage, setErrorMessage] = useState("");
    const [snackbarOpen, setSnackbarOpen] = useState(false);
    const [dialogOpen, setDialogOpen] = useState(false);
+   const [loading, setLoading] = useState(false);
+   const timer = useRef();
 
    async function handleErrorMessage(error) {
+      setLoading(true);
+      timer.current = window.setTimeout(() => {
+         setLoading(false);
+      }, 500);
       setErrorMessage({msg: error.message, key: error.code});
       setSnackbarOpen(true)
    }
@@ -149,6 +162,12 @@ const SignUp = ({history}) => {
    };
 
    const handleSignUp = useCallback(async event => {
+      if (!loading) {
+         setLoading(true);
+         timer.current = window.setTimeout(() => {
+            setLoading(false);
+         }, 2500);
+      }
       event.preventDefault();
       const {firstName, lastName, email, password} = event.target.elements;
       try {
@@ -300,8 +319,10 @@ const SignUp = ({history}) => {
                      fullWidth
                      size="large"
                      variant="contained"
+                     disabled={loading}
                      className={classes.submit}>
                      Kayıt Ol
+                     {loading && <CircularProgress size={30} className={classes.buttonProgress} color="secondary"/>}
                   </Button>
                   <Grid container justify="flex-end">
                      <Grid item>

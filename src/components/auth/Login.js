@@ -116,6 +116,10 @@ const Login = ({history}) => {
    const timer = useRef();
 
    async function handleErrorMessage(error) {
+      setLoading(true);
+      timer.current = window.setTimeout(() => {
+         setLoading(false);
+      }, 500);
       setErrorMessage({msg: error.message, key: error.code});
       setSnackbarOpen(true);
    }
