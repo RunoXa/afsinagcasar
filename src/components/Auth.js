@@ -1,14 +1,14 @@
 import React, {createContext, useEffect, useState} from "react";
 import {auth, firestore} from "../Base";
 
-export const AuthContext = createContext();
+export const AuthContext = createContext(undefined);
 
 export const AuthProvider = ({children}) => {
    const [currentUser, setCurrentUser] = useState(null);
    const [currentUserFirstName, setCurrentUserFirstName] = useState(null);
    const [currentUserLastName, setCurrentUserLastName] = useState(null);
    const [currentUserEmail, setCurrentUserEmail] = useState(null);
-   const [pending, setPending] = useState(true);
+   // const [pending, setPending] = useState(true);
 
    useEffect(() => {
       //Auth check and set User Status online
@@ -38,20 +38,20 @@ export const AuthProvider = ({children}) => {
                   console.log("Error getting document:", error);
                });
                setCurrentUser(user)
-               setPending(false)
+               // setPending(false)
             } else {
-               setPending(false)
+               // setPending(false)
             }
          } else {
             setCurrentUser(null)
-            setPending(false)
+            // setPending(false)
          }
       });
    }, []);
 
-   if (pending) {
-      return <div>Loading...</div>
-   }
+   // if (pending) {
+   //    return <div>Loading...</div>
+   // }
 
    return (
       <AuthContext.Provider

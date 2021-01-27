@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useState} from "react";
+import React, {useCallback, useContext, useRef, useState} from "react";
 import {withRouter, Redirect} from "react-router-dom";
 import app from "../../Base";
 import {AuthContext} from "../Auth.js";
@@ -17,6 +17,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import LoginImage from '../../images/home-image3.jpg';
 
 function Copyright() {
@@ -92,6 +93,13 @@ const useStyles = makeStyles((theme) => ({
          backgroundColor: 'rgba(121, 16, 9, 1)'
       },
    },
+   buttonProgress: {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      marginTop: -12,
+      marginLeft: -12,
+   },
    link: {
       color: "#ffffff !important"
    },
@@ -105,6 +113,8 @@ const Login = ({history}) => {
    const [errorMessage, setErrorMessage] = useState("");
    const [snackbarOpen, setSnackbarOpen] = useState(false);
    const [emailSnackbarOpen, setEmailSnackbarOpen] = useState(false);
+   const [loading, setLoading] = useState(false);
+   const timer = useRef();
 
    async function handleErrorMessage(error) {
       setErrorMessage({msg: error.message, key: error.code});
@@ -127,7 +137,17 @@ const Login = ({history}) => {
       setEmailSnackbarOpen(false);
    };
 
+   const handleButtonProgress = () => {
+      if (!loading) {
+         setLoading(true);
+         timer.current = window.setTimeout(() => {
+            setLoading(false);
+         }, 2500);
+      }
+   };
+
    const handleLogin = useCallback(async event => {
+         handleButtonProgress();
          event.preventDefault();
          const {email, password} = event.target.elements;
          try {
@@ -244,9 +264,10 @@ const Login = ({history}) => {
                      fullWidth
                      variant="contained"
                      size="large"
-                     className={classes.submit}
-                  >
-                     Giriş yap
+                     disabled={loading}
+                     className={classes.submit}>
+                     {loading ? <CircularProgress size={30} className={classes.buttonProgress} color="secondary"/> :
+                        <div>Giriş yap</div>}
                   </Button>
                   <Grid container>
                      <Grid item xs>
