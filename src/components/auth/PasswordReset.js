@@ -6,7 +6,6 @@ import Snackbar from '@material-ui/core/Snackbar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -18,6 +17,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import {Link} from "react-router-dom";
 
 function Copyright() {
    return (
@@ -80,7 +80,6 @@ const useStyles = makeStyles((theme) => ({
       color: "#ffffff",
       borderRadius: "25px 25px 25px 25px",
       "&:hover": {
-         color: '#ffffff',
          opacity: 1,
          backgroundColor: 'rgba(121, 16, 9, 1)'
       },
@@ -153,17 +152,13 @@ const PasswordReset = ({history}) => {
       history.push("/login");
    };
 
-   const handleButtonProgress = () => {
+   const handlePasswordReset = useCallback(async event => {
       if (!loading) {
          setLoading(true);
          timer.current = window.setTimeout(() => {
             setLoading(false);
          }, 2500);
       }
-   };
-
-   const handlePasswordReset = useCallback(async event => {
-      handleButtonProgress();
       event.preventDefault();
       const {email} = event.target.elements;
       try {
@@ -172,7 +167,7 @@ const PasswordReset = ({history}) => {
       } catch (error) {
          await handleErrorMessage(error);
       }
-   }, []);
+   }, [loading]);
 
    return (
       <div>
@@ -234,7 +229,7 @@ const PasswordReset = ({history}) => {
                   </Button>
                   <Grid container>
                      <Grid item>
-                        <Link href="/login" variant="body2" className={classes.link}>
+                        <Link to="/login" variant="body2" className={classes.link}>
                            Giriş Yap
                         </Link>
                      </Grid>

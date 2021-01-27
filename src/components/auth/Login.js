@@ -10,7 +10,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -18,6 +17,7 @@ import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import {Link} from "react-router-dom";
 import LoginImage from '../../images/home-image3.jpg';
 
 function Copyright() {
@@ -88,7 +88,6 @@ const useStyles = makeStyles((theme) => ({
       color: "#ffffff",
       borderRadius: "25px 25px 25px 25px",
       "&:hover": {
-         color: '#ffffff',
          opacity: 1,
          backgroundColor: 'rgba(121, 16, 9, 1)'
       },
@@ -137,17 +136,13 @@ const Login = ({history}) => {
       setEmailSnackbarOpen(false);
    };
 
-   const handleButtonProgress = () => {
-      if (!loading) {
-         setLoading(true);
-         timer.current = window.setTimeout(() => {
-            setLoading(false);
-         }, 2500);
-      }
-   };
-
    const handleLogin = useCallback(async event => {
-         handleButtonProgress();
+         if (!loading) {
+            setLoading(true);
+            timer.current = window.setTimeout(() => {
+               setLoading(false);
+            }, 2500);
+         }
          event.preventDefault();
          const {email, password} = event.target.elements;
          try {
@@ -168,7 +163,7 @@ const Login = ({history}) => {
             await handleErrorMessage(error);
          }
       },
-      [history]
+      [history, loading]
    );
 
    const {currentUser} = useContext(AuthContext);
@@ -271,12 +266,12 @@ const Login = ({history}) => {
                   </Button>
                   <Grid container>
                      <Grid item xs>
-                        <Link href="/passwordReset" variant="body2" className={classes.link}>
+                        <Link to="/passwordReset" variant="body2" className={classes.link}>
                            Şifremi unuttum?
                         </Link>
                      </Grid>
                      <Grid item>
-                        <Link href="/signup" variant="body2" className={classes.link}>
+                        <Link to="/signup" variant="body2" className={classes.link}>
                            {"Yeni hesap oluştur"}
                         </Link>
                      </Grid>

@@ -9,7 +9,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -22,6 +21,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import {firestore, auth} from '../../Base';
+import {Link} from "react-router-dom";
 
 function Copyright() {
    return (
@@ -199,6 +199,7 @@ const SignUp = ({history}) => {
                            id="firstName"
                            label="Adınız"
                            autoFocus
+                           autoComplete="off"
                            InputLabelProps={{
                               classes: {
                                  root: classes.cssLabel,
@@ -222,6 +223,7 @@ const SignUp = ({history}) => {
                            id="lastName"
                            label="Soyadınız"
                            name="lastName"
+                           autoComplete="off"
                            InputLabelProps={{
                               classes: {
                                  root: classes.cssLabel,
@@ -245,6 +247,7 @@ const SignUp = ({history}) => {
                            id="email"
                            label="Email"
                            name="email"
+                           autoComplete="off"
                            InputLabelProps={{
                               classes: {
                                  root: classes.cssLabel,
@@ -269,6 +272,7 @@ const SignUp = ({history}) => {
                            label="Şifreniz"
                            type="password"
                            id="password"
+                           autoComplete="off"
                            InputLabelProps={{
                               classes: {
                                  root: classes.cssLabel,
@@ -301,7 +305,7 @@ const SignUp = ({history}) => {
                   </Button>
                   <Grid container justify="flex-end">
                      <Grid item>
-                        <Link href="/login" variant="body2" className={classes.link}>
+                        <Link to="/login" variant="body2" className={classes.link}>
                            Üyeliğiniz var mı? Giriş Yap
                         </Link>
                      </Grid>
