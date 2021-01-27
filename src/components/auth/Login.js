@@ -266,8 +266,8 @@ const Login = ({history}) => {
                      size="large"
                      disabled={loading}
                      className={classes.submit}>
-                     {loading ? <CircularProgress size={30} className={classes.buttonProgress} color="secondary"/> :
-                        <div>Giriş yap</div>}
+                     Giriş yap
+                     {loading && <CircularProgress size={30} className={classes.buttonProgress} color="secondary"/>}
                   </Button>
                   <Grid container>
                      <Grid item xs>

@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from "react";
+import React, {useCallback, useRef, useState} from "react";
 import {withRouter} from "react-router-dom";
 import app from "../../Base";
 import MuiAlert from '@material-ui/lab/Alert';
@@ -17,6 +17,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 function Copyright() {
    return (
@@ -84,6 +85,13 @@ const useStyles = makeStyles((theme) => ({
          backgroundColor: 'rgba(121, 16, 9, 1)'
       },
    },
+   buttonProgress: {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      marginTop: -12,
+      marginLeft: -12,
+   },
    link: {
       color: "#ffffff !important"
    },
@@ -124,6 +132,8 @@ const PasswordReset = ({history}) => {
    const [errorMessage, setErrorMessage] = useState("");
    const [snackbarOpen, setSnackbarOpen] = useState(false);
    const [dialogOpen, setDialogOpen] = useState(false);
+   const [loading, setLoading] = useState(false);
+   const timer = useRef();
 
    async function handleErrorMessage(error) {
       setErrorMessage({msg: error.message, key: error.code});
@@ -143,7 +153,17 @@ const PasswordReset = ({history}) => {
       history.push("/login");
    };
 
+   const handleButtonProgress = () => {
+      if (!loading) {
+         setLoading(true);
+         timer.current = window.setTimeout(() => {
+            setLoading(false);
+         }, 2500);
+      }
+   };
+
    const handlePasswordReset = useCallback(async event => {
+      handleButtonProgress();
       event.preventDefault();
       const {email} = event.target.elements;
       try {
@@ -207,8 +227,10 @@ const PasswordReset = ({history}) => {
                      fullWidth
                      variant="contained"
                      size="large"
+                     disabled={loading}
                      className={classes.submit}>
                      Gönder
+                     {loading && <CircularProgress size={30} className={classes.buttonProgress} color="secondary"/>}
                   </Button>
                   <Grid container>
                      <Grid item>
