@@ -47,11 +47,10 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
    root: {
-      width: '100%',
-      backgroundColor: "#2e1919",
+      width: '100%'
    },
    indicator: {
-      backgroundColor: '#550A21',
+      backgroundColor: 'rgba(85, 4, 4, 1)',
       height: 4
    },
    tabRoot: {
@@ -70,7 +69,8 @@ const useStyles = makeStyles((theme) => ({
       },
    },
    tabs: {
-      backgroundColor: '#211212'
+      backgroundColor: 'rgb(10,0,0)',
+      color: '#ffffff'
    }
 }));
 

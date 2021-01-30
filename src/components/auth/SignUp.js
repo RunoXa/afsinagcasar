@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       color: "#ffffff",
       padding: '20px',
-      background: 'rgb(20,0,0)',
+      background: 'rgb(10,0,0)',
       borderRadius: "25px 25px 25px 25px"
    },
    avatar: {
@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
    },
    cssOutlinedInput: {
       color: '#ffffff',
-      background: '#2e1919 !important',
+      background: '#1a1a1a !important',
       '&$cssFocused $notchedOutline': {
          borderColor: `#ffffff !important`
       }
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
    },
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: 'rgb(20,0,0) !important',
+      borderColor: 'rgb(10,0,0) !important',
       color: "#ffffff"
    },
    submit: {

@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       color: "#ffffff",
       padding: '20px',
-      background: 'rgb(20,0,0)',
+      background: 'rgb(10,0,0)',
       borderRadius: "25px 25px 25px 25px"
    },
    loginContent: {
@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
    },
    cssOutlinedInput: {
       color: '#ffffff',
-      background: '#2e1919 !important',
+      background: '#1a1a1a !important',
       '&$cssFocused $notchedOutline': {
          borderColor: `#ffffff !important`
       }
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
    },
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: 'rgb(20,0,0) !important',
+      borderColor: 'rgb(10,0,0) !important',
       color: '#ffffff'
    },
    submit: {
@@ -98,12 +98,13 @@ const useStyles = makeStyles((theme) => ({
       left: '50%',
       marginTop: -12,
       marginLeft: -12,
+      color: "#ff0000"
    },
    link: {
       color: "#ffffff !important"
    },
    checkbox: {
-      color: "#ffffff !important"
+      color: "#ffffff !important",
    }
 }));
 
@@ -266,7 +267,7 @@ const Login = ({history}) => {
                      disabled={loading}
                      className={classes.submit}>
                      Giriş yap
-                     {loading && <CircularProgress size={30} className={classes.buttonProgress} color="secondary"/>}
+                     {loading && <CircularProgress size={30} className={classes.buttonProgress}/>}
                   </Button>
                   <Grid container>
                      <Grid item xs>

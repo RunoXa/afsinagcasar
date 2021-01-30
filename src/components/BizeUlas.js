@@ -23,9 +23,9 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       color: "#ffffff",
       padding: '20px',
-      background: 'rgb(20,0,0)',
+      background: 'rgb(10,0,0)',
       borderRadius: "25px 25px 25px 25px",
-      border: "3px solid #550A21"
+      border: "3px solid rgba(85, 4, 4, 1)"
    },
    avatar: {
       margin: theme.spacing(1),
@@ -143,7 +143,7 @@ export default function BizeUlas() {
                <Typography component="h1" variant="h5">
                   Bize Ulaş
                </Typography>
-               <Grid item sm={12} style={{color: 'red', marginTop: '20px', fontSize: '16px'}}>
+               <Grid item sm={12} style={{color: '#ff0000', marginTop: '20px', fontSize: '16px'}}>
                   <p>Aşağıdaki formu doldurarak şikayetlerinizi, sorularınızı veya önerilerinizi bize
                      iletebilirsiniz.
                   </p>
