@@ -35,7 +35,7 @@ const useStyles = makeStyles({
       maxHeight: '100%',
       overflow: 'auto',
       paddingRight: '15px',
-      background: '#202020'
+      background: '#1a1a1a'
    },
    messageBoxRight: {
       position: 'relative',

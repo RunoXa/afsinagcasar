@@ -26,7 +26,7 @@ const useStyles = makeStyles({
       }
    },
    userListSection: {
-      background: '#202020 !important',
+      background: '#1a1a1a !important',
       color: '#ffffff'
    },
    table: {

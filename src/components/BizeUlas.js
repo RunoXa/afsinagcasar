@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
    },
    cssOutlinedInput: {
       color: '#ffffff !important',
-      background: '#2e1919 !important',
+      background: '#1e1e1e !important',
       '&$disabled': {
          color: '#ffffff !important'
       },
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
    },
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: 'rgb(20,0,0) !important',
+      borderColor: 'rgb(10,0,0) !important',
       color: "#ffffff"
    },
    submit: {

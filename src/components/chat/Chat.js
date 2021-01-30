@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
    root: {
       backgroundColor: theme.palette.background.paper,
       borderRadius: '25px 25px 25px 25px',
-      color: '#50001B',
+      color: 'rgba(85, 4, 4, 1)',
       overflow: 'auto',
    },
    appBar: {
