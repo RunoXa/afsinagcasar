@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {firestore, auth} from "../../Base";
+import {firestore, auth, realtimeDB} from "../../Base";
 import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -103,10 +103,12 @@ export default function Chat() {
          setCurrentUserId(auth.currentUser.uid);
 
          //get chat messages
-         firestore.collection("chat")
-            .onSnapshot((snapshot) => {
+         realtimeDB.ref("chat")
+            .on("value", (snapshot) => {
                const conversation = [];
-               snapshot.forEach((doc) => conversation.push({...doc.data()}));
+               snapshot.forEach((doc) => {
+                  conversation.push(doc.val());
+               });
                setChatConversation(conversation);
             });
 

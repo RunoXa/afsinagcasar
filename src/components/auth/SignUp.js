@@ -183,7 +183,7 @@ const SignUp = ({history}) => {
       } catch (error) {
          await handleErrorMessage(error);
       }
-   }, []);
+   }, [loading]);
 
    return (
       <div>

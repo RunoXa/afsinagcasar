@@ -8,7 +8,7 @@ import List from '@material-ui/core/List';
 import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
 import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
-import {auth, firestore} from "../../Base";
+import {auth, realtimeDB} from "../../Base";
 import {AuthContext} from "../Auth";
 
 const useStyles = makeStyles({
@@ -146,11 +146,11 @@ export default function ChatContent(props) {
       const {message} = event.target.elements;
       try {
          if (message.value !== '') {
-            await firestore.collection('chat').add({
+            await realtimeDB.ref("chat").push({
                firstName: currentUserFirstName,
                lastName: currentUserLastName,
                message: message.value,
-               created: new Date(),
+               created: Date.now(),
                user_id: auth.currentUser.uid
             });
          }
@@ -183,7 +183,7 @@ export default function ChatContent(props) {
                                     <ListItemText className={classes.messageBoxRight} align="right">
                                        <div className={classes.text}>
                                           <p className={classes.currentUserName}>{currentUserFirstName + ' ' + currentUserLastName}<span
-                                             className={classes.timestamp}> ({new Date(bubbleData.created.seconds * 1000).toLocaleString()})</span>
+                                             className={classes.timestamp}> ({new Date(parseInt(bubbleData.created)).toLocaleTimeString()})</span>
                                           </p>
                                           <p className={classes.message}>{bubbleData.message}</p>
                                        </div>
@@ -198,7 +198,7 @@ export default function ChatContent(props) {
                                     <ListItemText className={classes.messageBoxLeft} align="left">
                                        <div className={classes.text}>
                                           <p className={classes.otherUserName}>{bubbleData.firstName + ' ' + bubbleData.lastName}<span
-                                             className={classes.timestamp}> ({new Date(bubbleData.created.seconds * 1000).toLocaleString()})</span>
+                                             className={classes.timestamp}> ({new Date(parseInt(bubbleData.created)).toLocaleTimeString()})</span>
                                           </p>
                                           <p className={classes.message}>{bubbleData.message}</p>
                                        </div>
