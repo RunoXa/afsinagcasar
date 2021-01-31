@@ -2,9 +2,6 @@ section {
     margin: 2em;
 }
 
-.home-content{
-}
-
 .home-title {
     text-align: center;
     color: #ffffff;
@@ -15,6 +12,7 @@ section {
     /*padding: 15px;*/
     font-size: medium;
     color: #ffffff;
+    margin-top: 20px;
 }
 
 .carousel-inner {

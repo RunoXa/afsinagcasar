@@ -157,7 +157,7 @@ const useStyles = makeStyles((theme) => ({
 
 const StyledMenu = withStyles({
    paper: {
-      color: "white",
+      color: "#ffffff",
       background: "rgba(85, 4, 4, 1)"
    },
 })((props) => (
@@ -167,11 +167,11 @@ const StyledMenu = withStyles({
       getContentAnchorEl={null}
       anchorOrigin={{
          vertical: 'bottom',
-         horizontal: 'center',
+         horizontal: 'center'
       }}
       transformOrigin={{
          vertical: 'top',
-         horizontal: 'center',
+         horizontal: 'center'
       }}
       {...props}
    />

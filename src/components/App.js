@@ -1,7 +1,7 @@
 import React, {Component, useContext} from "react";
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 import '../styles/App.css';
-import Home from './Home';
+import Home from './home/Home';
 import Header from "./Header";
 import Footer from "./Footer";
 import Contact from "./Contact";
