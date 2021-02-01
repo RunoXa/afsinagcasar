@@ -1,11 +1,13 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import {makeStyles} from '@material-ui/core/styles';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import {Link} from "react-router-dom";
+import Badge from '@material-ui/core/Badge';
+import DescriptionIcon from '@material-ui/icons/Description';
 import SengulImageCircle from '../../images/textImages/sengulcircle.png';
 import AliRizaImageCircle from '../../images/textImages/alirizacircle.png';
 
@@ -60,11 +62,13 @@ export default function WriterList() {
                   <ListItemIcon><img src={AliRizaImageCircle} alt="AliRizaImageCircle" width="40px"
                                      height="40px"/></ListItemIcon>
                   <ListItemText>Ali Rıza Arslan</ListItemText>
+                  <Badge badgeContent={8} color="primary"><DescriptionIcon/></Badge>
                </ListItem>
                <ListItem button exact to="/" className={classes.item} component={Link}>
                   <ListItemIcon><img src={SengulImageCircle} alt="SengulImageCircle" width="40px"
                                      height="40px"/></ListItemIcon>
                   <ListItemText>Şengül Arslan</ListItemText>
+                  <Badge badgeContent={1} color="primary"><DescriptionIcon/></Badge>
                </ListItem>
             </List>
          </div>
