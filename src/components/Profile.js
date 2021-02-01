@@ -11,12 +11,13 @@ import UserIcon from '../icons/user.png';
 const useStyles = makeStyles((theme) => ({
    paper: {
       marginTop: theme.spacing(5),
-      marginBottom: theme.spacing(4),
+      marginBottom: theme.spacing(8),
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       color: "#ffffff",
       padding: '20px',
+      paddingBottom: '100px',
       background: 'rgb(10,0,0)',
       borderRadius: "25px 25px 25px 25px",
       border: "3px solid rgba(85, 4, 4, 1)"
