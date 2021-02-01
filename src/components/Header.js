@@ -321,7 +321,8 @@ export default function PersistentDrawerLeft() {
                         keepMounted
                         open={Boolean(anchorEl)}
                         onClose={handleClose}>
-                        <StyledMenuItem onClick={handleClose} className={classes.styledMenuItem} style={{padding: '15px'}}>
+                        <StyledMenuItem button exact to="/profile" className={classes.styledMenuItem}
+                                        component={NavLink} onClick={handleClose} style={{padding: '15px'}}>
                            <ListItemIcon><AssignmentIndIcon fontSize="large" style={{color: "white"}}/></ListItemIcon>
                            <ListItemText primary={currentUserFirstName + ' ' + currentUserLastName}/>
                         </StyledMenuItem>
@@ -330,8 +331,8 @@ export default function PersistentDrawerLeft() {
                            <ListItemIcon><AssignmentLateOutlinedIcon style={{color: "white"}}/></ListItemIcon>
                            <ListItemText primary="Kurallar"/>
                         </StyledMenuItem>
-                        <StyledMenuItem button exact to="/bize-ulas" component={NavLink} onClick={handleClose}
-                                        className={classes.styledMenuItem}>
+                        <StyledMenuItem button exact to="/bize-ulas"
+                                        component={NavLink} onClick={handleClose} className={classes.styledMenuItem}>
                            <ListItemIcon><MailOutlineIcon style={{color: "white"}}/></ListItemIcon>
                            <ListItemText primary="Bize Ulaş"/>
                         </StyledMenuItem>

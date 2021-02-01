@@ -1,5 +1,6 @@
 import React, {Component, useContext} from "react";
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
+import {AuthContext, AuthProvider} from "./Auth";
 import '../styles/App.css';
 import Home from './home/Home';
 import Header from "./Header";
@@ -7,16 +8,16 @@ import Footer from "./Footer";
 import Contact from "./Contact";
 import Chat from "./chat/Chat";
 import ImagesTabs from "./tabs/ImagesTabs";
-import FamilyTree from "./FamilyTree";
 import CultureTabs from "./tabs/CultureTabs";
+import FamilyTree from "./FamilyTree";
 import LoginComponent from "./auth/Login";
 import SignUpComponent from "./auth/SignUp";
 import PasswordResetComponent from "./auth/PasswordReset";
 import NotFound from "./NotFound";
-import {AuthContext, AuthProvider} from "./Auth";
 import VeliDedeAnlatiyorTabs from "./tabs/VeliDedeAnlatiyorTabs";
 import AliRizaArslanTabs from "./tabs/AliRizaArslanTabs";
 import BizeUlas from "./BizeUlas";
+import Profile from "./Profile";
 
 const PrivateRoute = ({component: RouteComponent, ...rest}) => {
    const {currentUser} = useContext(AuthContext);
@@ -79,6 +80,7 @@ const DefaultContainer = () => (
             <PrivateRoute exact path="/writer/aliRizaArslan/7" component={AliRizaArslanTabs}/>
             <PrivateRoute exact path="/writer/aliRizaArslan/8" component={AliRizaArslanTabs}/>
             <PrivateRoute exact path="/contact" component={Contact}/>
+            <PrivateRoute exact path="/profile" component={Profile}/>
             <PrivateRoute exact path="/bize-ulas" component={BizeUlas}/>
             <PrivateRoute exact component={NotFound}/>
          </Switch>
