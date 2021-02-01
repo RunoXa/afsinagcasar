@@ -103,7 +103,7 @@ export default function Chat() {
          setCurrentUserId(auth.currentUser.uid);
 
          //get chat messages
-         realtimeDB.ref("chat")
+         realtimeDB.ref("chat").orderByChild('created').limitToLast(10)
             .on("value", (snapshot) => {
                const conversation = [];
                snapshot.forEach((doc) => {
