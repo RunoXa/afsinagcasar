@@ -51,7 +51,7 @@ export default function WriterList() {
    return (
       <div>
          <ListSubheader component="div" className={classes.header}>
-            <h2>SİTE YAZARLARI</h2>
+            <h3>SİTE YAZARLARI</h3>
          </ListSubheader>
          <div className={classes.listSection}>
             <List

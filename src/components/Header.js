@@ -27,6 +27,8 @@ import Collapse from '@material-ui/core/Collapse';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+import AssignmentLateOutlinedIcon from '@material-ui/icons/AssignmentLateOutlined';
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 import ChatIcon from '@material-ui/icons/Chat';
 import PermMediaIcon from '@material-ui/icons/PermMedia';
@@ -319,15 +321,14 @@ export default function PersistentDrawerLeft() {
                         keepMounted
                         open={Boolean(anchorEl)}
                         onClose={handleClose}>
-                        <StyledMenuItem onClick={handleClose} className={classes.styledMenuItem}>
-                           <ListItemIcon><AccountCircle style={{color: "white"}}/></ListItemIcon>
+                        <StyledMenuItem onClick={handleClose} className={classes.styledMenuItem} style={{padding: '15px'}}>
+                           <ListItemIcon><AssignmentIndIcon fontSize="large" style={{color: "white"}}/></ListItemIcon>
                            <ListItemText primary={currentUserFirstName + ' ' + currentUserLastName}/>
                         </StyledMenuItem>
                         <Divider/>
                         <StyledMenuItem onClick={handleClose} className={classes.styledMenuItem}>
-                           <ListItemIcon>
-                           </ListItemIcon>
-                           <ListItemText primary="Profil"/>
+                           <ListItemIcon><AssignmentLateOutlinedIcon style={{color: "white"}}/></ListItemIcon>
+                           <ListItemText primary="Kurallar"/>
                         </StyledMenuItem>
                         <StyledMenuItem button exact to="/bize-ulas" component={NavLink} onClick={handleClose}
                                         className={classes.styledMenuItem}>

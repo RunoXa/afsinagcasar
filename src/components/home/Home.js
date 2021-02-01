@@ -54,7 +54,7 @@ export default function Home() {
                   <Grid item xs={12} sm={6}>
                      <Paper className={classes.paper}>
                         <ListSubheader component="div" style={{color: '#ffffff'}}>
-                           <h2 style={{textAlign: 'center'}}>GÜNCEL HABERLER</h2>
+                           <h3 style={{textAlign: 'center'}}>GÜNCEL HABERLER</h3>
                            <p>Bu bölümde güncel haberler eklenecektir..</p>
                         </ListSubheader>
                      </Paper>
