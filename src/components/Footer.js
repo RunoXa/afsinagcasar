@@ -14,7 +14,7 @@ const Footer = () => {
          <div className="container">
             <div className="row">
                {/*Column 1*/}
-               <div className="col-md-2 col-sm-2">
+               <div className="col-md-3 col-sm-3">
                   <h4 className="footer-titles">İletişim</h4>
                   <ul className="list-unstyled">
                      <li><Link to="/contact" className="footer-links">Biz Kimiz</Link></li>
