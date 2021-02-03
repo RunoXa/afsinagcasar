@@ -234,7 +234,7 @@ export default function FullWidthTabs() {
             </TabPanel>
          </SwipeableViews>
          <Button to="/writer/aliRizaArslan" className={classes.backButton}
-                 component={Link}><ArrowBackIosOutlinedIcon/></Button>
+                 component={Link}><ArrowBackIosOutlinedIcon className={classes.backIcon}/></Button>
       </div>
    );
 }
