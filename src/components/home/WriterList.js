@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
       "&:hover": {
          opacity: 1,
          color: 'white !important',
-         backgroundColor: 'rgba(211, 211, 211, 0.2)',
+         backgroundColor: 'rgba(211, 211, 211, 0.2)'
       },
    },
    listSection: {

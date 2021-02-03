@@ -13,11 +13,11 @@ import AliRizaImageCircle from '../../images/textImages/alirizacircle.png';
 const useStyles = makeStyles(() => ({
    root: {
       height: '100%',
-      overflow: 'auto',
+      overflow: 'auto'
    },
    header: {
       color: '#ffffff',
-      textAlign: 'center',
+      textAlign: 'center'
    },
    item: {
       border: '2px solid rgba(85, 4, 4)',
@@ -25,7 +25,6 @@ const useStyles = makeStyles(() => ({
       marginRight: '15px',
       marginLeft: '15px',
       marginBottom: '8px',
-      // margin:'20px',
       padding: '16px',
       width: 'auto',
       backgroundColor: 'rgb(10,0,0)',
@@ -39,10 +38,10 @@ const useStyles = makeStyles(() => ({
       width: '100%',
       height: '320px',
       backgroundColor: '#1a1a1a',
-      marginTop: '20px',
+      marginTop: '15px',
       '@global': {
          '*::-webkit-scrollbar': {
-            width: '0.4em',
+            width: '0.4em'
          },
          '*::-webkit-scrollbar-track': {
             '-webkit-box-shadow': 'inset 0 0 6px #202020'
@@ -59,7 +58,7 @@ const useStyles = makeStyles(() => ({
       color: '#ffffff',
       paddingTop: '15px',
       overflow: 'auto',
-      backgroundColor: '#1e1e1e',
+      backgroundColor: '#1e1e1e'
    },
    badge: {
       marginRight: '20px',
