@@ -79,8 +79,10 @@ const useStyles = makeStyles(() => ({
       color: '#ffffff'
    },
    backButton: {
+      display: 'block',
       position: 'sticky',
       bottom: '10px',
+      marginBottom: '10px',
       left: '25px',
       borderRadius: '50%',
       height: '60px',
@@ -92,6 +94,10 @@ const useStyles = makeStyles(() => ({
          textDecoration: 'none',
          backgroundColor: 'rgba(85, 4, 4, .9)'
       },
+   },
+   backIcon: {
+      marginLeft: '25%',
+      marginTop: '25%'
    }
 }));
 
