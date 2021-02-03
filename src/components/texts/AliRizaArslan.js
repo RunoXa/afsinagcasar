@@ -17,13 +17,18 @@ const useStyles = makeStyles(() => ({
    },
    header: {
       color: '#ffffff',
-      textAlign: 'center'
+      textAlign: 'center',
    },
    item: {
-      borderTop: '0.5px solid #262626',
-      marginRight: '10px',
+      border: '2px solid rgba(85, 4, 4)',
+      borderRadius: "25px 25px 25px 25px",
+      marginRight: '15px',
+      marginLeft: '15px',
+      marginBottom: '8px',
+      // margin:'20px',
       padding: '16px',
-      width: '100%',
+      width: 'auto',
+      backgroundColor: 'rgb(10,0,0)',
       "&:hover": {
          // opacity: 1,
          color: 'white !important',
@@ -33,6 +38,8 @@ const useStyles = makeStyles(() => ({
    listSection: {
       width: '100%',
       height: '320px',
+      backgroundColor: '#1a1a1a',
+      marginTop: '20px',
       '@global': {
          '*::-webkit-scrollbar': {
             width: '0.4em',
