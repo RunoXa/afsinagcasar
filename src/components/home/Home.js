@@ -13,14 +13,13 @@ const useStyles = makeStyles(() => ({
       color: '#ffffff'
    },
    paper: {
-      // padding: theme.spacing(2),
       paddingTop: '20px',
-      border: "3px solid rgba(85, 4, 4, 1)",
-      marginTop: "10px",
-      borderRadius: "25px 25px 25px 25px",
-      backgroundColor: "rgb(10,0,0)",
-      color: "#ffffff",
-      overflow: "auto",
+      border: '3px solid rgba(85, 4, 4, 1)',
+      marginTop: '10px',
+      borderRadius: '25px 25px 25px 25px',
+      backgroundColor: 'rgb(10,0,0)',
+      color: '#ffffff',
+      overflow: 'auto'
    },
 }));
 

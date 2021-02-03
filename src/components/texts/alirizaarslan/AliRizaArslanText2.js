@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import Santral from "../../images/textImages/aliriza/santral.jpg";
-import Kapitalizm from "../../images/textImages/aliriza/kapitalizm.jpg";
-import Somuru from "../../images/textImages/aliriza/somuru.jpg";
+import Santral from "../../../images/textImages/aliriza/santral.jpg";
+import Kapitalizm from "../../../images/textImages/aliriza/kapitalizm.jpg";
+import Somuru from "../../../images/textImages/aliriza/somuru.jpg";
 
 export default class AliRizaArslanText2 extends Component {
 

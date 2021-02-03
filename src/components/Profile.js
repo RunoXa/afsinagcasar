@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: 'column',
       alignItems: 'center',
       color: "#ffffff",
-      padding: '20px',
-      paddingBottom: '100px',
+      padding: '30px',
+      paddingBottom: '200px',
       background: 'rgb(10,0,0)',
       borderRadius: "25px 25px 25px 25px",
       border: "3px solid rgba(85, 4, 4, 1)"

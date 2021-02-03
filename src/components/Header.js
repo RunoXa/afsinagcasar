@@ -421,7 +421,7 @@ export default function PersistentDrawerLeft() {
                </ListItem>
                <Collapse in={dropDownOpen} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
-                     <ListItem button exact to="/writer/aliRizaArslan/1" className={classes.nested} component={NavLink}
+                     <ListItem button exact to="/writer/aliRizaArslan" className={classes.nested} component={NavLink}
                                isActive={() => ['/writer/aliRizaArslan', '/writer/aliRizaArslan/', '/writer/aliRizaArslan/1',
                                   '/writer/aliRizaArslan/2', '/writer/aliRizaArslan/3',
                                   '/writer/aliRizaArslan/4', '/writer/aliRizaArslan/5',

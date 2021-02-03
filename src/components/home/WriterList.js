@@ -4,10 +4,10 @@ import {makeStyles} from '@material-ui/core/styles';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import Badge from '@material-ui/core/Badge';
 import DescriptionIcon from '@material-ui/icons/Description';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 import SengulImageCircle from '../../images/textImages/sengulcircle.png';
 import AliRizaImageCircle from '../../images/textImages/alirizacircle.png';
 
@@ -18,14 +18,15 @@ const useStyles = makeStyles(() => ({
    },
    header: {
       color: '#ffffff',
-      borderBottom: 'double #808080',
       textAlign: 'center'
    },
    item: {
+      padding: '16px',
+      borderTop: '1px solid #262626',
       "&:hover": {
          opacity: 1,
-         color: "white !important",
-         backgroundColor: 'rgba(211, 211, 211, 0.2)'
+         color: 'white !important',
+         backgroundColor: 'rgba(211, 211, 211, 0.2)',
       },
    },
    listSection: {
@@ -58,7 +59,7 @@ export default function WriterList() {
                component="nav"
                aria-labelledby="nested-list-subheader"
                className={classes.root}>
-               <ListItem button exact to="/writer/aliRizaArslan/1" className={classes.item} component={Link}>
+               <ListItem button exact to="/writer/aliRizaArslan" className={classes.item} component={Link}>
                   <ListItemIcon><img src={AliRizaImageCircle} alt="AliRizaImageCircle" width="40px"
                                      height="40px"/></ListItemIcon>
                   <ListItemText>Ali Rıza Arslan</ListItemText>

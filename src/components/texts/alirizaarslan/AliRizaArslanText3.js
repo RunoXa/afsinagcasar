@@ -1,14 +1,14 @@
 import React, {Component} from "react";
-import Pertek from "../../images/textImages/aliriza/pertek.jpg";
-import VeliArslan from "../../images/textImages/aliriza/veliarslan.jpg";
-import Koy from "../../images/textImages/aliriza/koy.jpg";
-import ElifArslan from "../../images/textImages/aliriza/elifarslan.jpg";
-import SuleymanBuyukgul from "../../images/textImages/aliriza/suleymanbuyukgul.jpg";
-import RizaBayazit from "../../images/textImages/aliriza/rizabayazit.jpg";
-import SuleymanArslan from "../../images/textImages/aliriza/suleymanarslan.jpg";
-import HuseyinBayazit from "../../images/textImages/aliriza/huseyinBayazit.jpg";
-import BesimeErbil from "../../images/textImages/aliriza/besimerbil.jpg";
-import HidirOzdemir from "../../images/textImages/aliriza/hidirozdemir.jpg";
+import Pertek from "../../../images/textImages/aliriza/pertek.jpg";
+import VeliArslan from "../../../images/textImages/aliriza/veliarslan.jpg";
+import Koy from "../../../images/textImages/aliriza/koy.jpg";
+import ElifArslan from "../../../images/textImages/aliriza/elifarslan.jpg";
+import SuleymanBuyukgul from "../../../images/textImages/aliriza/suleymanbuyukgul.jpg";
+import RizaBayazit from "../../../images/textImages/aliriza/rizabayazit.jpg";
+import SuleymanArslan from "../../../images/textImages/aliriza/suleymanarslan.jpg";
+import HuseyinBayazit from "../../../images/textImages/aliriza/huseyinBayazit.jpg";
+import BesimeErbil from "../../../images/textImages/aliriza/besimerbil.jpg";
+import HidirOzdemir from "../../../images/textImages/aliriza/hidirozdemir.jpg";
 
 export default class AliRizaArslanText3 extends Component {
 

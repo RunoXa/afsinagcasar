@@ -18,6 +18,7 @@ import VeliDedeAnlatiyorTabs from "./tabs/VeliDedeAnlatiyorTabs";
 import AliRizaArslanTabs from "./tabs/AliRizaArslanTabs";
 import BizeUlas from "./BizeUlas";
 import Profile from "./Profile";
+import AliRizaArslan from "./texts/AliRizaArslan";
 
 const PrivateRoute = ({component: RouteComponent, ...rest}) => {
    const {currentUser} = useContext(AuthContext);
@@ -69,8 +70,8 @@ const DefaultContainer = () => (
             <PrivateRoute exact path="/culture/yaylaGocu" component={CultureTabs}/>
             <PrivateRoute exact path="/culture/kocKatimi" component={CultureTabs}/>
             <PrivateRoute exact path="/culture/agcasarGecmisimiz" component={CultureTabs}/>
-            <PrivateRoute exact path="/writer/aliRizaArslan" component={AliRizaArslanTabs}/>
-            <PrivateRoute exact path="/writer/aliRizaArslan/" component={AliRizaArslanTabs}/>
+            <PrivateRoute exact path="/writer/aliRizaArslan" component={AliRizaArslan}/>
+            <PrivateRoute exact path="/writer/aliRizaArslan/" component={AliRizaArslan}/>
             <PrivateRoute exact path="/writer/aliRizaArslan/1" component={AliRizaArslanTabs}/>
             <PrivateRoute exact path="/writer/aliRizaArslan/2" component={AliRizaArslanTabs}/>
             <PrivateRoute exact path="/writer/aliRizaArslan/3" component={AliRizaArslanTabs}/>

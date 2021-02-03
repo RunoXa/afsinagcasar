@@ -1,21 +1,23 @@
 import React, {useEffect} from 'react';
+import {Link, NavLink, useLocation} from "react-router-dom";
+import AppBar from '@material-ui/core/AppBar';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
+import {Button} from "@material-ui/core";
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import {NavLink, useLocation} from "react-router-dom";
-import AliRizaArslanText1 from "../texts/AliRizaArslanText1";
-import AliRizaArslanText2 from "../texts/AliRizaArslanText2";
-import AliRizaArslanText3 from "../texts/AliRizaArslanText3";
-import AliRizaArslanText4 from "../texts/AliRizaArslanText4";
-import AliRizaArslanText5 from "../texts/AliRizaArslanText5";
-import AliRizaArslanText6 from "../texts/AliRizaArslanText6";
-import AliRizaArslanText7 from "../texts/AliRizaArslanText7";
-import AliRizaArslanText8 from "../texts/AliRizaArslanText8";
+import AliRizaArslanText1 from "../texts/alirizaarslan/AliRizaArslanText1";
+import AliRizaArslanText2 from "../texts/alirizaarslan/AliRizaArslanText2";
+import AliRizaArslanText3 from "../texts/alirizaarslan/AliRizaArslanText3";
+import AliRizaArslanText4 from "../texts/alirizaarslan/AliRizaArslanText4";
+import AliRizaArslanText5 from "../texts/alirizaarslan/AliRizaArslanText5";
+import AliRizaArslanText6 from "../texts/alirizaarslan/AliRizaArslanText6";
+import AliRizaArslanText7 from "../texts/alirizaarslan/AliRizaArslanText7";
+import AliRizaArslanText8 from "../texts/alirizaarslan/AliRizaArslanText8";
+import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined';
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
@@ -49,7 +51,7 @@ function a11yProps(index) {
    };
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
    root: {
       width: '100%'
    },
@@ -62,19 +64,34 @@ const useStyles = makeStyles((theme) => ({
       "&:hover": {
          color: '#ffffff',
          opacity: 1,
-         textDecoration: "none",
-         backgroundColor: 'rgba(211, 211, 211, 0.2);',
+         textDecoration: 'none',
+         backgroundColor: 'rgba(211, 211, 211, 0.2)',
       },
       '&.Mui-selected': {
          outline: 'none',
          color: '#ffffff',
-         fontWeight: "bold",
+         fontWeight: 'bold',
          padding: '20px'
       },
    },
    tabs: {
       backgroundColor: 'rgb(10,0,0)',
       color: '#ffffff'
+   },
+   backButton: {
+      position: 'sticky',
+      bottom: '10px',
+      left: '25px',
+      borderRadius: '50%',
+      height: '60px',
+      width: '20px',
+      backgroundColor: 'rgb(64, 64, 64, .9)',
+      color: '#ffffff',
+      "&:hover": {
+         color: '#ffffff',
+         textDecoration: 'none',
+         backgroundColor: 'rgba(85, 4, 4, .9)'
+      },
    }
 }));
 
@@ -97,16 +114,6 @@ export default function FullWidthTabs() {
    useEffect(() => {
       //set the TAB index by loading
       switch (selectedIndex) {
-         case '/writer/aliRizaArslan':
-            if (value !== 0) {
-               setValue(0)
-            }
-            break;
-         case '/writer/aliRizaArslan/':
-            if (value !== 0) {
-               setValue(0)
-            }
-            break;
          case '/writer/aliRizaArslan/1':
             if (value !== 0) {
                setValue(0)
@@ -172,7 +179,7 @@ export default function FullWidthTabs() {
                     label="GARİP BİR İHALE" {...a11yProps(1)}
                     classes={{root: classes.tabRoot}}/>
                <Tab component={NavLink} exact to="/writer/aliRizaArslan/3"
-                    label="HÜSEYİN DEDE (BİYOGRAFİ)" {...a11yProps(2)}
+                    label="HÜSEYİN DEDE" {...a11yProps(2)}
                     classes={{root: classes.tabRoot}}/>
                <Tab component={NavLink} exact to="/writer/aliRizaArslan/4"
                     label="1 MAYIS ve PERTEK ANISI" {...a11yProps(3)}
@@ -220,6 +227,8 @@ export default function FullWidthTabs() {
                <AliRizaArslanText8/>
             </TabPanel>
          </SwipeableViews>
+         <Button to="/writer/aliRizaArslan" className={classes.backButton}
+                 component={Link}><ArrowBackIosOutlinedIcon/></Button>
       </div>
    );
 }

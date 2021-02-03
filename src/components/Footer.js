@@ -50,9 +50,9 @@ const Footer = () => {
                                                                                     className='footer-icon'/></a>
                      </li>
                      <li><a href="https://twitter.com/afsinagcasar" target="_blank"
-                            rel="noopener noreferrer"><TwitterIcon size={31} round={true} className='footer-icon'/></a>
+                            rel="noopener noreferrer"><TwitterIcon size={32} round={true} className='footer-icon'/></a>
                      </li>
-                     <li><Link to="/bize-ulas" rel="noopener noreferrer"><EmailIcon size={31} round={true}
+                     <li><Link to="/bize-ulas" rel="noopener noreferrer"><EmailIcon size={32} round={true}
                                                                                    className='footer-icon'/></Link>
                      </li>
                      <li><a href="https://www.youtube.com/channel/UClWom_yPiHPGel4-MacSomQ/featured"

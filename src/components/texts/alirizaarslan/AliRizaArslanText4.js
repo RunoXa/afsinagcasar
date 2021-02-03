@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import BirMayis from "../../images/textImages/aliriza/birmayis.jpg";
+import BirMayis from "../../../images/textImages/aliriza/birmayis.jpg";
 
 export default class AliRizaArslanText4 extends Component {
 
