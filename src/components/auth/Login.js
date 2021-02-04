@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       color: "#ffffff",
       padding: '20px',
-      background: 'rgb(10,0,0)',
+      background: '#181818',
       borderRadius: "25px 25px 25px 25px"
    },
    loginContent: {
@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
    },
    cssOutlinedInput: {
       color: '#ffffff',
-      background: '#1a1a1a !important',
+      background: '#1e1e1e !important',
       '&$cssFocused $notchedOutline': {
          borderColor: `#ffffff !important`
       }
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
    },
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: 'rgb(10,0,0) !important',
+      borderColor: '#181818 !important',
       color: '#ffffff'
    },
    submit: {
@@ -88,9 +88,12 @@ const useStyles = makeStyles((theme) => ({
       color: "#ffffff",
       borderRadius: "25px 25px 25px 25px",
       "&:hover": {
-         opacity: 1,
          backgroundColor: 'rgba(121, 16, 9, 1)'
       },
+   },
+   disabledButton: {
+      backgroundColor: '#181818 !important',
+      color: '#181818 !important'
    },
    buttonProgress: {
       position: 'absolute',
@@ -265,7 +268,8 @@ const Login = ({history}) => {
                      variant="contained"
                      size="large"
                      disabled={loading}
-                     className={classes.submit}>
+                     className={classes.submit}
+                     classes={{disabled: classes.disabledButton}}>
                      Giriş yap
                      {loading && <CircularProgress size={30} className={classes.buttonProgress}/>}
                   </Button>

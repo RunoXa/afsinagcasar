@@ -1,10 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import {makeStyles} from '@material-ui/core/styles';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Badge from '@material-ui/core/Badge';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -17,17 +15,21 @@ const useStyles = makeStyles(() => ({
    },
    header: {
       color: '#ffffff',
-      textAlign: 'center'
+      border: '5px double rgba(85, 4, 4)',
+      borderRadius: "25px 25px 25px 25px",
+      padding: '10px',
+      marginTop: '20px',
+      backgroundColor: '#181818',
    },
    item: {
-      border: '2px solid rgba(85, 4, 4)',
+      border: '1px solid rgba(85, 4, 4)',
       borderRadius: "25px 25px 25px 25px",
+      backgroundColor: '#181818',
       marginRight: '15px',
       marginLeft: '15px',
       marginBottom: '8px',
       padding: '16px',
       width: 'auto',
-      backgroundColor: 'rgb(10,0,0)',
       "&:hover": {
          // opacity: 1,
          color: 'white !important',
@@ -36,8 +38,7 @@ const useStyles = makeStyles(() => ({
    },
    listSection: {
       width: '100%',
-      height: '320px',
-      backgroundColor: '#1a1a1a',
+      height: '100%',
       marginTop: '15px',
       '@global': {
          '*::-webkit-scrollbar': {
@@ -77,11 +78,10 @@ export default function AliRizaArslan() {
    return (
       <div>
          <div className={classes.paper}>
-            <ListSubheader component="div" className={classes.header}>
-               <h1>Ali Rıza Arslan</h1>
-            </ListSubheader>
-            <ListItemIcon><img src={AliRizaImageCircle} alt="AliRizaImageCircle" width="150px"
-                               height="150px"/></ListItemIcon>
+            <div className={classes.header}>
+               <h3><img src={AliRizaImageCircle} alt="AliRizaImageCircle" width="80px"
+                                      height="80px" style={{marginRight: '10px'}}/> Ali Rıza Arslan</h3>
+            </div>
             <div className={classes.listSection}>
                <List
                   component="nav"

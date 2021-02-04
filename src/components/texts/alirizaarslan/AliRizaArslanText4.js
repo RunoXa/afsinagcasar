@@ -10,7 +10,7 @@ export default class AliRizaArslanText4 extends Component {
             padding: "1rem",
             marginTop: "75px",
             borderRadius: "25px 25px 25px 25px",
-            backgroundColor: "rgb(10,0,0)",
+            backgroundColor: "#181818",
             color: "#ffffff",
             overflow: "auto"
          }}>

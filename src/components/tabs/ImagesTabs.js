@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
       },
    },
    tabs: {
-      backgroundColor: 'rgb(10,0,0)',
+      backgroundColor: '#181818',
       color: '#ffffff'
    }
 }));

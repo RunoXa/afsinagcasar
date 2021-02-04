@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       color: "#ffffff",
       padding: '20px',
-      background: 'rgb(10,0,0)',
+      background: '#161616',
       borderRadius: "25px 25px 25px 25px",
       border: "3px solid rgba(85, 4, 4, 1)"
    },
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
    },
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: 'rgb(10,0,0) !important',
+      borderColor: '#181818 !important',
       color: "#ffffff"
    },
    submit: {

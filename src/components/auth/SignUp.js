@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       color: "#ffffff",
       padding: '20px',
-      background: 'rgb(10,0,0)',
+      background: '#181818',
       borderRadius: "25px 25px 25px 25px"
    },
    avatar: {
@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
    },
    cssOutlinedInput: {
       color: '#ffffff',
-      background: '#1a1a1a !important',
+      background: '#1e1e1e !important',
       '&$cssFocused $notchedOutline': {
          borderColor: `#ffffff !important`
       }
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
    },
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: 'rgb(10,0,0) !important',
+      borderColor: '#181818 !important',
       color: "#ffffff"
    },
    submit: {
@@ -85,9 +85,12 @@ const useStyles = makeStyles((theme) => ({
       color: "#ffffff",
       borderRadius: "25px 25px 25px 25px",
       "&:hover": {
-         opacity: 1,
          backgroundColor: 'rgba(121, 16, 9, 1)'
       },
+   },
+   disabledButton: {
+      backgroundColor: '#181818 !important',
+      color: '#181818 !important'
    },
    buttonProgress: {
       position: 'absolute',
@@ -95,6 +98,7 @@ const useStyles = makeStyles((theme) => ({
       left: '50%',
       marginTop: -12,
       marginLeft: -12,
+      color: "#ff0000"
    },
    link: {
       color: "#ffffff !important"
@@ -320,9 +324,10 @@ const SignUp = ({history}) => {
                      size="large"
                      variant="contained"
                      disabled={loading}
-                     className={classes.submit}>
+                     className={classes.submit}
+                     classes={{disabled: classes.disabledButton}}>
                      Kayıt Ol
-                     {loading && <CircularProgress size={30} className={classes.buttonProgress} color="secondary"/>}
+                     {loading && <CircularProgress size={30} className={classes.buttonProgress}/>}
                   </Button>
                   <Grid container justify="flex-end">
                      <Grid item>

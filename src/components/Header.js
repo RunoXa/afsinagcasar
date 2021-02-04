@@ -277,6 +277,36 @@ export default function PersistentDrawerLeft() {
          case '/history/veliDedeAnlatiyor/sayfa4':
             setDropDownOpen2(true);
             break;
+         case '/writer/aliRizaArslan':
+            setDropDownOpen(true);
+            break;
+         case '/writer/aliRizaArslan/':
+            setDropDownOpen(true);
+            break;
+         case '/writer/aliRizaArslan/1':
+            setDropDownOpen(true);
+            break;
+         case '/writer/aliRizaArslan/2':
+            setDropDownOpen(true);
+            break;
+         case '/writer/aliRizaArslan/3':
+            setDropDownOpen(true);
+            break;
+         case '/writer/aliRizaArslan/4':
+            setDropDownOpen(true);
+            break;
+         case '/writer/aliRizaArslan/5':
+            setDropDownOpen(true);
+            break;
+         case '/writer/aliRizaArslan/6':
+            setDropDownOpen(true);
+            break;
+         case '/writer/aliRizaArslan/7':
+            setDropDownOpen(true);
+            break;
+         case '/writer/aliRizaArslan/8':
+            setDropDownOpen(true);
+            break;
          default:
             break
       }
