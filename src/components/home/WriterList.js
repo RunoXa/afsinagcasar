@@ -6,6 +6,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Badge from '@material-ui/core/Badge';
 import DescriptionIcon from '@material-ui/icons/Description';
+import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import SengulImageCircle from '../../images/textImages/sengulcircle.png';
@@ -43,6 +44,11 @@ const useStyles = makeStyles(() => ({
             backgroundColor: 'grey'
          }
       }
+   },
+   libraryIcon: {
+      border: '3px solid #ffffff',
+      borderRadius: "25px 25px 25px 25px",
+      padding: '2px'
    }
 }));
 
@@ -52,7 +58,7 @@ export default function WriterList() {
    return (
       <div>
          <ListSubheader component="div" className={classes.header}>
-            <h3>SİTE YAZARLARI</h3>
+            <h3><LocalLibraryIcon fontSize='large' className={classes.libraryIcon}/> SİTE YAZARLARI</h3>
          </ListSubheader>
          <div className={classes.listSection}>
             <List

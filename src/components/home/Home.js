@@ -6,6 +6,7 @@ import Carousel from '../Carousel'
 import WriterList from './WriterList'
 import Paper from '@material-ui/core/Paper';
 import ListSubheader from "@material-ui/core/ListSubheader";
+import NotificationImportantIcon from '@material-ui/icons/NotificationImportant';
 
 const useStyles = makeStyles(() => ({
    root: {
@@ -21,6 +22,11 @@ const useStyles = makeStyles(() => ({
       color: '#ffffff',
       overflow: 'auto'
    },
+   notificationIcon: {
+      border: '3px solid #ffffff',
+      borderRadius: "25px 25px 25px 25px",
+      padding: '2px'
+   }
 }));
 
 export default function Home() {
@@ -53,7 +59,10 @@ export default function Home() {
                   <Grid item xs={12} sm={6}>
                      <Paper className={classes.paper}>
                         <ListSubheader component="div" style={{color: '#ffffff'}}>
-                           <h3 style={{textAlign: 'center'}}>GÜNCEL HABERLER</h3>
+                           <h3 style={{textAlign: 'center'}}>
+                              <NotificationImportantIcon fontSize='large' className={classes.notificationIcon}/> GÜNCEL
+                              HABERLER
+                           </h3>
                            <p>Bu bölümde güncel haberler eklenecektir..</p>
                         </ListSubheader>
                      </Paper>
