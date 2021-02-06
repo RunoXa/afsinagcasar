@@ -88,17 +88,17 @@ const useStyles = makeStyles(() => ({
       borderRadius: '50%',
       height: '60px',
       width: '20px',
-      backgroundColor: 'rgba(50, 50, 50, 0.5)',
+      backgroundColor: 'rgba(50, 50, 50, 0.8)',
       color: '#ffffff',
       "&:hover": {
          color: '#ffffff',
          textDecoration: 'none',
-         backgroundColor: 'rgba(85, 4, 4, .9)'
+         backgroundColor: 'rgba(50, 50, 50, 0.8)',
       },
    },
    backIcon: {
-      marginLeft: '25%',
-      marginTop: '25%'
+      marginLeft: '10%',
+      marginTop: '15%'
    }
 }));
 
@@ -235,7 +235,7 @@ export default function FullWidthTabs() {
             </TabPanel>
          </SwipeableViews>
          <Button to="/writer/aliRizaArslan" className={classes.backButton}
-                 component={Link}><ArrowBackIosOutlinedIcon className={classes.backIcon}/></Button>
+                 component={Link}><ArrowBackIosOutlinedIcon fontSize="large" className={classes.backIcon}/></Button>
          <ScrollUpButton ShowAtPosition={50}
                          style={{
                             borderRadius: '50%',
