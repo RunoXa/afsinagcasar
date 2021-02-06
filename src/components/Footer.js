@@ -53,7 +53,7 @@ const Footer = () => {
                             rel="noopener noreferrer"><TwitterIcon size={32} round={true} className='footer-icon'/></a>
                      </li>
                      <li><Link to="/bize-ulas" rel="noopener noreferrer"><EmailIcon size={32} round={true}
-                                                                                   className='footer-icon'/></Link>
+                                                                                    className='footer-icon'/></Link>
                      </li>
                      <li><a href="https://www.youtube.com/channel/UClWom_yPiHPGel4-MacSomQ/featured"
                             target="_blank" rel="noopener noreferrer"><img src={YoutubeIcon}
@@ -65,7 +65,7 @@ const Footer = () => {
             </div>
             <div className="footer-bottom">
                <p className="copyright-text">
-                  &copy; Agcasarlilar {new Date().getFullYear()} | Tüm Hakları Saklıdır | Terms of Service | Privacy
+                  &copy; Agcasarlilar {new Date().getFullYear()} | Tüm Hakları Saklıdır.
                </p>
             </div>
          </div>
