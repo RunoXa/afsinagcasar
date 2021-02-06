@@ -48,7 +48,8 @@ const useStyles = makeStyles(() => ({
    libraryIcon: {
       border: '3px solid #ffffff',
       borderRadius: "25px 25px 25px 25px",
-      padding: '2px'
+      padding: '2px',
+      marginBottom: '5px'
    }
 }));
 
