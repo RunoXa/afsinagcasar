@@ -18,6 +18,7 @@ import AliRizaArslanText6 from "../texts/alirizaarslan/AliRizaArslanText6";
 import AliRizaArslanText7 from "../texts/alirizaarslan/AliRizaArslanText7";
 import AliRizaArslanText8 from "../texts/alirizaarslan/AliRizaArslanText8";
 import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined';
+import ScrollUpButton from "react-scroll-up-button";
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
@@ -83,11 +84,11 @@ const useStyles = makeStyles(() => ({
       position: 'sticky',
       bottom: '10px',
       marginBottom: '10px',
-      left: '25px',
+      left: '20px',
       borderRadius: '50%',
       height: '60px',
       width: '20px',
-      backgroundColor: 'rgb(64, 64, 64, .9)',
+      backgroundColor: 'rgba(50, 50, 50, 0.5)',
       color: '#ffffff',
       "&:hover": {
          color: '#ffffff',
@@ -235,6 +236,16 @@ export default function FullWidthTabs() {
          </SwipeableViews>
          <Button to="/writer/aliRizaArslan" className={classes.backButton}
                  component={Link}><ArrowBackIosOutlinedIcon className={classes.backIcon}/></Button>
+         <ScrollUpButton ShowAtPosition={50}
+                         style={{
+                            borderRadius: '50%',
+                            width: 60,
+                            height: 60,
+                            padding: '10px',
+                            outline: 'none',
+                            bottom: '10px'
+                         }}>
+         </ScrollUpButton>
       </div>
    );
 }
