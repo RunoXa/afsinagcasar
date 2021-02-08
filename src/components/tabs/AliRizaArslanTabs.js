@@ -76,7 +76,7 @@ const useStyles = makeStyles(() => ({
       },
    },
    tabs: {
-      backgroundColor: '#181818',
+      backgroundColor: '#161616',
       color: '#ffffff'
    },
    backButton: {

@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
       color: "#ffffff",
       padding: '20px',
-      background: '#181818',
+      background: '#161616',
       borderRadius: "25px 25px 25px 25px"
    },
    avatar: {
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
    },
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: '#181818 !important',
+      borderColor: '#161616 !important',
       color: "#ffffff"
    },
    submit: {
@@ -89,8 +89,8 @@ const useStyles = makeStyles((theme) => ({
       },
    },
    disabledButton: {
-      backgroundColor: '#181818 !important',
-      color: '#181818 !important'
+      backgroundColor: '#161616 !important',
+      color: '#161616 !important'
    },
    buttonProgress: {
       position: 'absolute',

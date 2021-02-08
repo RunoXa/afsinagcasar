@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
    },
    notchedOutline: {
       borderWidth: '1px',
-      borderColor: '#181818 !important',
+      borderColor: '#161616 !important',
       color: "#ffffff"
    },
    submit: {

@@ -9,7 +9,7 @@ export default class AgcasarGecmisimiz extends Component {
             marginTop: "75px",
             padding: "1rem",
             borderRadius: "25px 25px 25px 25px",
-            backgroundColor: "#181818",
+            backgroundColor: "#161616",
             color: "#ffffff"
          }}>
             <div>
