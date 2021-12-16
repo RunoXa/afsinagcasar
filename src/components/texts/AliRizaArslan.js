@@ -14,12 +14,8 @@ const useStyles = makeStyles(() => ({
       overflow: 'auto'
    },
    header: {
-      color: '#ffffff',
-      border: '5px double rgba(85, 4, 4)',
-      borderRadius: "25px 25px 25px 25px",
-      padding: '10px',
-      marginTop: '20px',
-      backgroundColor: '#161616',
+      marginTop: '15px',
+      marginBottom: '15px'
    },
    item: {
       border: '1px solid rgba(85, 4, 4)',
@@ -39,7 +35,6 @@ const useStyles = makeStyles(() => ({
    listSection: {
       width: '100%',
       height: '100%',
-      marginTop: '15px',
       '@global': {
          '*::-webkit-scrollbar': {
             width: '0.4em'
