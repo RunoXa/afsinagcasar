@@ -5,11 +5,8 @@ export default class AliRizaArslanText7 extends Component {
    render() {
       return (
          <div style={{
-            border: "3px solid rgba(85, 4, 4, 1)",
             padding: "1rem",
             marginTop: "75px",
-            borderRadius: "25px 25px 25px 25px",
-            backgroundColor: "#161616",
             color: "#ffffff",
             overflow: "auto"
          }}>
@@ -18,7 +15,7 @@ export default class AliRizaArslanText7 extends Component {
             </div>
             <div style={{marginTop: "50px"}}>
                <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>B</span>u aralar gerek görsel
-                  basında gerekse yazılı basında bazı konular yaygın bir şekilde konuşuluyor . Bunların başında dünya
+                  basında gerekse yazılı basında bazı konular yaygın bir şekilde konuşuluyor. Bunların başında dünya
                   ekonomik krizi, yerel seçimler ve Alevilerin Ankara'da yaptıkları miting ve tabi bunların önümüzdeki
                   yerel seçimlere nasıl yansıyacağı ve Alevi dernek ve vakıflarının bir biriyle olan rekabetleri
                   geliyor.

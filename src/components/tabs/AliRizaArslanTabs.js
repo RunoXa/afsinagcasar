@@ -102,7 +102,7 @@ const useStyles = makeStyles(() => ({
    }
 }));
 
-export default function FullWidthTabs() {
+export default function AliRizaArslanTabs() {
    const classes = useStyles();
    const theme = useTheme();
    const [value, setValue] = React.useState(null);

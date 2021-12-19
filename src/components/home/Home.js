@@ -15,7 +15,6 @@ const useStyles = makeStyles(() => ({
    },
    paper: {
       paddingTop: '20px',
-      border: '3px solid rgba(85, 4, 4, 1)',
       marginTop: '10px',
       borderRadius: '25px 25px 25px 25px',
       backgroundColor: '#161616',

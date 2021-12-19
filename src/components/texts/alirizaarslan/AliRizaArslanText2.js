@@ -8,11 +8,8 @@ export default class AliRizaArslanText2 extends Component {
    render() {
       return (
          <div style={{
-            border: "3px solid rgba(85, 4, 4, 1)",
             padding: "1rem",
             marginTop: "75px",
-            borderRadius: "25px 25px 25px 25px",
-            backgroundColor: "#161616",
             color: "#ffffff",
             overflow: "auto"
          }}>
