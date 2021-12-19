@@ -5,11 +5,8 @@ export default class AgcasarGecmisimiz extends Component {
    render() {
       return (
          <div style={{
-            border: "3px solid rgba(85, 4, 4, 1)",
             marginTop: "75px",
             padding: "1rem",
-            borderRadius: "25px 25px 25px 25px",
-            backgroundColor: "#161616",
             color: "#ffffff"
          }}>
             <div>
