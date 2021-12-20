@@ -18,16 +18,17 @@ export default class AliRizaArslanText3 extends Component {
             padding: "1rem",
             marginTop: "75px",
             color: "#ffffff",
-            overflow: "auto"
+            overflow: "auto",
+            lineHeight: 2
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>HÜSEYİN DEDE (BİYOGRAFİ)</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>HÜSEYİN DEDE (BİYOGRAFİ)</h2>
             </div>
             <div style={{marginTop: "50px"}}>
                <div style={{fontWeight: "bold", fontSize: "18px", textDecoration: "underline"}}>
                   Hüseyin Dede ve Dersim
                </div>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>H</span>üseyin Dede ŞEH DELİLİLİ
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>H</span>üseyin Dede ŞEH DELİLİLİ
                   BELİCAN evladından Mola Veli ve Senem ananın ilk çocuklarıdır. Hüseyin Dede, ata yurdu olan Dersim’in
                   Pertek ilçesi Dere nahiyesi Karaveliler mezrasında 1866 tarihinde dünyaya gelmiş.
                   Hüseyin Dede çocukluğunda, cesareti ve güçlü fiziki yapısıyla yaşıtları içerisinde ön plana çıkar. Bu

@@ -9,13 +9,14 @@ export default class AliRizaArslanText4 extends Component {
             padding: "1rem",
             marginTop: "75px",
             color: "#ffffff",
-            overflow: "auto"
+            overflow: "auto",
+            lineHeight: 2
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>1 MAYIS ve PERTEK ANISI</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>1 MAYIS ve PERTEK ANISI</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>1</span> Mayıs İşçi Bayramı ya da
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>1</span> Mayıs İşçi Bayramı ya da
                   amele bayramı tüm dünyada sembolik de olsa kutlanıp tatil ilan edilirken bizim ülkemizde halen yasal
                   bir statüye kavuşturulamadı. Bahar bayramı mı desek yoksa işçi bayramı mı desek ya da amele bayramı mı
                   desek halen bunun tartışması var bizim ülkemizde. Daha önce bahar bayramıydı. Ama şimdi Nevrozu da

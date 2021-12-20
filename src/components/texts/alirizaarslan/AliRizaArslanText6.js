@@ -8,13 +8,14 @@ export default class AliRizaArslanText6 extends Component {
             padding: "1rem",
             marginTop: "75px",
             color: "#ffffff",
-            overflow: "auto"
+            overflow: "auto",
+            lineHeight: 2
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>KARAYOLLARI VE KAZALAR</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>KARAYOLLARI VE KAZALAR</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>D</span>
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>D</span>
                   ünya Sağlık Örgütüne göre gelişmiş ülkelerde, trafikteki insanlara yönelik tehdit-risk sıralama
                   ortalaması 9. sırada. Geri kalmış ülkelerde ise bu tehdit 3. sırada. Türkiye'de trafiğin cana ve mala
                   yönelik tehdidi 1 sırada! Türkiye’de ortalama her 7 kişiden biri trafik kazasında ya ölüyor ya da

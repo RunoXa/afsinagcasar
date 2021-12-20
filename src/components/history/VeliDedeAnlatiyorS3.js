@@ -10,14 +10,15 @@ export default class VeliDedeAnlatiyorS1 extends Component {
             padding: "1rem",
             marginTop: "75px",
             color: "#ffffff",
-            overflow: "auto"
+            overflow: "auto",
+            lineHeight: 2
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>Ağcaşar'ı Neden Seçtiler ve
                   Hüseyin Dede`nin Yiğitlikleri</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>O</span> zaman beş kardeşlermiş, ama bir tek evmiş. Elbistan ovasından yer alsak havasına dayanamayız
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>O</span> zaman beş kardeşlermiş, ama bir tek evmiş. Elbistan ovasından yer alsak havasına dayanamayız
                   çoluğumuz çocuğumuz kırılır. Bütün dosta düşmana karşı mahçup oluruz. İkincisi, Elbistan ovasına
                   yerleşsek, Türk köylerinin yakınlarına, yarın gencimiz olur Türklerden evlenir. Yetişkin kızımız olur,
                   olur ki Türkler götürür, bu da olmaz. Bir aşiretin kulpuna gitsek biz niçin taa oradan, Dersim gibi

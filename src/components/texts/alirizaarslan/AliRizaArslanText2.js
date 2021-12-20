@@ -11,13 +11,14 @@ export default class AliRizaArslanText2 extends Component {
             padding: "1rem",
             marginTop: "75px",
             color: "#ffffff",
-            overflow: "auto"
+            overflow: "auto",
+            lineHeight: 2
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>Garip Bir İhale</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>Garip Bir İhale</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>A</span>fşin-Elbistan A santrali
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>A</span>fşin-Elbistan A santrali
                   de garip bir özelleştirme uygulamasına maruz kalmıştır. 1994 yılında,
                   santralin tamamlanmayan iki ünitesinin yapılarak toplam 6 ünitesinin 20 yıl boyunca kömür sahasıyla
                   birlikte işletilmesi için uluslararası beş ayrı konsorsiyuma çağrı yapılmış.

@@ -8,13 +8,14 @@ export default class AliRizaArslanText5 extends Component {
             padding: "1rem",
             marginTop: "75px",
             color: "#ffffff",
-            overflow: "auto"
+            overflow: "auto",
+            lineHeight: 2
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>Sorumluluk</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>Sorumluluk</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>D</span>ünyada savaş tarihi ile
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>D</span>ünyada savaş tarihi ile
                   insanlık tarihi eş zamanda başlamıştır. Tarihçiler, tarihi incelerken insanın tüm kültürel ve sosyal
                   yanlarını incelemelerine rağmen insanlık tarihinde savaşlar daha önemli bir yer alırlar. Hangi
                   savaşlar yapılmış, bu savaşların sonuçları ne olmuş, kim kazanmış, kim kaybetmiş, ne kadar insan

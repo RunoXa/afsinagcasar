@@ -10,13 +10,14 @@ export default class VeliDedeAnlatiyorS1 extends Component {
             padding: "1rem",
             marginTop: "75px",
             color: "#ffffff",
-            overflow: "auto"
+            overflow: "auto",
+            lineHeight: 2
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>Kötüye Karşı İyilik</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>E</span>vet, nerde bir mazlum
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>E</span>vet, nerde bir mazlum
                   varsa o ezilir. Ama zalımların sonu nerde kalır, onlar da ezilmiyor mu? Bu da yaradılıştan mı,
                   mayasından mı yoksa vicdandan mı, bilmiyorum kurban! Şimdi birisi senin kafanı kırsa. Bir saat sonra
                   da getirse tabancayı eline verse. Aha benim boynum, aha kılıç. İstersen beni kes. Sen ona acaba bir

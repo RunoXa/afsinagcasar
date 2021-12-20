@@ -8,13 +8,14 @@ export default class AliRizaArslanText7 extends Component {
             padding: "1rem",
             marginTop: "75px",
             color: "#ffffff",
-            overflow: "auto"
+            overflow: "auto",
+            lineHeight: 2
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>GÜNDEM</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>GÜNDEM</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>B</span>u aralar gerek görsel
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>B</span>u aralar gerek görsel
                   basında gerekse yazılı basında bazı konular yaygın bir şekilde konuşuluyor. Bunların başında dünya
                   ekonomik krizi, yerel seçimler ve Alevilerin Ankara'da yaptıkları miting ve tabi bunların önümüzdeki
                   yerel seçimlere nasıl yansıyacağı ve Alevi dernek ve vakıflarının bir biriyle olan rekabetleri

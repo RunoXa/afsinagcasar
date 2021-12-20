@@ -8,13 +8,14 @@ export default class AliRizaArslanText1 extends Component {
             padding: "1rem",
             marginTop: "75px",
             color: "#ffffff",
-            overflow: "auto"
+            overflow: "auto",
+            lineHeight: 2
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>AĞCAŞAR’DA YAŞADIĞIM BİR OLAY</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>AĞCAŞAR’DA YAŞADIĞIM BİR OLAY</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>Y</span>ıllar önce Ağcaşar’da
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>Y</span>ıllar önce Ağcaşar’da
                   yaşadığım bir olay
                   vardı. Belki çok önemli
                   değildi ama o yaşta yaşadığım ve bana anlatılanlar çok önemli gelmişti. Öyle ki günümüzde o

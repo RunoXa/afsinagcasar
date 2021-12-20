@@ -8,13 +8,14 @@ export default class AliRizaArslanText8 extends Component {
             padding: "1rem",
             marginTop: "75px",
             color: "#ffffff",
-            overflow: "auto"
+            overflow: "auto",
+            lineHeight: 2
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>UNUTTUK MU?</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>UNUTTUK MU?</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>O</span>
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>O</span>
                   tuz yıl önce bu gün Maraş’ta Maraşlılar, Maraşlılara bir can pazarı yaşattılar. Bu gün bir katliam
                   başlamıştı ve tam dört gün sürdü. Bu katliamdan sonra Maraş bir daha asla eski Maraş olmadı. Buraya
                   yolu düşenlerin içinde bir burukluk, bir acı olmuştur. Bir kısım Maraşlı katledildi bir kısmı da katil
