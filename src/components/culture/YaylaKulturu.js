@@ -11,13 +11,14 @@ export default class YaylaKulturu extends Component {
             padding: "1rem",
             marginTop: "75px",
             color: "#ffffff",
-            align: 'justify'
+            align: 'justify',
+            lineHeight: 2
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#ffffff"}}>Ağcaşar'da Yaylaya Göç</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>E</span>skiden mayıs ayında diğer
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>E</span>skiden mayıs ayında diğer
                   tüm komşu köylerde olduğu gibi Ağcaşar’da da bir telaş başlardı. Bu telaş
                   ve heyecan kollektif bir yaşamın ve üretimin başlangıcı olan yaylaya göçün telaşıydı. Yaylaya yaklaşık
                   olarak mayıs ayı ortalarında gidilir ve yaz sonunda tekrar köye geri dönülürdü. Bu gidiş ve gelişlerin

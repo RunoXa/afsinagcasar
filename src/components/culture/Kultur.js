@@ -8,6 +8,7 @@ export default class KocKatimi extends Component {
             padding: "1rem",
             marginTop: "75px",
             color: "#ffffff",
+            lineHeight: 2
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#ffffff"}}>Kültür</h2>

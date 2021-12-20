@@ -10,7 +10,8 @@ export default class KocKatimi extends Component {
          <div style={{
             padding: "1rem",
             marginTop: "75px",
-            color: "#ffffff"
+            color: "#ffffff",
+            lineHeight: 2
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#ffffff"}}>Ağcaşar'da Koç Katımı</h2>
@@ -19,7 +20,7 @@ export default class KocKatimi extends Component {
                <p>
                   <img src={KocKatimiImage1} alt="KocKatimiImage1"
                        style={{float: "left", maxWidth: "100%", margin: "20px 60px 20px 0px"}}/>
-                  <span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>A</span>ğcaşar Toroslar’ın Kuzey
+                  <span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>A</span>ğcaşar Toroslar’ın Kuzey
                   eteklerinde Binboğa Dağlarının güney yamaçlarına yaslanmış daha doğrusu serpiştirilmiş küçük bir dağ
                   köyüdür. Bu küçük dağ köyünün de kendine özgü gelenekleri ve görenekleri vardır. Bu gelenek ve
                   görenekler ya kendi yaşam ve inançları sonucu oluşmuş ya da çevredeki diğer toplum grupları ile

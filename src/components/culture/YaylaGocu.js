@@ -8,13 +8,14 @@ export default class AgcasarGecmisimiz extends Component {
          <div style={{
             padding: "1rem",
             marginTop: "75px",
-            color: "#ffffff"
+            color: "#ffffff",
+            lineHeight: 2
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#ffffff"}}>BİZİM MEMLEKETTE YAYLA ZAMANI</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", marginLeft: "8px"}}>B</span>u
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", marginLeft: "8px", lineHeight: 1}}>B</span>u
                   mevsim bizim memlekete yayla zamanıdır. Geçmiş dönemlerde bu mevsimde köyde yaylaya göçmenin tatlı
                   heyecanı ve telaşı başlardı. Keşikler kim olacak, kimle o yıl gidilecek, kim çoban tutulacak gibi…</p>
                <p>

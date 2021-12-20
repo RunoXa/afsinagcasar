@@ -7,13 +7,14 @@ export default class AgcasarGecmisimiz extends Component {
          <div style={{
             marginTop: "75px",
             padding: "1rem",
-            color: "#ffffff"
+            color: "#ffffff",
+            lineHeight: 2
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#ffffff"}}>Ağcaşar Geçmişimiz</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>Y</span>ıllar önce Ağcaşar'da akşamları büyükler toplanır sohbet ederlerdi. Bu toplantılar genellikle Veli
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>Y</span>ıllar önce Ağcaşar'da akşamları büyükler toplanır sohbet ederlerdi. Bu toplantılar genellikle Veli
                   Dedemgillerde ya da Hasan Dedemgillerde yapılırdı. Ben Hasan Dedemgillerdeki toplantıları pek fazla
                   hatırlamıyorum. Fakat Hasan Dedemgiller yapılan toplantılara ilişkin birkaç anım var. Bu anılarımdan
                   biri Hasan Dedemgillerde yapılan bir ceme ilişkindir. Beni de o cemde, nur içinde yatsınlar, Hasan
