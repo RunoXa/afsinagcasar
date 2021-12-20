@@ -7,20 +7,18 @@ export default class VeliDedeAnlatiyorS1 extends Component {
    render() {
       return (
          <div style={{
-            border: "3px solid rgba(85, 4, 4, 1)",
             padding: "1rem",
             marginTop: "75px",
-            borderRadius: "25px 25px 25px 25px",
-            backgroundColor: "#161616",
             color: "#ffffff",
-            overflow: "auto"
+            overflow: "auto",
+            lineHeight: 2
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>Dersim'den Ağcaşar'a Göç ve
                   Seyyit Veli'nin Vasiyeti</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>H</span>ayır, hiç bir şey yokmuş.
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>H</span>ayır, hiç bir şey yokmuş.
                   Sadece bizim dedemiz oranın vahşiyetinden, oranın durumundan nefret etmiş,
                   daha doğrusu bizim aşiretle başka bir aşiret arasında bir düşmanlık olmuş. O aşiret de çok kuvvetli
                   bir aşiret. İlk harpte de aşiret reisi Veli Ağa vuruluyor. Vurulunca da bütün şark Dersim'i

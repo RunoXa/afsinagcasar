@@ -8,19 +8,17 @@ export default class VeliDedeAnlatiyorS1 extends Component {
    render() {
       return (
          <div style={{
-            border: "3px solid rgba(85, 4, 4, 1)",
             padding: "1rem",
             marginTop: "75px",
-            borderRadius: "25px 25px 25px 25px",
-            backgroundColor: "#161616",
             color: "#ffffff",
-            overflow: "auto"
+            overflow: "auto",
+            lineHeight: 2
          }}>
             <div>
                <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>Dolapta Bir Çift Arslan</h2>
             </div>
             <div style={{marginTop: "50px"}}>
-               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold"}}>D</span>edem kendisi de
+               <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>D</span>edem kendisi de
                   geliyormuş, kurban. Dersim´den vuruyormuş Erzincan´a. Erzincan´dan, Sivas´tan,
                   Kangal`dan geliyormuş Dallıkavak´a, Mollanın evi orda ya. Dallıkavaklılarla taa o zaman çok samimi,
                   birbirilerini çok severlermiş. Taa, buraya kadar inermiş. Sonra da burdan böyle çıkar geri Kangal´dan

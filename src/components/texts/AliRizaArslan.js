@@ -43,7 +43,8 @@ const useStyles = makeStyles(() => ({
       color: '#ffffff',
       marginTop: '15x',
       overflow: 'auto',
-      backgroundColor: '#1e1e1e'
+      backgroundColor: '#1e1e1e',
+      lineHeight: 2
    },
    badge: {
       marginRight: '20px',
@@ -71,7 +72,7 @@ export default function AliRizaArslan() {
                    aria-labelledby="nested-list-subheader"
                    className={classes.root}>
                   <ListItem button exact to="/writer/aliRizaArslan/1" className={classes.item} component={Link}>
-                     <article style={{lineHeight: 2}}>
+                     <article>
                         <p style={{textAlign: 'left'}}><DateRangeOutlinedIcon
                             style={{color: "white", width: '20px'}}/> 06/02/2008</p>
                         <h3 style={{marginBottom: '20px'}}>Yaşadığım Bir Olay</h3>
@@ -85,7 +86,7 @@ export default function AliRizaArslan() {
                      </article>
                   </ListItem>
                   <ListItem button exact to="/writer/aliRizaArslan/2" className={classes.item} component={Link}>
-                     <article style={{lineHeight: 2}}>
+                     <article>
                         <p style={{textAlign: 'left'}}><DateRangeOutlinedIcon
                             style={{color: "white", width: '20px'}}/> 15/03/2008</p>
                         <h3 style={{marginBottom: '20px'}}>Garip Bir İhale</h3>
@@ -98,7 +99,7 @@ export default function AliRizaArslan() {
                      </article>
                   </ListItem>
                   <ListItem button exact to="/writer/aliRizaArslan/3" className={classes.item} component={Link}>
-                     <article style={{lineHeight: 2}}>
+                     <article>
                         <p style={{textAlign: 'left'}}><DateRangeOutlinedIcon
                             style={{color: "white", width: '20px'}}/> 06/04/2008</p>
                         <h3 style={{marginBottom: '20px'}}>Hüseyin Dede</h3>
@@ -110,7 +111,7 @@ export default function AliRizaArslan() {
                      </article>
                   </ListItem>
                   <ListItem button exact to="/writer/aliRizaArslan/4" className={classes.item} component={Link}>
-                     <article style={{lineHeight: 2}}>
+                     <article>
                         <p style={{textAlign: 'left'}}><DateRangeOutlinedIcon
                             style={{color: "white", width: '20px'}}/> 30/04/2008</p>
                         <h3 style={{marginBottom: '20px'}}>1 Mayıs ve Pertek Anısı</h3>
@@ -123,7 +124,7 @@ export default function AliRizaArslan() {
                      </article>
                   </ListItem>
                   <ListItem button exact to="/writer/aliRizaArslan/5" className={classes.item} component={Link}>
-                     <article style={{lineHeight: 2}}>
+                     <article>
                         <p style={{textAlign: 'left'}}><DateRangeOutlinedIcon
                             style={{color: "white", width: '20px'}}/> 10/07/2008</p>
                         <h3 style={{marginBottom: '20px'}}>Sorumluluk</h3>
@@ -134,9 +135,8 @@ export default function AliRizaArslan() {
                         <p>> <u><strong>devamını oku</strong></u></p>
                      </article>
                   </ListItem>
-
                   <ListItem button exact to="/writer/aliRizaArslan/6" className={classes.item} component={Link}>
-                     <article style={{lineHeight: 2}}>
+                     <article>
                         <p style={{textAlign: 'left'}}><DateRangeOutlinedIcon
                             style={{color: "white", width: '20px'}}/> 01/10/2008</p>
                         <h3 style={{marginBottom: '20px'}}>Karayolları ve Kazalar</h3>
@@ -147,9 +147,8 @@ export default function AliRizaArslan() {
                         <p>> <u><strong>devamını oku</strong></u></p>
                      </article>
                   </ListItem>
-
                   <ListItem button exact to="/writer/aliRizaArslan/7" className={classes.item} component={Link}>
-                     <article style={{lineHeight: 2}}>
+                     <article>
                         <p style={{textAlign: 'left'}}><DateRangeOutlinedIcon
                             style={{color: "white", width: '20px'}}/> 12/12/2008</p>
                         <h3 style={{marginBottom: '20px'}}>Gündem</h3>
@@ -162,9 +161,8 @@ export default function AliRizaArslan() {
                         <p>> <u><strong>devamını oku</strong></u></p>
                      </article>
                   </ListItem>
-
                   <ListItem button exact to="/writer/aliRizaArslan/8" className={classes.item} component={Link}>
-                     <article style={{lineHeight: 2}}>
+                     <article>
                         <p style={{textAlign: 'left'}}><DateRangeOutlinedIcon
                             style={{color: "white", width: '20px'}}/> 25/12/2008</p>
                         <h3 style={{marginBottom: '20px'}}>Unuttuk mu?</h3>
