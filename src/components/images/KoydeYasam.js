@@ -134,12 +134,13 @@ export default class KoydeYasam extends Component {
             display: "block",
             marginTop: "60px",
             minHeight: "1px",
-            overflow: "auto"
+            overflow: "auto",
+            textAlign: "center"
          }}>
             <Lightbox
                images={IMAGES}
-               thumbnailWidth='320px'
-               thumbnailHeight='212px'
+               thumbnailWidth='310px'
+               thumbnailHeight='202px'
                showImageModifiers={false}/>
          </div>
       )

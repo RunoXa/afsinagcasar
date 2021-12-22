@@ -19,6 +19,7 @@ import AliRizaArslanTabs from "./tabs/AliRizaArslanTabs";
 import BizeUlas from "./BizeUlas";
 import Profile from "./Profile";
 import AliRizaArslan from "./texts/AliRizaArslan";
+import '../styles/MuiTabs.css';
 
 const PrivateRoute = ({component: RouteComponent, ...rest}) => {
    const {currentUser} = useContext(AuthContext);

@@ -14,5 +14,6 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
 }
 
 .MuiAppBar-colorDefault {
+    top: 56px;
     position: fixed !important;
 }

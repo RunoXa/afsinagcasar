@@ -7,7 +7,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import '../../styles/ImagesTabs.css';
 import Kultur from "../culture/Kultur";
 import YaylaKulturu from "../culture/YaylaKulturu";
 import YaylaGocu from "../culture/YaylaGocu";
@@ -53,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
    },
    indicator: {
       backgroundColor: 'rgba(85, 4, 4, 1)',
-      height: 4
+      height: 4,
    },
    tabRoot: {
       color: '#ffffff',

@@ -17,8 +17,8 @@ import AliRizaArslanText5 from "../texts/alirizaarslan/AliRizaArslanText5";
 import AliRizaArslanText6 from "../texts/alirizaarslan/AliRizaArslanText6";
 import AliRizaArslanText7 from "../texts/alirizaarslan/AliRizaArslanText7";
 import AliRizaArslanText8 from "../texts/alirizaarslan/AliRizaArslanText8";
-import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined';
 import ScrollUpButton from "react-scroll-up-button";
+import ArrowBackIosOutlinedIcon from '@material-ui/icons/ArrowBackIosOutlined';
 
 function TabPanel(props) {
    const {children, value, index, ...other} = props;
