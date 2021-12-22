@@ -11,7 +11,7 @@ export default class KocKatimi extends Component {
             lineHeight: 2
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>Kültür</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>Kültür</h2>
             </div>
             <div style={{marginTop: "50px"}}>
                <div style={{fontWeight: "bold", fontSize: "18px", textDecoration: "underline"}}>Tanımı:</div>

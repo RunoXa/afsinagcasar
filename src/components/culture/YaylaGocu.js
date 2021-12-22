@@ -12,7 +12,7 @@ export default class AgcasarGecmisimiz extends Component {
             lineHeight: 2
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>BİZİM MEMLEKETTE YAYLA ZAMANI</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>BİZİM MEMLEKETTE YAYLA ZAMANI</h2>
             </div>
             <div style={{marginTop: "50px"}}>
                <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", marginLeft: "8px", lineHeight: 1}}>B</span>u

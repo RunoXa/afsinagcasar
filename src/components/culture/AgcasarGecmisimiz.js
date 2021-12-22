@@ -11,7 +11,7 @@ export default class AgcasarGecmisimiz extends Component {
             lineHeight: 2
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>Ağcaşar Geçmişimiz</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>Ağcaşar Geçmişimiz</h2>
             </div>
             <div style={{marginTop: "50px"}}>
                <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>Y</span>ıllar önce Ağcaşar'da akşamları büyükler toplanır sohbet ederlerdi. Bu toplantılar genellikle Veli

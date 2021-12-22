@@ -15,7 +15,7 @@ export default class YaylaKulturu extends Component {
             lineHeight: 2
          }}>
             <div>
-               <h2 style={{fontWeight: "bold", color: "#ffffff"}}>Ağcaşar'da Yaylaya Göç</h2>
+               <h2 style={{fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>Ağcaşar'da Yaylaya Göç</h2>
             </div>
             <div style={{marginTop: "50px"}}>
                <p><span style={{color: "blue", fontSize: "25px", fontWeight: "bold", lineHeight: 1}}>E</span>skiden mayıs ayında diğer
