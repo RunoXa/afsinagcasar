@@ -1,7 +1,6 @@
-import React, {Component} from "react";
-import '../../styles/Images.css';
-import Lightbox from 'react-lightbox-component';
-import 'react-lightbox-component/build/css/index.css';
+import React, {useState, useCallback} from "react";
+import Gallery from "react-photo-gallery";
+import Carousel, {Modal, ModalGateway} from "react-images";
 import Bahar1 from '../../images/bahar/bahar1.JPG';
 import Bahar2 from '../../images/bahar/bahar2.JPG';
 import Bahar3 from '../../images/bahar/bahar3.JPG';
@@ -34,205 +33,222 @@ import Bahar29 from '../../images/bahar/bahar29.JPG';
 import Bahar30 from '../../images/bahar/bahar30.JPG';
 
 const IMAGES =
-   [
-      {
-         src: Bahar1,
-         thumbnail: Bahar1,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar2,
-         thumbnail: Bahar2,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar3,
-         thumbnail: Bahar3,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar4,
-         thumbnail: Bahar4,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar5,
-         thumbnail: Bahar5,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar6,
-         thumbnail: Bahar6,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar7,
-         thumbnail: Bahar7,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar8,
-         thumbnail: Bahar8,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar9,
-         thumbnail: Bahar9,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar10,
-         thumbnail: Bahar10,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar11,
-         thumbnail: Bahar11,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar12,
-         thumbnail: Bahar12,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar13,
-         thumbnail: Bahar13,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar14,
-         thumbnail: Bahar14,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar15,
-         thumbnail: Bahar15,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar16,
-         thumbnail: Bahar16,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar17,
-         thumbnail: Bahar17,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar18,
-         thumbnail: Bahar18,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar19,
-         thumbnail: Bahar19,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar20,
-         thumbnail: Bahar20,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar21,
-         thumbnail: Bahar21,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar22,
-         thumbnail: Bahar22,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar23,
-         thumbnail: Bahar23,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar24,
-         thumbnail: Bahar24,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar25,
-         thumbnail: Bahar25,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar26,
-         thumbnail: Bahar26,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar27,
-         thumbnail: Bahar27,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar28,
-         thumbnail: Bahar28,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar29,
-         thumbnail: Bahar29,
-         title: ' ',
-         description: ' ',
-      },
-      {
-         src: Bahar30,
-         thumbnail: Bahar30,
-         title: ' ',
-         description: ' ',
-      },
-   ];
+    [
+        {
+            src: Bahar1,
+            thumbnail: Bahar1,
+            width: 1,
+            height: 1,
+        },
+        {
+            src: Bahar2,
+            thumbnail: Bahar2,
+            width: 1,
+            height: 1,
+        },
+        {
+            src: Bahar3,
+            thumbnail: Bahar3,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar4,
+            thumbnail: Bahar4,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar5,
+            thumbnail: Bahar5,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar6,
+            thumbnail: Bahar6,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar7,
+            thumbnail: Bahar7,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar8,
+            thumbnail: Bahar8,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar9,
+            thumbnail: Bahar9,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar10,
+            thumbnail: Bahar10,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar11,
+            thumbnail: Bahar11,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar12,
+            thumbnail: Bahar12,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar13,
+            thumbnail: Bahar13,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar14,
+            thumbnail: Bahar14,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar15,
+            thumbnail: Bahar15,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar16,
+            thumbnail: Bahar16,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar17,
+            thumbnail: Bahar17,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar18,
+            thumbnail: Bahar18,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar19,
+            thumbnail: Bahar19,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar20,
+            thumbnail: Bahar20,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar21,
+            thumbnail: Bahar21,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar22,
+            thumbnail: Bahar22,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar23,
+            thumbnail: Bahar23,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar24,
+            thumbnail: Bahar24,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar25,
+            thumbnail: Bahar25,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar26,
+            thumbnail: Bahar26,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar27,
+            thumbnail: Bahar27,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar28,
+            thumbnail: Bahar28,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar29,
+            thumbnail: Bahar29,
+            width: 1,
+            height: 1
+        },
+        {
+            src: Bahar30,
+            thumbnail: Bahar30,
+            width: 1,
+            height: 1
+        },
+    ];
 
-export default class Bahar extends Component {
+export default function Bahar() {
+    const [currentImage, setCurrentImage] = useState(0);
+    const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-   render() {
-      return (
+    const openLightbox = useCallback((event, {photo, index}) => {
+        setCurrentImage(index);
+        setViewerIsOpen(true);
+    }, []);
 
-         <div className="main-images-1" style={{
-            display: "block",
-            minHeight: "1px",
-            marginTop: "60px",
-         }}>
-            <Lightbox
-               images={IMAGES}
-               thumbnailWidth={'300px'}
-               thumbnailHeight={'400px'}
-               showImageModifiers={false}/>
-         </div>
-      )
-   }
+    const closeLightbox = () => {
+        setCurrentImage(0);
+        setViewerIsOpen(false);
+    }
+
+    return (
+        <div>
+            <div style={{marginTop: "50px"}}>
+                <Gallery photos={IMAGES} onClick={openLightbox} margin={10}/>
+            </div>
+            <ModalGateway>
+                {viewerIsOpen ? (
+                    <Modal onClose={closeLightbox}>
+                        <Carousel
+                            currentIndex={currentImage}
+                            views={IMAGES.map(x => ({
+                                ...x,
+                                srcset: x.srcSet,
+                                caption: x.title
+                            }))}
+                        />
+                    </Modal>
+                ) : null}
+            </ModalGateway>
+        </div>
+    )
 }
