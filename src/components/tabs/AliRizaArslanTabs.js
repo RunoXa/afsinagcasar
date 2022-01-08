@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
-import {Link, NavLink, useLocation} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import AppBar from '@material-ui/core/AppBar';
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
+import { useHistory } from "react-router-dom";
 import {Button} from "@material-ui/core";
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -97,8 +98,7 @@ const useStyles = makeStyles(() => ({
       },
    },
    backIcon: {
-      marginLeft: '10%',
-      marginTop: '15%'
+      textAlign: "center",
    }
 }));
 
@@ -107,6 +107,7 @@ export default function AliRizaArslanTabs() {
    const theme = useTheme();
    const [value, setValue] = React.useState(null);
    const selectedIndex = useLocation().pathname;
+   let history = useHistory();
 
    const handleChange = (event, newValue) => {
       setValue(newValue);
@@ -234,8 +235,8 @@ export default function AliRizaArslanTabs() {
                <AliRizaArslanText8/>
             </TabPanel>
          </SwipeableViews>
-         <Button to="/writer/aliRizaArslan" className={classes.backButton}
-                 component={Link}><ArrowBackIosOutlinedIcon fontSize="large" className={classes.backIcon}/></Button>
+         <Button onClick={() => history.goBack()} className={classes.backButton}>
+            <ArrowBackIosOutlinedIcon fontSize="large" className={classes.backIcon}/></Button>
          <ScrollUpButton ShowAtPosition={50}
                          style={{
                             borderRadius: '50%',
